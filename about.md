@@ -31,4 +31,6 @@ Customize this plan template for your own organization.  Instructions are availa
 * [Three Analytical Traps in Accident Investigation](https://www.youtube.com/watch?v=TqaFT-0cY7U) (Dr. Johan Bergström)
 * [US National Incident Management System (NIMS)](https://www.fema.gov/national-incident-management-system) (FEMA)
 * [Informed's NIMS Incident Command System Field Guide](https://www.amazon.com/gp/product/1284038408) (Michael J. Ward)
+* [Advanced PostMortem Fu and Human Error 101 (Velocity 2011)](http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011)
+* [Blame. Language. Sharing.](http://fractio.nl/2015/10/30/blame-language-sharing/)
 

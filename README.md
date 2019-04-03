@@ -12,17 +12,17 @@ The layout is as follows:
   * `roles/`: a folder containing descriptions of each role in the plan, along with duties and training notes.  `index.md` contains the roles section header content, and each role should follow the convention `playbooks/role-[ORDER]-[NAME].md`.
   * `after.md`: the guide to after-action review (_a.k.a._, hotwash, debrief, or post-mortem)---actions taken after an incident response.
   * `about.md`: a footer containing information about the plan/template as a whole.
-  * `data.yaml`: a file containing values for the template strings throughout the plan (see below)
+  * `info.yaml`: a file containing values for the template strings throughout the plan (see below)
 
 ## Find and replace template strings that `{{LOOK_LIKE_THIS}}`
 
-This is the [mustache](https://mustache.github.io/) syntax, and has wide support in a variety of tools and languages.  The easiest way to replace these is to customize the `data.yaml` file with your organization's information and use a tool like the mustache cli to automatically find and replace all the relevant strings:
+This is the [mustache](https://mustache.github.io/) syntax, and has wide support in a variety of tools and languages.  The easiest way to replace these is to customize the `info.yaml` file with your organization's information and use a tool like the mustache cli to automatically find and replace all the relevant strings:
 
 ```bash
-mustache data.yaml template.md > filled-template.md
+mustache info.yaml template.md > plan.md
 ```
 
-The defaults are These should be discernable from context, but the [default `data.yaml` file](./data.yaml) is commented for additional clarity.
+These should be discernable from context, but the [default `info.yaml` file](./info.yaml) is commented for additional clarity.
 
 If you don't have the things referenced in the variables, consider fixing that.  **Especially** the critical information list (data you want to protect) and critical asset list (systems you want to protect).
 
@@ -40,28 +40,29 @@ Combine the template components:
 cat during.md \
     ./playbooks/index.md ./playbooks/playbook-*.md \
     ./roles/index.md ./roles/role-*.md \
-    about.md > plan-template.md
+    after.md about.md > plan-template.md
 ```
 
-Fill the template:
+Fill the template (and optionally, the pandoc metadata template):
 ```bash
-mustache data.yaml plan-template.md > plan.md
+mustache info.yaml plan-template.md > plan.md
+mustache info.yaml pandoc.yaml > meta.yaml
 ```
 
-Use pandoc to create the format of your choice:
+Use pandoc to create the format of your choice (to `stdout` here, otherwise use `-o`):
 ```bash
-pandoc --toc --toc-depth=3 --standalone -o plan.html plan.md
+pandoc --toc --toc-depth=3 --standalone --metadata-file=./meta.yaml
 ```
 
-Or do it all in one go:
+Or do it all in one shot with a little bash fifo magic:
 ```bash
-cat data.yaml \
-    during.md \
+    mustache info.yaml \
+    <(cat during.md \
     ./playbooks/index.md ./playbooks/playbook-*.md \
     ./roles/index.md ./roles/role-*.md \
-    about.md \
-    | mustache \
-    | pandoc --toc --toc-depth=3 --standalone -o ./public/response-plan.html
+    after.md about.md) \
+    | pandoc --toc --toc-depth=3 --standalone \
+    --metadata-file=<(mustache info.yaml pandoc.yaml)
 ```
 
 ## Contact Us

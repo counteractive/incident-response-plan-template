@@ -15,10 +15,10 @@ REVISION_NUMBER: 1
 RELEASE_DATE: '3 Apr 2019'
 
 # Date someone last reviewed the plan
-REVIEW_DATE: '1 Feb 2018'
+REVIEW_DATE: '3 Apr 2019'
 
 # Date someone last tested the plan
-TEST_DATE: null
+TEST_DATE: '3 Apr 2019'
 
 # URL or reference to IR chat program
 RESPONSE_CHAT: 'chat.acme.tld/codename'
@@ -113,7 +113,7 @@ LOCAL_LE_CONTACT: 'police@local.gov.tld'
 # FBI contact info
 FBI_CONTACT: '1-800-CALL-FBI (225-5324), https://www.fbi.gov/contact-us'
 
-# Vendor for IR and infosec support   |
+# Vendor for IR and infosec support
 INCIDENT_RESPONSE_VENDOR: '[Counteractive Security](https://www.counteractive.net)'
 
 # Vendor for PR support
@@ -124,4 +124,11 @@ INSURANCE_VENDOR: 'cyber.insurance.tld'
 
 # Industry ISAC contact info
 ISAC_CONTACT: 'https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center'
+
+# After action review (AAR) service level agreement (time after completion of incident to conduct AAR)
+AAR_SLA: '5 business days'
+
+# AAR attendees
+AAR_ATTENDEES: 'ir.acme.tld/aar/attendees'
+
 ---

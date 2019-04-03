@@ -1,14 +1,3 @@
----
-title: 'Incident Response Plan for {{COMPANY_NAME}}'
-author: 'Author: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}'
-date: 'Revision {{REVISION_NUMBER}}, Released {{RELEASE_DATE}}'
-abstract: |
-  This incident response plan is based on the concise, directive, specific, flexible, and free plan available on Counteractive Security's [Github](https://github.com/counteractive/incident-response-plan-template) and discussed at [www.counteractive.net](https://www.counteractive.net/posts/an-ir-plan-you-will-use/)
-
-  It was last reviewed on {{REVIEW_DATE}}.{{#TEST_DATE}}  It was last tested on {{TEST_DATE}}.{{/TEST_DATE}}
-geometry: margin=1.5in
----
-
 `TODO: Customize this plan template for your organization using instructions at https://github.com/counteractive/incident-response-plan-template.  For incident response services, or help customizing, implementing, or testing your plan, contact us at contact@counteractive.net or at (888) 925-5765.`
 
 # Assess
@@ -222,7 +211,7 @@ If an incident turns out to be two or more distinct incidents:
 
 Resource                  | Location
 ------------------------- | ------------------------------------
-Critical infomation list  | {{CRITICAL_INFO _LIST_LOCATION}}
+Critical infomation list  | {{CRITICAL_INFO_LIST_LOCATION}}
 Critical asset list       | {{CRITICAL_ASSET_LIST_LOCATION}}
 Asset management database | {{ASSET_MGMT_DB_LOCATION}}
 Network map               | {{NETWORK_MAP_LOCATION}}
