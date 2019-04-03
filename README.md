@@ -12,51 +12,17 @@ The layout is as follows:
   * `roles/`: a folder containing descriptions of each role in the plan, along with duties and training notes.  `index.md` contains the roles section header content, and each role should follow the convention `playbooks/role-[ORDER]-[NAME].md`.
   * `after.md`: the guide to after-action review (_a.k.a._, hotwash, debrief, or post-mortem)---actions taken after an incident response.
   * `about.md`: a footer containing information about the plan/template as a whole.
+  * `data.yaml`: a file containing values for the template strings throughout the plan (see below)
 
-## Find and replace template variables that `LOOK_LIKE_THIS`
+## Find and replace template strings that `{{LOOK_LIKE_THIS}}`
 
-These should be discernable from context, but the following is a non-comprehensive reference:
+This is the [mustache](https://mustache.github.io/) syntax, and has wide support in a variety of tools and languages.  The easiest way to replace these is to customize the `data.yaml` file with your organization's information and use a tool like the mustache cli to automatically find and replace all the relevant strings:
 
-Variable                             | Details                             | Example
------------------------------------- | ----------------------------------- | -------
-`COMPANY_NAME`                       | The name of your organization       | Acme, Inc.
-`AUTHOR_NAME`, `AUTHOR_EMAIL`        | Name and email of plan author       | Chris, contact@counteractive.net
-`REVISION_NUMBER`, `RELEASE_DATE`    | Document control metadata           | 1, 1 Jan 2018
-`REVIEW_DATE`                        | Date someone last reviewed the plan | 1 Feb 2018
-`TEST_DATE`                          | Date you last tested the plan       | 15 Jan 2018
-`RESPONSE_CHAT`                      | URL or reference to IR chat program | chat.acme.tld/codename
-`RESPONSE_CALL`                      | Call bridge number or URL           | 555-HACK, webex.acme.tld/codename
-`ALTERNATIVE_EMAIL`                  | Description/URL for alternate email | O365 at ir.acme.tld/othermail
-`ORGANIZATION_DOMAIN`                | Domain name for your organization   | acme.tld
-`INCIDENT_COMMANDER_PAGER`           | Number or URL to page Commander(s)  | 555-PAGE, ir.acme.tld/ic-page
-`INCIDENT_COMMANDER_ROSTER`          | URL/path to Commander roster/list   | ir.acme.tld/ic-roster
-`SECURITY_TEAM_ROSTER`               | As above, for security team         | ir.acme.tld/sec-roster
-`TEAM_SME_ROSTER`                    | As above, for SMEs                  | ir.acme.tld/sme-roster
-`EXECTIVE_ROSTER`                    | As above, for executive team        | ir.acme.tld/exec-roster
-`INCIDENT_COMMANDER_RESPONSE_SLA`    | Time to wait for on-duty IC on call | 15 minutes
-`UPDATE_FREQUENCY`                   | Time between scheduled updates      | 4 hours
-`INCIDENT_FILE_LOCATION`             | URL/path to incident file        | ir.acme.tld/files/codename
-`CRITICAL_INFORMATION_LIST_LOCATION` | URL/path to critical information list, data you want to protect | ir.acme.tld/cil
-`CRITICAL_ASSET_LIST_LOCATION`       | URL/path to critical asset list, systems you want to protect  | ir.acme.tld/cal
-`ASSET_MGMT_DB_LOCATION`             | URL/path to asset management DB     | ir.acme.tld/assets
-`NETWORK_MAP_LOCATION`               | URL/path to network map             | ir.acme.tld/netmap
-`SIEM_CONSOLE_LOCATION`              | URL to SIEM                         | siem.acme.tld
-`LOG_AGGREGATOR_CONSOLE`             | URL to log aggregator               | elk.acme.tld
-`LIVE_RESPONSE_TOOL`                 | Name/URL of live response tool      | [ir-rescue](https://github.com/diogo-fernan/ir-rescue)
-`MEMORY_COLLECTION_TOOL`             | Name/URL of memory collection tool  | [rekall](http://www.rekall-forensic.com/)
-`DISK_IMAGE_TOOL`                    | Name/URL of disk imaging tool       | [ftk imager](http://www.forensicswiki.org/wiki/FTK_Imager)
-`INCIDENT_REPORT_TEMPLATE`           | URL/path to IR report template      | ir.acme.tld/report/template
-`INCIDENT_REPORT_RECIPIENTS`         | URL/path to report recipient list   | ir.acme.tld/report/recipients
-`COMPLIANCE_TEAM`                    | Compliance team name                | the legal team, legal@acme.tld
-`COMMUNICATIONS_TEAM`                | Communications team name            | the marketing team, marketing@acme.tld
-`EXECUTIVE_TEAM`                     | Executive team name                 | the front office, bosses@acme.tld
-`LEGAL_TEAM`                         | Legal team name                     | the legal team, legal@acme.tld
-`LOCAL_LE_CONTACT`                   | Local law enforcement contact info  | police@local.gov.tld
-`FBI_CONTACT`                        | FBI contact info                    | 555-FEDS, suits@local.office.fbi
-`INCIDENT_RESPONSE_VENDOR`           | Vendor for IR and infosec support   | [Counteractive Security](https://www.counteractive.net)
-`PUBLIC_RELATIONS_VENDOR`            | Vendor for PR support               | pr.firm.tld
-`INSURANCE_VENDOR`                   | (Cyber) insurance provider          | geico.com
-`ISAC_CONTACT`                       | Industry ISAC contact info          | 555-ISAC
+```bash
+mustache data.yaml template.md > filled-template.md
+```
+
+The defaults are These should be discernable from context, but the [default `data.yaml` file](./data.yaml) is commented for additional clarity.
 
 If you don't have the things referenced in the variables, consider fixing that.  **Especially** the critical information list (data you want to protect) and critical asset list (systems you want to protect).
 
@@ -68,20 +34,41 @@ If you don't have the things referenced in the variables, consider fixing that. 
 ## Build
 Run whichever portions you like through [pandoc](https://pandoc.org/installing.html) to create your format of choice, or use the markdown files with [mkdocs](http://www.mkdocs.org/), [hugo](https://gohugo.io/), or countless other platforms.
 
-### Response Plan Example
+### Response Plan Creation Example
+Combine the template components:
 ```bash
 cat during.md \
     ./playbooks/index.md ./playbooks/playbook-*.md \
     ./roles/index.md ./roles/role-*.md \
+    about.md > plan-template.md
+```
+
+Fill the template:
+```bash
+mustache data.yaml plan-template.md > plan.md
+```
+
+Use pandoc to create the format of your choice:
+```bash
+pandoc --toc --toc-depth=3 --standalone -o plan.html plan.md
+```
+
+Or do it all in one go:
+```bash
+cat data.yaml \
+    during.md \
+    ./playbooks/index.md ./playbooks/playbook-*.md \
+    ./roles/index.md ./roles/role-*.md \
     about.md \
+    | mustache \
     | pandoc --toc --toc-depth=3 --standalone -o ./public/response-plan.html
 ```
 
 ## Contact Us
-For professional assistance with incident response, or with customizing, implementing, or testing your plan, please contact us at support@counteractive.net or [(888) 925-5765](tel:+18889255765).
+For professional assistance with incident response, or with customizing, implementing, or testing your plan, please contact us at contact@counteractive.net or [(888) 925-5765](tel:+18889255765).
 
 # License
-This template is provided under the Apache License, version 2.0.  See the LICENSE and NOTICE files for additional information.
+This template is provided under the Apache License, version 2.0.  See the [LICENSE](./LICENSE) and [NOTICE](./NOTICE) files for additional information.
 
 # References and Additional Reading
 * [Awesome Incident Response](https://github.com/meirwah/awesome-incident-response)
@@ -120,3 +107,4 @@ This template is provided under the Apache License, version 2.0.  See the LICENS
 - [ ] Testing procedure
 - [ ] Communication and escalation tree, including executives
 - [ ] Finance and budget
+- [ ] Continuing to enhance modularity ("puzzle-piece" approach)

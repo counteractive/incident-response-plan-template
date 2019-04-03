@@ -1,15 +1,15 @@
 ---
-title: 'Incident Response Plan for `COMPANY_NAME`'
-author: 'Author: `AUTHOR_NAME`, `AUTHOR_EMAIL`'
-date: 'Revision `REVISION_NUMBER`, Released `RELEASE_DATE`'
+title: 'Incident Response Plan for {{COMPANY_NAME}}'
+author: 'Author: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}'
+date: 'Revision {{REVISION_NUMBER}}, Released {{RELEASE_DATE}}'
 abstract: |
   This incident response plan is based on the concise, directive, specific, flexible, and free plan available on Counteractive Security's [Github](https://github.com/counteractive/incident-response-plan-template) and discussed at [www.counteractive.net](https://www.counteractive.net/posts/an-ir-plan-you-will-use/)
 
-  It was last reviewed on `REVIEW_DATE`, and was last tested on `TEST_DATE`.
+  It was last reviewed on {{REVIEW_DATE}}.{{#TEST_DATE}}  It was last tested on {{TEST_DATE}}.{{/TEST_DATE}}
 geometry: margin=1.5in
 ---
 
-`TODO: Customize this plan template for your organization using instructions at https://github.com/counteractive/incident-response-plan-template.  For incident response services, or help customizing, implementing, or testing your plan, contact us at support@counteractive.net or at (888) 925-5765.`
+`TODO: Customize this plan template for your organization using instructions at https://github.com/counteractive/incident-response-plan-template.  For incident response services, or help customizing, implementing, or testing your plan, contact us at contact@counteractive.net or at (888) 925-5765.`
 
 # Assess
 1. **Stay calm and professional.**
@@ -41,10 +41,10 @@ Create an [simple two-word phrase](http://creativityforyou.com/combomaker.html) 
 ## Assemble the Response Team
 1. Page the on-duty/on-call Incident Commander. `TODO: Add Incident Commander call list or procedure`
 1. **Do not** discuss the incident outside the response team unless cleared by the Incident Commander
-1. Launch and/or join the response chat at `RESPONSE_CHAT`.  `TODO: Add response chat launch procedure.`
-1. Launch and/or join the response call at `RESPONSE_CALL`.  `TODO: Add response call launch procedure.`
+1. Launch and/or join the response chat at {{RESPONSE_CHAT}}.  `TODO: Add response chat launch procedure.`
+1. Launch and/or join the response call at {{RESPONSE_PHONE}} and/or {{RESPONSE_VTC}}.  `TODO: Add response call launch procedure.`
 1. Prefer voice call, chat, and secure file exchange over any other methods.
-1. **Do not** use primary email if possible.  If email is necessary, use sparingly or use `ALTERNATIVE_EMAIL`.  Encrypt emails when any participant is outside the `ORGANIZATION_DOMAIN` domain.  `TODO: Add alternative email details and procedure, e.g., on-demand Office 365 or GSuite`
+1. **Do not** use primary email if possible.  If email is necessary, use sparingly or use {{ALTERNATE_EMAIL}}.  Encrypt emails when any participant is outside the {{ORGANIZATION_DOMAIN}} domain.  `TODO: Add alternative email details and procedure, e.g., on-demand Office 365 or GSuite`
 1. **Do not** use SMS/text to communicate about the incident, unless to tell someone to move to a more secure channel.
 1. Invite on-duty/on-call responders to the response call and response chat.
     * Invite the security team.  `TODO: Add security team contact list or procedure.`
@@ -74,13 +74,14 @@ Create an [simple two-word phrase](http://creativityforyou.com/combomaker.html) 
 
 ### Reference: Response Team Contact Information
 
-Response Team Role        | Contact Information
-------------------------- | ---------------------------
-Incident Commander pager  | `INCIDENT_COMMANDER_PAGER`
-Incident Commander roster | `INCIDENT_COMMANDER_ROSTER`
-Security team roster      | `SECURITY_TEAM_ROSTER`
-Team SME roster           | `TEAM_SME_ROSTER`
-Executive roster          | `EXECTIVE_ROSTER`
+Response Team Role           | Contact Information
+---------------------------- | ---------------------------
+Incident Commander pager     | {{INCIDENT_COMMANDER_PAGER_NUMBER}}
+Incident Commander pager url | {{INCIDENT_COMMANDER_PAGER_URL}}
+Incident Commander roster    | {{INCIDENT_COMMANDER_ROSTER}}
+Security team roster         | {{SECURITY_TEAM_ROSTER}}
+Team SME roster              | {{TEAM_SME_ROSTER}}
+Executive roster             | {{EXECTIVE_ROSTER}}
 
 `TODO: Customize response team contact information.  Include contact procedures in rosters, which can be static or dynamic.`
 
@@ -90,11 +91,11 @@ Executive roster          | `EXECTIVE_ROSTER`
 
 ### Conduct Initial Response Call
 1. Conduct initial call using the [initial response call structure](#reference-initial-response-call-structure)
-1. Follow instructions from the Incident Commander.  If the on-duty/on-call Incident Commander does not join the call within `INCIDENT_COMMANDER_RESPONSE_SLA` and you are a trained incident commander, take command of the call.
+1. Follow instructions from the Incident Commander.  If the on-duty/on-call Incident Commander does not join the call **within {{INCIDENT_COMMANDER_RESPONSE_SLA}}** and you are a trained incident commander, take command of the call.
 1. Follow the [instructions for your role](#roles).
 1. Follow the call and chat, and comment as appropriate.  If you are not a SME, filter input through the SME for your team if possible.
 1. **Keep the call and chat active throughout the incident for event-driven communication.**
-1. Schedule updates every `UPDATE_FREQUENCY` on the active bridge.
+1. Schedule updates **every {{UPDATE_FREQUENCY}}** on the active bridge.
 
 <div class="reference">
 
@@ -131,7 +132,7 @@ Executive roster          | `EXECTIVE_ROSTER`
 </div>
 
 ### Conduct Response Update
-* Conduct scheduled updates using the [update call structure](#reference-response-update-call-structure) every `UPDATE_FREQUENCY` on the active bridge. `TODO: Customize update frequency and scripts; recommend no more than twice daily.`
+* Conduct scheduled updates using the [update call structure](#reference-response-update-call-structure) every {{UPDATE_FREQUENCY}} on the active bridge. `TODO: Customize update frequency and scripts; recommend no more than twice daily.`
 * Adjust frequency as necessary.
 * Coordinate independent updates (_e.g._, executive, legal) as required, but as infrequently as practicable.
 
@@ -157,7 +158,7 @@ Executive roster          | `EXECTIVE_ROSTER`
     * What is your recommended communication strategy?  Strong objections? [listen, gain consensus, task/approve]
     * What communication actions need tasking or approval?
 * IC: This call and chat will remain up and available until incident closure, please use it for all incident related communications.  Provide real-time status updates in the chat, if possible.  Are there any questions or remaining inputs? [answers questions]
-* IC: Team leaders, please proceed.  We will reconvene at [UPDATE_TIME] to discuss the status.  Thank you.
+* IC: Team leaders, please proceed.  We will reconvene at [{{UPDATE_TIME}}] to discuss the status.  Thank you.
 
 </div>
 
@@ -185,7 +186,7 @@ If an incident turns out to be two or more distinct incidents:
 **[Investigate](#investigate), [remediate](#remediate), and [communicate](#communicate) in parallel, using separate teams, if possible.**  The Incident Commander will coordinate these activities.  Notify the Incident Commander if there are steps the team should consider.
 
 ## Create Incident File
-1. Create a new incident file at `INCIDENT_FILE_LOCATION` using the [incident name](#name-the-incident).  Use this file for secure storage of documentation, evidence, artifacts, _etc._
+1. Create a new incident file at {{INCIDENT_FILE_LOCATION}} using the [incident name](#name-the-incident).  Use this file for secure storage of documentation, evidence, artifacts, _etc._
     * Provision secure digital storage.
     * Provision secure file exchange.
     * Obtain physical storage.
@@ -221,12 +222,12 @@ If an incident turns out to be two or more distinct incidents:
 
 Resource                  | Location
 ------------------------- | ------------------------------------
-Critical infomation list  | `CRITICAL_INFORMATION_LIST_LOCATION`
-Critical asset list       | `CRITICAL_ASSET_LIST_LOCATION`
-Asset management database | `ASSET_MGMT_DB_LOCATION`
-Network map               | `NETWORK_MAP_LOCATION`
-SIEM console              | `SIEM_CONSOLE_LOCATION`
-Log aggregator            | `LOG_AGGREGATOR_CONSOLE`
+Critical infomation list  | {{CRITICAL_INFO _LIST_LOCATION}}
+Critical asset list       | {{CRITICAL_ASSET_LIST_LOCATION}}
+Asset management database | {{ASSET_MGMT_DB_LOCATION}}
+Network map               | {{NETWORK_MAP_LOCATION}}
+SIEM console              | {{SIEM_CONSOLE_LOCATION}}
+Log aggregator            | {{LOG_AGGREGATOR_CONSOLE}}
 
 `TODO: Complete critical information and asset lists ("crown jewels"). This is incredibly important to effective response.`
 
@@ -298,10 +299,10 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 
 ## Collect Evidence
 * Prioritize based on the investigative plan
-* Collect live response data using `LIVE_RESPONSE_TOOL`.  `TODO: Customize live response tools and procedure.`
+* Collect live response data using {{LIVE_RESPONSE_TOOL}}.  `TODO: Customize live response tools and procedure.`
 * Collect relevant logs from system(s) (if not part of live response), aggregator(s), SIEM(s), or device console(s).  `TODO: Customize log collection tools and procedure.`
-* Collect memory image, if necessary and if not part of live response, using `MEMORY_COLLECTION_TOOL`.  `TODO: Customize memory collection tools and procedure.`
-* Collect disk image, if necessary, using `DISK_IMAGE_TOOL.`  `TODO: Customize disk image collection tool and procedure.`
+* Collect memory image, if necessary and if not part of live response, using {{MEMORY_COLLECTION_TOOL}}.  `TODO: Customize memory collection tools and procedure.`
+* Collect disk image, if necessary, using {{DISK_IMAGE_TOOL}}.`  `TODO: Customize disk image collection tool and procedure.`
 1. Collect and store evidence in accordance with policy, and with proper chain of custody. `TODO: Customize evidence collection and chain of custody policy.`
 
 ## Analyze Evidence
@@ -321,7 +322,7 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 
 ## Update Remediation Plan
 
-1. Review the incident file at `INCIDENT_FILE_LOCATION` using the [incident name](#name-the-incident)
+1. Review the incident file at {{INCIDENT_FILE_LOCATION}} using the [incident name](#name-the-incident)
 1. Review applicable [playbooks](#playbooks).
 1. Review the [Response Resource List](#reference-response-resource-list)).
 1. Consider which attacker tactics are in play in this incident.  Use MITRE's [ATT&CK](https://attack.mitre.org/wiki/Main_Page) list (_i.e._, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Lateral Movement, Execution, Collection, Exfiltration, and Command and Control), or similar framework.
@@ -418,8 +419,8 @@ All communication must include the most accurate information available.  Display
 * Focus on the best assessment of the vector, impact, summary, and highlights of the timeline including remediation steps.  Do not speculate.
 
 ### Create Incident Report
-* Upon incident closure, capture information in the [incident file](#create-incident-file) for distribution using the format at `INCIDENT_REPORT_TEMPLATE`.  **If the vector, impact, summary, timeline, and activity reports are complete, this can be fully automated.**
-* Distribute the incident report to the following: `INCIDENT_REPORT_RECIPIENTS`.
+* Upon incident closure, capture information in the [incident file](#create-incident-file) for distribution using the format at {{INCIDENT_REPORT_TEMPLATE}}.  **If the vector, impact, summary, timeline, and activity reports are complete, this can be fully automated.**
+* Distribute the incident report to the following: {{INCIDENT_REPORT_RECIPIENTS}}.
 * `TODO: Customize incident report creation and distribution, if necessary`
 
 ## Communicate Externally
@@ -427,11 +428,11 @@ All communication must include the most accurate information available.  Display
 ### Notify Regulators
 * **Do not** notify or update non-response personnel until cleared by the Incident Commander.
 * Notify regulators (_e.g._, HIPAA/HITRUST, PCI DSS, SOX) if necessary, and in accordance with policy.
-* Coordinate requirements, format, and timeline with `COMPLIANCE_TEAM`.
+* Coordinate requirements, format, and timeline with {{COMPLIANCE_TEAM}}.
 
 ### Notify Customers
 * **Do not** notify or update non-response personnel until cleared by the Incident Commander.
-* Coordinate customer notifications with `COMMUNICATIONS_TEAM`.
+* Coordinate customer notifications with {{COMMUNICATIONS_TEAM}}.
 * Include the date in the title of any announcement, to avoid confusion.
 * **Do not** use platitudes such as "we take security very seriously". Focus on facts.
 * Be honest, accept responsibility, and present the facts, along with the plan to prevent similar incidents in future.
@@ -449,17 +450,17 @@ All communication must include the most accurate information available.  Display
 
 ### Notify Law Enforcement
 * **Do not** notify or update non-response personnel until cleared by the Incident Commander.
-* Coordinate with `EXECUTIVE_TEAM` and `LEGAL_TEAM` prior to interacting with law enforcement
-* Contact local law enforcement at `LOCAL_LE_CONTACT`.
-* Contact FBI at `FBI_CONTACT` or via the [Internet Crime Complaint Center (IC3)](https://www.ic3.gov).
+* Coordinate with {{EXECUTIVE_TEAM}} and {{LEGAL_TEAM}} prior to interacting with law enforcement
+* Contact local law enforcement at {{LOCAL_LE_CONTACT}}.
+* Contact FBI at {{FBI_CONTACT}} or via the [Internet Crime Complaint Center (IC3)](https://www.ic3.gov).
 * Contact operators for any systems used in the attack, their systems may also have been compromised.
 
 ### Contact External Response Support
-* Contact `INCIDENT_RESPONSE_VENDOR` to help in assessing risk, incident management, incident response, and post-incident support.
-* Contact `PUBLIC_RELATIONS_VENDOR` for help with PR and external communication.
-* Contact `INSURANCE_VENDOR` for help with cyber insurance.
+* Contact {{INCIDENT_RESPONSE_VENDOR}} to help in assessing risk, incident management, incident response, and post-incident support.
+* Contact {{PUBLIC_RELATIONS_VENDOR}} for help with PR and external communication.
+* Contact {{INSURANCE_VENDOR}} for help with cyber insurance.
 
 ### Share Intelligence
 * Share IOCs with [Infragard](https://www.infragard.org/) if applicable.
-* Share IOCs with your servicing [ISAC](https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center) through `ISAC_CONTACT`, if applicable.
+* Share IOCs with your servicing [ISAC](https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center) through {{ISAC_CONTACT}}, if applicable.
 

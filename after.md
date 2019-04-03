@@ -1,11 +1,11 @@
 ---
-title: 'Incident Response After Action Plan for `COMPANY_NAME`'
-author: 'Author: `AUTHOR_NAME`, `AUTHOR_EMAIL`'
-date: 'Revision `REVISION_NUMBER`, Released `RELEASE_DATE`'
+title: 'Incident Response After Action Plan for `{{COMPANY_NAME}}`'
+author: 'Author: `{{AUTHOR_NAME}}`, `{{AUTHOR_EMAIL}}`'
+date: 'Revision `{{REVISION_NUMBER}}`, Released `{{RELEASE_DATE}}`'
 abstract: |
   This incident response after-action plan is based on the concise, directive, specific, flexible, and free plan available on Counteractive Security's [Github](https://github.com/counteractive/incident-response-plan-template) and discussed at [www.counteractive.net](https://www.counteractive.net/posts/an-ir-plan-you-will-use/)
 
-  It was last reviewed on `REVIEW_DATE`, and was last tested on `TEST_DATE`.
+  It was last reviewed on `{{REVIEW_DATE}}`, and was last tested on `{{TEST_DATE}}`.
 geometry: margin=1.5in
 ---
 

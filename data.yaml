@@ -1,0 +1,127 @@
+---
+# The name of your organization
+COMPANY_NAME: 'Acme, Inc.'
+
+# Name and email of plan author
+AUTHOR_NAME: 'Chris'
+
+# Email of plan author
+AUTHOR_EMAIL: 'contact@counteractive.net'
+
+# Document control metadata
+REVISION_NUMBER: 1
+
+# Document control metadata
+RELEASE_DATE: '3 Apr 2019'
+
+# Date someone last reviewed the plan
+REVIEW_DATE: '1 Feb 2018'
+
+# Date someone last tested the plan
+TEST_DATE: null
+
+# URL or reference to IR chat program
+RESPONSE_CHAT: 'chat.acme.tld/codename'
+
+# Phone number for response teleconference
+RESPONSE_PHONE: '555-HACK'
+
+# URL for response video teleconference (VTC)
+RESPONSE_VTC: 'webex.acme.tld/codename'
+
+# Description/URL for alternate email
+ALTERNATE_EMAIL: 'O365 at ir.acme.tld/othermail'
+
+# Domain name for your organization
+ORGANIZATION_DOMAIN: 'acme.tld'
+
+# Number or URL to page Commander(s)
+INCIDENT_COMMANDER_PAGER_NUMBER: '555-PAGE'
+
+# Number or URL to page Commander(s)
+INCIDENT_COMMANDER_PAGER_URL: 'ir.acme.tld/ic-page'
+
+# URL/path to Commander roster/list
+INCIDENT_COMMANDER_ROSTER: 'ir.acme.tld/ic-roster'
+
+# As above, for security team
+SECURITY_TEAM_ROSTER: 'ir.acme.tld/sec-roster'
+
+# As above, for SMEs
+TEAM_SME_ROSTER: 'ir.acme.tld/sme-roster'
+
+# As above, for executive team
+EXECTIVE_ROSTER: 'ir.acme.tld/exec-roster'
+
+# Time to wait for on-duty IC on call
+INCIDENT_COMMANDER_RESPONSE_SLA: '15 minutes'
+
+# Time between scheduled updates
+UPDATE_FREQUENCY: '4 hours'
+
+# URL/path to incident file
+INCIDENT_FILE_LOCATION: 'ir.acme.tld/files/codename'
+
+# URL/path to critical information list, data you want to protect
+CRITICAL_INFO_LIST_LOCATION: 'ir.acme.tld/cil'
+
+# URL/path to critical asset list, systems you want to protect
+CRITICAL_ASSET_LIST_LOCATION: 'ir.acme.tld/cal'
+
+# URL/path to asset management DB
+ASSET_MGMT_DB_LOCATION: 'ir.acme.tld/assets'
+
+# URL/path to network map
+NETWORK_MAP_LOCATION:  'ir.acme.tld/netmap'
+
+# URL to SIEM
+SIEM_CONSOLE_LOCATION: 'siem.acme.tld'
+
+# URL to log aggregator
+LOG_AGGREGATOR_CONSOLE: 'elk.acme.tld'
+
+# Name/URL of live response tool
+LIVE_RESPONSE_TOOL: '[ir-rescue](https://github.com/diogo-fernan/ir-rescue)'
+
+# Name/URL of memory collection tool
+MEMORY_COLLECTION_TOOL: '[rekall](http://www.rekall-forensic.com/)'
+
+# Name/URL of disk imaging tool
+DISK_IMAGE_TOOL: '[ftk imager](http://www.forensicswiki.org/wiki/FTK_Imager)'
+
+# URL/path to IR report template
+INCIDENT_REPORT_TEMPLATE: 'ir.acme.tld/report/template'
+
+# URL/path to report recipient list
+INCIDENT_REPORT_RECIPIENTS: 'ir.acme.tld/report/recipients'
+
+# Compliance team name
+COMPLIANCE_TEAM:  'the legal team, legal@acme.tld'
+
+# Communications team name
+COMMUNICATIONS_TEAM: 'the marketing team, marketing@acme.tld'
+
+# Executive team name
+EXECUTIVE_TEAM: 'the front office, bosses@acme.tld'
+
+# Legal team name
+LEGAL_TEAM: 'the legal team, legal@acme.tld'
+
+# Local law enforcement contact info
+LOCAL_LE_CONTACT: 'police@local.gov.tld'
+
+# FBI contact info
+FBI_CONTACT: '1-800-CALL-FBI (225-5324), https://www.fbi.gov/contact-us'
+
+# Vendor for IR and infosec support   |
+INCIDENT_RESPONSE_VENDOR: '[Counteractive Security](https://www.counteractive.net)'
+
+# Vendor for PR support
+PUBLIC_RELATIONS_VENDOR: 'pr.firm.tld'
+
+# (Cyber) insurance provider
+INSURANCE_VENDOR: 'cyber.insurance.tld'
+
+# Industry ISAC contact info
+ISAC_CONTACT: 'https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center'
+---
