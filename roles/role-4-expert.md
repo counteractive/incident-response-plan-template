@@ -35,6 +35,7 @@ If you are on-call for any team, you may be paged for an incident and will be ex
 1. Do not blame.  This incident response process is completely blameless: blaming is counter productive and distracts from the problem at hand.  After-action review will identify places we can all improve.
 
 #### Wartime vs. Peacetime
+
 On incident response calls ("wartime"), a different organizational structure overrides normal operations ("peacetime"):
 
 * The Incident Commander is in charge. No matter their rank during peacetime, they are now the highest ranked individual on the call, higher than the CEO.

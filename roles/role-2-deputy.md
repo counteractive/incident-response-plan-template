@@ -11,8 +11,8 @@ A Deputy Incident Commander (Deputy) is a direct support role for the Incident C
 1. Manage the incident call, and be prepared to remove people from the call if instructed by the Incident Commander.
 1. Monitor the status of the incident, and notify the IC if/when the incident escalates in severity level.
 1. Monitor timers:
-  * track how long the incident has been running
-  * notify the IC every X minutes so they can take actions (_e.g._, "IC, be advised the incident is now at the 10 minute mark.")
+    * track how long the incident has been running
+    * notify the IC every X minutes so they can take actions (_e.g._, "IC, be advised the incident is now at the 10 minute mark.")
 1. Monitor task deadlines (e.g., "IC, be advised the timer for [TEAM]'s investigation is up.")
 
 ### Training

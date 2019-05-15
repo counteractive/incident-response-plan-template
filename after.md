@@ -1,4 +1,5 @@
 # Conduct an After Action Review (AAR)
+
 1. Schedule an After Action Review (AAR) meeting within {{AAR_SLA}} and invite the attendees listed at {{AAR_ATTENDEES}}.  Always include the following:
     * The incident commander.
     * Service owners involved in the incident.
@@ -6,7 +7,9 @@
 1. Designate an AAR owner who will investigate the incident in advance of the meeting to prepare, looking into the incident process itself including reviewing notes and reports.
 
 ## Conduct the AAR Meeting
+
 Document answers to the following key questions:
+
 1. **What happened?** Create a timeline, supported with data or other artifacts. **Avoid blame. Find facts.**
 1. **What was supposed to happen?**
     * Detail deviations from process, procedure, or best practice, including SME assessments.
@@ -18,11 +21,13 @@ Document answers to the following key questions:
     * Continue: what should we keep doing?
 
 ## Communicate AAR Status and Results
+
 The AAR owner, in coordination with the Internal Liaison, will  communicate the status of the AAR (see below)
 
 <div class="reference">
 
 ### Status Descriptions
+
 | Status | Description |
 |-|-|
 | **Draft** | AAR investigation is still ongoing |

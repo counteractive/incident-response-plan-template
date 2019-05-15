@@ -41,6 +41,7 @@ Resolve the incident as quickly and as safely as possible using the incident res
     * Work with Team Leads/Managers on scheduling preventive actions.
 
 The Incident Commander uses some additional call procedures and lingo:
+
 * Always announce when you join the call if you are the on-call IC.
 * **Do not** let discussions get out of hand. Keep conversations short.
 * Note objections from others, but your call is final.
@@ -60,6 +61,7 @@ The Incident Commander uses some additional call procedures and lingo:
 * _OPTIONAL:_ Refer to [Incident Responders as Facilitators (and Therapists)](#FIX) and the [PagerDuty Incident Commander training](https://response.pagerduty.com/training/incident_commander/) for more ideas and discussion.
 
 #### Prerequisites
+
 There is no seniority or business-unit prerequisites to become an Incident Commander, it is a role open to anyone with the training and ability.  Before you can be an Incident Commander, it is expected that you meet the following criteria:
 
 * Excellent verbal and written **communication skills**.
@@ -72,5 +74,6 @@ There is no seniority or business-unit prerequisites to become an Incident Comma
 Deep technical knowledge is not required!  Incident Commanders do not require deep technical knowledge of our systems. Your job as Incident Commander is to coordinate the response, not make technical changes. Don’t think you can’t be an Incident Commander just because you’re not in the engineering department.
 
 #### Graduation
+
 Upon completion of training, add yourself to the Incident Commander roster.
 
