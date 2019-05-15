@@ -64,14 +64,18 @@ pandoc --toc --toc-depth=3 --standalone --metadata-file=./meta.yaml
 Or do it all in one shot with a little bash fifo magic:
 
 ```bash
-    mustache info.yaml \
-    <(cat during.md \
-    ./playbooks/index.md ./playbooks/playbook-*.md \
-    ./roles/index.md ./roles/role-*.md \
-    after.md about.md) \
-    | pandoc --toc --toc-depth=3 --standalone \
-    --metadata-file=<(mustache info.yaml pandoc.yaml)
+mustache info.yaml \
+  <(cat during.md \
+  ./playbooks/index.md ./playbooks/playbook-*.md \
+  ./roles/index.md ./roles/role-*.md \
+  after.md about.md) \
+| pandoc --toc --toc-depth=3 --standalone \
+  --metadata-file=<(mustache info.yaml pandoc.yaml)
 ```
+
+## Example
+
+An example is available in [the examples directory](./examples/example.md), where we leave the html rendering from markdown to github.
 
 ## Contact Us
 
