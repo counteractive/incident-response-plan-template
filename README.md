@@ -5,14 +5,15 @@ This template was developed by the team at [Counteractive Security](https://www.
 # Instructions
 
 ## Download or fork this template
+
 The layout is as follows:
 
-  * `during.md`: the core of the plan, actions taken during an incident response.
-  * `playbooks/`: a folder containing playbooks with investigation, remediation, and communication suggestions for specific incidents.  Create playbooks for any incidents that are highly likely or highly damaging for your organization.  `playbooks/index.md` contains the playbook section header content, and each playbook should follow the convention `playbooks/playbook-[THREAT].md`.
-  * `roles/`: a folder containing descriptions of each role in the plan, along with duties and training notes.  `index.md` contains the roles section header content, and each role should follow the convention `playbooks/role-[ORDER]-[NAME].md`.
-  * `after.md`: the guide to after-action review (_a.k.a._, hotwash, debrief, or post-mortem)---actions taken after an incident response.
-  * `about.md`: a footer containing information about the plan/template as a whole.
-  * `info.yaml`: a file containing values for the template strings throughout the plan (see below)
+* `during.md`: the core of the plan, actions taken during an incident response.
+* `playbooks/`: a folder containing playbooks with investigation, remediation, and communication suggestions for specific incidents.  Create playbooks for any incidents that are highly likely or highly damaging for your organization.  `playbooks/index.md` contains the playbook section header content, and each playbook should follow the convention `playbooks/playbook-[THREAT].md`.
+* `roles/`: a folder containing descriptions of each role in the plan, along with duties and training notes.  `index.md` contains the roles section header content, and each role should follow the convention `playbooks/role-[ORDER]-[NAME].md`.
+* `after.md`: the guide to after-action review (_a.k.a._, hotwash, debrief, or post-mortem)---actions taken after an incident response.
+* `about.md`: a footer containing information about the plan/template as a whole.
+* `info.yaml`: a file containing values for the template strings throughout the plan (see below)
 
 ## Find and replace template strings that `{{LOOK_LIKE_THIS}}`
 
@@ -27,15 +28,19 @@ These should be discernable from context, but the [default `info.yaml` file](./i
 If you don't have the things referenced in the variables, consider fixing that.  **Especially** the critical information list (data you want to protect) and critical asset list (systems you want to protect).
 
 ## Customize
+
 1. Review all the `TODO` prompts for likely areas to customize, if desired.  Delete them if no changes are required.
 1. Add any roles or playbooks relevant to your organization. These can also be added over time.
 1. Customize anything else!  Whatever you feel is most effective for your organization.
 
 ## Build
+
 Run whichever portions you like through [pandoc](https://pandoc.org/installing.html) to create your format of choice, or use the markdown files with [mkdocs](http://www.mkdocs.org/), [hugo](https://gohugo.io/), or countless other platforms.
 
 ### Response Plan Creation Example
+
 Combine the template components:
+
 ```bash
 cat during.md \
     ./playbooks/index.md ./playbooks/playbook-*.md \
@@ -44,17 +49,20 @@ cat during.md \
 ```
 
 Fill the template (and optionally, the pandoc metadata template):
+
 ```bash
 mustache info.yaml plan-template.md > plan.md
 mustache info.yaml pandoc.yaml > meta.yaml
 ```
 
 Use pandoc to create the format of your choice (to `stdout` here, otherwise use `-o`):
+
 ```bash
 pandoc --toc --toc-depth=3 --standalone --metadata-file=./meta.yaml
 ```
 
 Or do it all in one shot with a little bash fifo magic:
+
 ```bash
     mustache info.yaml \
     <(cat during.md \
@@ -66,12 +74,15 @@ Or do it all in one shot with a little bash fifo magic:
 ```
 
 ## Contact Us
+
 For professional assistance with incident response, or with customizing, implementing, or testing your plan, please contact us at contact@counteractive.net or [(888) 925-5765](tel:+18889255765).
 
 # License
+
 This template is provided under the Apache License, version 2.0.  See the [LICENSE](./LICENSE) and [NOTICE](./NOTICE) files for additional information.
 
 # References and Additional Reading
+
 * [Awesome Incident Response](https://github.com/meirwah/awesome-incident-response)
 * [NIST Computer Security Incident Handling Guide](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) (NIST)
 * [CERT Societe Generale Incident Response Methodologies](https://github.com/certsocietegenerale/IRM/tree/master/EN)
@@ -101,11 +112,12 @@ This template is provided under the Apache License, version 2.0.  See the [LICEN
 * [incidentresponse.com playbooks](https://www.incidentresponse.com/playbooks/)
 
 # In Progress
-- [ ] After Action, lessons learned, process improvement
-- [ ] Recovery
-- [ ] Measures and Metrics
-- [ ] Business priorities
-- [ ] Testing procedure
-- [ ] Communication and escalation tree, including executives
-- [ ] Finance and budget
-- [ ] Continuing to enhance modularity ("puzzle-piece" approach)
+
+* [x] After Action, lessons learned, process improvement
+* [ ] Recovery
+* [ ] Measures and Metrics
+* [ ] Business priorities
+* [ ] Testing procedure
+* [ ] Communication and escalation tree, including executives
+* [ ] Finance and budget
+* [ ] Continuing to enhance modularity ("puzzle-piece" approach)
