@@ -51,7 +51,7 @@ SECURITY_TEAM_ROSTER: 'ir.acme.tld/sec-roster'
 TEAM_SME_ROSTER: 'ir.acme.tld/sme-roster'
 
 # As above, for executive team
-EXECTIVE_ROSTER: 'ir.acme.tld/exec-roster'
+EXECUTIVE_ROSTER: 'ir.acme.tld/exec-roster'
 
 # Time to wait for on-duty IC on call
 INCIDENT_COMMANDER_RESPONSE_SLA: '15 minutes'
