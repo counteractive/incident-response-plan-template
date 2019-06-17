@@ -24,16 +24,13 @@ Document answers to the following key questions:
 
 The AAR owner, in coordination with the Internal Liaison, will  communicate the status of the AAR (see below)
 
-<div class="reference">
-
 ### Status Descriptions
 
 | Status | Description |
 |-|-|
 | **Draft** | AAR investigation is still ongoing |
 | **In Review** | AAR investigation has been completed, and is ready to be reviewed during the AAR meeting. |
-| **Reviewed** | AAR meeting is over and the content has been reviewed and agreed upon.<br/>If there are additional "External Messages", the communications team will take action to prepare. |
-| **Closed** | No further actions are needed on the AAR (outstanding issues are tracked in tickets).<br/>If no "External Messages", skip straight to this once the meeting is over.<br/>If there are additional "External Messages", communications team will update AAR Closed once sent. |
+| **Reviewed** | AAR meeting is over and the content has been reviewed and agreed upon.<br>If there are additional "External Messages", the communications team will take action to prepare. |
+| **Closed** | No further actions are needed on the AAR (outstanding issues are tracked in tickets).<br>If no "External Messages", skip straight to this once the meeting is over.<br>If there are additional "External Messages", communications team will update AAR Closed once sent. |
 
 Communicate the results of the AAR internally and finalize the AAR documentation.
-

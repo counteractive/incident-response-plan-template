@@ -1,3 +1,13 @@
+# Incident Response Plan for {{COMPANY_NAME}}
+
+Author: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}
+
+Revision {{REVISION_NUMBER}}, Released {{RELEASE_DATE}}
+
+This incident response plan is based on the concise, directive, specific, flexible, and free plan available on Counteractive Security's [Github](https://github.com/counteractive/incident-response-plan-template) and discussed at [www.counteractive.net](https://www.counteractive.net/posts/an-ir-plan-you-will-use/)
+
+It was last reviewed on {{REVIEW_DATE}}. It was last tested on {{TEST_DATE}}.
+
 `TODO: Customize this plan template for your organization using instructions at https://github.com/counteractive/incident-response-plan-template.  For incident response services, or help customizing, implementing, or testing your plan, contact us at contact@counteractive.net or at (888) 925-5765.`
 
 # Assess
@@ -41,14 +51,10 @@ Create an [simple two-word phrase](http://creativityforyou.com/combomaker.html) 
 1. **Do not** use primary email if possible.  If email is necessary, use sparingly or use {{ALTERNATE_EMAIL}}.  Encrypt emails when any participant is outside the {{ORGANIZATION_DOMAIN}} domain.  `TODO: Add alternative email details and procedure, e.g., on-demand Office 365 or GSuite`
 1. **Do not** use SMS/text to communicate about the incident, unless to tell someone to move to a more secure channel.
 1. Invite on-duty/on-call responders to the response call and response chat.
-
-  * Invite the security team.  `TODO: Add security team contact list or procedure.`
-  * Invite a SME for affected teams and systems.  `TODO: Add team SME contact list or procedure.`
-  * Invite executive stakeholders and legal counsel at earliest opportunity, but prioritize operational responders.  `TODO: Add executive stakeholder contact list or procedure.`
-
+    * Invite the security team.  `TODO: Add security team contact list or procedure.`
+    * Invite a SME for affected teams and systems.  `TODO: Add team SME contact list or procedure.`
+    * Invite executive stakeholders and legal counsel at earliest opportunity, but prioritize operational responders.  `TODO: Add executive stakeholder contact list or procedure.`
 1. _OPTIONAL:_ Establish an in-person collaboration room ("war room") for complex or severe incidents. `TODO: Add collaboration room procedure.`
-
-<div class="reference">
 
 ### Reference: Response Team Structure
 
@@ -66,9 +72,6 @@ Create an [simple two-word phrase](http://creativityforyou.com/combomaker.html) 
 
 `TODO: Modify role structure as necessary.`
 
-</div>
-<div class="reference">
-
 ### Reference: Response Team Contact Information
 
 Response Team Role           | Contact Information
@@ -78,11 +81,9 @@ Incident Commander pager url | {{INCIDENT_COMMANDER_PAGER_URL}}
 Incident Commander roster    | {{INCIDENT_COMMANDER_ROSTER}}
 Security team roster         | {{SECURITY_TEAM_ROSTER}}
 Team SME roster              | {{TEAM_SME_ROSTER}}
-Executive roster             | {{EXECTIVE_ROSTER}}
+Executive roster             | {{EXECUTIVE_ROSTER}}
 
 `TODO: Customize response team contact information.  Include contact procedures in rosters, which can be static or dynamic.`
-
-</div>
 
 ## Establish Battle Rhythm
 
@@ -95,14 +96,12 @@ Executive roster             | {{EXECTIVE_ROSTER}}
 1. **Keep the call and chat active throughout the incident for event-driven communication.**
 1. Schedule updates **every {{UPDATE_FREQUENCY}}** on the active bridge.
 
-<div class="reference">
-
 #### Reference: Initial Response Call Structure
 
 * INCIDENT COMMANDER (IC): My name is [NAME], I am the Incident Commander.  I have designated [NAME] as Deputy, and [NAME] as Scribe. Who is on the call?
 * SCRIBE: [Takes attendance]
 * IC: [If missing key personnel] Deputy, please page [MISSING PERSONNEL].
-* IC: [Asks questions to understand situation, symptoms, scope, vector, impact, and timeline from the incident reporter, applicable SMEs for sytems and business units]
+* IC: [Asks questions to understand situation, symptoms, scope, vector, impact, and timeline from the incident reporter, applicable SMEs for systems and business units]
 * SMEs: [Brief answers to IC's questions]
 * IC:[If this is an incident]:
   * At this time, the incident summary is as follows: [reiterates summary].  The Investigation team will be led by [NAME], the Remediation team will be led by [NAME], and the Communication team will be led by [NAME].  They will coordinate team membership and report to me.  SMEs, please report to your appropriate team leader.
@@ -110,9 +109,6 @@ Executive roster             | {{EXECTIVE_ROSTER}}
   * This call and chat will remain up and available until incident closure, please use it for all incident related communications.  Provide real-time status updates in the chat, if possible.  Are there any questions or remaining inputs? [answers questions]
   * Team leaders, please proceed with your planned actions.  We will reconvene at [UPDATE_TIME] to discuss the status.  Thank you.
 * IC: [If this is not an incident]: At this time, these facts do not rise to the level of an incident.  I will coordinate directly with the incident reporter for follow-on actions.  Thank you for your time.
-
-</div>
-<div class="reference">
 
 #### Reference: Call Etiquette
 
@@ -127,15 +123,11 @@ Executive roster             | {{EXECTIVE_ROSTER}}
 * Respect time constraints given by the Incident Commander.
 * **Use clear terminology, and avoid acronyms or abbreviations. Clarity and accuracy is more important than brevity.**
 
-</div>
-
 ### Conduct Response Update
 
 * Conduct scheduled updates using the [update call structure](#reference-response-update-call-structure) every {{UPDATE_FREQUENCY}} on the active bridge. `TODO: Customize update frequency and scripts; recommend no more than twice daily.`
 * Adjust frequency as necessary.
 * Coordinate independent updates (_e.g._, executive, legal) as required, but as infrequently as practicable.
-
-<div class="reference">
 
 #### Reference: Response Update Call Structure
 
@@ -157,9 +149,7 @@ Executive roster             | {{EXECTIVE_ROSTER}}
   * What is your recommended communication strategy?  Strong objections? [listen, gain consensus, task/approve]
   * What communication actions need tasking or approval?
 * IC: This call and chat will remain up and available until incident closure, please use it for all incident related communications.  Provide real-time status updates in the chat, if possible.  Are there any questions or remaining inputs? [answers questions]
-* IC: Team leaders, please proceed.  We will reconvene at [{{UPDATE_TIME}}] to discuss the status.  Thank you.
-
-</div>
+* IC: Team leaders, please proceed.  We will reconvene in [{{UPDATE_TIME}}] to discuss the status.  Thank you.
 
 ## Monitor Scope
 
@@ -220,13 +210,11 @@ If an incident turns out to be two or more distinct incidents:
 1. Interview SME(s) in affected business unit, to understand mission/business impact, context, and risk.
 1. Ensure leads are relevant, detailed, and actionable.
 
-<div class="reference">
-
 ### Reference: Response Resource List
 
 Resource                  | Location
 ------------------------- | ------------------------------------
-Critical infomation list  | {{CRITICAL_INFO_LIST_LOCATION}}
+Critical information list  | {{CRITICAL_INFO_LIST_LOCATION}}
 Critical asset list       | {{CRITICAL_ASSET_LIST_LOCATION}}
 Asset management database | {{ASSET_MGMT_DB_LOCATION}}
 Network map               | {{NETWORK_MAP_LOCATION}}
@@ -236,8 +224,6 @@ Log aggregator            | {{LOG_AGGREGATOR_CONSOLE}}
 `TODO: Complete critical information and asset lists ("crown jewels"). This is incredibly important to effective response.`
 
 `TODO: Customize response resource list`
-
-</div>
 
 ## Update Investigative Plan and Incident File
 
@@ -265,8 +251,6 @@ Log aggregator            | {{LOG_AGGREGATOR_CONSOLE}}
 
 **The investigative plan is critical to an effective response; it drives all investigative actions.  Use critical thinking, creativity, and sound judgment.**
 
-<div class="reference">
-
 ### Reference: Attacker Tactics to Key Questions Matrix
 
 Attacker Tactic      | The way attackers ...         | Possible Key Questions
@@ -282,8 +266,6 @@ Collection           | ... find and gather data      | What data? Why? When? Whe
 Exfiltration         | ... take data                 | What data? How? When? Where?
 Command and Control  | ... control tools and systems | How? Where? Who? Why?
 
-</div>
-
 ## Create and Deploy Indicators of Compromise (IOCs)
 
 * Create IOCs based on [initial leads](#collect-initial-leads) and [analysis](#analyzeiterate).
@@ -291,10 +273,10 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 * Use automation, if possible. `TODO: Add IOC deployment/revocation procedure.`
 * **Do not** deploy unrelated, un-curated "feeds" of IOCs; these can cause confusion and fatigue.
 * Consider all IOC types:
-    * Network-based IOCs such as IP or MAC addresses, ports, email addresses, email content or metadata, URLs, domains, or PCAP patterns.
-    * Host-based IOCs such as paths, file hashes, file content or metadata, registry keys, MUTEXes, autoruns, or user artifacts and permissions.
-    * Cloud-based IOCs such as log patterns for [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) or [IaaS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service) deployments
-    * Behavioral IOCs (a.k.a., patterns, TTPs) such as process tree patterns, heuristics, deviation from baseline, and login patterns.
+  * Network-based IOCs such as IP or MAC addresses, ports, email addresses, email content or metadata, URLs, domains, or PCAP patterns.
+  * Host-based IOCs such as paths, file hashes, file content or metadata, registry keys, MUTEXes, autoruns, or user artifacts and permissions.
+  * Cloud-based IOCs such as log patterns for [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) or [IaaS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service) deployments
+  * Behavioral IOCs (a.k.a., patterns, TTPs) such as process tree patterns, heuristics, deviation from baseline, and login patterns.
 * Correlate various IOC types, such as network and host-based indicators on the same systems(s).
 
 ## Identify Systems of Interest
@@ -309,7 +291,7 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 * Collect live response data using {{LIVE_RESPONSE_TOOL}}.  `TODO: Customize live response tools and procedure.`
 * Collect relevant logs from system(s) (if not part of live response), aggregator(s), SIEM(s), or device console(s).  `TODO: Customize log collection tools and procedure.`
 * Collect memory image, if necessary and if not part of live response, using {{MEMORY_COLLECTION_TOOL}}.  `TODO: Customize memory collection tools and procedure.`
-* Collect disk image, if necessary, using {{DISK_IMAGE_TOOL}}.`  `TODO: Customize disk image collection tool and procedure.`
+* Collect disk image, if necessary, using {{DISK_IMAGE_TOOL}}.  `TODO: Customize disk image collection tool and procedure.`
 * Collect and store evidence in accordance with policy, and with proper chain of custody. `TODO: Customize evidence collection and chain of custody policy.`
 
 ## Analyze Evidence
@@ -334,7 +316,7 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 1. Review the incident file at {{INCIDENT_FILE_LOCATION}} using the [incident name](#name-the-incident)
 1. Review applicable [playbooks](#playbooks).
 1. Review the [Response Resource List](#reference-response-resource-list)).
-1. Consider which attacker tactics are in play in this incident.  Use MITRE's [ATT&CK](https://attack.mitre.org/wiki/Main_Page) list (_i.e._, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Lateral Movement, Execution, Collection, Exfiltration, and Command and Control), or similar framework.
+1. Consider which attacker tactics are in play in this incident.  Use the MITRE [ATT&CK](https://attack.mitre.org/wiki/Main_Page) list (_i.e._, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Lateral Movement, Execution, Collection, Exfiltration, and Command and Control), or similar framework.
 1. Develop remediations for each tactic in play, as feasible given existing tools and resources.  Consider remediations to [Protect](#protect), [Detect](#detect), [Contain](#contain), and [Eradicate](#eradicate) each attacker behavior.
 1. Prioritize based on [timing strategy](#choose-remediation-timing), impact, and urgency.
 1. Document in incident file.
@@ -379,7 +361,7 @@ Use the following as a starting point for containment remediation:
 * Implement blocks at the enterprise boundary, at multiple layers of the [OSI model](https://en.wikipedia.org/wiki/OSI_model).
 * Disable or remove compromised account access.
 * Block malicious IP addresses or networks.
-* Blackhole or sinkhole malicious domains.
+* Black hole or sinkhole malicious domains.
 * Update network and host IPS and anti-malware signatures using IOCs.
 * Remove critical or compromised systems from the network.
 * Contact providers for assistance (_e.g._, internet service providers, SaaS vendors)
@@ -402,7 +384,7 @@ Use the following as a starting point for eradication remediation:
 
 ## Choose Remediation Timing
 
-Determine the timing strategy---when remediation actions will be taken---by engaging the Incident Commander, the system SMEs and owners, business unit SMEs and owners, and the executive team.  Each strategy is appopriate under different circumstances:
+Determine the timing strategy---when remediation actions will be taken---by engaging the Incident Commander, the system SMEs and owners, business unit SMEs and owners, and the executive team.  Each strategy is appropriate under different circumstances:
 
 * Choose **immediate** remediation when it is more important to immediately stop attacker activities than to continue investigating.  For example, ongoing financial loss, or ongoing mission failure, active data loss, or prevention of an imminent significant threat.
 * Choose **delayed** remediation when it is important to complete the investigation, or important not to alert the attacker.  For example, long-term compromise by an advanced attacker, corporate espionage, or large-scale compromise of an an unknown number of systems.
@@ -492,4 +474,3 @@ All communication must include the most accurate information available.  Display
 
 * Share IOCs with [Infragard](https://www.infragard.org/) if applicable.
 * Share IOCs with your servicing [ISAC](https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center) through {{ISAC_CONTACT}}, if applicable.
-

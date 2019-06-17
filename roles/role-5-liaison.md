@@ -17,7 +17,7 @@ Liaisons interact with other teams or stakeholders, outside the incident respons
 1. Contact or interact with external stakeholders such as vendors, partners, law enforcement, _etc._
 1. **Do not** feel responsible for creating every message: work with the Incident Commander and other stakeholders.
 1. As appropriate, keep customers informed during an incident.
-1. Act as a voice for our customers to the Incident Commander, as this is useful for IC decisionmaking.
+1. Act as a voice for our customers to the Incident Commander, as this is useful for IC decision making.
 1. Gaining message approval after you have crafted the public message: copy the message into chat and wait for verbal/written confirmation from the IC before proceeding.
 
 ##### Tips for Public Messages
@@ -52,4 +52,3 @@ Read and understand the incident response plan, including the roles and playbook
 * Excellent verbal and written **communication skills**.
 * _OPTIONAL:_ Customer support training.
 * _OPTIONAL:_ Corporate communication or marketing training.
-

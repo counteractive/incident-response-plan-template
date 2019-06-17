@@ -31,7 +31,7 @@ Resolve the incident as quickly and as safely as possible using the incident res
     * Get straight answers
     * Handle executive swoop such as
         * Overriding the Incident Commander
-        * Anti-motiviation
+        * Anti-motivation
         * Information requests
         * Questioning severity
     * Handle disruptive or belligerent responders
@@ -76,4 +76,3 @@ Deep technical knowledge is not required!  Incident Commanders do not require de
 #### Graduation
 
 Upon completion of training, add yourself to the Incident Commander roster.
-

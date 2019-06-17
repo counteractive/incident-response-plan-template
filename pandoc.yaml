@@ -5,6 +5,6 @@ date: 'Revision {{REVISION_NUMBER}}, Released {{RELEASE_DATE}}'
 abstract: |
   This incident response plan is based on the concise, directive, specific, flexible, and free plan available on Counteractive Security's [Github](https://github.com/counteractive/incident-response-plan-template) and discussed at [www.counteractive.net](https://www.counteractive.net/posts/an-ir-plan-you-will-use/)
 
-  It was last reviewed on {{REVIEW_DATE}}.{{#TEST_DATE}}  It was last tested on {{TEST_DATE}}.{{/TEST_DATE}}
+  It was last reviewed on {{REVIEW_DATE}}.  It was last tested on {{TEST_DATE}}.
 geometry: margin=1.5in
 ---

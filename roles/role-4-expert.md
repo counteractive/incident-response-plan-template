@@ -2,20 +2,20 @@
 
 ### Description
 
-A Subject Matter Expert (SME), sometimes called a "Resolver", is a domain expert or designated owner of a team, component, or service.  You are there to support the incident commander in identifying the cause of the incident, suggesting and evaluation investigation, remediation, and communication actions, and following through on them as tasked.
+A Subject Matter Expert (SME) is a domain expert or designated owner of a team, component, or service (an "area").  You are there to support the incident commander in identifying the cause of the incident, suggesting and evaluation investigation, remediation, and communication actions, and following through on them as tasked.
 
 ### Duties
 
-1. Diagnose common problems with the service.
+1. Diagnose common problems within your area of expertise.
 1. Rapidly fix issues found during an incident.
-1. Concise communication skills, specifically for CAN reports:
-    * Condition: What is the current state of the service? Is it healthy or not?
-    * Actions: What actions need to be taken if the service is not in a healthy state?
-    * Needs: What support does the resolver need to perform an action?
+1. Concise communication:
+    * Condition: What is the current state of your area? Is it healthy or not?
+    * Actions: What actions need to be taken if your area is not in a healthy state?
+    * Needs: What support do you need need to perform an action?
 1. Participate in the investigation, remediation, and/or communication phases of the response.
 1. Announce all suggestions to the incident commander, it is their decision on how to proceed, do not follow any actions unless told to do so.
 
-If you are on-call for any team, you may be paged for an incident and will be expected to respond as a subject matter expert (SME) for your team, component, or service.  Anyone who is considered a "domain expert" can act as a resolver for an incident. Typically the team's primary on-call will act as the SME for that team.
+If you are on-call for any team, you may be paged for an incident and will be expected to respond as a subject matter expert (SME) for your team, component, or service.  Anyone who is considered a "domain expert" can act as a SME for an incident. Typically the team's primary on-call will act as the SME for that team.
 
 #### Prepare for On-Call Period
 
@@ -34,19 +34,6 @@ If you are on-call for any team, you may be paged for an incident and will be ex
 1. If you're not sure about something, bring in other SMEs from your team that can help.  **Never hesitate to escalate**, if necessary.
 1. Do not blame.  This incident response process is completely blameless: blaming is counter productive and distracts from the problem at hand.  After-action review will identify places we can all improve.
 
-#### Wartime vs. Peacetime
-
-On incident response calls ("wartime"), a different organizational structure overrides normal operations ("peacetime"):
-
-* The Incident Commander is in charge. No matter their rank during peacetime, they are now the highest ranked individual on the call, higher than the CEO.
-* Primary responders (folks acting as primary on-call for a team/service) are the highest ranked individuals for that service.
-* Decisions will be made by the IC after consideration of the information presented. Once that decision is made, it is final.
-* Riskier decisions can be made by the IC than would normally be considered during peacetime.
-* The IC may go against a consensus decision. If a poll is done, and 9/10 people agree but 1 disagrees. The IC may choose the disagreement option despite a majority vote.  Even if you disagree, the IC's decision is final. During the call is not the time to argue with them.
-* The IC may use language or behave in a way you find rude. This is wartime, and they need to do whatever it takes to resolve the situation, so sometimes rudeness occurs. This is not personal, and something you should be prepared to experience if you've never been in a wartime situation before.
-* You may be asked to leave the call by the IC, or you may even be forceable kicked off a call. It is at the IC's discretion to do this if they feel you are not providing useful input. Again, this is not personal and you should remember that wartime is different than peacetime.
-
 ### Training
 
 * Read and understand the incident response plan, including the roles and playbooks.
-

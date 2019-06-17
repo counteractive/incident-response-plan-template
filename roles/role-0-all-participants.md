@@ -2,7 +2,7 @@
 
 ### Description
 
-All partipants in an incident response have the responsibility to help resolve the incident according to the incident response plan, under the authority of the Incident Commander.
+All participants in an incident response have the responsibility to help resolve the incident according to the incident response plan, under the authority of the Incident Commander.
 
 ### Duties
 
@@ -20,8 +20,6 @@ All partipants in an incident response have the responsibility to help resolve t
 * If you join only one channel (call or chat), do not actively participate, as it causes disjoined communication.
 * **Use clear terminology, and avoid acronyms or abbreviations. Clarity and accuracy is more important than brevity.**
 
-<div class="reference">
-
 ##### Reference: Common Voice Procedure
 
 Standard radio [voice procedure](https://en.wikipedia.org/wiki/Voice_procedure#Words_in_voice_procedure) **is not required**, however you may hear certain terms (or need to use them yourself). Common phrases include:
@@ -32,8 +30,6 @@ Standard radio [voice procedure](https://en.wikipedia.org/wiki/Voice_procedure#W
 * **Wilco:** "Will comply"
 
 **Do not** invent new abbreviations; favor being explicit over implicit.
-
-</div>
 
 #### Follow the Incident Commander
 
@@ -49,4 +45,3 @@ The Incident Commander (IC) is the leader of the incident response process.
 ### Training
 
 Read and understand the incident response plan, including the roles and playbooks.
-
