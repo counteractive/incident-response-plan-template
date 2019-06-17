@@ -1,6 +1,9 @@
 # Processed Output:
 public
 
+# Editor configuration
+.vscode/
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
