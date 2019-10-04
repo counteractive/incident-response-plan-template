@@ -1,4 +1,4 @@
-## Playbook: Phishing
+## Playbook: Ransomware
 
 **Investigate, remediate (contain, eradicate), and communicate in parallel! Containment is critical in ransomware incidents, prioritize accordingly.**
 
@@ -22,7 +22,7 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
         * language, structure, phrases, artwork
         * contact email
         * format of the user id
-        * ransom demand specifics *(_e.g._, digital currency, gift cards)
+        * ransom demand specifics (_e.g._, digital currency, gift cards)
         * payment address in case of digital currency
         * support chat or support page
 
@@ -121,23 +121,31 @@ Quarantines (logical, physical, or both) prevent spread _from_ infected systems 
 
 1. Document incident per procedure
 
+1. Communicate with internal and external legal counsel per procedure, including discussions of compliance, risk exposure, liability, law enforcement contact, _etc._
+
 1. Communicate with users (internal)
     1. Communicate incident response updates per procedure
     1. Communicate impact of incident **and** incident response actions (e.g., containment: "why is the file share down?"), which can be more intrusive/disruptive during ransomware incidents
     1. Communicate requirements: "what should users do and not do?"  See "Reference: User Actions for Suspected Ransomware," below
 
-1. Customers
-    1. Communicate with customers per procedure, particularly those whose data was affected
+1. Communicate with customers
+    1. Focus particularly on those whose data was affected
     1. Generate required notifications based on applicable regulations (particularly those that may consider ransomware a data breach or otherwise requires notifications (_e.g._, [HHS/HIPAA](https://www.hhs.gov/sites/default/files/RansomwareFactSheet.pdf))) `TODO: Expand notification requirements and procedures for applicable regulations`
 
-1. Insurance, including a discussion of what resources they can make available, what tools and vendors they support and will pay for, _etc._
+1. Contact insurance provider(s)
+    1. Discuss what resources they can make available, what tools and vendors they support and will pay for, _etc._
+    1. Comply with reporting and claims requirements to protect eligibility
 
-1. Regulators, including a discussion of what resources they can make available (not just boilerplate notification: many can actively assist)
+1. Communicate with regulators, including a discussion of what resources they can make available (not just boilerplate notification: many can actively assist)
 
-1. [Law Enforcement](https://www.nomoreransom.org/en/report-a-crime.html)
+1. Consider notifying and involving [law enforcement](https://www.nomoreransom.org/en/report-a-crime.html)
     1. [Local law enforcement](#TODO-link-to-actual-resource)
     1. [State or regional law enforcement](#TODO-link-to-actual-resource)
     1. [Federal or national law enforcement](#TODO-link-to-actual-resource)
+
+1. Communicate with security and IT vendors
+    1. Notify and collaborate with [managed providers](#TODO-link-to-actual-resource) per procedure
+    1. Notify and collaborate with [incident response consultants](#TODO-link-to-actual-resource) per procedure
 
 ### Recover
 
