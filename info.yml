@@ -130,5 +130,3 @@ AAR_SLA: '5 business days'
 
 # AAR attendees
 AAR_ATTENDEES: 'ir.acme.tld/aar/attendees'
-
----

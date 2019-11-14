@@ -98,6 +98,10 @@ Quarantines (logical, physical, or both) prevent spread _from_ infected systems 
 * Deploy custom signatures to endpoint protection and network security tools based on discovered IOCs
 * **Watch for re-infection:** consider increased priority for alarms/alerts related to this incident.
 
+#### Reference: Remediation Resources
+
+`TODO: Specify financial, personnel, and logistical resources to accomplish remediation.`
+
 ### Communicate
 
 `TODO: Customize communication steps for ransomware`

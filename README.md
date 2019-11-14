@@ -1,10 +1,14 @@
-# About
+# Incident Response Plan Template
+
+## About
 
 This template was developed by the team at [Counteractive Security](https://www.counteractive.net), to help all organizations get a good start on a concise, directive, specific, flexible, and free incident response plan.  Build a [plan you will actually use](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) to respond effectively, minimize cost and impact, and get back to business as soon as possible.
 
-# Instructions
+The latest release
 
-## Download or fork this template
+## Instructions
+
+### Download or fork this template
 
 The layout is as follows:
 
@@ -13,79 +17,47 @@ The layout is as follows:
 * `roles/`: a folder containing descriptions of each role in the plan, along with duties and training notes.  `index.md` contains the roles section header content, and each role should follow the convention `playbooks/role-[ORDER]-[NAME].md`.
 * `after.md`: the guide to after-action review (_a.k.a._, hotwash, debrief, or post-mortem)---actions taken after an incident response.
 * `about.md`: a footer containing information about the plan/template as a whole.
-* `info.yaml`: a file containing values for the template strings throughout the plan (see below)
+* `info.yml`: a file containing values for the template strings throughout the plan (see below)
 
-## Find and replace template strings that `{{LOOK_LIKE_THIS}}`
+### Customize `info.yml` with your organization's information
 
-This is the [mustache](https://mustache.github.io/) syntax, and has wide support in a variety of tools and languages.  The easiest way to replace these is to customize the `info.yaml` file with your organization's information and use a tool like the mustache cli to automatically find and replace all the relevant strings:
+The template files have a lot of placeholders that `{{LOOK_LIKE_THIS}}`.  The purpose of each placeholder should be discernable from context, and the [default `info.yml` file](./info.yml) is commented for additional clarity.
+
+This is the [mustache](https://mustache.github.io/) template syntax, and has wide support in a variety of tools and languages.  The easiest way to replace these is to customize the `info.yml` file with your organization's information and use the provided makefile (as of v1.0.0) to automatically find and replace all the relevant strings.  In your terminal of choice (use [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq) on Windows), type:
 
 ```bash
-mustache info.yaml template.md > plan.md
+make
 ```
 
-These should be discernable from context, but the [default `info.yaml` file](./info.yaml) is commented for additional clarity.
+If you don't have the information or tools referenced in the template variables, consider fixing that.  **Especially** the critical information list (data you want to protect) and critical asset list (systems you want to protect).
 
-If you don't have the things referenced in the variables, consider fixing that.  **Especially** the critical information list (data you want to protect) and critical asset list (systems you want to protect).
+This merges the template components, combines them with your custom data from `info.yml`, and outputs all supported formats in the `public/` directory.  That's it.
 
-## Customize
+*If you have a specific case and want more details, read on!*
+
+### Customize
 
 1. Review all the `TODO` prompts for likely areas to customize, if desired.  Delete them if no changes are required.
 1. Add any roles or playbooks relevant to your organization. These can also be added over time.
 1. Customize anything else!  Whatever you feel is most effective for your organization.
 
-## Build
+### Deploy
 
-Run whichever portions you like through [pandoc](https://pandoc.org/installing.html) to create your format of choice, or use the markdown files with [mkdocs](http://www.mkdocs.org/), [hugo](https://gohugo.io/), or countless other platforms.
+The makefile uses [pandoc](https://pandoc.org/installing.html) to create a variety of formats, or you can use the markdown files with [mkdocs](http://www.mkdocs.org/), [hugo](https://gohugo.io/), or countless other platforms.
 
-### Response Plan Creation Example
-
-Combine the template components:
-
-```bash
-cat during.md \
-    ./playbooks/index.md ./playbooks/playbook-*.md \
-    ./roles/index.md ./roles/role-*.md \
-    after.md about.md > plan-template.md
-```
-
-Fill the template (and optionally, the pandoc metadata template):
-
-```bash
-mustache info.yaml plan-template.md > plan.md
-mustache info.yaml pandoc.yaml > meta.yaml
-```
-
-Use pandoc to create the format of your choice (to `stdout` here, otherwise use `-o`):
-
-```bash
-pandoc --toc --toc-depth=3 --standalone --metadata-file=./meta.yaml
-```
-
-Or do it all in one shot with a little bash fifo magic:
-
-```bash
-mustache info.yaml \
-  <(cat during.md \
-  ./playbooks/index.md ./playbooks/playbook-*.md \
-  ./roles/index.md ./roles/role-*.md \
-  after.md about.md) \
-| pandoc --toc --toc-depth=3 --standalone \
-  --metadata-file=<(mustache info.yaml pandoc.yaml)
-```
-
-## Example
+### Example
 
 An example is available in [the examples directory](./examples/example.md), where we leave the html rendering from markdown to github.
 
-## Contact Us
+### Contact Us
 
 For professional assistance with incident response, or with customizing, implementing, or testing your plan, please contact us at contact@counteractive.net or [(888) 925-5765](tel:+18889255765).
 
-# License
+## License
 
 This template is provided under the Apache License, version 2.0.  See the [LICENSE](./LICENSE) and [NOTICE](./NOTICE) files for additional information.
 
-# References and Additional Reading
+## References and Additional Reading
 
 * [Awesome Incident Response](https://github.com/meirwah/awesome-incident-response)
 * [NIST Computer Security Incident Handling Guide](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) (NIST)
@@ -115,13 +87,28 @@ This template is provided under the Apache License, version 2.0.  See the [LICEN
 * [EPA IR Plan](https://www.epa.gov/sites/production/files/2016-01/documents/cio_2150-p-08.2.pdf)
 * [incidentresponse.com playbooks](https://www.incidentresponse.com/playbooks/)
 
-# In Progress
+## To do
 
 * [x] After Action, lessons learned, process improvement
-* [ ] Recovery
+* [x] Recovery
+* [x] Ransomware playbook
+* [x] Easier build process
 * [ ] Measures and Metrics
 * [ ] Business priorities
 * [ ] Testing procedure
 * [ ] Communication and escalation tree, including executives
 * [ ] Finance and budget
 * [ ] Continuing to enhance modularity ("puzzle-piece" approach)
+
+## Changelog
+
+### v1.0.0 - First versioned production release
+
+#### Added
+
+* Added makefile and temporary directories to ease the build process
+
+#### Changed
+
+* Renamed `.yaml` files to `.yml`
+* Updated README

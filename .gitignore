@@ -1,5 +1,6 @@
 # Processed Output:
-public
+build/
+public/
 
 # Editor configuration
 .vscode/

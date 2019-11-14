@@ -1,3 +1,13 @@
+# Incident Response Plan for Acme, Inc.
+
+Author: Chris, contact@counteractive.net
+
+Revision 1, Released 3 Apr 2019
+
+This incident response plan is based on the concise, directive, specific, flexible, and free plan available on Counteractive Security's [Github](https://github.com/counteractive/incident-response-plan-template) and discussed at [www.counteractive.net](https://www.counteractive.net/posts/an-ir-plan-you-will-use/)
+
+It was last reviewed on 3 Apr 2019. It was last tested on 3 Apr 2019.
+
 `TODO: Customize this plan template for your organization using instructions at https://github.com/counteractive/incident-response-plan-template.  For incident response services, or help customizing, implementing, or testing your plan, contact us at contact@counteractive.net or at (888) 925-5765.`
 
 # Assess
@@ -41,14 +51,10 @@ Create an [simple two-word phrase](http://creativityforyou.com/combomaker.html) 
 1. **Do not** use primary email if possible.  If email is necessary, use sparingly or use O365 at ir.acme.tld/othermail.  Encrypt emails when any participant is outside the acme.tld domain.  `TODO: Add alternative email details and procedure, e.g., on-demand Office 365 or GSuite`
 1. **Do not** use SMS/text to communicate about the incident, unless to tell someone to move to a more secure channel.
 1. Invite on-duty/on-call responders to the response call and response chat.
-
-  * Invite the security team.  `TODO: Add security team contact list or procedure.`
-  * Invite a SME for affected teams and systems.  `TODO: Add team SME contact list or procedure.`
-  * Invite executive stakeholders and legal counsel at earliest opportunity, but prioritize operational responders.  `TODO: Add executive stakeholder contact list or procedure.`
-
+    * Invite the security team.  `TODO: Add security team contact list or procedure.`
+    * Invite a SME for affected teams and systems.  `TODO: Add team SME contact list or procedure.`
+    * Invite executive stakeholders and legal counsel at earliest opportunity, but prioritize operational responders.  `TODO: Add executive stakeholder contact list or procedure.`
 1. _OPTIONAL:_ Establish an in-person collaboration room ("war room") for complex or severe incidents. `TODO: Add collaboration room procedure.`
-
-<div class="reference">
 
 ### Reference: Response Team Structure
 
@@ -66,9 +72,6 @@ Create an [simple two-word phrase](http://creativityforyou.com/combomaker.html) 
 
 `TODO: Modify role structure as necessary.`
 
-</div>
-<div class="reference">
-
 ### Reference: Response Team Contact Information
 
 Response Team Role           | Contact Information
@@ -82,8 +85,6 @@ Executive roster             | ir.acme.tld/exec-roster
 
 `TODO: Customize response team contact information.  Include contact procedures in rosters, which can be static or dynamic.`
 
-</div>
-
 ## Establish Battle Rhythm
 
 ### Conduct Initial Response Call
@@ -95,14 +96,12 @@ Executive roster             | ir.acme.tld/exec-roster
 1. **Keep the call and chat active throughout the incident for event-driven communication.**
 1. Schedule updates **every 4 hours** on the active bridge.
 
-<div class="reference">
-
 #### Reference: Initial Response Call Structure
 
 * INCIDENT COMMANDER (IC): My name is [NAME], I am the Incident Commander.  I have designated [NAME] as Deputy, and [NAME] as Scribe. Who is on the call?
 * SCRIBE: [Takes attendance]
 * IC: [If missing key personnel] Deputy, please page [MISSING PERSONNEL].
-* IC: [Asks questions to understand situation, symptoms, scope, vector, impact, and timeline from the incident reporter, applicable SMEs for sytems and business units]
+* IC: [Asks questions to understand situation, symptoms, scope, vector, impact, and timeline from the incident reporter, applicable SMEs for systems and business units]
 * SMEs: [Brief answers to IC's questions]
 * IC:[If this is an incident]:
   * At this time, the incident summary is as follows: [reiterates summary].  The Investigation team will be led by [NAME], the Remediation team will be led by [NAME], and the Communication team will be led by [NAME].  They will coordinate team membership and report to me.  SMEs, please report to your appropriate team leader.
@@ -110,9 +109,6 @@ Executive roster             | ir.acme.tld/exec-roster
   * This call and chat will remain up and available until incident closure, please use it for all incident related communications.  Provide real-time status updates in the chat, if possible.  Are there any questions or remaining inputs? [answers questions]
   * Team leaders, please proceed with your planned actions.  We will reconvene at [UPDATE_TIME] to discuss the status.  Thank you.
 * IC: [If this is not an incident]: At this time, these facts do not rise to the level of an incident.  I will coordinate directly with the incident reporter for follow-on actions.  Thank you for your time.
-
-</div>
-<div class="reference">
 
 #### Reference: Call Etiquette
 
@@ -127,15 +123,11 @@ Executive roster             | ir.acme.tld/exec-roster
 * Respect time constraints given by the Incident Commander.
 * **Use clear terminology, and avoid acronyms or abbreviations. Clarity and accuracy is more important than brevity.**
 
-</div>
-
 ### Conduct Response Update
 
 * Conduct scheduled updates using the [update call structure](#reference-response-update-call-structure) every 4 hours on the active bridge. `TODO: Customize update frequency and scripts; recommend no more than twice daily.`
 * Adjust frequency as necessary.
 * Coordinate independent updates (_e.g._, executive, legal) as required, but as infrequently as practicable.
-
-<div class="reference">
 
 #### Reference: Response Update Call Structure
 
@@ -157,9 +149,7 @@ Executive roster             | ir.acme.tld/exec-roster
   * What is your recommended communication strategy?  Strong objections? [listen, gain consensus, task/approve]
   * What communication actions need tasking or approval?
 * IC: This call and chat will remain up and available until incident closure, please use it for all incident related communications.  Provide real-time status updates in the chat, if possible.  Are there any questions or remaining inputs? [answers questions]
-* IC: Team leaders, please proceed.  We will reconvene at [] to discuss the status.  Thank you.
-
-</div>
+* IC: Team leaders, please proceed.  We will reconvene in [] to discuss the status.  Thank you.
 
 ## Monitor Scope
 
@@ -220,13 +210,11 @@ If an incident turns out to be two or more distinct incidents:
 1. Interview SME(s) in affected business unit, to understand mission/business impact, context, and risk.
 1. Ensure leads are relevant, detailed, and actionable.
 
-<div class="reference">
-
 ### Reference: Response Resource List
 
 Resource                  | Location
 ------------------------- | ------------------------------------
-Critical infomation list  | ir.acme.tld/cil
+Critical information list  | ir.acme.tld/cil
 Critical asset list       | ir.acme.tld/cal
 Asset management database | ir.acme.tld/assets
 Network map               | ir.acme.tld/netmap
@@ -236,8 +224,6 @@ Log aggregator            | elk.acme.tld
 `TODO: Complete critical information and asset lists ("crown jewels"). This is incredibly important to effective response.`
 
 `TODO: Customize response resource list`
-
-</div>
 
 ## Update Investigative Plan and Incident File
 
@@ -265,8 +251,6 @@ Log aggregator            | elk.acme.tld
 
 **The investigative plan is critical to an effective response; it drives all investigative actions.  Use critical thinking, creativity, and sound judgment.**
 
-<div class="reference">
-
 ### Reference: Attacker Tactics to Key Questions Matrix
 
 Attacker Tactic      | The way attackers ...         | Possible Key Questions
@@ -282,8 +266,6 @@ Collection           | ... find and gather data      | What data? Why? When? Whe
 Exfiltration         | ... take data                 | What data? How? When? Where?
 Command and Control  | ... control tools and systems | How? Where? Who? Why?
 
-</div>
-
 ## Create and Deploy Indicators of Compromise (IOCs)
 
 * Create IOCs based on [initial leads](#collect-initial-leads) and [analysis](#analyzeiterate).
@@ -291,10 +273,10 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 * Use automation, if possible. `TODO: Add IOC deployment/revocation procedure.`
 * **Do not** deploy unrelated, un-curated "feeds" of IOCs; these can cause confusion and fatigue.
 * Consider all IOC types:
-    * Network-based IOCs such as IP or MAC addresses, ports, email addresses, email content or metadata, URLs, domains, or PCAP patterns.
-    * Host-based IOCs such as paths, file hashes, file content or metadata, registry keys, MUTEXes, autoruns, or user artifacts and permissions.
-    * Cloud-based IOCs such as log patterns for [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) or [IaaS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service) deployments
-    * Behavioral IOCs (a.k.a., patterns, TTPs) such as process tree patterns, heuristics, deviation from baseline, and login patterns.
+  * Network-based IOCs such as IP or MAC addresses, ports, email addresses, email content or metadata, URLs, domains, or PCAP patterns.
+  * Host-based IOCs such as paths, file hashes, file content or metadata, registry keys, MUTEXes, autoruns, or user artifacts and permissions.
+  * Cloud-based IOCs such as log patterns for [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) or [IaaS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service) deployments
+  * Behavioral IOCs (a.k.a., patterns, TTPs) such as process tree patterns, heuristics, deviation from baseline, and login patterns.
 * Correlate various IOC types, such as network and host-based indicators on the same systems(s).
 
 ## Identify Systems of Interest
@@ -309,7 +291,7 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 * Collect live response data using [ir-rescue](https://github.com/diogo-fernan/ir-rescue).  `TODO: Customize live response tools and procedure.`
 * Collect relevant logs from system(s) (if not part of live response), aggregator(s), SIEM(s), or device console(s).  `TODO: Customize log collection tools and procedure.`
 * Collect memory image, if necessary and if not part of live response, using [rekall](http://www.rekall-forensic.com/).  `TODO: Customize memory collection tools and procedure.`
-* Collect disk image, if necessary, using [ftk imager](http://www.forensicswiki.org/wiki/FTK_Imager).`  `TODO: Customize disk image collection tool and procedure.`
+* Collect disk image, if necessary, using [ftk imager](http://www.forensicswiki.org/wiki/FTK_Imager).  `TODO: Customize disk image collection tool and procedure.`
 * Collect and store evidence in accordance with policy, and with proper chain of custody. `TODO: Customize evidence collection and chain of custody policy.`
 
 ## Analyze Evidence
@@ -334,7 +316,7 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 1. Review the incident file at ir.acme.tld/files/codename using the [incident name](#name-the-incident)
 1. Review applicable [playbooks](#playbooks).
 1. Review the [Response Resource List](#reference-response-resource-list)).
-1. Consider which attacker tactics are in play in this incident.  Use MITRE's [ATT&CK](https://attack.mitre.org/wiki/Main_Page) list (_i.e._, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Lateral Movement, Execution, Collection, Exfiltration, and Command and Control), or similar framework.
+1. Consider which attacker tactics are in play in this incident.  Use the MITRE [ATT&CK](https://attack.mitre.org/wiki/Main_Page) list (_i.e._, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Lateral Movement, Execution, Collection, Exfiltration, and Command and Control), or similar framework.
 1. Develop remediations for each tactic in play, as feasible given existing tools and resources.  Consider remediations to [Protect](#protect), [Detect](#detect), [Contain](#contain), and [Eradicate](#eradicate) each attacker behavior.
 1. Prioritize based on [timing strategy](#choose-remediation-timing), impact, and urgency.
 1. Document in incident file.
@@ -379,7 +361,7 @@ Use the following as a starting point for containment remediation:
 * Implement blocks at the enterprise boundary, at multiple layers of the [OSI model](https://en.wikipedia.org/wiki/OSI_model).
 * Disable or remove compromised account access.
 * Block malicious IP addresses or networks.
-* Blackhole or sinkhole malicious domains.
+* Black hole or sinkhole malicious domains.
 * Update network and host IPS and anti-malware signatures using IOCs.
 * Remove critical or compromised systems from the network.
 * Contact providers for assistance (_e.g._, internet service providers, SaaS vendors)
@@ -402,7 +384,7 @@ Use the following as a starting point for eradication remediation:
 
 ## Choose Remediation Timing
 
-Determine the timing strategy---when remediation actions will be taken---by engaging the Incident Commander, the system SMEs and owners, business unit SMEs and owners, and the executive team.  Each strategy is appopriate under different circumstances:
+Determine the timing strategy---when remediation actions will be taken---by engaging the Incident Commander, the system SMEs and owners, business unit SMEs and owners, and the executive team.  Each strategy is appropriate under different circumstances:
 
 * Choose **immediate** remediation when it is more important to immediately stop attacker activities than to continue investigating.  For example, ongoing financial loss, or ongoing mission failure, active data loss, or prevention of an imminent significant threat.
 * Choose **delayed** remediation when it is important to complete the investigation, or important not to alert the attacker.  For example, long-term compromise by an advanced attacker, corporate espionage, or large-scale compromise of an an unknown number of systems.
@@ -492,13 +474,11 @@ All communication must include the most accurate information available.  Display
 
 * Share IOCs with [Infragard](https://www.infragard.org/) if applicable.
 * Share IOCs with your servicing [ISAC](https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center) through https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center, if applicable.
-
 # Playbooks
 
-The following playbooks capture common [investigation](#investigate), [remediation](#remediate), and [communication](#communicate) steps specific to a particular type of incident.
+The following playbooks capture common [investigation](#investigate), [remediation](#remediate), and [communication](#communicate) steps for particular types of incident.
 
 `TODO: Create playbooks for incidents that are highly likely or highly damaging.`
-
 ## Playbook: Phishing
 
 ### Investigate
@@ -519,6 +499,209 @@ The following playbooks capture common [investigation](#investigate), [remediati
 
 `TODO: Customize communication steps for phishing, e.g., contacting organizations phished using your email domain or infrastructure.`
 
+## Playbook: Ransomware
+
+**Investigate, remediate (contain, eradicate), and communicate in parallel! Containment is critical in ransomware incidents, prioritize accordingly.**
+
+Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
+
+### Investigate
+
+`TODO: Expand investigation steps, including key questions and strategies, for ransomware.`
+
+1. **Determine the type** of ransomware (_i.e.,_ what is the family, variant, or flavor?)[<sup>[1]</sup>](#ransomware-playbook-ref-1)
+    1. Find any related messages.  Check:
+        * graphical user interfaces (GUIs) for the malware itself
+        * text or html files, sometimes opened automatically after encryption
+        * image files, often as wallpaper on infected systems
+        * contact emails in encrypted file extensions
+        * pop-ups after trying to open an encrypted file
+        * voice messages
+    1. Analyze the messages looking for clues to the ransomware type:
+        * ransomware name
+        * language, structure, phrases, artwork
+        * contact email
+        * format of the user id
+        * ransom demand specifics (_e.g._, digital currency, gift cards)
+        * payment address in case of digital currency
+        * support chat or support page
+    1. Analyze affected and/or new files.  Check:
+        * file renaming scheme of encrypted files including extension (_e.g._, `.crypt`, `.cry`, `.locked`) and base name
+        * file corruption vs encryption
+        * targeted file types and locations
+        * owning user/group of affected files
+        * icon for encrypted files
+        * file markers
+        * existence of file listings, key files or other data files
+    1. Analyze affected software or system types.  Some ransomware variants only affect certain tools (_e.g._, [databases](https://www.bleepingcomputer.com/news/security/mongodb-apocalypse-professional-ransomware-group-gets-involved-infections-reach-28k-servers/)) or platforms (_e.g._, [NAS products](https://forum.synology.com/enu/viewtopic.php?f=3&t=88716))
+    1. Upload indicators to automated categorization services like [Crypto Sheriff](https://www.nomoreransom.org/crypto-sheriff.php), [ID Ransomware](https://id-ransomware.malwarehunterteam.com/), or similar.
+1. **Determine the scope:**
+    1. Which systems are affected? `TODO: Specify tool(s) and procedure`
+        * Scan for concrete indicators of compromise (IOCs) such as files/hashes, processes, network connections, etc.  Use [endpoint protection/EDR](#TODO-link-to-actual-resource), [endpoint telemetry](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), etc.
+        * Check similar systems for infection (_e.g._, similar users, groups, data, tools, department,configuration, patch status): check [IAM tools](#TODO-link-to-actual-resource), [permissions management tools](#TODO-link-to-actual-resource), [directory services](#TODO-link-to-actual-resource), _etc._
+        * Find external command and control (C2), if present, and find other systems connecting to it: check [firewall or IDS logs](#TODO-link-to-actual-resource), [system logs/EDR](#TODO-link-to-actual-resource), [DNS logs](#TODO-link-to-actual-resource), [netflow or router logs](#TODO-link-to-actual-resource), _etc._
+    1. What data is affected? (_e.g._, file types, department or group, affected software) `TODO: Specify tool(s) and procedure`
+        * Find anomalous changes to file metadata such as mass changes to creation or modification times.  Check [file metadata search tools](#TODO-link-to-actual-resource)
+        * Find changes to normally-stable or critical data files.  Check [file integrity monitoring](#TODO-link-to-actual-resource) tools
+1. **Assess the impact** to prioritize and motivate resources
+    1. Assess functional impact: impact to business or mission.
+        * How much money is lost or at risk?
+        * How many (and which) missions are degraded or at risk?
+    1. Assess information impact: impact to confidentiality, integrity, and availability of data.
+        * How critical is the data to the business/mission?
+        * How sensitive is the data? (_e.g._, trade secrets)
+        * What is the regulatory status of data (_e.g._, PII, PHI)
+1. **Find the infection vector.**  Check the tactics captured in the [Initial Access tactic](https://attack.mitre.org/tactics/TA0001/) of MITRE ATT&CK[<sup>[4]</sup>](#ransomware-playbook-ref-4).  Common specifics and data sources include:
+    * email attachment: check [email logs](#TODO-link-to-actual-resource), [email security appliances and services](#TODO-link-to-actual-resource), [e-discovery tools](#TODO-link-to-actual-resource), _etc._
+    * insecure remote desktop protocol (RDP): check [vulnerability scanning results](#TODO-link-to-actual-resource), [firewall configurations](#TODO-link-to-actual-resource), _etc._
+    * self-propagation (worm or virus) (check [host telemetry/EDR](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), [forensic analysis](#TODO-link-to-actual-resource), _etc._)
+    * infection via removable drives (worm or virus)
+    * delivered by other malware or attacker tool: expand investigation to include additional attacker tools or malware
+
+### Remediate
+
+* **Plan remediation events** where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.
+* **Consider the timing and tradeoffs** of remediation actions: your response has consequences.
+
+#### Contain
+
+`TODO: Customize containment steps, tactical and strategic, for ransomware.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+**In ransomware situations, containment is critical.  Inform containment measures with facts from the investigation.  Prioritize quarantines and other containment measures higher than during a typical response.**
+
+Quarantines (logical, physical, or both) prevent spread _from_ infected systems and prevent spread _to_ critical systems and data. Quarantines should be comprehensive: include cloud/SaaS access, single-sign-on, system access such as to ERP or other business tools, _etc._
+
+* Quarantine infected systems
+* Quarantine affected users and groups.
+* Quarantine file shares (not just known-infected shares; protect uninfected shares too)
+* Quarantine shared databases (not just known-infected servers; protect uninfected databases too)
+* Quarantine backups, if not already secured
+* Block command and control domains and addresses
+* Remove vector emails from inboxes
+* Confirm endpoint protection (AV, NGAV, EDR, _etc._) is up-to-date and enabled on all systems.
+* Confirm patches are deployed on all systems (prioritizing targeted systems, OSes, software, _etc._).
+* Deploy custom signatures to endpoint protection and network security tools based on discovered IOCs
+
+`TODO: Consider automating containment measures using orchestration tools.`
+
+#### Eradicate
+
+`TODO: Customize eradication steps, tactical and strategic, for ransomware.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+* Rebuild infected systems from known-good media
+* Restore from known-clean backups
+* Confirm endpoint protection (AV, NGAV, EDR, _etc._) is up-to-date and enabled on all systems.
+* Confirm patches are deployed on all systems (prioritizing targeted systems, OSes, software, _etc._).
+* Deploy custom signatures to endpoint protection and network security tools based on discovered IOCs
+* **Watch for re-infection:** consider increased priority for alarms/alerts related to this incident.
+
+#### Reference: Remediation Resources
+
+`TODO: Specify financial, personnel, and logistical resources to accomplish remediation.`
+
+### Communicate
+
+`TODO: Customize communication steps for ransomware`
+
+`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.`
+
+1. Escalate incident and communicate with leadership per procedure
+1. Document incident per procedure
+1. Communicate with internal and external legal counsel per procedure, including discussions of compliance, risk exposure, liability, law enforcement contact, _etc._
+1. Communicate with users (internal)
+    1. Communicate incident response updates per procedure
+    1. Communicate impact of incident **and** incident response actions (e.g., containment: "why is the file share down?"), which can be more intrusive/disruptive during ransomware incidents
+    1. Communicate requirements: "what should users do and not do?"  See "Reference: User Actions for Suspected Ransomware," below
+1. Communicate with customers
+    1. Focus particularly on those whose data was affected
+    1. Generate required notifications based on applicable regulations (particularly those that may consider ransomware a data breach or otherwise requires notifications (_e.g._, [HHS/HIPAA](https://www.hhs.gov/sites/default/files/RansomwareFactSheet.pdf))) `TODO: Expand notification requirements and procedures for applicable regulations`
+1. Contact insurance provider(s)
+    1. Discuss what resources they can make available, what tools and vendors they support and will pay for, _etc._
+    1. Comply with reporting and claims requirements to protect eligibility
+1. Communicate with regulators, including a discussion of what resources they can make available (not just boilerplate notification: many can actively assist)
+1. Consider notifying and involving [law enforcement](https://www.nomoreransom.org/en/report-a-crime.html)
+    1. [Local law enforcement](#TODO-link-to-actual-resource)
+    1. [State or regional law enforcement](#TODO-link-to-actual-resource)
+    1. [Federal or national law enforcement](#TODO-link-to-actual-resource)
+1. Communicate with security and IT vendors
+    1. Notify and collaborate with [managed providers](#TODO-link-to-actual-resource) per procedure
+    1. Notify and collaborate with [incident response consultants](#TODO-link-to-actual-resource) per procedure
+
+### Recover
+
+`TODO: Customize recovery steps for ransomware.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+> **We do not recommend paying the ransom:** it does not guarantee a solution to the problem. It can go wrong (_e.g._, bugs could make data unrecoverable even with the key).  Also, paying proves ransomware works and could increase attacks against you or other groups.[<sup>[2, paraphrased]</sup>](#ransomware-playbook-ref-2)
+
+1. Launch business continuity/disaster recovery plan(s): _e.g._, consider migration to alternate operating locations, fail-over sites, backup systems.
+1. Recover data from known-clean backups to known-clean, patched, monitored systems (post-eradication), in accordance with our [well-tested backup strategy](#TODO-link-to-actual-resource).
+    * Check backups for indicators of compromise
+    * Consider partial recovery and backup integrity testing
+1. Find and try known decryptors for the variant(s) discovered using resources like the No More Ransom! Project's [Decryption Tools page](https://www.nomoreransom.org/en/decryption-tools.html).
+1. Consider paying the ransom for irrecoverable critical assets/data, in accordance with policy `TODO: Expand and socialize this decision matrix`
+    * Consider ramifications with appropriate stakeholders
+    * Understand finance implications and budget
+    * Understand legal, regulatory, and insurance implications
+    * Understand mechanisms (_e.g._, technologies, platforms, intermediate vendors/go-betweens)
+
+### Resources
+
+#### Reference: User Actions for Suspected Ransomware
+
+`TODO: Customize steps for users dealing with suspected ransomware`
+
+1. Stay calm, take a deep breath.
+1. Disconnect your system from the network `TODO: include detailed steps with screenshots, a pre-installed tool or script to make this easy ("break in case of emergency"), consider hardware network cut-off switches`
+1. Take pictures of your screen using your smartphone showing the things you noticed: ransom messages, encrypted files, system error messages, _etc._
+1. Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper.  Every little bit helps!  Document the following:
+    1. What did you notice?
+    1. Why did you think it was a problem?
+    1. What were you doing at the time you detected it?
+    1. When did it first occur, and how often since?
+    1. Where were you when it happened, and on what network? (office/home/shop, wired/wireless, with/without VPN, _etc._)
+    1. What systems are you using? (operating system, hostname, _etc._)
+    1. What account were you using?
+    1. What data do you typically access?
+    1. Who else have you contacted about this incident, and what did you tell them?
+1. Contact the [help desk](#TODO-link-to-actual-resource) and be as helpful as possible
+1. Be patient: the response may be disruptive, but you are protecting your team and the organization!  **Thank you.**
+
+#### Reference: Help Desk Actions for Suspected Ransomware
+
+`TODO: Customize steps for help desk personnel dealing with suspected ransomware`
+
+1. Stay calm, take a deep breath.
+1. Open a ticket to document the incident, per procedure `TODO: Customize template with key questions (see below) and follow-on workflow`
+1. Ask the user to take pictures of their screen using their smartphone showing the things they noticed: ransom messages, encrypted files, system error messages, _etc._  If this is something you noticed directly, do the same yourself.
+1. Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper.  If this is a user report, ask detailed questions, including:
+    1. What did you notice?
+    1. Why did you think it was a problem?
+    1. What were you doing at the time you detected it?
+    1. When did it first occur, and how often since?
+    1. What networks are involved? (office/home/shop, wired/wireless, with/without VPN, _etc._)
+    1. What systems are involved? (operating system, hostname, _etc._)
+    1. What data is involved? (paths, file types, file shares, databases, software, _etc._)
+    1. What users and accounts are involved? (active directory, SaaS, SSO, service accounts, _etc._)
+    1. What data do the involved users typically access?
+    1. Who else have you contacted about this incident, and what did you tell them?
+1. Ask follow-up questions as necessary.  **You are an incident responder, we are counting on you.**
+1. Get detailed contact information from the user (home, office, mobile), if applicable
+1. Record all information in the ticket, including hand-written and voice notes
+1. Quarantine affected users and systems `TODO: Customize containment steps, automate as much as possible`
+1. Contact the [security team](#TODO-link-to-actual-resource) and stand by to participate in the response as directed: investigation, remediation, communication, and recovery
+
+#### Additional Information
+
+1. <a name="ransomware-playbook-ref-1"></a>["Ransomware Identification for the Judicious Analyst"](https://www.gdatasoftware.com/blog/2019/06/31666-ransomware-identification-for-the-judicious-analyst), Hahn (12 Jun 2019)
+1. <a name="ransomware-playbook-ref-2"></a>[No More Ransom!](https://www.nomoreransom.org) Project, including their [Crypto Sheriff](https://www.nomoreransom.org/crypto-sheriff.php?lang=en) service and their [Q&A](https://www.nomoreransom.org/en/ransomware-qa.html)
+1. <a name="ransomware-playbook-ref-3"></a>[ID Ransomware](https://id-ransomware.malwarehunterteam.com/) service
+1. <a name="ransomware-playbook-ref-4"></a>[MITRE ATT&CK Matrix](https://attack.mitre.org), including the [Initial Access](https://attack.mitre.org/tactics/TA0001/) and [Impact](https://attack.mitre.org/tactics/TA0040/) tactics
 # Roles
 
 The following are the descriptions, duties, and training for each of the defined roles in an incident response.
@@ -542,11 +725,22 @@ During larger complex incidents, the role structure may be adjusted to account f
 
 This is a **flexible structure**: every role will not be filled by a different person for every incident. For example, in a small incident the Deputy might act as the Scribe and Internal Liaison. The structure is flexible and scales based on the incident.
 
+## Wartime vs. Peacetime
+
+On incident response calls ("wartime"), a different organizational structure overrides normal operations ("peacetime"):
+
+* The Incident Commander is in charge. No matter their rank during peacetime, they are now the highest ranked individual on the call, higher than the CEO.
+* Primary responders (folks acting as primary on-call for a team/service) are the highest ranked individuals for that service.
+* Decisions will be made by the IC after consideration of the information presented. Once that decision is made, it is final.
+* Riskier decisions can be made by the IC than would normally be considered during peacetime.
+* The IC may go against a consensus decision. If a poll is done, and 9/10 people agree but 1 disagrees. The IC may choose the disagreement option despite a majority vote.  Even if you disagree, the IC's decision is final. During the call is not the time to argue with them.
+* The IC may use language or behave in a way you find rude. This is wartime, and they need to do whatever it takes to resolve the situation, so sometimes rudeness occurs. This is not personal, and something you should be prepared to experience if you've never been in a wartime situation before.
+* You may be asked to leave the call by the IC, or you may even be forcibly kicked off a call. It is at the IC's discretion to do this if they feel you are not providing useful input. Again, this is not personal and you should remember that wartime is different than peacetime.
 ## Role: All Participants
 
 ### Description
 
-All partipants in an incident response have the responsibility to help resolve the incident according to the incident response plan, under the authority of the Incident Commander.
+All participants in an incident response have the responsibility to help resolve the incident according to the incident response plan, under the authority of the Incident Commander.
 
 ### Duties
 
@@ -564,8 +758,6 @@ All partipants in an incident response have the responsibility to help resolve t
 * If you join only one channel (call or chat), do not actively participate, as it causes disjoined communication.
 * **Use clear terminology, and avoid acronyms or abbreviations. Clarity and accuracy is more important than brevity.**
 
-<div class="reference">
-
 ##### Reference: Common Voice Procedure
 
 Standard radio [voice procedure](https://en.wikipedia.org/wiki/Voice_procedure#Words_in_voice_procedure) **is not required**, however you may hear certain terms (or need to use them yourself). Common phrases include:
@@ -576,8 +768,6 @@ Standard radio [voice procedure](https://en.wikipedia.org/wiki/Voice_procedure#W
 * **Wilco:** "Will comply"
 
 **Do not** invent new abbreviations; favor being explicit over implicit.
-
-</div>
 
 #### Follow the Incident Commander
 
@@ -593,7 +783,6 @@ The Incident Commander (IC) is the leader of the incident response process.
 ### Training
 
 Read and understand the incident response plan, including the roles and playbooks.
-
 ## Role: Incident Commander (IC)
 
 ### Description
@@ -627,7 +816,7 @@ Resolve the incident as quickly and as safely as possible using the incident res
     * Get straight answers
     * Handle executive swoop such as
         * Overriding the Incident Commander
-        * Anti-motiviation
+        * Anti-motivation
         * Information requests
         * Questioning severity
     * Handle disruptive or belligerent responders
@@ -672,7 +861,6 @@ Deep technical knowledge is not required!  Incident Commanders do not require de
 #### Graduation
 
 Upon completion of training, add yourself to the Incident Commander roster.
-
 ## Role: Deputy Incident Commander (Deputy)
 
 ### Description
@@ -697,7 +885,6 @@ A Deputy Incident Commander (Deputy) is a direct support role for the Incident C
 #### Prerequisites
 
 * Be trained as an [Incident Commander](#role-incident-commander-ic).
-
 ## Role: Scribe
 
 ### Description
@@ -710,9 +897,8 @@ A Scribe documents the timeline of an incident as it progresses, and makes sure 
 1. Note in chat and in the file timelines: important data, events, and actions, as they happen. Specifically:
     * Key actions as they are taken
     * Status reports when one is provided by the IC
-    * Any key callouts either during the call or at the ending review
+    * Any key call-outs either during the call or at the ending review
 1. Update the chat with who the IC is, who the Deputy is, and that you're the scribe (if not already done).
-1. Start chatops bot, if available, so that all responders can see the current state without needing to ask (see this [blog entry at PagerDuty](https://www.pagerduty.com/blog/what-is-chatops/)).
 
 Scribing is more art than science. The objective is to keep an accurate record of important events that occurred, Use your judgement and experience. But here are some general things you most definitely want to capture as scribe.
 
@@ -733,25 +919,24 @@ Read and understand the incident response plan, including the roles and playbook
 
 * Read the incident response plan, including all roles and playbooks.
 * _OPTIONAL:_ Parallel the actions of a scribe during an incident or exercise, and seek feedback from the actual Scribe and Incident Commander.
-
 ## Role: Subject Matter Expert (SME)
 
 ### Description
 
-A Subject Matter Expert (SME), sometimes called a "Resolver", is a domain expert or designated owner of a team, component, or service.  You are there to support the incident commander in identifying the cause of the incident, suggesting and evaluation investigation, remediation, and communication actions, and following through on them as tasked.
+A Subject Matter Expert (SME) is a domain expert or designated owner of a team, component, or service (an "area").  You are there to support the incident commander in identifying the cause of the incident, suggesting and evaluation investigation, remediation, and communication actions, and following through on them as tasked.
 
 ### Duties
 
-1. Diagnose common problems with the service.
+1. Diagnose common problems within your area of expertise.
 1. Rapidly fix issues found during an incident.
-1. Concise communication skills, specifically for CAN reports:
-    * Condition: What is the current state of the service? Is it healthy or not?
-    * Actions: What actions need to be taken if the service is not in a healthy state?
-    * Needs: What support does the resolver need to perform an action?
+1. Concise communication:
+    * Condition: What is the current state of your area? Is it healthy or not?
+    * Actions: What actions need to be taken if your area is not in a healthy state?
+    * Needs: What support do you need need to perform an action?
 1. Participate in the investigation, remediation, and/or communication phases of the response.
 1. Announce all suggestions to the incident commander, it is their decision on how to proceed, do not follow any actions unless told to do so.
 
-If you are on-call for any team, you may be paged for an incident and will be expected to respond as a subject matter expert (SME) for your team, component, or service.  Anyone who is considered a "domain expert" can act as a resolver for an incident. Typically the team's primary on-call will act as the SME for that team.
+If you are on-call for any team, you may be paged for an incident and will be expected to respond as a subject matter expert (SME) for your team, component, or service.  Anyone who is considered a "domain expert" can act as a SME for an incident. Typically the team's primary on-call will act as the SME for that team.
 
 #### Prepare for On-Call Period
 
@@ -770,22 +955,9 @@ If you are on-call for any team, you may be paged for an incident and will be ex
 1. If you're not sure about something, bring in other SMEs from your team that can help.  **Never hesitate to escalate**, if necessary.
 1. Do not blame.  This incident response process is completely blameless: blaming is counter productive and distracts from the problem at hand.  After-action review will identify places we can all improve.
 
-#### Wartime vs. Peacetime
-
-On incident response calls ("wartime"), a different organizational structure overrides normal operations ("peacetime"):
-
-* The Incident Commander is in charge. No matter their rank during peacetime, they are now the highest ranked individual on the call, higher than the CEO.
-* Primary responders (folks acting as primary on-call for a team/service) are the highest ranked individuals for that service.
-* Decisions will be made by the IC after consideration of the information presented. Once that decision is made, it is final.
-* Riskier decisions can be made by the IC than would normally be considered during peacetime.
-* The IC may go against a consensus decision. If a poll is done, and 9/10 people agree but 1 disagrees. The IC may choose the disagreement option despite a majority vote.  Even if you disagree, the IC's decision is final. During the call is not the time to argue with them.
-* The IC may use language or behave in a way you find rude. This is wartime, and they need to do whatever it takes to resolve the situation, so sometimes rudeness occurs. This is not personal, and something you should be prepared to experience if you've never been in a wartime situation before.
-* You may be asked to leave the call by the IC, or you may even be forceable kicked off a call. It is at the IC's discretion to do this if they feel you are not providing useful input. Again, this is not personal and you should remember that wartime is different than peacetime.
-
 ### Training
 
 * Read and understand the incident response plan, including the roles and playbooks.
-
 ## Role: Liaison
 
 ### Description
@@ -805,7 +977,7 @@ Liaisons interact with other teams or stakeholders, outside the incident respons
 1. Contact or interact with external stakeholders such as vendors, partners, law enforcement, _etc._
 1. **Do not** feel responsible for creating every message: work with the Incident Commander and other stakeholders.
 1. As appropriate, keep customers informed during an incident.
-1. Act as a voice for our customers to the Incident Commander, as this is useful for IC decisionmaking.
+1. Act as a voice for our customers to the Incident Commander, as this is useful for IC decision making.
 1. Gaining message approval after you have crafted the public message: copy the message into chat and wait for verbal/written confirmation from the IC before proceeding.
 
 ##### Tips for Public Messages
@@ -840,7 +1012,6 @@ Read and understand the incident response plan, including the roles and playbook
 * Excellent verbal and written **communication skills**.
 * _OPTIONAL:_ Customer support training.
 * _OPTIONAL:_ Corporate communication or marketing training.
-
 # Conduct an After Action Review (AAR)
 
 1. Schedule an After Action Review (AAR) meeting within 5 business days and invite the attendees listed at ir.acme.tld/aar/attendees.  Always include the following:
@@ -867,19 +1038,16 @@ Document answers to the following key questions:
 
 The AAR owner, in coordination with the Internal Liaison, will  communicate the status of the AAR (see below)
 
-<div class="reference">
-
 ### Status Descriptions
 
 | Status | Description |
 |-|-|
 | **Draft** | AAR investigation is still ongoing |
 | **In Review** | AAR investigation has been completed, and is ready to be reviewed during the AAR meeting. |
-| **Reviewed** | AAR meeting is over and the content has been reviewed and agreed upon.<br/>If there are additional "External Messages", the communications team will take action to prepare. |
-| **Closed** | No further actions are needed on the AAR (outstanding issues are tracked in tickets).<br/>If no "External Messages", skip straight to this once the meeting is over.<br/>If there are additional "External Messages", communications team will update AAR Closed once sent. |
+| **Reviewed** | AAR meeting is over and the content has been reviewed and agreed upon.<br>If there are additional "External Messages", the communications team will take action to prepare. |
+| **Closed** | No further actions are needed on the AAR (outstanding issues are tracked in tickets).<br>If no "External Messages", skip straight to this once the meeting is over.<br>If there are additional "External Messages", communications team will update AAR Closed once sent. |
 
 Communicate the results of the AAR internally and finalize the AAR documentation.
-
 # About
 
 This template was developed by the team at [Counteractive Security](https://www.counteractive.net), to help all organizations get a good start on a concise, directive, specific, flexible, and free incident response plan.  Build a [plan you will actually use](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) to respond effectively, minimize cost and impact, and get back to business as soon as possible.
@@ -915,4 +1083,3 @@ Customize this plan template for your own organization.  Instructions are availa
 * [Informed's NIMS Incident Command System Field Guide](https://www.amazon.com/gp/product/1284038408) (Michael J. Ward)
 * [Advanced PostMortem Fu and Human Error 101 (Velocity 2011)](http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011)
 * [Blame. Language. Sharing.](http://fractio.nl/2015/10/30/blame-language-sharing/)
-
