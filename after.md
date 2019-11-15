@@ -34,3 +34,4 @@ The AAR owner, in coordination with the Internal Liaison, will  communicate the 
 | **Closed** | No further actions are needed on the AAR (outstanding issues are tracked in tickets).<br>If no "External Messages", skip straight to this once the meeting is over.<br>If there are additional "External Messages", communications team will update AAR Closed once sent. |
 
 Communicate the results of the AAR internally and finalize the AAR documentation.
+

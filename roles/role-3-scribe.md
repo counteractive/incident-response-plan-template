@@ -32,3 +32,4 @@ Read and understand the incident response plan, including the roles and playbook
 
 * Read the incident response plan, including all roles and playbooks.
 * _OPTIONAL:_ Parallel the actions of a scribe during an incident or exercise, and seek feedback from the actual Scribe and Incident Commander.
+

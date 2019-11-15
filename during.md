@@ -474,3 +474,4 @@ All communication must include the most accurate information available.  Display
 
 * Share IOCs with [Infragard](https://www.infragard.org/) if applicable.
 * Share IOCs with your servicing [ISAC](https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center) through {{ISAC_CONTACT}}, if applicable.
+

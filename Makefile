@@ -1,7 +1,7 @@
 all: public/plan.html
 
 public/plan.html: public/plan.md build/_pandoc.yml
-	pandoc --toc --toc-depth=3 --standalone --output=public/plan.html build/_plan.md
+	pandoc --toc --toc-depth=3 --standalone --metadata-file=build/_pandoc.yml --output=public/plan.html build/_plan.md
 
 public/plan.md: build/_plan.md
 	mkdir -p public

@@ -474,11 +474,13 @@ All communication must include the most accurate information available.  Display
 
 * Share IOCs with [Infragard](https://www.infragard.org/) if applicable.
 * Share IOCs with your servicing [ISAC](https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center) through https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center, if applicable.
+
 # Playbooks
 
 The following playbooks capture common [investigation](#investigate), [remediation](#remediate), and [communication](#communicate) steps for particular types of incident.
 
 `TODO: Create playbooks for incidents that are highly likely or highly damaging.`
+
 ## Playbook: Phishing
 
 ### Investigate
@@ -702,6 +704,7 @@ Quarantines (logical, physical, or both) prevent spread _from_ infected systems 
 1. <a name="ransomware-playbook-ref-2"></a>[No More Ransom!](https://www.nomoreransom.org) Project, including their [Crypto Sheriff](https://www.nomoreransom.org/crypto-sheriff.php?lang=en) service and their [Q&A](https://www.nomoreransom.org/en/ransomware-qa.html)
 1. <a name="ransomware-playbook-ref-3"></a>[ID Ransomware](https://id-ransomware.malwarehunterteam.com/) service
 1. <a name="ransomware-playbook-ref-4"></a>[MITRE ATT&CK Matrix](https://attack.mitre.org), including the [Initial Access](https://attack.mitre.org/tactics/TA0001/) and [Impact](https://attack.mitre.org/tactics/TA0040/) tactics
+
 # Roles
 
 The following are the descriptions, duties, and training for each of the defined roles in an incident response.
@@ -736,6 +739,7 @@ On incident response calls ("wartime"), a different organizational structure ove
 * The IC may go against a consensus decision. If a poll is done, and 9/10 people agree but 1 disagrees. The IC may choose the disagreement option despite a majority vote.  Even if you disagree, the IC's decision is final. During the call is not the time to argue with them.
 * The IC may use language or behave in a way you find rude. This is wartime, and they need to do whatever it takes to resolve the situation, so sometimes rudeness occurs. This is not personal, and something you should be prepared to experience if you've never been in a wartime situation before.
 * You may be asked to leave the call by the IC, or you may even be forcibly kicked off a call. It is at the IC's discretion to do this if they feel you are not providing useful input. Again, this is not personal and you should remember that wartime is different than peacetime.
+
 ## Role: All Participants
 
 ### Description
@@ -783,6 +787,7 @@ The Incident Commander (IC) is the leader of the incident response process.
 ### Training
 
 Read and understand the incident response plan, including the roles and playbooks.
+
 ## Role: Incident Commander (IC)
 
 ### Description
@@ -861,6 +866,7 @@ Deep technical knowledge is not required!  Incident Commanders do not require de
 #### Graduation
 
 Upon completion of training, add yourself to the Incident Commander roster.
+
 ## Role: Deputy Incident Commander (Deputy)
 
 ### Description
@@ -885,6 +891,7 @@ A Deputy Incident Commander (Deputy) is a direct support role for the Incident C
 #### Prerequisites
 
 * Be trained as an [Incident Commander](#role-incident-commander-ic).
+
 ## Role: Scribe
 
 ### Description
@@ -919,6 +926,7 @@ Read and understand the incident response plan, including the roles and playbook
 
 * Read the incident response plan, including all roles and playbooks.
 * _OPTIONAL:_ Parallel the actions of a scribe during an incident or exercise, and seek feedback from the actual Scribe and Incident Commander.
+
 ## Role: Subject Matter Expert (SME)
 
 ### Description
@@ -958,6 +966,7 @@ If you are on-call for any team, you may be paged for an incident and will be ex
 ### Training
 
 * Read and understand the incident response plan, including the roles and playbooks.
+
 ## Role: Liaison
 
 ### Description
@@ -1012,6 +1021,7 @@ Read and understand the incident response plan, including the roles and playbook
 * Excellent verbal and written **communication skills**.
 * _OPTIONAL:_ Customer support training.
 * _OPTIONAL:_ Corporate communication or marketing training.
+
 # Conduct an After Action Review (AAR)
 
 1. Schedule an After Action Review (AAR) meeting within 5 business days and invite the attendees listed at ir.acme.tld/aar/attendees.  Always include the following:
@@ -1048,6 +1058,7 @@ The AAR owner, in coordination with the Internal Liaison, will  communicate the 
 | **Closed** | No further actions are needed on the AAR (outstanding issues are tracked in tickets).<br>If no "External Messages", skip straight to this once the meeting is over.<br>If there are additional "External Messages", communications team will update AAR Closed once sent. |
 
 Communicate the results of the AAR internally and finalize the AAR documentation.
+
 # About
 
 This template was developed by the team at [Counteractive Security](https://www.counteractive.net), to help all organizations get a good start on a concise, directive, specific, flexible, and free incident response plan.  Build a [plan you will actually use](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) to respond effectively, minimize cost and impact, and get back to business as soon as possible.
@@ -1083,3 +1094,4 @@ Customize this plan template for your own organization.  Instructions are availa
 * [Informed's NIMS Incident Command System Field Guide](https://www.amazon.com/gp/product/1284038408) (Michael J. Ward)
 * [Advanced PostMortem Fu and Human Error 101 (Velocity 2011)](http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011)
 * [Blame. Language. Sharing.](http://fractio.nl/2015/10/30/blame-language-sharing/)
+

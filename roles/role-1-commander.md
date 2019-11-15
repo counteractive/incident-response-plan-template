@@ -76,3 +76,4 @@ Deep technical knowledge is not required!  Incident Commanders do not require de
 #### Graduation
 
 Upon completion of training, add yourself to the Incident Commander roster.
+

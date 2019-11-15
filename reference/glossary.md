@@ -10,3 +10,4 @@
 1. **Span of Control:** Refers to the number of direct reports you have. For example, if the IC has 10 people as direct reports on a call, they have a large span of control. We aim to make the span of control as minimal as we can while still being productive.
 1. **Grenade Thrower:** Someone who joins the call at a late time in the game, and provides information that completely derails the current thinking. They then leave almost immediately.
 1. **Executive Swoop:** When an executive comes on the call and drops some sort of bombshell. A version of grenade throwing.
+

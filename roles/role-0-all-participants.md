@@ -45,3 +45,4 @@ The Incident Commander (IC) is the leader of the incident response process.
 ### Training
 
 Read and understand the incident response plan, including the roles and playbooks.
+

@@ -22,3 +22,4 @@ A Deputy Incident Commander (Deputy) is a direct support role for the Incident C
 #### Prerequisites
 
 * Be trained as an [Incident Commander](#role-incident-commander-ic).
+
