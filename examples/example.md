@@ -479,27 +479,7 @@ All communication must include the most accurate information available.  Display
 
 The following playbooks capture common [investigation](#investigate), [remediation](#remediate), and [communication](#communicate) steps for particular types of incident.
 
-`TODO: Create playbooks for incidents that are highly likely or highly damaging.`
-
-## Playbook: Phishing
-
-### Investigate
-
-`TODO: Customize investigation steps, including key questions and strategies, for phishing.`
-
-### Remediate
-
-#### Contain
-
-`TODO: Customize containment steps, tactical and strategic, for phishing.`
-
-#### Eradicate
-
-`TODO: Customize eradication steps, tactical and strategic, for phishing.`
-
-### Communicate
-
-`TODO: Customize communication steps for phishing, e.g., contacting organizations phished using your email domain or infrastructure.`
+`TODO: Create additional playbooks for highly likely or highly damaging incident types.`
 
 ## Playbook: Ransomware
 
