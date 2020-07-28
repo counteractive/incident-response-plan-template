@@ -1,0 +1,12 @@
+/* TEAM */
+Creator: Chris Hendricks
+Site: https://www.counteractive.net
+Twitter: @counteract_ive
+Location: San Antonio, Texas, USA
+
+/* THANKS */
+Inspirations: Everyone involved in the prior art listed in the README
+
+/* SITE */
+Standards: markdown
+Software: pandoc
