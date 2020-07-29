@@ -4,6 +4,10 @@ Site: https://www.counteractive.net
 Twitter: @counteract_ive
 Location: San Antonio, Texas, USA
 
+Contributor: Katherine Henry
+Twitter: @kathenry11
+Location: Oklahoma City, Oklahoma, USA
+
 /* THANKS */
 Inspirations: Everyone involved in the prior art listed in the README
 
