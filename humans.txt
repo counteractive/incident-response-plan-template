@@ -8,6 +8,9 @@ Contributor: Katherine Henry
 Twitter: @kathenry11
 Location: Oklahoma City, Oklahoma, USA
 
+Contributor: William Rowe
+Location: Fredericksburg, Virginia, USA
+
 /* THANKS */
 Inspirations: Everyone involved in the prior art listed in the README
 
