@@ -1,4 +1,4 @@
-## Playbook: Ransomware
+## Playbook: Phishing
 
 **Investigate, remediate (contain, eradicate), and communicate in parallel!**
 
