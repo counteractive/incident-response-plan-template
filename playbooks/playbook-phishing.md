@@ -9,9 +9,9 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
 `TODO: Expand investigation steps, including key questions and strategies, for phishing.`
 
 1. **Scope the attack** Usually you will be notified that a potential phishing attack is underway, either by a user, customer, or partner.
-    1. Determine **total number of impacted users**
-    1. Understand **user actions** in response to the phishing email (_e.g._, did they download the attachment, visit the spoofed site, or give out any personal or business information such as credentials)
-    1. Find the potentially related activity. Check:
+    * Determine **total number of impacted users**
+    * Understand **user actions** in response to the phishing email (_e.g._, did they download the attachment, visit the spoofed site, or give out any personal or business information such as credentials)
+    * Find the potentially related activity. Check:
         * social media
         * any possibly suspicious emails
         * emails with links to external and unknown URLs
@@ -119,8 +119,8 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
     * [malicious or suspicious links](https://www.pcworld.com/article/248963/how-to-tell-if-a-link-is-safe-without-clicking-on-it.html)
     * receiving an email or attachment they were not expecting but from someone they know (contact sender before opening it)
     * reporting suspicious activity to IT or security
-* Ensure that IT staff is up to date on recent phishing techniques.
-* Determine if any controls have failed when falling victim to an attack and rectify them. Here is a [good source](https://www.proofpoint.com/us/security-awareness/post/14-things-do-after-phishing-attack) to consider following a phishing attack.
+1. Ensure that IT and security staff is up to date on recent phishing techniques.
+1. Determine if any controls have failed when falling victim to an attack and rectify them. Here is a [good source](https://www.proofpoint.com/us/security-awareness/post/14-things-do-after-phishing-attack) to consider following a phishing attack.
 
 ### Resources
 
