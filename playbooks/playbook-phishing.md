@@ -17,33 +17,33 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
         * emails with links to external and unknown URLs
         * non-returnable or non-deliverable emails
         * any kind of notification of suspicious activity
-    1. Analyze the phishing message using a safe device to determine: `TODO: Specify tools and procedure`
-        * **Do not** open messages on a device with access to sensitive data or credentials. The message may contain malware.
-        * who received the message
-        * who was targeted by the message (may be different than "successful" recipients)
-        * email address of the sender
-        * subject line
-        * message body
-        * attachments (**do not open attachments** except according to established procedures)
-        * links, domains, and hostnames (**do not follow links** except according to established procedures)
-        * email metadata including message headers (see below)
-            * sender information from the 'from' field and the X-authenticated user header
-            * all client and mail server IP addresses
-        * note "quirks" or suspicious features
-    1. Analyze links and attachments `TODO: Specify tools and procedure`
-        * use passive collection such as nslookup and whois to find IP addresses and registration information
-        * find related domains using OSINT (_e.g._, [reverse whois](https://www.whoxy.com/reverse-whois/)) on email addresses and other registration data
-        * submit links, attachments, and/or hashes to [VirusTotal](https://www.virustotal.com/gui/)
-        * submit links, attachments, and/or hashes to a malware sandbox such as [Cuckoo](https://cuckoosandbox.org/), [Hybrid Analysis](https://www.hybrid-analysis.com/), [Joe Sandbox](https://www.joesecurity.org/), or [VMray](https://www.vmray.com/).
-    1. Categorize the type of phishing attack. `TODO: Customize categories and create additional playbooks for common or high-impact phishing types`
-    1. Determine the severity. Consider:
-        * whether public or personal safety is at risk
-        * whether personal data (or other sensitive data) is at risk
-        * any evidence of who is behind the attack
-        * number of affected assets
-        * preliminary business impact
-        * whether services are affected
-        * whether you are able to control/record critical systems
+1. **Analyze the message** using a safe device to determine: `TODO: Specify tools and procedure`
+    * **Do not** open messages on a device with access to sensitive data or credentials. The message may contain malware.
+    * who received the message
+    * who was targeted by the message (may be different than "successful" recipients)
+    * email address of the sender
+    * subject line
+    * message body
+    * attachments (**do not open attachments** except according to established procedures)
+    * links, domains, and hostnames (**do not follow links** except according to established procedures)
+    * email metadata including message headers (see below)
+        * sender information from the 'from' field and the X-authenticated user header
+        * all client and mail server IP addresses
+    * note "quirks" or suspicious features
+1. **Analyze links and attachments** `TODO: Specify tools and procedure`
+    * use passive collection such as nslookup and whois to find IP addresses and registration information
+    * find related domains using OSINT (_e.g._, [reverse whois](https://www.whoxy.com/reverse-whois/)) on email addresses and other registration data
+    * submit links, attachments, and/or hashes to [VirusTotal](https://www.virustotal.com/gui/)
+    * submit links, attachments, and/or hashes to a malware sandbox such as [Cuckoo](https://cuckoosandbox.org/), [Hybrid Analysis](https://www.hybrid-analysis.com/), [Joe Sandbox](https://www.joesecurity.org/), or [VMray](https://www.vmray.com/).
+1. Categorize the type of attack. `TODO: Customize categories and create additional playbooks for common or high-impact phishing types`
+1. **Determine the severity.** Consider:
+    * whether public or personal safety is at risk
+    * whether personal data (or other sensitive data) is at risk
+    * any evidence of who is behind the attack
+    * number of affected assets
+    * preliminary business impact
+    * whether services are affected
+    * whether you are able to control/record critical systems
 
 `TODO: Expand investigation steps, including key questions and strategies, for phishing.`
 
