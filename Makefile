@@ -1,4 +1,4 @@
-all: public/plan.html
+all: public/plan.html public/plan.md examples/example.md
 
 public/plan.html: public/plan.md build/_pandoc.yml
 	pandoc --toc --toc-depth=3 --standalone --metadata-file=build/_pandoc.yml --output=public/plan.html build/_plan.md
@@ -6,6 +6,8 @@ public/plan.html: public/plan.md build/_pandoc.yml
 public/plan.md: build/_plan.md
 	mkdir -p public
 	mustache info.yml build/_plan.md > public/plan.md
+
+examples/example.md: public/plan.md
 	cp public/plan.md examples/example.md
 
 build/_pandoc.yml: info.yml pandoc.yml
