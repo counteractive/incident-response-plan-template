@@ -4,7 +4,7 @@
 
 This template was developed by the team at [Counteractive Security](https://www.counteractive.net), to help all organizations get a good start on a concise, directive, specific, flexible, and free incident response plan.  Build a [plan you will actually use](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) to respond effectively, minimize cost and impact, and get back to business as soon as possible.
 
-The latest release
+Download the latest release [here](https://github.com/counteractive/incident-response-plan-template/releases/latest), a please create an issue or submit a pull request with any feedback, suggestions, or updates.
 
 ## Instructions
 
@@ -21,17 +21,32 @@ The layout is as follows:
 
 ### Customize `info.yml` with your organization's information
 
-The template files have a lot of placeholders that `{{LOOK_LIKE_THIS}}`.  The purpose of each placeholder should be discernable from context, and the [default `info.yml` file](./info.yml) is commented for additional clarity.
+The template files have a lot of placeholders that `{{LOOK_LIKE_THIS}}`.  The purpose of each placeholder should be discernable from context, and the [default `info.yml` file](./info.yml) is commented for additional clarity.  This is the [mustache](https://mustache.github.io/) template syntax, and has wide support in a variety of tools and languages.  
 
-This is the [mustache](https://mustache.github.io/) template syntax, and has wide support in a variety of tools and languages.  The easiest way to replace these is to customize the `info.yml` file with your organization's information and use the provided makefile (as of v1.0.0) to automatically find and replace all the relevant strings.  In your terminal of choice (use [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq) on Windows), type:
+The easiest way to replace these variables is to customize the `info.yml` file with your organization's information and use the provided [Makefile](https://en.wikipedia.org/wiki/Make_(software)) (as of v1.0.0) to automatically find and replace all the relevant strings.  _NOTE:_ this requires `make` (naturally), `mustache`, and `pandoc` to be installed and available in the user's `$PATH` (as well as `git` if you want to clone the repository rather than download the zipped source). 
+
+In your terminal of choice (e.g., [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq) on Windows):
 
 ```bash
+# install dependencies if necessary. on ubuntu, for example:
+sudo apt-get install make ruby-mustache pandoc git
+
+# clone this repository
+git clone https://github.com/counteractive/incident-response-plan-template
+
+# change to the directory of the cloned repository
+cd /path/to/incident-response-plan-template
+
+# customize info.yml with your editor of choice
+vi info.yml
+
+# build the template
 make
 ```
 
-If you don't have the information or tools referenced in the template variables, consider fixing that.  **Especially** the critical information list (data you want to protect) and critical asset list (systems you want to protect).
+If you don't have the information or tools referenced in the template variables, that's definitely worth fixing.  **Especially** the critical information list (data you want to protect) and critical asset list (systems you want to protect).
 
-This merges the template components, combines them with your custom data from `info.yml`, and outputs all supported formats in the `public/` directory.  That's it.
+This merges the template components, combines them with your custom data from `info.yml`, and outputs all supported formats in the `public/` directory.  That's it!
 
 *If you have a specific case and want more details, read on!*
 
@@ -63,6 +78,7 @@ This template is provided under the Apache License, version 2.0.  See the [LICEN
 * [NIST Computer Security Incident Handling Guide](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) (NIST)
 * [CERT Societe Generale Incident Response Methodologies](https://github.com/certsocietegenerale/IRM/tree/master/EN)
 * [Incident Handler's Handbook](https://www.sans.org/reading-room/whitepapers/incident/incident-handlers-handbook-33901) (SANS)
+* [Technical Approaches to Uncovering and Remediating Malicious Activity](https://us-cert.cisa.gov/ncas/alerts/aa20-245a) (Cybersecurity and Infrastructure Security Agency (CISA))
 * [Responding to IT Security Incidents](https://technet.microsoft.com/en-us/library/cc700825.aspx) (Microsoft)
 * [Defining Incident Management Processes for CSIRTs: A Work in Progress](http://resources.sei.cmu.edu/library/asset-view.cfm?assetid=7153) (CMU)
 * [Creating and Managing Computer Security Incident Handling Teams (CSIRTS)](https://www.first.org/conference/2008/papers/killcrece-georgia-slides.pdf) (CERT)
@@ -87,28 +103,10 @@ This template is provided under the Apache License, version 2.0.  See the [LICEN
 * [EPA IR Plan](https://www.epa.gov/sites/production/files/2016-01/documents/cio_2150-p-08.2.pdf)
 * [incidentresponse.com playbooks](https://www.incidentresponse.com/playbooks/)
 
-## To do
+## Roadmap
 
-* [x] After Action, lessons learned, process improvement
-* [x] Recovery
-* [x] Ransomware playbook
-* [x] Easier build process
-* [ ] Measures and Metrics
-* [ ] Business priorities
-* [ ] Testing procedure
-* [ ] Communication and escalation tree, including executives
-* [ ] Finance and budget
-* [ ] Continuing to enhance modularity ("puzzle-piece" approach)
+See [issues](https://github.com/counteractive/incident-response-plan-template/issues) list.
 
 ## Changelog
 
-### v1.0.0 - First versioned production release
-
-#### Added
-
-* Added makefile and temporary directories to ease the build process
-
-#### Changed
-
-* Renamed `.yaml` files to `.yml`
-* Updated README
+See [releases](https://github.com/counteractive/incident-response-plan-template/releases) page.

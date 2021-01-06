@@ -234,7 +234,6 @@ Log aggregator            | {{LOG_AGGREGATOR_CONSOLE}}
 1. Create hypotheses: what may have happened, and with what confidence.
 1. **Identify and prioritize key questions** (information gaps) to support or discredit hypotheses.
     * Use the MITRE ATT&CK matrix or similar framework to [develop questions](#reference-attacker-tactics-to-key-questions-matrix).
-        * [PRE-ATT&CK](https://attack.mitre.org/pre-attack/index.php/Main_Page) for "Left-of-Exploit."
         * [ATT&CK for Enterprise](https://attack.mitre.org/wiki/Main_Page), including links to Windows, Mac, and Linux specifics.
         * [ATT&CK Mobile Profile](https://attack.mitre.org/mobile/index.php/Main_Page) for mobile devices.
     * Use interrogative words as inspiration:
@@ -255,20 +254,28 @@ Log aggregator            | {{LOG_AGGREGATOR_CONSOLE}}
 
 Attacker Tactic      | The way attackers ...         | Possible Key Questions
 -------------------- | ----------------------------- | -----------------------------------------
+Reconnaissance       | ... learn about targets       | How? Since when? Where? Which systems?
+Resource Development | ... build infrastructure      | Where? Which systems?
+Initial Access       | ... get in                    | How? Since when? Where? Which systems?
+Execution            | ... run hostile code          | What malware? What tools? Where? When?
 Persistence          | ... stick around              | How? Since when? Where? Which systems?
 Privilege Escalation | ... get higher level access   | How? Where? What tools?
 Defense Evasion      | ... dodge security            | How? Where? Since when?
 Credential Access    | ... get/create accounts       | Which accounts? Since when? Why?
 Discovery            | ... learn our network         | How? Where? What do they know?
 Lateral Movement     | ... move around               | How? When? Which accounts?
-Execution            | ... run hostile code          | What malware? What tools? Where? When?
 Collection           | ... find and gather data      | What data? Why? When? Where?
-Exfiltration         | ... take data                 | What data? How? When? Where?
 Command and Control  | ... control tools and systems | How? Where? Who? Why?
+Exfiltration         | ... take data                 | What data? How? When? Where?
+Impact               | ... break things              | What systems or data? How? When? Where? How bad?
+
+See the [MITRE ATT&CK page](https://attack.mitre.org/) for more insight and ideas.
 
 ## Create and Deploy Indicators of Compromise (IOCs)
 
-* Create IOCs based on [initial leads](#collect-initial-leads) and [analysis](#analyzeiterate).
+> Emphasize **dynamic and behavioral** indicators alongside static fingerprints.
+
+* Create IOCs based on [initial leads](#collect-initial-leads) and [analysis](#analyze-evidence).
 * Create IOCs using an open format supported by your tools (_e.g._, [STIX 2.0](https://oasis-open.github.io/cti-documentation/stix/intro)), if possible. `TODO: Customize IOC format as necessary.`
 * Use automation, if possible. `TODO: Add IOC deployment/revocation procedure.`
 * **Do not** deploy unrelated, un-curated "feeds" of IOCs; these can cause confusion and fatigue.
@@ -282,7 +289,7 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 ## Identify Systems of Interest
 
 1. Validate whether they are relevant.
-1. Categorize the reason(s) they are "of interest": has malware x, accessed by compromised account, has sensitive data, etc.  Treat these as "tags", there may be more than one category per system.
+1. Categorize the reason(s) they are "of interest": has malware, accessed by compromised account, has sensitive data, etc.  Treat these as "tags", there may be more than one category per system.
 1. Prioritize collection, analysis, and remediation based on investigative needs, business impact, _etc._
 
 ## Collect Evidence
@@ -294,6 +301,34 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 * Collect disk image, if necessary, using {{DISK_IMAGE_TOOL}}.  `TODO: Customize disk image collection tool and procedure.`
 * Collect and store evidence in accordance with policy, and with proper chain of custody. `TODO: Customize evidence collection and chain of custody policy.`
 
+Consider collecting the following artifacts as evidence, either in real time (_e.g., via EDR or a SIEM) or on demand:
+
+###  Example Useful Artifacts
+
+`TODO: Customize and prioritize useful artifacts.`
+
+* Running Processes
+* Running Services
+* Executable Hashes
+* Installed Applications
+* Local and Domain Users
+* Listening Ports and Associated Services
+* Domain Name System (DNS) Resolution Settings and Static Routes
+* Established and Recent Network Connections
+* Run Key and other AutoRun Persistence
+* Scheduled tasks and cron jobs
+* Artifacts of past execution (e.g., Prefetch and Shimcache)
+* Event logs
+* Group policy and WMI artifacts
+* Anti-virus detections
+* Binaries in temporary storage locations
+* Remote access credentials
+* Network connection telemetry (e.g., netflow, firewall permits)
+* DNS traffic and activity
+* Remote access activity including Remote Desktop Protocol (RDP), virtual private network (VPN), SSH, virtual network computing (VNC), and other remote access tools
+* Uniform Resource Identifier (URI) strings, user agent strings, and proxy enforcement actions
+* Web traffic (HTTP/HTTPS)
+
 ## Analyze Evidence
 
 * Prioritize based on the investigative plan
@@ -301,11 +336,26 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 * Analyze memory and disk images (_i.e._, conduct forensics)
 * Analyze malware
 * _OPTIONAL:_ Enrich with research and intelligence
+* Document new indicators of compromise (IOCs)
 * Update the case file
+
+### Example Useful Indicators
+
+`TODO: Customize and prioritize useful indicators.`
+
+* Unusual authentication behavior (_e.g._, frequency, systems, time of day, remote location)
+* Non-Standard formatted usernames
+* Unsigned binaries connecting to the network
+* Beaconing or significant data transfers
+* PowerShell command line requests with Base64-encoded commands
+* Excessive RAR, 7zip, or WinZip activity, especially with suspicious file names
+* Connections on previously unused ports.
+* Traffic patterns related to time, frequency, and byte count
+* Changes to routing tables, such as weighting, static entries, gateways, and peer relationships
 
 ## Iterate Investigation
 
-[Update the investigative plan](#update-investigative-plan) and repeat until closure.
+[Update the investigative plan](#update-investigative-plan-and-incident-file) and repeat until closure.
 
 # Remediate
 

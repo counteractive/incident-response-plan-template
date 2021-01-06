@@ -17,8 +17,7 @@ Assign steps to individuals or teams to work concurrently, when possible; this p
         * emails with links to external and unknown URLs
         * non-returnable or non-deliverable emails
         * any kind of notification of suspicious activity
-1. **Analyze the message** using a safe device to determine: `TODO: Specify tools and procedure`
-    * **Do not** open messages on a device with access to sensitive data or credentials. The message may contain malware.
+1. **Analyze the message** using a safe device (i.e., **do not** open messages on a device with access to sensitive data or credentials as the message may contain malware), determine: `TODO: Specify tools and procedure`
     * who received the message
     * who was targeted by the message (may be different than "successful" recipients)
     * email address of the sender
