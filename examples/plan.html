@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Author: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}" />
+  <title>Incident Response Plan for {{COMPANY_NAME}}</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Incident Response Plan for {{COMPANY_NAME}}</h1>
+<p class="author">Author: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}</p>
+<p class="date">Revision {{REVISION_NUMBER}}, Released {{RELEASE_DATE}}</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#incident-response-plan-for-company_name">Incident Response Plan for {{COMPANY_NAME}}</a></li>
+<li><a href="#assess">Assess</a>
+<ul>
+<li><a href="#assess-functional-impact">Assess Functional Impact</a></li>
+<li><a href="#assess-information-impact">Assess Information Impact</a></li>
+</ul></li>
+<li><a href="#initiate-response">Initiate Response</a>
+<ul>
+<li><a href="#name-the-incident">Name the Incident</a></li>
+<li><a href="#assemble-the-response-team">Assemble the Response Team</a>
+<ul>
+<li><a href="#reference-response-team-structure">Reference: Response Team Structure</a></li>
+<li><a href="#reference-response-team-contact-information">Reference: Response Team Contact Information</a></li>
+</ul></li>
+<li><a href="#establish-battle-rhythm">Establish Battle Rhythm</a>
+<ul>
+<li><a href="#conduct-initial-response-call">Conduct Initial Response Call</a></li>
+<li><a href="#conduct-response-update">Conduct Response Update</a></li>
+</ul></li>
+<li><a href="#monitor-scope">Monitor Scope</a>
+<ul>
+<li><a href="#create-sub-teams">Create Sub-Teams</a></li>
+<li><a href="#split-incident">Split Incident</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#investigate">Investigate</a>
+<ul>
+<li><a href="#create-incident-file">Create Incident File</a></li>
+<li><a href="#collect-initial-leads">Collect Initial Leads</a>
+<ul>
+<li><a href="#reference-response-resource-list">Reference: Response Resource List</a></li>
+</ul></li>
+<li><a href="#update-investigative-plan-and-incident-file">Update Investigative Plan and Incident File</a>
+<ul>
+<li><a href="#reference-attacker-tactics-to-key-questions-matrix">Reference: Attacker Tactics to Key Questions Matrix</a></li>
+</ul></li>
+<li><a href="#create-and-deploy-indicators-of-compromise-iocs">Create and Deploy Indicators of Compromise (IOCs)</a></li>
+<li><a href="#identify-systems-of-interest">Identify Systems of Interest</a></li>
+<li><a href="#collect-evidence">Collect Evidence</a>
+<ul>
+<li><a href="#example-useful-artifacts">Example Useful Artifacts</a></li>
+</ul></li>
+<li><a href="#analyze-evidence">Analyze Evidence</a>
+<ul>
+<li><a href="#example-useful-indicators">Example Useful Indicators</a></li>
+</ul></li>
+<li><a href="#iterate-investigation">Iterate Investigation</a></li>
+</ul></li>
+<li><a href="#remediate">Remediate</a>
+<ul>
+<li><a href="#update-remediation-plan">Update Remediation Plan</a>
+<ul>
+<li><a href="#protect">Protect</a></li>
+<li><a href="#detect">Detect</a></li>
+<li><a href="#contain">Contain</a></li>
+<li><a href="#eradicate">Eradicate</a></li>
+</ul></li>
+<li><a href="#choose-remediation-timing">Choose Remediation Timing</a></li>
+<li><a href="#execute-remediation">Execute Remediation</a></li>
+<li><a href="#iterate-remediation">Iterate Remediation</a></li>
+</ul></li>
+<li><a href="#communicate">Communicate</a>
+<ul>
+<li><a href="#communicate-internally">Communicate Internally</a>
+<ul>
+<li><a href="#notify-and-update-stakeholders">Notify and Update Stakeholders</a></li>
+<li><a href="#notify-and-update-organization">Notify and Update Organization</a></li>
+<li><a href="#create-incident-report">Create Incident Report</a></li>
+</ul></li>
+<li><a href="#communicate-externally">Communicate Externally</a>
+<ul>
+<li><a href="#notify-regulators">Notify Regulators</a></li>
+<li><a href="#notify-customers">Notify Customers</a></li>
+<li><a href="#notify-vendors-and-partners">Notify Vendors and Partners</a></li>
+<li><a href="#notify-law-enforcement">Notify Law Enforcement</a></li>
+<li><a href="#contact-external-response-support">Contact External Response Support</a></li>
+<li><a href="#share-intelligence">Share Intelligence</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#recover">Recover</a></li>
+<li><a href="#playbooks">Playbooks</a>
+<ul>
+<li><a href="#playbook-website-defacement">Playbook: Website Defacement</a>
+<ul>
+<li><a href="#investigate-1">Investigate</a></li>
+<li><a href="#remediate-1">Remediate</a></li>
+<li><a href="#recover-1">Recover</a></li>
+<li><a href="#communicate-1">Communicate</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#investigate-2">Investigate</a></li>
+<li><a href="#remediate-2">Remediate</a></li>
+<li><a href="#communicate-2">Communicate</a></li>
+<li><a href="#recover-2">Recover</a></li>
+<li><a href="#resources-1">Resources</a></li>
+</ul></li>
+<li><a href="#playbook-phishing">Playbook: Phishing</a>
+<ul>
+<li><a href="#investigate-3">Investigate</a></li>
+<li><a href="#remediate-3">Remediate</a></li>
+<li><a href="#communicate-3">Communicate</a></li>
+<li><a href="#recover-3">Recover</a></li>
+<li><a href="#resources-2">Resources</a></li>
+<li><a href="#investigate-4">Investigate</a></li>
+<li><a href="#remediate-4">Remediate</a></li>
+<li><a href="#communicate-4">Communicate</a></li>
+<li><a href="#recover-4">Recover</a></li>
+<li><a href="#resources-3">Resources</a></li>
+</ul></li>
+<li><a href="#playbook-supply-chain-compromise">Playbook: Supply Chain Compromise</a>
+<ul>
+<li><a href="#investigate-5">Investigate</a></li>
+<li><a href="#remediate-5">Remediate</a></li>
+<li><a href="#communicate-5">Communicate</a></li>
+<li><a href="#recover-5">Recover</a></li>
+<li><a href="#resources-4">Resources</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#roles">Roles</a>
+<ul>
+<li><a href="#structure-of-roles">Structure of Roles</a></li>
+<li><a href="#wartime-vs.-peacetime">Wartime vs. Peacetime</a></li>
+<li><a href="#role-all-participants">Role: All Participants</a>
+<ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#duties">Duties</a></li>
+<li><a href="#training">Training</a></li>
+</ul></li>
+<li><a href="#role-incident-commander-ic">Role: Incident Commander (IC)</a>
+<ul>
+<li><a href="#description-1">Description</a></li>
+<li><a href="#duties-1">Duties</a></li>
+<li><a href="#training-1">Training</a></li>
+</ul></li>
+<li><a href="#role-deputy-incident-commander-deputy">Role: Deputy Incident Commander (Deputy)</a>
+<ul>
+<li><a href="#description-2">Description</a></li>
+<li><a href="#duties-2">Duties</a></li>
+<li><a href="#training-2">Training</a></li>
+</ul></li>
+<li><a href="#role-scribe">Role: Scribe</a>
+<ul>
+<li><a href="#description-3">Description</a></li>
+<li><a href="#duties-3">Duties</a></li>
+<li><a href="#training-3">Training</a></li>
+</ul></li>
+<li><a href="#role-subject-matter-expert-sme">Role: Subject Matter Expert (SME)</a>
+<ul>
+<li><a href="#description-4">Description</a></li>
+<li><a href="#duties-4">Duties</a></li>
+<li><a href="#training-4">Training</a></li>
+</ul></li>
+<li><a href="#role-liaison">Role: Liaison</a>
+<ul>
+<li><a href="#description-5">Description</a></li>
+<li><a href="#duties-5">Duties</a></li>
+<li><a href="#training-5">Training</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#conduct-an-after-action-review-aar">Conduct an After Action Review (AAR)</a>
+<ul>
+<li><a href="#conduct-the-aar-meeting">Conduct the AAR Meeting</a></li>
+<li><a href="#communicate-aar-status-and-results">Communicate AAR Status and Results</a>
+<ul>
+<li><a href="#status-descriptions">Status Descriptions</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#about">About</a>
+<ul>
+<li><a href="#license">License</a></li>
+<li><a href="#instructions">Instructions</a></li>
+<li><a href="#references-and-additional-reading">References and Additional Reading</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="incident-response-plan-for-company_name">Incident Response Plan for {{COMPANY_NAME}}</h1>
+<p>Author: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}</p>
+<p>Revision {{REVISION_NUMBER}}, Released {{RELEASE_DATE}}</p>
+<p>This incident response plan is based on the concise, directive, specific, flexible, and free plan available on Counteractive Security’s <a href="https://github.com/counteractive/incident-response-plan-template">Github</a> and discussed at <a href="https://www.counteractive.net/posts/an-ir-plan-you-will-use/">www.counteractive.net</a></p>
+<p>It was last reviewed on {{REVIEW_DATE}}. It was last tested on {{TEST_DATE}}.</p>
+<p><code>TODO: Customize this plan template for your organization using instructions at https://github.com/counteractive/incident-response-plan-template.  For incident response services, or help customizing, implementing, or testing your plan, contact us at contact@counteractive.net or at (888) 925-5765.</code></p>
+<h1 id="assess">Assess</h1>
+<ol type="1">
+<li><strong>Stay calm and professional.</strong></li>
+<li>Gather pertinent information, <em>e.g.</em>, alarms, events, data, assumptions, intuitions (<strong>observe</strong>).</li>
+<li>Consider impact categories, below (<strong>orient</strong>), and determine if there is a possible incident (<strong>decide</strong>):</li>
+<li>Initiate a response if there is an incident (<strong>act</strong>). If in doubt, initiate a response. The incident commander and response team can adjust upon investigation and review.</li>
+</ol>
+<h2 id="assess-functional-impact">Assess Functional Impact</h2>
+<p>What is the direct or likely impact on your mission? (<em>e.g.</em>, business operations, employees, customers, users)</p>
+<ul>
+<li>Mission/business degradation or failure: <strong>incident!</strong></li>
+<li>None: assess information impact.</li>
+</ul>
+<h2 id="assess-information-impact">Assess Information Impact</h2>
+<p>What is the direct or likely impact on your information/data, particularly anything sensitive? (<em>e.g.</em>, PII, proprietary, financial, or healthcare data)</p>
+<ul>
+<li>Information accessed, taken, changed, or deleted: <strong>incident!</strong></li>
+<li>None: handle via non-incident channels (<em>e.g.</em>, support ticket).</li>
+</ul>
+<p><strong>Every team member is empowered to start this process.</strong> If you see something, say something.</p>
+<p><code>TODO: Customize categories/severities as necessary.  This simple example (incident vs. no incident) is based on impact categories in NIST SP 800-61r2.</code></p>
+<h1 id="initiate-response">Initiate Response</h1>
+<h2 id="name-the-incident">Name the Incident</h2>
+<p>Create an <a href="http://creativityforyou.com/combomaker.html">simple two-word phrase</a> to refer to the incident—a codename—to use for the incident file and channel(s). <code>TODO: Customize incident naming procedure.</code></p>
+<h2 id="assemble-the-response-team">Assemble the Response Team</h2>
+<ol type="1">
+<li>Page the on-duty/on-call Incident Commander. <code>TODO: Add Incident Commander call list or procedure</code></li>
+<li><strong>Do not</strong> discuss the incident outside the response team unless cleared by the Incident Commander</li>
+<li>Launch and/or join the response chat at {{RESPONSE_CHAT}}. <code>TODO: Add response chat launch procedure.</code></li>
+<li>Launch and/or join the response call at {{RESPONSE_PHONE}} and/or {{RESPONSE_VTC}}. <code>TODO: Add response call launch procedure.</code></li>
+<li>Prefer voice call, chat, and secure file exchange over any other methods.</li>
+<li><strong>Do not</strong> use primary email if possible. If email is necessary, use sparingly or use {{ALTERNATE_EMAIL}}. Encrypt emails when any participant is outside the {{ORGANIZATION_DOMAIN}} domain. <code>TODO: Add alternative email details and procedure, e.g., on-demand Office 365 or GSuite</code></li>
+<li><strong>Do not</strong> use SMS/text to communicate about the incident, unless to tell someone to move to a more secure channel.</li>
+<li>Invite on-duty/on-call responders to the response call and response chat.
+<ul>
+<li>Invite the security team. <code>TODO: Add security team contact list or procedure.</code></li>
+<li>Invite a SME for affected teams and systems. <code>TODO: Add team SME contact list or procedure.</code></li>
+<li>Invite executive stakeholders and legal counsel at earliest opportunity, but prioritize operational responders. <code>TODO: Add executive stakeholder contact list or procedure.</code></li>
+</ul></li>
+<li><em>OPTIONAL:</em> Establish an in-person collaboration room (“war room”) for complex or severe incidents. <code>TODO: Add collaboration room procedure.</code></li>
+</ol>
+<h3 id="reference-response-team-structure">Reference: Response Team Structure</h3>
+<ul>
+<li>Command Team
+<ul>
+<li><a href="#role-incident-commander-ic">Incident Commander</a></li>
+<li><a href="#role-deputy-incident-commander-deputy">Deputy Incident Commander</a></li>
+<li><a href="#role-scribe">Scribe</a></li>
+</ul></li>
+<li>Liaison Team
+<ul>
+<li>Internal <a href="#role-liaison">Liaison</a></li>
+<li>External Liaison</li>
+</ul></li>
+<li>Operations Team
+<ul>
+<li><a href="#role-subject-matter-expert-sme">Subject Matter Experts</a> (SMEs) for Systems</li>
+<li>SMEs for Teams/Business Units</li>
+<li>SMEs for Executive Functions (<em>e.g.</em>, Legal, HR, Finance)</li>
+</ul></li>
+</ul>
+<p><code>TODO: Modify role structure as necessary.</code></p>
+<h3 id="reference-response-team-contact-information">Reference: Response Team Contact Information</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Response Team Role</th>
+<th>Contact Information</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Incident Commander pager</td>
+<td>{{INCIDENT_COMMANDER_PAGER_NUMBER}}</td>
+</tr>
+<tr class="even">
+<td>Incident Commander pager url</td>
+<td>{{INCIDENT_COMMANDER_PAGER_URL}}</td>
+</tr>
+<tr class="odd">
+<td>Incident Commander roster</td>
+<td>{{INCIDENT_COMMANDER_ROSTER}}</td>
+</tr>
+<tr class="even">
+<td>Security team roster</td>
+<td>{{SECURITY_TEAM_ROSTER}}</td>
+</tr>
+<tr class="odd">
+<td>Team SME roster</td>
+<td>{{TEAM_SME_ROSTER}}</td>
+</tr>
+<tr class="even">
+<td>Executive roster</td>
+<td>{{EXECUTIVE_ROSTER}}</td>
+</tr>
+</tbody>
+</table>
+<p><code>TODO: Customize response team contact information.  Include contact procedures in rosters, which can be static or dynamic.</code></p>
+<h2 id="establish-battle-rhythm">Establish Battle Rhythm</h2>
+<h3 id="conduct-initial-response-call">Conduct Initial Response Call</h3>
+<ol type="1">
+<li>Conduct initial call using the <a href="#reference-initial-response-call-structure">initial response call structure</a></li>
+<li>Follow instructions from the Incident Commander. If the on-duty/on-call Incident Commander does not join the call <strong>within {{INCIDENT_COMMANDER_RESPONSE_SLA}}</strong> and you are a trained incident commander, take command of the call.</li>
+<li>Follow the <a href="#roles">instructions for your role</a>.</li>
+<li>Follow the call and chat, and comment as appropriate. If you are not a SME, filter input through the SME for your team if possible.</li>
+<li><strong>Keep the call and chat active throughout the incident for event-driven communication.</strong></li>
+<li>Schedule updates <strong>every {{UPDATE_FREQUENCY}}</strong> on the active bridge.</li>
+</ol>
+<h4 id="reference-initial-response-call-structure">Reference: Initial Response Call Structure</h4>
+<ul>
+<li>INCIDENT COMMANDER (IC): My name is [NAME], I am the Incident Commander. I have designated [NAME] as Deputy, and [NAME] as Scribe. Who is on the call?</li>
+<li>SCRIBE: [Takes attendance]</li>
+<li>IC: [If missing key personnel] Deputy, please page [MISSING PERSONNEL].</li>
+<li>IC: [Asks questions to understand situation, symptoms, scope, vector, impact, and timeline from the incident reporter, applicable SMEs for systems and business units]</li>
+<li>SMEs: [Brief answers to IC’s questions]</li>
+<li>IC:[If this is an incident]:
+<ul>
+<li>At this time, the incident summary is as follows: [reiterates summary]. The Investigation team will be led by [NAME], the Remediation team will be led by [NAME], and the Communication team will be led by [NAME]. They will coordinate team membership and report to me. SMEs, please report to your appropriate team leader.</li>
+<li>What investigation, remediation, or communication steps have already been taken? [this should be a short list, but needs to come out now]</li>
+<li>This call and chat will remain up and available until incident closure, please use it for all incident related communications. Provide real-time status updates in the chat, if possible. Are there any questions or remaining inputs? [answers questions]</li>
+<li>Team leaders, please proceed with your planned actions. We will reconvene at [UPDATE_TIME] to discuss the status. Thank you.</li>
+</ul></li>
+<li>IC: [If this is not an incident]: At this time, these facts do not rise to the level of an incident. I will coordinate directly with the incident reporter for follow-on actions. Thank you for your time.</li>
+</ul>
+<h4 id="reference-call-etiquette">Reference: Call Etiquette</h4>
+<ul>
+<li>Join both the call and chat.</li>
+<li>Keep background noise to a minimum.</li>
+<li>Keep your microphone muted until you have something to say.</li>
+<li>Identify yourself when you join the call; State your name and role (<em>e.g.</em>, “I am the SME for team x”).</li>
+<li>Speak up and speak clearly.</li>
+<li>Be direct and factual.</li>
+<li>Keep conversations/discussions short and to the point.</li>
+<li>Bring any concerns to the Incident Commander (IC) on the call.</li>
+<li>Respect time constraints given by the Incident Commander.</li>
+<li><strong>Use clear terminology, and avoid acronyms or abbreviations. Clarity and accuracy is more important than brevity.</strong></li>
+</ul>
+<h3 id="conduct-response-update">Conduct Response Update</h3>
+<ul>
+<li>Conduct scheduled updates using the <a href="#reference-response-update-call-structure">update call structure</a> every {{UPDATE_FREQUENCY}} on the active bridge. <code>TODO: Customize update frequency and scripts; recommend no more than twice daily.</code></li>
+<li>Adjust frequency as necessary.</li>
+<li>Coordinate independent updates (<em>e.g.</em>, executive, legal) as required, but as infrequently as practicable.</li>
+</ul>
+<h4 id="reference-response-update-call-structure">Reference: Response Update Call Structure</h4>
+<ul>
+<li>INCIDENT COMMANDER (IC): Since our last scheduled update, the incident summary is as follows:
+<ul>
+<li>[Impact]</li>
+<li>[Vector]</li>
+<li>[Summary update]</li>
+<li>[Timeline update]</li>
+</ul></li>
+<li>IC: Investigation team, please provide a brief update
+<ul>
+<li>INVESTIGATION LEAD: [Investigative activities or “nothing to report”]</li>
+<li>What is your recommended investigations plan?</li>
+<li>What investigation actions need tasking or approval? [listen, gain consensus, task/approve]</li>
+</ul></li>
+<li>IC: Remediation team, please provide a brief update
+<ul>
+<li>REMEDIATION LEAD: [Remediation activities or “nothing to report”]</li>
+<li>What is your recommended remediation strategy? Strong objections? [listen, gain consensus, task/approve]</li>
+<li>What remediation actions need tasking or approval?</li>
+</ul></li>
+<li>IC: Communication team, please provide a brief update:
+<ul>
+<li>COMMUNICATIONS LEAD: [Communication activities or “nothing to report”]</li>
+<li>What is your recommended communication strategy? Strong objections? [listen, gain consensus, task/approve]</li>
+<li>What communication actions need tasking or approval?</li>
+</ul></li>
+<li>IC: This call and chat will remain up and available until incident closure, please use it for all incident related communications. Provide real-time status updates in the chat, if possible. Are there any questions or remaining inputs? [answers questions]</li>
+<li>IC: Team leaders, please proceed. We will reconvene in [] to discuss the status. Thank you.</li>
+</ul>
+<h2 id="monitor-scope">Monitor Scope</h2>
+<ul>
+<li>Monitor the scope of the response to ensure it does not exceed the Incident Commander’s span of control.</li>
+<li>If an incident gets sufficiently complex, and there are sufficient responders, consider spinning off sub-teams.</li>
+</ul>
+<h3 id="create-sub-teams">Create Sub-Teams</h3>
+<ul>
+<li>In preparation for complex incidents, three sub-teams are pre-defined: Investigation, Remediation, and Communication, generally responsible for those response functions. <code>TODO: Customize sub-team structure if necessary.</code></li>
+<li>Create a call bridge and chat for each sub-team.</li>
+<li>The Incident Commander will designate team leaders, who report to the IC, and team members, who report to their team leader. <em>Team leaders do not have to be trained as incident commanders, however some leadership experience is preferable.</em></li>
+<li>The Incident Commander may adjust the purpose or name of the sub-teams as necessary.</li>
+<li>If you wish to switch teams, ask your <strong>current team leader</strong>. <strong>Do not</strong> ask the Incident Commander, or the leader of the other team(s). Use the chain of command.</li>
+</ul>
+<h3 id="split-incident">Split Incident</h3>
+<p>If an incident turns out to be two or more distinct incidents:</p>
+<ul>
+<li>Establish a new <a href="#create-incident-file">incident file</a>.</li>
+<li>Track and coordinate investigation, remediation, and communication in the appropriate file.</li>
+<li>Consider establishing sub-teams for each incident.</li>
+<li><strong>Maintain one top-level Incident Commander</strong>, to coordinate low-density, high-demand assets and maintain unity of command.</li>
+</ul>
+<h1 id="investigate">Investigate</h1>
+<p><strong><a href="#investigate">Investigate</a>, <a href="#remediate">remediate</a>, and <a href="#communicate">communicate</a> in parallel, using separate teams, if possible.</strong> The Incident Commander will coordinate these activities. Notify the Incident Commander if there are steps the team should consider.</p>
+<h2 id="create-incident-file">Create Incident File</h2>
+<ol type="1">
+<li>Create a new incident file at {{INCIDENT_FILE_LOCATION}} using the <a href="#name-the-incident">incident name</a>. Use this file for secure storage of documentation, evidence, artifacts, <em>etc.</em>
+<ul>
+<li>Provision secure digital storage.</li>
+<li>Provision secure file exchange.</li>
+<li>Obtain physical storage.</li>
+<li>Share the incident file location on the call and chat.</li>
+<li><code>TODO: Customize and automate file location and procedure</code></li>
+</ul></li>
+<li>Document the functional and information impact, if known (see <a href="#assess">Assess</a>). <code>TODO: Customize impact categories, if necessary.</code></li>
+<li>Document the vector, if known (<em>e.g.,</em> web, email, removable media). <code>TODO: Customize vector list, if necessary.</code></li>
+<li>Document the incident summary: a brief overview of the vector, impact, investigation, and remediation situation, if known.</li>
+<li>Document the incident timeline, including attacker activity and responder activity. <code>TODO: Add timelines of varying details, as necessary.</code></li>
+<li>Document investigation, remediation, and communication steps. Document activities independently so they can be combined and reused, if possible.</li>
+<li>Track significant information such as:
+<ul>
+<li><strong>Evidence</strong>, with time of collection, source, chain of custody, <em>etc.</em></li>
+<li><strong>Affected systems</strong>, with how and when system was identified, and summary of effect (<em>e.g.</em>, has malware, data accessed).</li>
+<li><strong>Files of interest</strong>, such as malware or data files, with system and metadata.</li>
+<li><strong>Accessed and taken data</strong>, with filenames, metadata, and time of suspected exposure.</li>
+<li><strong>Significant attacker activity</strong>, such as logins and malware execution, with time of the event.</li>
+<li><strong>Network-based indicators of compromise (IOCs)</strong>, such as IP addresses and domains.</li>
+<li><strong>Host-based IOCs</strong>, such as filenames, hashes, and registry keys.</li>
+<li><strong>Compromised accounts</strong>, with scope of access and time of compromise.</li>
+</ul></li>
+</ol>
+<p><code>TODO: Customize incident documentation procedure, including spreadsheets, databases, forms, systems, and templates, if necessary.</code></p>
+<h2 id="collect-initial-leads">Collect Initial Leads</h2>
+<ol type="1">
+<li>Interview incident reporter(s).</li>
+<li>Collect initial supporting data (<em>e.g.</em>, alarms, events, data, assumptions, intuitions) in the incident file.</li>
+<li>Interview SME(s) with domain or system expertise, to understand technical detail, context, and risk.</li>
+<li>Interview SME(s) in affected business unit, to understand mission/business impact, context, and risk.</li>
+<li>Ensure leads are relevant, detailed, and actionable.</li>
+</ol>
+<h3 id="reference-response-resource-list">Reference: Response Resource List</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Resource</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Critical information list</td>
+<td>{{CRITICAL_INFO_LIST_LOCATION}}</td>
+</tr>
+<tr class="even">
+<td>Critical asset list</td>
+<td>{{CRITICAL_ASSET_LIST_LOCATION}}</td>
+</tr>
+<tr class="odd">
+<td>Asset management database</td>
+<td>{{ASSET_MGMT_DB_LOCATION}}</td>
+</tr>
+<tr class="even">
+<td>Network map</td>
+<td>{NETWORK_MAP_LOCATION{}}</td>
+</tr>
+<tr class="odd">
+<td>SIEM console</td>
+<td>{{SIEM_CONSOLE_LOCATION}}</td>
+</tr>
+<tr class="even">
+<td>Log aggregator</td>
+<td>{{LOG_AGGREGATOR_CONSOLE}}</td>
+</tr>
+</tbody>
+</table>
+<p><code>TODO: Complete critical information and asset lists ("crown jewels"). This is incredibly important to effective response.</code></p>
+<p><code>TODO: Customize response resource list</code></p>
+<h2 id="update-investigative-plan-and-incident-file">Update Investigative Plan and Incident File</h2>
+<ol type="1">
+<li>Review and refine incident impact.</li>
+<li>Review and refine incident vector.</li>
+<li>Review and refine incident summary.</li>
+<li>Review and refine incident timeline with facts and inferences.</li>
+<li>Create hypotheses: what may have happened, and with what confidence.</li>
+<li><strong>Identify and prioritize key questions</strong> (information gaps) to support or discredit hypotheses.
+<ul>
+<li>Use the MITRE ATT&amp;CK matrix or similar framework to <a href="#reference-attacker-tactics-to-key-questions-matrix">develop questions</a>.
+<ul>
+<li><a href="https://attack.mitre.org/wiki/Main_Page">ATT&amp;CK for Enterprise</a>, including links to Windows, Mac, and Linux specifics.</li>
+<li><a href="https://attack.mitre.org/mobile/index.php/Main_Page">ATT&amp;CK Mobile Profile</a> for mobile devices.</li>
+</ul></li>
+<li>Use interrogative words as inspiration:
+<ul>
+<li><strong>When?</strong>: first compromise, first data loss, access to x data, access to y system, <em>etc.</em></li>
+<li><strong>What?</strong>: impact, vector, root cause, motivation, tools/exploits used, accounts/systems compromised, data targeted/lost, infrastructure, IOCs, <em>etc.</em></li>
+<li><strong>Where?</strong>: attacker location, affected business units, infrastructure, <em>etc.</em></li>
+<li><strong>How?</strong>: compromise (exploit), persistence, access, exfiltration, lateral movement, <em>etc.</em></li>
+<li><strong>Why?</strong>: targeted, timing, access x data, access y system, <em>etc.</em></li>
+<li><strong>Who?</strong>: attacker, affected users, affected customers, <em>etc.</em></li>
+</ul></li>
+</ul></li>
+<li><strong>Identify and prioritize witness devices and strategies</strong> to answer key questions.
+<ul>
+<li>Consult network diagrams, asset management systems, and SME expertise</li>
+<li>Check the <a href="#reference-response-resource-list">Response Resource List</a>)</li>
+</ul></li>
+<li>Refer to <a href="#playbooks">incident playbooks</a> for key questions, witness devices, and strategies for investigating common or highly damaging threats.</li>
+</ol>
+<p><strong>The investigative plan is critical to an effective response; it drives all investigative actions. Use critical thinking, creativity, and sound judgment.</strong></p>
+<h3 id="reference-attacker-tactics-to-key-questions-matrix">Reference: Attacker Tactics to Key Questions Matrix</h3>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 32%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attacker Tactic</th>
+<th>The way attackers …</th>
+<th>Possible Key Questions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Reconnaissance</td>
+<td>… learn about targets</td>
+<td>How? Since when? Where? Which systems?</td>
+</tr>
+<tr class="even">
+<td>Resource Development</td>
+<td>… build infrastructure</td>
+<td>Where? Which systems?</td>
+</tr>
+<tr class="odd">
+<td>Initial Access</td>
+<td>… get in</td>
+<td>How? Since when? Where? Which systems?</td>
+</tr>
+<tr class="even">
+<td>Execution</td>
+<td>… run hostile code</td>
+<td>What malware? What tools? Where? When?</td>
+</tr>
+<tr class="odd">
+<td>Persistence</td>
+<td>… stick around</td>
+<td>How? Since when? Where? Which systems?</td>
+</tr>
+<tr class="even">
+<td>Privilege Escalation</td>
+<td>… get higher level access</td>
+<td>How? Where? What tools?</td>
+</tr>
+<tr class="odd">
+<td>Defense Evasion</td>
+<td>… dodge security</td>
+<td>How? Where? Since when?</td>
+</tr>
+<tr class="even">
+<td>Credential Access</td>
+<td>… get/create accounts</td>
+<td>Which accounts? Since when? Why?</td>
+</tr>
+<tr class="odd">
+<td>Discovery</td>
+<td>… learn our network</td>
+<td>How? Where? What do they know?</td>
+</tr>
+<tr class="even">
+<td>Lateral Movement</td>
+<td>… move around</td>
+<td>How? When? Which accounts?</td>
+</tr>
+<tr class="odd">
+<td>Collection</td>
+<td>… find and gather data</td>
+<td>What data? Why? When? Where?</td>
+</tr>
+<tr class="even">
+<td>Command and Control</td>
+<td>… control tools and systems</td>
+<td>How? Where? Who? Why?</td>
+</tr>
+<tr class="odd">
+<td>Exfiltration</td>
+<td>… take data</td>
+<td>What data? How? When? Where?</td>
+</tr>
+<tr class="even">
+<td>Impact</td>
+<td>… break things</td>
+<td>What systems or data? How? When? Where? How bad?</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="https://attack.mitre.org/">MITRE ATT&amp;CK page</a> for more insight and ideas.</p>
+<h2 id="create-and-deploy-indicators-of-compromise-iocs">Create and Deploy Indicators of Compromise (IOCs)</h2>
+<blockquote>
+<p>Emphasize <strong>dynamic and behavioral</strong> indicators alongside static fingerprints.</p>
+</blockquote>
+<ul>
+<li>Create IOCs based on <a href="#collect-initial-leads">initial leads</a> and <a href="#analyze-evidence">analysis</a>.</li>
+<li>Create IOCs using an open format supported by your tools (<em>e.g.</em>, <a href="https://oasis-open.github.io/cti-documentation/stix/intro">STIX 2.0</a>), if possible. <code>TODO: Customize IOC format as necessary.</code></li>
+<li>Use automation, if possible. <code>TODO: Add IOC deployment/revocation procedure.</code></li>
+<li><strong>Do not</strong> deploy unrelated, un-curated “feeds” of IOCs; these can cause confusion and fatigue.</li>
+<li>Consider all IOC types:
+<ul>
+<li>Network-based IOCs such as IP or MAC addresses, ports, email addresses, email content or metadata, URLs, domains, or PCAP patterns.</li>
+<li>Host-based IOCs such as paths, file hashes, file content or metadata, registry keys, MUTEXes, autoruns, or user artifacts and permissions.</li>
+<li>Cloud-based IOCs such as log patterns for <a href="https://en.wikipedia.org/wiki/Software_as_a_service">SaaS</a> or <a href="https://en.wikipedia.org/wiki/Infrastructure_as_a_service">IaaS</a> deployments</li>
+<li>Behavioral IOCs (a.k.a., patterns, TTPs) such as process tree patterns, heuristics, deviation from baseline, and login patterns.</li>
+</ul></li>
+<li>Correlate various IOC types, such as network and host-based indicators on the same systems(s).</li>
+</ul>
+<h2 id="identify-systems-of-interest">Identify Systems of Interest</h2>
+<ol type="1">
+<li>Validate whether they are relevant.</li>
+<li>Categorize the reason(s) they are “of interest”: has malware, accessed by compromised account, has sensitive data, etc. Treat these as “tags”, there may be more than one category per system.</li>
+<li>Prioritize collection, analysis, and remediation based on investigative needs, business impact, <em>etc.</em></li>
+</ol>
+<h2 id="collect-evidence">Collect Evidence</h2>
+<ul>
+<li>Prioritize based on the investigative plan</li>
+<li>Collect live response data using {{LIVE_RESPONSE_TOOL}}. <code>TODO: Customize live response tools and procedure.</code></li>
+<li>Collect relevant logs from system(s) (if not part of live response), aggregator(s), SIEM(s), or device console(s). <code>TODO: Customize log collection tools and procedure.</code></li>
+<li>Collect memory image, if necessary and if not part of live response, using {{MEMORY_COLLECTION_TOOL}}. <code>TODO: Customize memory collection tools and procedure.</code></li>
+<li>Collect disk image, if necessary, using {{DISK_IMAGE_TOOL}}. <code>TODO: Customize disk image collection tool and procedure.</code></li>
+<li>Collect and store evidence in accordance with policy, and with proper chain of custody. <code>TODO: Customize evidence collection and chain of custody policy.</code></li>
+</ul>
+<p>Consider collecting the following artifacts as evidence, either in real time (_e.g., via EDR or a SIEM) or on demand:</p>
+<h3 id="example-useful-artifacts">Example Useful Artifacts</h3>
+<p><code>TODO: Customize and prioritize useful artifacts.</code></p>
+<ul>
+<li>Running Processes</li>
+<li>Running Services</li>
+<li>Executable Hashes</li>
+<li>Installed Applications</li>
+<li>Local and Domain Users</li>
+<li>Listening Ports and Associated Services</li>
+<li>Domain Name System (DNS) Resolution Settings and Static Routes</li>
+<li>Established and Recent Network Connections</li>
+<li>Run Key and other AutoRun Persistence</li>
+<li>Scheduled tasks and cron jobs</li>
+<li>Artifacts of past execution (e.g., Prefetch and Shimcache)</li>
+<li>Event logs</li>
+<li>Group policy and WMI artifacts</li>
+<li>Anti-virus detections</li>
+<li>Binaries in temporary storage locations</li>
+<li>Remote access credentials</li>
+<li>Network connection telemetry (e.g., netflow, firewall permits)</li>
+<li>DNS traffic and activity</li>
+<li>Remote access activity including Remote Desktop Protocol (RDP), virtual private network (VPN), SSH, virtual network computing (VNC), and other remote access tools</li>
+<li>Uniform Resource Identifier (URI) strings, user agent strings, and proxy enforcement actions</li>
+<li>Web traffic (HTTP/HTTPS)</li>
+</ul>
+<h2 id="analyze-evidence">Analyze Evidence</h2>
+<ul>
+<li>Prioritize based on the investigative plan</li>
+<li>Analyze and triage live response data</li>
+<li>Analyze memory and disk images (<em>i.e.</em>, conduct forensics)</li>
+<li>Analyze malware</li>
+<li><em>OPTIONAL:</em> Enrich with research and intelligence</li>
+<li>Document new indicators of compromise (IOCs)</li>
+<li>Update the case file</li>
+</ul>
+<h3 id="example-useful-indicators">Example Useful Indicators</h3>
+<p><code>TODO: Customize and prioritize useful indicators.</code></p>
+<ul>
+<li>Unusual authentication behavior (<em>e.g.</em>, frequency, systems, time of day, remote location)</li>
+<li>Non-Standard formatted usernames</li>
+<li>Unsigned binaries connecting to the network</li>
+<li>Beaconing or significant data transfers</li>
+<li>PowerShell command line requests with Base64-encoded commands</li>
+<li>Excessive RAR, 7zip, or WinZip activity, especially with suspicious file names</li>
+<li>Connections on previously unused ports.</li>
+<li>Traffic patterns related to time, frequency, and byte count</li>
+<li>Changes to routing tables, such as weighting, static entries, gateways, and peer relationships</li>
+</ul>
+<h2 id="iterate-investigation">Iterate Investigation</h2>
+<p><a href="#update-investigative-plan-and-incident-file">Update the investigative plan</a> and repeat until closure.</p>
+<h1 id="remediate">Remediate</h1>
+<p><strong><a href="#investigate">Investigate</a>, <a href="#remediate">remediate</a>, and <a href="#communicate">communicate</a> in parallel, using separate teams, if possible.</strong> The Incident Commander will coordinate these activities. Notify the Incident Commander if there are steps the team should consider</p>
+<h2 id="update-remediation-plan">Update Remediation Plan</h2>
+<ol type="1">
+<li>Review the incident file at {{INCIDENT_FILE_LOCATION}} using the <a href="#name-the-incident">incident name</a></li>
+<li>Review applicable <a href="#playbooks">playbooks</a>.</li>
+<li>Review the <a href="#reference-response-resource-list">Response Resource List</a>).</li>
+<li>Consider which attacker tactics are in play in this incident. Use the MITRE <a href="https://attack.mitre.org/wiki/Main_Page">ATT&amp;CK</a> list (<em>i.e.</em>, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Lateral Movement, Execution, Collection, Exfiltration, and Command and Control), or similar framework.</li>
+<li>Develop remediations for each tactic in play, as feasible given existing tools and resources. Consider remediations to <a href="#protect">Protect</a>, <a href="#detect">Detect</a>, <a href="#contain">Contain</a>, and <a href="#eradicate">Eradicate</a> each attacker behavior.</li>
+<li>Prioritize based on <a href="#choose-remediation-timing">timing strategy</a>, impact, and urgency.</li>
+<li>Document in incident file.</li>
+</ol>
+<p>Use <a href="https://www.nist.gov/cyberframework">information security (infosec) frameworks</a> as inspiration, but <strong>do not use incident remediation as a substitute for an infosec program with an appropriate framework.</strong> Use them to supplement one another.</p>
+<h3 id="protect">Protect</h3>
+<blockquote>
+<p>“How can we stop tactic X from happening again, or reduce risk? How can we improve future protection?”</p>
+</blockquote>
+<p>Use the following as a starting point for protective remediation:</p>
+<ul>
+<li>Patch applications.</li>
+<li>Patch operating systems.</li>
+<li>Update network and host IPS signatures.</li>
+<li>Update endpoint protection/EDR/anti-virus signatures.</li>
+<li>Reduce locations with critical data.</li>
+<li>Reduce administrative or privileged accounts.</li>
+<li>Enable multi-factor authentication.</li>
+<li>Strengthen password requirements.</li>
+<li>Block unused ports and protocols at segment and network boundaries, both inbound and outbound.</li>
+<li>Whitelist network connections for critical servers and services.</li>
+</ul>
+<h3 id="detect">Detect</h3>
+<blockquote>
+<p>“How can we detect this on new systems or in the future? How can we improve future detection and investigation?”</p>
+</blockquote>
+<p>Use the following as a starting point for detective remediation:</p>
+<ul>
+<li>Enhance logging and retention for system logs, particularly critical systems.</li>
+<li>Enhance logging for applications, including SaaS applications.</li>
+<li>Enhance log aggregation.</li>
+<li>Update network and host IDS signatures using IOCs.</li>
+</ul>
+<h3 id="contain">Contain</h3>
+<blockquote>
+<p>“How can we stop this from spreading, or getting more severe? How can we improve future containment?”</p>
+</blockquote>
+<p>Use the following as a starting point for containment remediation:</p>
+<ul>
+<li>Implement access lists (ACLs) at network segment boundaries</li>
+<li>Implement blocks at the enterprise boundary, at multiple layers of the <a href="https://en.wikipedia.org/wiki/OSI_model">OSI model</a>.</li>
+<li>Disable or remove compromised account access.</li>
+<li>Block malicious IP addresses or networks.</li>
+<li>Black hole or sinkhole malicious domains.</li>
+<li>Update network and host IPS and anti-malware signatures using IOCs.</li>
+<li>Remove critical or compromised systems from the network.</li>
+<li>Contact providers for assistance (<em>e.g.</em>, internet service providers, SaaS vendors)</li>
+<li>Whitelist network connections for critical servers and services.</li>
+<li>Kill or disable processes or services.</li>
+<li>Block or remove access for external vendors and partners, especially privileged access.</li>
+</ul>
+<h3 id="eradicate">Eradicate</h3>
+<blockquote>
+<p>“How can we eliminate this from our assets? How can we improve future eradication?”</p>
+</blockquote>
+<p>Use the following as a starting point for eradication remediation:</p>
+<ul>
+<li>Rebuild or restore compromised systems and data from known-good state.</li>
+<li>Reset account passwords.</li>
+<li>Remove hostile accounts or credentials.</li>
+<li>Delete or remove specific malware (difficult!).</li>
+<li>Implement alternative vendors.</li>
+<li>Activate and migrate to alternate locations, services, or servers.</li>
+</ul>
+<h2 id="choose-remediation-timing">Choose Remediation Timing</h2>
+<p>Determine the timing strategy—when remediation actions will be taken—by engaging the Incident Commander, the system SMEs and owners, business unit SMEs and owners, and the executive team. Each strategy is appropriate under different circumstances:</p>
+<ul>
+<li>Choose <strong>immediate</strong> remediation when it is more important to immediately stop attacker activities than to continue investigating. For example, ongoing financial loss, or ongoing mission failure, active data loss, or prevention of an imminent significant threat.</li>
+<li>Choose <strong>delayed</strong> remediation when it is important to complete the investigation, or important not to alert the attacker. For example, long-term compromise by an advanced attacker, corporate espionage, or large-scale compromise of an an unknown number of systems.</li>
+<li>Choose <strong>combined</strong> remediation when both immediate and delayed circumstances apply in the same incident. For example, immediate segmentation of a sensitive server or network to meet regulatory requirements while still investigating a long-term compromise.</li>
+</ul>
+<h2 id="execute-remediation">Execute Remediation</h2>
+<ul>
+<li>Assess and explain risks of remediation actions to stakeholders. <code>TODO: Customize remediation risk approval procedure, if necessary.</code></li>
+<li>Immediately implement those remediation actions with little or no affect on the attacker (sometimes called “posturing actions”). For example, many of the <a href="#protect">protection</a> and <a href="#detect">detection</a> actions above are good candidates.</li>
+<li>Schedule and task remediation actions according to the timing strategy.</li>
+<li>Execute remediation actions in batches, as events, for maximum effectiveness and minimum risk.</li>
+<li>Document execution status and time in the incident file, especially for temporary measures.</li>
+</ul>
+<h2 id="iterate-remediation">Iterate Remediation</h2>
+<p><a href="#update-remediation-plan">Update the remediation plan</a> and repeat until closure.</p>
+<h1 id="communicate">Communicate</h1>
+<p><strong><a href="#investigate">Investigate</a>, <a href="#remediate">remediate</a>, and <a href="#communicate">communicate</a> in parallel, using separate teams, if possible.</strong> The Incident Commander will coordinate these activities. Notify the Incident Commander if there are steps the team should consider</p>
+<p>All communication must include the most accurate information available. Display integrity. Do not communicate speculation.</p>
+<h2 id="communicate-internally">Communicate Internally</h2>
+<h3 id="notify-and-update-stakeholders">Notify and Update Stakeholders</h3>
+<ul>
+<li>Communicate with stakeholders as part of the initial and update calls, as well as via event-driven updates on the call and chat.</li>
+<li>Coordinate independent updates (<em>e.g.</em>, executive, legal) as required, but as infrequently as practicable, to keep the focus on investigation and remediation.</li>
+<li>Focus on the best assessment of the vector, impact, summary, and highlights of the timeline including remediation steps. Do not speculate.</li>
+</ul>
+<h3 id="notify-and-update-organization">Notify and Update Organization</h3>
+<ul>
+<li><strong>Do not</strong> notify or update non-response personnel until cleared by the Incident Commander, particularly if there is a risk of an insider threat.</li>
+<li>Coordinate updates for teams or the entire organization with executives and business leadership.</li>
+<li>Focus on the best assessment of the vector, impact, summary, and highlights of the timeline including remediation steps. Do not speculate.</li>
+</ul>
+<h3 id="create-incident-report">Create Incident Report</h3>
+<ul>
+<li>Upon incident closure, capture information in the <a href="#create-incident-file">incident file</a> for distribution using the format at {{INCIDENT_REPORT_TEMPLATE}}. <strong>If the vector, impact, summary, timeline, and activity reports are complete, this can be fully automated.</strong></li>
+<li>Distribute the incident report to the following: {{INCIDENT_REPORT_RECIPIENTS}}.</li>
+<li><code>TODO: Customize incident report creation and distribution, if necessary</code></li>
+</ul>
+<h2 id="communicate-externally">Communicate Externally</h2>
+<h3 id="notify-regulators">Notify Regulators</h3>
+<ul>
+<li><strong>Do not</strong> notify or update non-response personnel until cleared by the Incident Commander.</li>
+<li>Notify regulators (<em>e.g.</em>, HIPAA/HITRUST, PCI DSS, SOX) if necessary, and in accordance with policy.</li>
+<li>Coordinate requirements, format, and timeline with {COMPLIANCE_TEAM{}}.</li>
+</ul>
+<h3 id="notify-customers">Notify Customers</h3>
+<ul>
+<li><strong>Do not</strong> notify or update non-response personnel until cleared by the Incident Commander.</li>
+<li>Coordinate customer notifications with {{COMMUNICATIONS_TEAM}}.</li>
+<li>Include the date in the title of any announcement, to avoid confusion.</li>
+<li><strong>Do not</strong> use platitudes such as “we take security very seriously”. Focus on facts.</li>
+<li>Be honest, accept responsibility, and present the facts, along with the plan to prevent similar incidents in future.</li>
+<li>Be as detailed as possible with the timeline.</li>
+<li>Be as detailed as possible in what information was compromised, and how it affects customers. If we were storing something we shouldn’t have been, be honest about it. It’ll come out later and it’ll be much worse.</li>
+<li><strong>Do not</strong> discuss external parties that might have caused the compromise, unless they’ve already publicly disclosed, in which case link to their disclosure. Communicate with them independently (see <a href="#notify-vendors-and-partners">Notify Vendors</a>)</li>
+<li>Release the external communication as soon as possible. Bad news does not get better with age.</li>
+<li>If possible, contact customers’ internal security teams before notifying the public.</li>
+</ul>
+<h3 id="notify-vendors-and-partners">Notify Vendors and Partners</h3>
+<ul>
+<li><strong>Do not</strong> notify or update non-response personnel until cleared by the Incident Commander.</li>
+<li>If possible, contact vendors’ and partners’ internal security teams before notifying the public.</li>
+<li>Focus on the specific aspects of the incident that affect or implicate the vendor or partner.</li>
+<li>Coordinate response efforts and share information if possible.</li>
+</ul>
+<h3 id="notify-law-enforcement">Notify Law Enforcement</h3>
+<ul>
+<li><strong>Do not</strong> notify or update non-response personnel until cleared by the Incident Commander.</li>
+<li>Coordinate with {{EXECUTIVE_TEAM}} and {{LEGAL_TEAM}} prior to interacting with law enforcement</li>
+<li>Contact local law enforcement at {{LOCAL_LE_CONTACT}}.</li>
+<li>Contact FBI at {{FBI_CONTACT}} or via the <a href="https://www.ic3.gov">Internet Crime Complaint Center (IC3)</a>.</li>
+<li>Contact operators for any systems used in the attack, their systems may also have been compromised.</li>
+</ul>
+<h3 id="contact-external-response-support">Contact External Response Support</h3>
+<ul>
+<li>Contact {{INCIDENT_RESPONSE_VENDOR}} to help in assessing risk, incident management, incident response, and post-incident support.</li>
+<li>Contact {{PUBLIC_RELATIONS_VENDOR}} for help with PR and external communication.</li>
+<li>Contact {{INSURANCE_VENDOR}} for help with cyber insurance.</li>
+</ul>
+<h3 id="share-intelligence">Share Intelligence</h3>
+<ul>
+<li>Share IOCs with <a href="https://www.infragard.org/">Infragard</a> if applicable.</li>
+<li>Share IOCs with your servicing <a href="https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center">ISAC</a> through {{ISAC_CONTACT}}, if applicable.</li>
+</ul>
+<h1 id="recover">Recover</h1>
+<p><code>TODO: Customize recovery steps.</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below.</code></p>
+<p><strong>Recovery is typically governed by business units and system owners. Take recovery actions only in collaboration with relevant stakeholders.</strong></p>
+<ol type="1">
+<li>Launch business continuity/disaster recovery plan(s): <em>e.g.</em>, consider migration to alternate operating locations, fail-over sites, backup systems.</li>
+<li>Integrate security actions with organizational recovery efforts.</li>
+</ol>
+<h1 id="playbooks">Playbooks</h1>
+<p>The following playbooks capture common <a href="#investigate">investigation</a>, <a href="#remediate">remediation</a>, and <a href="#communicate">communication</a> steps for particular types of incident.</p>
+<p><code>TODO: Create additional playbooks for highly likely or highly damaging incident types.</code></p>
+<h2 id="playbook-website-defacement">Playbook: Website Defacement</h2>
+<p><strong>Investigate, remediate (contain, eradicate), and communicate in parallel!</strong></p>
+<p>Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.</p>
+<h3 id="investigate-1">Investigate</h3>
+<ol type="1">
+<li>Immediately take the defaced server offline for further investigation
+<ul>
+<li>This is especially important if the defacement is insulting or triggering in any way. Remove this from the public eye as quickly as possible to avoid harm as well as to mitigate business impact.</li>
+<li>The defacement message may also contain false information that could mislead users or put them at risk.</li>
+<li>Taking the server offline will allow a deeper investigation of the defacement. This may be necessary as the hacker may have dove depper into the organization accessing application servers, databases, etc.</li>
+</ul></li>
+<li>Determine the system’s source of vulnerability that was used by the attacker. Common exploits include:
+<ul>
+<li>SQL injection attakcs
+<ul>
+<li>This kind of attack occurs when an attacker interferes with an application’s queries to the database. Therefore, this can lead to unauthorized access to private or sensitive data. Read more about SQL injection attacks <a href="https://www.acunetix.com/websitesecurity/sql-injection/">here</a></li>
+</ul></li>
+<li>Remote File Inclusion (RFI) attacks
+<ul>
+<li>This kind of attack exploits an application’s referencing function to upload malware from a remote URL. Read more about RFI attacks <a href="https://www.acunetix.com/blog/articles/remote-file-inclusion-rfi/">here</a></li>
+</ul></li>
+<li>webshells
+<ul>
+<li>More about web shells and website defacement <a href="https://www.wordfence.com/blog/2017/06/wso-shell/">here</a></li>
+</ul></li>
+<li>poor web application design
+<ul>
+<li>javascript hacks</li>
+<li>PHP/ASP hacks</li>
+<li>Here’s more on <a href="https://itnext.io/how-companies-are-hacked-via-malicious-javascript-code-12aa82560bdc">hacking with javascript</a></li>
+</ul></li>
+<li>other methods of detection include:
+<ul>
+<li>Checking the server logs
+<ul>
+<li>look through the web page’s access log and error log for any suspicious or unfamiliar activity</li>
+<li>of course, it is also a good idea to check the IDS or IPS firewall logs, if available</li>
+</ul></li>
+<li>Checking files with static content</li>
+<li>Scanning databases for malicious content</li>
+<li>Checking links present in the page</li>
+</ul></li>
+</ul></li>
+<li>Collect any clues as to who the hacker is or what organization they are working for. Consider the following questions:
+<ul>
+<li>What did the defacement portray? Did it include an obvious message?</li>
+<li>Did the defacement seem harmless or intentional? Could the hacker be a kid messing around or a professional group working with a motive?</li>
+<li>Does it seem like your organization was targeted? Who may want to target your organization?</li>
+<li>What did the hacker hope to accomplish?</li>
+<li>Consult <a href="https://www.geeksforgeeks.org/types-of-hackers/">here</a> to learn more about the types of hackers that may have attacked your webpage.</li>
+</ul></li>
+<li>Collect other important information from the page that has been defaced such as:
+<ul>
+<li>a screenshot of the defacement</li>
+<li>the domain and IP address of the page</li>
+<li>details of the web server</li>
+<li>page’s source code
+<ul>
+<li>analyze this carefully to identify the problem and ensure that it is on a server belonging to the company</li>
+</ul></li>
+<li>name or any information on the attacker</li>
+</ul></li>
+<li>There are also tools available to aid in both detection and log analysis. A few are listed below:
+<ul>
+<li>Weblog Expert</li>
+<li>Sawmill</li>
+<li>Deep Log Analyzer</li>
+</ul></li>
+</ol>
+<p><code>TODO: Expand investigation steps, including key questions and strategies, for website defacement.</code></p>
+<h3 id="remediate-1">Remediate</h3>
+<ul>
+<li><strong>Plan remediation events</strong> where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.</li>
+<li><strong>Consider the timing and tradeoffs</strong> of remediation actions: your response has consequences.</li>
+</ul>
+<h4 id="contain-1">Contain</h4>
+<p><code>TODO: Customize containment steps, tactical and strategic, for website defacement.</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below.</code></p>
+<ol type="1">
+<li>Backup all data stored on the web server for forensic purposes.</li>
+<li>As previously mentioned, make sure to take the defaced page’s server down temporarily while investigation occurs.
+<ul>
+<li>You should have an error page prepared for this situation that informs user and/or employees that maintenance is undereway and the page they sought will return shortly. You may even wish to have a backup website prepared where you may publish content while investigation and remediation are underway and have your temporary error page redirect users to this backup site.</li>
+<li>Check your network architecture map. If the breach is another system on the network, take that down and investigate it.</li>
+</ul></li>
+<li>Once the source of the attack has been determined, apply the necessarily steps to ensure this will not happen again. This may include modifying code or editing access rights.
+<ul>
+<li>Reference the “Investigate” section for common sources of vulnerability.</li>
+<li>If this is outside of your domain, simply ensure that you have given the appropriate personnel all the information on the attack that you have and allow experts to do their job.</li>
+</ul></li>
+</ol>
+<h3 id="recover-1">Recover</h3>
+<p><code>TODO: Customize recovery steps for defacement</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below</code></p>
+<ol type="1">
+<li>Remove the hacker’s message and replace with original, legitimate content. If data was lost in the attack, reference backups and restore the original page as much as possible.
+<ul>
+<li>Check backups for indicators of compromise</li>
+<li>Consider partial recovery and backup integrity testing</li>
+</ul></li>
+<li>Consider asking users to change their login credentials if the web server has user authentication.</li>
+<li>After implementing risk avoidance measures (as recommended below), restore your server showing the original page content.</li>
+<li>If necessary and/or applicable, prepare an apology/explanation of the attack that occurred for users or anyone who witnessed the defacement. Ensure that is it clear that the defacement content does not reflect your organization in any way.</li>
+</ol>
+<h4 id="risk-avoidance">Risk Avoidance</h4>
+<p><code>TODO: Communicate with other employees to ensure that everyone understands and contributes to the following steps, where applicable</code></p>
+<ol type="1">
+<li>Use as few plug-ins as necessary. Hackers target websites that are vulnerable and have many sources of entry. You can limit these sources of entry by only using what you need and removing any unused or old plug ins and software. It is also important to update these as soon as possible.</li>
+<li>Closely monitor and mandate access to administrative content. Only allow individuals access to what they need access to. This will reduce the chance of human error leading to cyber attacks. There are more DIY methods of prevention mentioned in <a href="https://cirt.gy/index.php/node/116">this article</a> (steps 6-12) and in resource #4 at the end of this playbook.</li>
+<li>Regularly check for malware on your site by scanning the source code. Look for scripts, iframes, or URLs that look unfamiliar and make sure to also scan URLs that do look familiar.</li>
+<li>There are many highly reputable automated website scanners that will not cost any of your time and will thoroughly scan your site for vulnerabilities regularly. Here is a <a href="https://resources.infosecinstitute.com/14-popular-web-application-vulnerability-scanners/#gref">link to popular scanners</a>.</li>
+<li>Defend against common points of exploitation such as SQL injections and XSS attacks. <a href="https://www.banffcyber.com/knowledge-base/articles/best-practices-address-issue-web-defacement/">This article</a> includes best practices to defend these attacks.</li>
+<li>Install defacement detection programs so that if an attack were to occurr again, you would be prepared and respond quickly. Here is an <a href="https://www.techradar.com/news/best-website-defacement-monitoring-service">article</a> that summarizes some of 2020’s best monitoring services.</li>
+<li>Discuss with your employees the importance of keeping administrative access limited and confidential and inform them of these steps to avoid incidents including regular cybersecurity awareness training.</li>
+</ol>
+<h4 id="reference-remediation-resources">Reference: Remediation Resources</h4>
+<p><code>TODO: Specify financial, personnel, and logistical resources to accomplish remediation</code></p>
+<h3 id="communicate-1">Communicate</h3>
+<p><code>TODO: Customize communication steps for defacement</code></p>
+<p><code>TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan</code></p>
+<ol type="1">
+<li>Escalate incident and communicate with leadership per procedure</li>
+<li>Document incident per procedure (and report if applicable)</li>
+<li>Communicate with internal and external legal counsel per procedure, including discussions of compliance, risk exposure, liability, law enforcement contact, <em>etc.</em></li>
+<li>Communicate with users (internal)
+<ol type="1">
+<li>Communicate incident response updates per procedure</li>
+<li>Communicate impact of incident <strong>and</strong> incident response actions (e.g., containment: “why is the file share down?”)</li>
+<li>Communicate requirements: “what should users do and not do?”<br />
+</li>
+</ol></li>
+<li>Communicate with customers
+<ol type="1">
+<li>Focus particularly on those whose data was affected</li>
+<li>Generate required notifications based on applicable regulations (particularly those that may consider defacement a data breach or otherwise requires notifications) <code>TODO: Expand notification requirements and procedures for applicable regulations</code></li>
+</ol></li>
+<li>Contact insurance provider(s)
+<ol type="1">
+<li>Discuss what resources they can make available, what tools and vendors they support and will pay for, <em>etc.</em></li>
+<li>Comply with reporting and claims requirements to protect eligibility</li>
+</ol></li>
+<li>Consider notifying and involving law enforcement. TODO: Link the following bullets to actual resources for your organization
+<ol type="1">
+<li><a href="#TODO-link-to-actual-resource">Local law enforcement</a></li>
+<li><a href="#TODO-link-to-actual-resource">State or regional law enforcement</a></li>
+<li><a href="#TODO-link-to-actual-resource">Federal or national law enforcement</a></li>
+</ol></li>
+<li>Communicate with security and IT vendors TODO: Link the following bullets to actual resources for your organization
+<ol type="1">
+<li>Notify and collaborate with <a href="#TODO-link-to-actual-resource">managed providers</a> per procedure</li>
+<li>Notify and collaborate with <a href="#TODO-link-to-actual-resource">incident response consultants</a> per procedure</li>
+</ol></li>
+</ol>
+<h3 id="resources">Resources</h3>
+<h4 id="reference-user-actions-for-suspected-defacement-attack">Reference: User Actions for Suspected Defacement Attack</h4>
+<p><code>TODO: Customize steps for users dealing with suspected defacement</code></p>
+<ol type="1">
+<li>Stay calm, take a deep breath.</li>
+<li>Disconnect your system from the network <code>TODO: include detailed steps with screenshots, a pre-installed tool or script to make this easy ("break in case of emergency"), consider hardware network cut-off switches</code></li>
+<li>Take pictures of the page you see using your smartphone showing the things you noticed: the defacement message and any other changes to the usual site.</li>
+<li>Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper. Every little bit helps! Document the following:
+<ol type="1">
+<li>What did you notice?</li>
+<li>When did it first occur, and how often since?</li>
+<li>What data do you typically access?</li>
+<li>Who else have you contacted about this incident, and what did you tell them?</li>
+</ol></li>
+<li>Contact the <a href="#TODO-link-to-actual-resource">help desk</a> and be as helpful as possible.</li>
+<li>Be patient: allow the IT personnel get it under control, you may be protecting others from harm! <strong>Thank you.</strong></li>
+</ol>
+<h4 id="reference-help-desk-actions-for-suspected-defacement-attack">Reference: Help Desk Actions for Suspected Defacement Attack</h4>
+<p><code>TODO: Customize steps for help desk personnel dealing with suspected defacement</code></p>
+<ol type="1">
+<li>Stay calm, take a deep breath.</li>
+<li>Open a ticket to document the incident, per procedure. <code>TODO: Customize template with key questions (see below) and follow-on workflow</code></li>
+<li>Use your best judgement on which steps to prioritize (i.e. if the defacement left harmful or triggerring content, prioritize taking down the server immediately).</li>
+<li>Ask the user to take pictures of their screen using their smartphone showing the things they noticed.</li>
+<li>Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper. If this is a user report, ask detailed questions, including: 1. What did you notice?
+<ol type="1">
+<li>When did it first occur, and how often since?</li>
+<li>What data do you typically access?</li>
+<li>Who else have you contacted about this incident, and what did you tell them?</li>
+</ol></li>
+<li>Ask follow-up questions as necessary. <strong>You are an incident responder, we are counting on you.</strong></li>
+<li>Get detailed contact information from the user (home, office, mobile), if applicable.</li>
+<li>Record all information in the ticket, including hand-written and voice notes.</li>
+<li>Quarantine affected users and systems. <code>TODO: Customize containment steps, automate as much as possible</code></li>
+<li>Contact the <a href="#TODO-link-to-actual-resource">security team</a> and stand by to participate in the response as directed: investigation, remediation, communication, and recovery.</li>
+</ol>
+<h4 id="additional-information">Additional Information</h4>
+<ol type="1">
+<li><a name="defacement-playbook-ref-1"></a>A helpful and detailed <a href="https://pdfs.semanticscholar.org/899e/2d629e06d920b9059edb21fcb52cdb33f783.pdf">paper</a> on defacement detection</li>
+<li><a name="defacement-playbook-ref-2"></a>10 tools for <a href="https://geekflare.com/website-defacement-monitoring/">better website monitoring and security</a></li>
+<li><a name="defacement-playbook-ref-3"></a><a href="https://sucuri.net/reports/2019-hacked-website-report/">2019 Website Threat Research Report</a> with helpful statistics</li>
+<li><a name="defacement-playbook-ref-4"></a><a href="https://www.imperva.com/learn/application-security/website-defacement-attack/">Article</a> including DIYs and Best practices to prevent website defacement## Playbook: Identity and Access Compromise</li>
+</ol>
+<p><strong>Investigate, remediate (contain, eradicate), and communicate in parallel!</strong></p>
+<p>Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.</p>
+<h3 id="investigate-2">Investigate</h3>
+<p><code>TODO: Expand investigation steps, including key questions and strategies, for identity and access compromise.</code></p>
+<ol type="1">
+<li>TODO</li>
+</ol>
+<h3 id="remediate-2">Remediate</h3>
+<ul>
+<li><strong>Plan remediation events</strong> where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.</li>
+<li><strong>Consider the timing and tradeoffs</strong> of remediation actions: your response has consequences.</li>
+</ul>
+<h4 id="contain-2">Contain</h4>
+<p><code>TODO: Customize containment steps, tactical and strategic, for identity and access compromise.</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below.</code></p>
+<ul>
+<li>TODO</li>
+</ul>
+<p><code>TODO: Consider automating containment measures using orchestration tools.</code></p>
+<h4 id="eradicate-1">Eradicate</h4>
+<p><code>TODO: Customize eradication steps, tactical and strategic, for identity and access compromise.</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below.</code></p>
+<ul>
+<li>TODO</li>
+</ul>
+<h4 id="reference-remediation-resources-1">Reference: Remediation Resources</h4>
+<p><code>TODO: Specify financial, personnel, and logistical resources to accomplish remediation.</code></p>
+<h3 id="communicate-2">Communicate</h3>
+<p><code>TODO: Customize communication steps for identity and access compromise</code></p>
+<p><code>TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.</code></p>
+<p>In addition to the general steps and guidance in the incident response plan:</p>
+<ol type="1">
+<li>TODO</li>
+</ol>
+<h3 id="recover-2">Recover</h3>
+<p><code>TODO: Customize recovery steps for identity and access compromise.</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below.</code></p>
+<p>In addition to the general steps and guidance in the incident response plan:</p>
+<ol type="1">
+<li>TODO</li>
+</ol>
+<h3 id="resources-1">Resources</h3>
+<h4 id="additional-information-1">Additional Information</h4>
+<ol type="1">
+<li><a name="identity-and-access-playbook-ref-1"></a><a href="#TODO-url">“Title”</a>, Author Last Name (Date)</li>
+</ol>
+<h2 id="playbook-phishing">Playbook: Phishing</h2>
+<p><strong>Investigate, remediate (contain, eradicate), and communicate in parallel!</strong></p>
+<p>Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.</p>
+<h3 id="investigate-3">Investigate</h3>
+<p><code>TODO: Expand investigation steps, including key questions and strategies, for phishing.</code></p>
+<ol type="1">
+<li><strong>Scope the attack</strong> Usually you will be notified that a potential phishing attack is underway, either by a user, customer, or partner.
+<ul>
+<li>Determine <strong>total number of impacted users</strong></li>
+<li>Understand <strong>user actions</strong> in response to the phishing email (<em>e.g.</em>, did they download the attachment, visit the spoofed site, or give out any personal or business information such as credentials)</li>
+<li>Find the potentially related activity. Check:
+<ul>
+<li>social media</li>
+<li>any possibly suspicious emails</li>
+<li>emails with links to external and unknown URLs</li>
+<li>non-returnable or non-deliverable emails</li>
+<li>any kind of notification of suspicious activity</li>
+</ul></li>
+</ul></li>
+<li><strong>Analyze the message</strong> using a safe device (i.e., <strong>do not</strong> open messages on a device with access to sensitive data or credentials as the message may contain malware), determine: <code>TODO: Specify tools and procedure</code>
+<ul>
+<li>who received the message</li>
+<li>who was targeted by the message (may be different than “successful” recipients)</li>
+<li>email address of the sender</li>
+<li>subject line</li>
+<li>message body</li>
+<li>attachments (<strong>do not open attachments</strong> except according to established procedures)</li>
+<li>links, domains, and hostnames (<strong>do not follow links</strong> except according to established procedures)</li>
+<li>email metadata including message headers (see below)
+<ul>
+<li>sender information from the ‘from’ field and the X-authenticated user header</li>
+<li>all client and mail server IP addresses</li>
+</ul></li>
+<li>note “quirks” or suspicious features</li>
+</ul></li>
+<li><strong>Analyze links and attachments</strong> <code>TODO: Specify tools and procedure</code>
+<ul>
+<li>use passive collection such as nslookup and whois to find IP addresses and registration information</li>
+<li>find related domains using OSINT (<em>e.g.</em>, <a href="https://www.whoxy.com/reverse-whois/">reverse whois</a>) on email addresses and other registration data</li>
+<li>submit links, attachments, and/or hashes to <a href="https://www.virustotal.com/gui/">VirusTotal</a></li>
+<li>submit links, attachments, and/or hashes to a malware sandbox such as <a href="https://cuckoosandbox.org/">Cuckoo</a>, <a href="https://www.hybrid-analysis.com/">Hybrid Analysis</a>, <a href="https://www.joesecurity.org/">Joe Sandbox</a>, or <a href="https://www.vmray.com/">VMray</a>.</li>
+</ul></li>
+<li>Categorize the type of attack. <code>TODO: Customize categories and create additional playbooks for common or high-impact phishing types</code></li>
+<li><strong>Determine the severity.</strong> Consider:
+<ul>
+<li>whether public or personal safety is at risk</li>
+<li>whether personal data (or other sensitive data) is at risk</li>
+<li>any evidence of who is behind the attack</li>
+<li>number of affected assets</li>
+<li>preliminary business impact</li>
+<li>whether services are affected</li>
+<li>whether you are able to control/record critical systems</li>
+</ul></li>
+</ol>
+<p><code>TODO: Expand investigation steps, including key questions and strategies, for phishing.</code></p>
+<h3 id="remediate-3">Remediate</h3>
+<ul>
+<li><strong>Plan remediation events</strong> where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.</li>
+<li><strong>Consider the timing and tradeoffs</strong> of remediation actions: your response has consequences.</li>
+</ul>
+<h4 id="contain-3">Contain</h4>
+<p><code>TODO: Customize containment steps, tactical and strategic, for phishing.</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below.</code></p>
+<ul>
+<li>Contain affected accounts
+<ul>
+<li>change login credentials</li>
+<li>reduce access to critical services, systems, or data until investigation is complete</li>
+<li>reenforce multi-factor authentication (MFA)</li>
+</ul></li>
+<li>Block activity based on discovered indicators of compromise, <em>e.g.</em>:
+<ul>
+<li>block malicious domains using DNS, firewalls, or proxies</li>
+<li>block messages with similar senders, message bodies, subjects, links, attachments, <em>etc.</em>, using email gateway or service.</li>
+</ul></li>
+<li>Implement forensic hold or retain forensic copies of messages</li>
+<li>Purge related messages from other user inboxes, or otherwise make inaccessible</li>
+<li>Contain broader compromise in accordance with general IR plan</li>
+<li>Consider mobile device containment measures such as wiping via mobile device management (MDM). Balance against investigative/forensic impact.</li>
+<li>Increase detection “alert level,” with enhanced monitoring, particularly from related accounts, domains, or IP addresses.</li>
+<li>Consider outside security assistance to support investigation and remediation</li>
+<li>Confirm relevant software upgrades and anti-malware updates on assets.</li>
+</ul>
+<h4 id="reference-remediation-resources-2">Reference: Remediation Resources</h4>
+<p><code>TODO: Specify financial, personnel, and logistical resources to accomplish remediation</code></p>
+<h3 id="communicate-3">Communicate</h3>
+<p><code>TODO: Customize communication steps for phishing</code></p>
+<p><code>TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan</code></p>
+<ol type="1">
+<li>Escalate incident and communicate with leadership per procedure</li>
+<li>Document incident per procedure (and <a href="https://us-cert.cisa.gov/report-phishing">report</a>)</li>
+<li>Communicate with internal and external legal counsel per procedure, including discussions of compliance, risk exposure, liability, law enforcement contact, <em>etc.</em></li>
+<li>Communicate with users (internal)
+<ol type="1">
+<li>Communicate incident response updates per procedure</li>
+<li>Communicate impact of incident <strong>and</strong> incident response actions (e.g., containment: “why is the file share down?”)</li>
+<li>Communicate requirements: “what should users do and not do?”<br />
+</li>
+</ol></li>
+<li>Communicate with customers
+<ol type="1">
+<li>Focus particularly on those whose data was affected</li>
+<li>Generate required notifications based on applicable regulations (particularly those that may consider phishing a data breach or otherwise requires notifications) <code>TODO: Expand notification requirements and procedures for applicable regulations</code></li>
+</ol></li>
+<li>Contact insurance provider(s)
+<ol type="1">
+<li>Discuss what resources they can make available, what tools and vendors they support and will pay for, <em>etc.</em></li>
+<li>Comply with reporting and claims requirements to protect eligibility</li>
+</ol></li>
+<li>Consider notifying and involving <a href="https://www.usa.gov/stop-scams-frauds">law enforcement</a> TODO: Link the following bullets to actual resources for your organization
+<ol type="1">
+<li><a href="#TODO-link-to-actual-resource">Local law enforcement</a></li>
+<li><a href="#TODO-link-to-actual-resource">State or regional law enforcement</a></li>
+<li><a href="#TODO-link-to-actual-resource">Federal or national law enforcement</a></li>
+</ol></li>
+<li>Communicate with security and IT vendors TODO: Link the following bullets to actual resources for your organization
+<ol type="1">
+<li>Notify and collaborate with <a href="#TODO-link-to-actual-resource">managed providers</a> per procedure</li>
+<li>Notify and collaborate with <a href="#TODO-link-to-actual-resource">incident response consultants</a> per procedure</li>
+</ol></li>
+</ol>
+<h3 id="recover-3">Recover</h3>
+<p><code>TODO: Customize recovery steps for phishing</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below</code></p>
+<ol type="1">
+<li>Launch business continuity/disaster recovery plan(s) if compromise involved business outages: <em>e.g.</em>, consider migration to alternate operating locations, fail-over sites, backup systems.</li>
+<li>Reinforce training programs regarding suspected phishing attacks. Key suspicious indicators may include:
+<ul>
+<li>misspellings in the message or subject</li>
+<li>phony-seeming sender names, including mismatches between display name and email address</li>
+<li>personal email addresses for official business (e.g., gmail or yahoo emails from business colleagues)</li>
+<li>subject lines marked “[EXTERNAL]” on emails that look internal</li>
+<li><a href="https://www.pcworld.com/article/248963/how-to-tell-if-a-link-is-safe-without-clicking-on-it.html">malicious or suspicious links</a></li>
+<li>receiving an email or attachment they were not expecting but from someone they know (contact sender before opening it)</li>
+<li>reporting suspicious activity to IT or security</li>
+</ul></li>
+<li>Ensure that IT and security staff is up to date on recent phishing techniques.</li>
+<li>Determine if any controls have failed when falling victim to an attack and rectify them. Here is a <a href="https://www.proofpoint.com/us/security-awareness/post/14-things-do-after-phishing-attack">good source</a> to consider following a phishing attack.</li>
+</ol>
+<h3 id="resources-2">Resources</h3>
+<h4 id="reference-user-actions-for-suspected-phishing-attack">Reference: User Actions for Suspected Phishing Attack</h4>
+<p><code>TODO: Customize steps for users dealing with suspected phishing</code></p>
+<ol type="1">
+<li>Stay calm, take a deep breath.</li>
+<li>Take pictures of your screen using your smartphone showing the things you noticed: the phishing message, the link if you opened it, the sender information.</li>
+<li>Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper. Every little bit helps! Document the following:
+<ol type="1">
+<li>What did you notice?</li>
+<li>Why did you think it was a problem?</li>
+<li>What were you doing at the time you detected it?</li>
+<li>When did it first occur, and how often since?</li>
+<li>Where were you when it happened, and on what network? (office/home/shop, wired/wireless, with/without VPN, <em>etc.</em>)</li>
+<li>What systems are you using? (operating system, hostname, <em>etc.</em>)</li>
+<li>What account were you using?</li>
+<li>What data do you typically access?</li>
+<li>Who else have you contacted about this incident, and what did you tell them?</li>
+</ol></li>
+<li>Contact the <a href="#TODO-link-to-actual-resource">help desk</a> using the <a href="#TODO-link-to-actual-resource">phishing hotline</a> or the <a href="#TODO-link-to-actual-resource">phishing report toolbar</a> and be as helpful as possible.</li>
+<li>Be patient: the response may be disruptive, but you are protecting your team and the organization! <strong>Thank you.</strong></li>
+</ol>
+<h4 id="reference-help-desk-actions-for-suspected-phishing-attack">Reference: Help Desk Actions for Suspected Phishing Attack</h4>
+<p><code>TODO: Customize steps for help desk personnel dealing with suspected phishing</code></p>
+<ol type="1">
+<li>Stay calm, take a deep breath.</li>
+<li>Open a ticket to document the incident, per procedure. <code>TODO: Customize template with key questions (see below) and follow-on workflow</code></li>
+<li>Ask the user to take pictures of their screen using their smartphone showing the things they noticed: the phishing message, the link if you opened it, the sender information, <em>etc.</em> If this is something you noticed directly, do the same yourself.</li>
+<li>Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper. If this is a user report, ask detailed questions, including:
+<ol type="1">
+<li>What did you notice?</li>
+<li>Why did you think it was a problem?</li>
+<li>What were you doing at the time you detected it?</li>
+<li>When did it first occur, and how often since?</li>
+<li>What networks are involved? (office/home/shop, wired/wireless, with/without VPN, <em>etc.</em>)</li>
+<li>What systems are involved? (operating system, hostname, <em>etc.</em>)</li>
+<li>What data is involved? (paths, file types, file shares, databases, software, <em>etc.</em>)</li>
+<li>What users and accounts are involved? (active directory, SaaS, SSO, service accounts, <em>etc.</em>)</li>
+<li>What data do the involved users typically access?</li>
+<li>Who else have you contacted about this incident, and what did you tell them?</li>
+</ol></li>
+<li>Ask follow-up questions as necessary. <strong>You are an incident responder, we are counting on you.</strong></li>
+<li>Get detailed contact information from the user (home, office, mobile), if applicable.</li>
+<li>Record all information in the ticket, including hand-written and voice notes.</li>
+<li>Quarantine affected users and systems. <code>TODO: Customize containment steps, automate as much as possible</code></li>
+<li>Contact the <a href="#TODO-link-to-actual-resource">security team</a> and stand by to participate in the response as directed: investigation, remediation, communication, and recovery.</li>
+</ol>
+<h4 id="additional-information-2">Additional Information</h4>
+<ol type="1">
+<li><a name="phishing-playbook-ref-1"></a><a href="https://resources.infosecinstitute.com/category/enterprise/phishing/phishing-countermeasures/top-16-anti-phishing-resources/#gref">Anti-Phishing Attack resources</a></li>
+<li><a name="phisphing-playbook-ref-2"></a><a href="https://www.securitymetrics.com/blog/7-ways-recognize-phishing-email">Methods of Identifying a Phishing attack</a></li>
+<li><a name="phishing-playbook-ref-3"></a><a href="https://www.phishing.org/phishing-examples">Phishing Email Examples</a></li>
+<li><a name="phishing-playbook-ref-4"></a><a href="https://resources.infosecinstitute.com/category/enterprise/phishing/phishing-countermeasures/anti-phishing-best-practices/#gref">Anti-Phishing best practices</a> ## Playbook: Ransomware</li>
+</ol>
+<p><strong>Investigate, remediate (contain, eradicate), and communicate in parallel! Containment is critical in ransomware incidents, prioritize accordingly.</strong></p>
+<p>Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.</p>
+<h3 id="investigate-4">Investigate</h3>
+<p><code>TODO: Expand investigation steps, including key questions and strategies, for ransomware.</code></p>
+<ol type="1">
+<li><strong>Determine the type</strong> of ransomware (<em>i.e.,</em> what is the family, variant, or flavor?)<a href="#ransomware-playbook-ref-1"><sup>[1]</sup></a>
+<ol type="1">
+<li>Find any related messages. Check:
+<ul>
+<li>graphical user interfaces (GUIs) for the malware itself</li>
+<li>text or html files, sometimes opened automatically after encryption</li>
+<li>image files, often as wallpaper on infected systems</li>
+<li>contact emails in encrypted file extensions</li>
+<li>pop-ups after trying to open an encrypted file</li>
+<li>voice messages</li>
+</ul></li>
+<li>Analyze the messages looking for clues to the ransomware type:
+<ul>
+<li>ransomware name</li>
+<li>language, structure, phrases, artwork</li>
+<li>contact email</li>
+<li>format of the user id</li>
+<li>ransom demand specifics (<em>e.g.</em>, digital currency, gift cards)</li>
+<li>payment address in case of digital currency</li>
+<li>support chat or support page</li>
+</ul></li>
+<li>Analyze affected and/or new files. Check:
+<ul>
+<li>file renaming scheme of encrypted files including extension (<em>e.g.</em>, <code>.crypt</code>, <code>.cry</code>, <code>.locked</code>) and base name</li>
+<li>file corruption vs encryption</li>
+<li>targeted file types and locations</li>
+<li>owning user/group of affected files</li>
+<li>icon for encrypted files</li>
+<li>file markers</li>
+<li>existence of file listings, key files or other data files</li>
+</ul></li>
+<li>Analyze affected software or system types. Some ransomware variants only affect certain tools (<em>e.g.</em>, <a href="https://www.bleepingcomputer.com/news/security/mongodb-apocalypse-professional-ransomware-group-gets-involved-infections-reach-28k-servers/">databases</a>) or platforms (<em>e.g.</em>, <a href="https://forum.synology.com/enu/viewtopic.php?f=3&amp;t=88716">NAS products</a>)</li>
+<li>Upload indicators to automated categorization services like <a href="https://www.nomoreransom.org/crypto-sheriff.php">Crypto Sheriff</a>, <a href="https://id-ransomware.malwarehunterteam.com/">ID Ransomware</a>, or similar.</li>
+</ol></li>
+<li><strong>Determine the scope:</strong>
+<ol type="1">
+<li>Which systems are affected? <code>TODO: Specify tool(s) and procedure</code>
+<ul>
+<li>Scan for concrete indicators of compromise (IOCs) such as files/hashes, processes, network connections, etc. Use <a href="#TODO-link-to-actual-resource">endpoint protection/EDR</a>, <a href="#TODO-link-to-actual-resource">endpoint telemetry</a>, <a href="#TODO-link-to-actual-resource">system logs</a>, etc.</li>
+<li>Check similar systems for infection (<em>e.g.</em>, similar users, groups, data, tools, department,configuration, patch status): check <a href="#TODO-link-to-actual-resource">IAM tools</a>, <a href="#TODO-link-to-actual-resource">permissions management tools</a>, <a href="#TODO-link-to-actual-resource">directory services</a>, <em>etc.</em></li>
+<li>Find external command and control (C2), if present, and find other systems connecting to it: check <a href="#TODO-link-to-actual-resource">firewall or IDS logs</a>, <a href="#TODO-link-to-actual-resource">system logs/EDR</a>, <a href="#TODO-link-to-actual-resource">DNS logs</a>, <a href="#TODO-link-to-actual-resource">netflow or router logs</a>, <em>etc.</em></li>
+</ul></li>
+<li>What data is affected? (<em>e.g.</em>, file types, department or group, affected software) <code>TODO: Specify tool(s) and procedure</code>
+<ul>
+<li>Find anomalous changes to file metadata such as mass changes to creation or modification times. Check <a href="#TODO-link-to-actual-resource">file metadata search tools</a></li>
+<li>Find changes to normally-stable or critical data files. Check <a href="#TODO-link-to-actual-resource">file integrity monitoring</a> tools</li>
+</ul></li>
+</ol></li>
+<li><strong>Assess the impact</strong> to prioritize and motivate resources
+<ol type="1">
+<li>Assess functional impact: impact to business or mission.
+<ul>
+<li>How much money is lost or at risk?</li>
+<li>How many (and which) missions are degraded or at risk?</li>
+</ul></li>
+<li>Assess information impact: impact to confidentiality, integrity, and availability of data.
+<ul>
+<li>How critical is the data to the business/mission?</li>
+<li>How sensitive is the data? (<em>e.g.</em>, trade secrets)</li>
+<li>What is the regulatory status of data (<em>e.g.</em>, PII, PHI)</li>
+</ul></li>
+</ol></li>
+<li><strong>Find the infection vector.</strong> Check the tactics captured in the <a href="https://attack.mitre.org/tactics/TA0001/">Initial Access tactic</a> of MITRE ATT&amp;CK<a href="#ransomware-playbook-ref-4"><sup>[4]</sup></a>. Common specifics and data sources include:
+<ul>
+<li>email attachment: check <a href="#TODO-link-to-actual-resource">email logs</a>, <a href="#TODO-link-to-actual-resource">email security appliances and services</a>, <a href="#TODO-link-to-actual-resource">e-discovery tools</a>, <em>etc.</em></li>
+<li>insecure remote desktop protocol (RDP): check <a href="#TODO-link-to-actual-resource">vulnerability scanning results</a>, <a href="#TODO-link-to-actual-resource">firewall configurations</a>, <em>etc.</em></li>
+<li>self-propagation (worm or virus) (check <a href="#TODO-link-to-actual-resource">host telemetry/EDR</a>, <a href="#TODO-link-to-actual-resource">system logs</a>, <a href="#TODO-link-to-actual-resource">forensic analysis</a>, <em>etc.</em>)</li>
+<li>infection via removable drives (worm or virus)</li>
+<li>delivered by other malware or attacker tool: expand investigation to include additional attacker tools or malware</li>
+</ul></li>
+</ol>
+<h3 id="remediate-4">Remediate</h3>
+<ul>
+<li><strong>Plan remediation events</strong> where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.</li>
+<li><strong>Consider the timing and tradeoffs</strong> of remediation actions: your response has consequences.</li>
+</ul>
+<h4 id="contain-4">Contain</h4>
+<p><code>TODO: Customize containment steps, tactical and strategic, for ransomware.</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below.</code></p>
+<p><strong>In ransomware situations, containment is critical. Inform containment measures with facts from the investigation. Prioritize quarantines and other containment measures higher than during a typical response.</strong></p>
+<p>Quarantines (logical, physical, or both) prevent spread <em>from</em> infected systems and prevent spread <em>to</em> critical systems and data. Quarantines should be comprehensive: include cloud/SaaS access, single-sign-on, system access such as to ERP or other business tools, <em>etc.</em></p>
+<ul>
+<li>Quarantine infected systems</li>
+<li>Quarantine affected users and groups.</li>
+<li>Quarantine file shares (not just known-infected shares; protect uninfected shares too)</li>
+<li>Quarantine shared databases (not just known-infected servers; protect uninfected databases too)</li>
+<li>Quarantine backups, if not already secured</li>
+<li>Block command and control domains and addresses</li>
+<li>Remove vector emails from inboxes</li>
+<li>Confirm endpoint protection (AV, NGAV, EDR, <em>etc.</em>) is up-to-date and enabled on all systems.</li>
+<li>Confirm patches are deployed on all systems (prioritizing targeted systems, OSes, software, <em>etc.</em>).</li>
+<li>Deploy custom signatures to endpoint protection and network security tools based on discovered IOCs</li>
+</ul>
+<p><code>TODO: Consider automating containment measures using orchestration tools.</code></p>
+<h4 id="eradicate-2">Eradicate</h4>
+<p><code>TODO: Customize eradication steps, tactical and strategic, for ransomware.</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below.</code></p>
+<ul>
+<li>Rebuild infected systems from known-good media</li>
+<li>Restore from known-clean backups</li>
+<li>Confirm endpoint protection (AV, NGAV, EDR, <em>etc.</em>) is up-to-date and enabled on all systems.</li>
+<li>Confirm patches are deployed on all systems (prioritizing targeted systems, OSes, software, <em>etc.</em>).</li>
+<li>Deploy custom signatures to endpoint protection and network security tools based on discovered IOCs</li>
+<li><strong>Watch for re-infection:</strong> consider increased priority for alarms/alerts related to this incident.</li>
+</ul>
+<h4 id="reference-remediation-resources-3">Reference: Remediation Resources</h4>
+<p><code>TODO: Specify financial, personnel, and logistical resources to accomplish remediation.</code></p>
+<h3 id="communicate-4">Communicate</h3>
+<p><code>TODO: Customize communication steps for ransomware</code></p>
+<p><code>TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.</code></p>
+<ol type="1">
+<li>Escalate incident and communicate with leadership per procedure</li>
+<li>Document incident per procedure</li>
+<li>Communicate with internal and external legal counsel per procedure, including discussions of compliance, risk exposure, liability, law enforcement contact, <em>etc.</em></li>
+<li>Communicate with users (internal)
+<ol type="1">
+<li>Communicate incident response updates per procedure</li>
+<li>Communicate impact of incident <strong>and</strong> incident response actions (e.g., containment: “why is the file share down?”), which can be more intrusive/disruptive during ransomware incidents</li>
+<li>Communicate requirements: “what should users do and not do?” See “Reference: User Actions for Suspected Ransomware,” below</li>
+</ol></li>
+<li>Communicate with customers
+<ol type="1">
+<li>Focus particularly on those whose data was affected</li>
+<li>Generate required notifications based on applicable regulations (particularly those that may consider ransomware a data breach or otherwise requires notifications (<em>e.g.</em>, <a href="https://www.hhs.gov/sites/default/files/RansomwareFactSheet.pdf">HHS/HIPAA</a>)) <code>TODO: Expand notification requirements and procedures for applicable regulations</code></li>
+</ol></li>
+<li>Contact insurance provider(s)
+<ol type="1">
+<li>Discuss what resources they can make available, what tools and vendors they support and will pay for, <em>etc.</em></li>
+<li>Comply with reporting and claims requirements to protect eligibility</li>
+</ol></li>
+<li>Communicate with regulators, including a discussion of what resources they can make available (not just boilerplate notification: many can actively assist)</li>
+<li>Consider notifying and involving <a href="https://www.nomoreransom.org/en/report-a-crime.html">law enforcement</a>
+<ol type="1">
+<li><a href="#TODO-link-to-actual-resource">Local law enforcement</a></li>
+<li><a href="#TODO-link-to-actual-resource">State or regional law enforcement</a></li>
+<li><a href="#TODO-link-to-actual-resource">Federal or national law enforcement</a></li>
+</ol></li>
+<li>Communicate with security and IT vendors
+<ol type="1">
+<li>Notify and collaborate with <a href="#TODO-link-to-actual-resource">managed providers</a> per procedure</li>
+<li>Notify and collaborate with <a href="#TODO-link-to-actual-resource">incident response consultants</a> per procedure</li>
+</ol></li>
+</ol>
+<h3 id="recover-4">Recover</h3>
+<p><code>TODO: Customize recovery steps for ransomware.</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below.</code></p>
+<blockquote>
+<p><strong>We do not recommend paying the ransom:</strong> it does not guarantee a solution to the problem. It can go wrong (<em>e.g.</em>, bugs could make data unrecoverable even with the key). Also, paying proves ransomware works and could increase attacks against you or other groups.<a href="#ransomware-playbook-ref-2"><sup>[2, paraphrased]</sup></a></p>
+</blockquote>
+<ol type="1">
+<li>Launch business continuity/disaster recovery plan(s): <em>e.g.</em>, consider migration to alternate operating locations, fail-over sites, backup systems.</li>
+<li>Recover data from known-clean backups to known-clean, patched, monitored systems (post-eradication), in accordance with our <a href="#TODO-link-to-actual-resource">well-tested backup strategy</a>.
+<ul>
+<li>Check backups for indicators of compromise</li>
+<li>Consider partial recovery and backup integrity testing</li>
+</ul></li>
+<li>Find and try known decryptors for the variant(s) discovered using resources like the No More Ransom! Project’s <a href="https://www.nomoreransom.org/en/decryption-tools.html">Decryption Tools page</a>.</li>
+<li>Consider paying the ransom for irrecoverable critical assets/data, in accordance with policy <code>TODO: Expand and socialize this decision matrix</code>
+<ul>
+<li>Consider ramifications with appropriate stakeholders</li>
+<li>Understand finance implications and budget</li>
+<li>Understand legal, regulatory, and insurance implications</li>
+<li>Understand mechanisms (<em>e.g.</em>, technologies, platforms, intermediate vendors/go-betweens)</li>
+</ul></li>
+</ol>
+<h3 id="resources-3">Resources</h3>
+<h4 id="reference-user-actions-for-suspected-ransomware">Reference: User Actions for Suspected Ransomware</h4>
+<p><code>TODO: Customize steps for users dealing with suspected ransomware</code></p>
+<ol type="1">
+<li>Stay calm, take a deep breath.</li>
+<li>Disconnect your system from the network <code>TODO: include detailed steps with screenshots, a pre-installed tool or script to make this easy ("break in case of emergency"), consider hardware network cut-off switches</code></li>
+<li>Take pictures of your screen using your smartphone showing the things you noticed: ransom messages, encrypted files, system error messages, <em>etc.</em></li>
+<li>Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper. Every little bit helps! Document the following:
+<ol type="1">
+<li>What did you notice?</li>
+<li>Why did you think it was a problem?</li>
+<li>What were you doing at the time you detected it?</li>
+<li>When did it first occur, and how often since?</li>
+<li>Where were you when it happened, and on what network? (office/home/shop, wired/wireless, with/without VPN, <em>etc.</em>)</li>
+<li>What systems are you using? (operating system, hostname, <em>etc.</em>)</li>
+<li>What account were you using?</li>
+<li>What data do you typically access?</li>
+<li>Who else have you contacted about this incident, and what did you tell them?</li>
+</ol></li>
+<li>Contact the <a href="#TODO-link-to-actual-resource">help desk</a> and be as helpful as possible</li>
+<li>Be patient: the response may be disruptive, but you are protecting your team and the organization! <strong>Thank you.</strong></li>
+</ol>
+<h4 id="reference-help-desk-actions-for-suspected-ransomware">Reference: Help Desk Actions for Suspected Ransomware</h4>
+<p><code>TODO: Customize steps for help desk personnel dealing with suspected ransomware</code></p>
+<ol type="1">
+<li>Stay calm, take a deep breath.</li>
+<li>Open a ticket to document the incident, per procedure <code>TODO: Customize template with key questions (see below) and follow-on workflow</code></li>
+<li>Ask the user to take pictures of their screen using their smartphone showing the things they noticed: ransom messages, encrypted files, system error messages, <em>etc.</em> If this is something you noticed directly, do the same yourself.</li>
+<li>Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper. If this is a user report, ask detailed questions, including:
+<ol type="1">
+<li>What did you notice?</li>
+<li>Why did you think it was a problem?</li>
+<li>What were you doing at the time you detected it?</li>
+<li>When did it first occur, and how often since?</li>
+<li>What networks are involved? (office/home/shop, wired/wireless, with/without VPN, <em>etc.</em>)</li>
+<li>What systems are involved? (operating system, hostname, <em>etc.</em>)</li>
+<li>What data is involved? (paths, file types, file shares, databases, software, <em>etc.</em>)</li>
+<li>What users and accounts are involved? (active directory, SaaS, SSO, service accounts, <em>etc.</em>)</li>
+<li>What data do the involved users typically access?</li>
+<li>Who else have you contacted about this incident, and what did you tell them?</li>
+</ol></li>
+<li>Ask follow-up questions as necessary. <strong>You are an incident responder, we are counting on you.</strong></li>
+<li>Get detailed contact information from the user (home, office, mobile), if applicable</li>
+<li>Record all information in the ticket, including hand-written and voice notes</li>
+<li>Quarantine affected users and systems <code>TODO: Customize containment steps, automate as much as possible</code></li>
+<li>Contact the <a href="#TODO-link-to-actual-resource">security team</a> and stand by to participate in the response as directed: investigation, remediation, communication, and recovery</li>
+</ol>
+<h4 id="additional-information-3">Additional Information</h4>
+<ol type="1">
+<li><a name="ransomware-playbook-ref-1"></a><a href="https://www.gdatasoftware.com/blog/2019/06/31666-ransomware-identification-for-the-judicious-analyst">“Ransomware Identification for the Judicious Analyst”</a>, Hahn (12 Jun 2019)</li>
+<li><a name="ransomware-playbook-ref-2"></a><a href="https://www.nomoreransom.org">No More Ransom!</a> Project, including their <a href="https://www.nomoreransom.org/crypto-sheriff.php?lang=en">Crypto Sheriff</a> service and their <a href="https://www.nomoreransom.org/en/ransomware-qa.html">Q&amp;A</a></li>
+<li><a name="ransomware-playbook-ref-3"></a><a href="https://id-ransomware.malwarehunterteam.com/">ID Ransomware</a> service</li>
+<li><a name="ransomware-playbook-ref-4"></a><a href="https://attack.mitre.org">MITRE ATT&amp;CK Matrix</a>, including the <a href="https://attack.mitre.org/tactics/TA0001/">Initial Access</a> and <a href="https://attack.mitre.org/tactics/TA0040/">Impact</a> tactics</li>
+</ol>
+<h2 id="playbook-supply-chain-compromise">Playbook: Supply Chain Compromise</h2>
+<p><strong>Investigate, remediate (contain, eradicate), and communicate in parallel!</strong></p>
+<p>Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.</p>
+<h3 id="investigate-5">Investigate</h3>
+<p><code>TODO: Expand investigation steps, including key questions and strategies, for supply chain compromise.</code></p>
+<ol type="1">
+<li>TODO</li>
+</ol>
+<h3 id="remediate-5">Remediate</h3>
+<ul>
+<li><strong>Plan remediation events</strong> where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.</li>
+<li><strong>Consider the timing and tradeoffs</strong> of remediation actions: your response has consequences.</li>
+</ul>
+<h4 id="contain-5">Contain</h4>
+<p><code>TODO: Customize containment steps, tactical and strategic, for supply chain compromise.</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below.</code></p>
+<ul>
+<li>TODO</li>
+</ul>
+<p><code>TODO: Consider automating containment measures using orchestration tools.</code></p>
+<h4 id="eradicate-3">Eradicate</h4>
+<p><code>TODO: Customize eradication steps, tactical and strategic, for supply chain compromise.</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below.</code></p>
+<ul>
+<li>TODO</li>
+</ul>
+<h4 id="reference-remediation-resources-4">Reference: Remediation Resources</h4>
+<p><code>TODO: Specify financial, personnel, and logistical resources to accomplish remediation.</code></p>
+<h3 id="communicate-5">Communicate</h3>
+<p><code>TODO: Customize communication steps for supply chain compromise</code></p>
+<p><code>TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.</code></p>
+<p>In addition to the general steps and guidance in the incident response plan:</p>
+<ol type="1">
+<li>TODO</li>
+</ol>
+<h3 id="recover-5">Recover</h3>
+<p><code>TODO: Customize recovery steps for supply chain compromise.</code></p>
+<p><code>TODO: Specify tools and procedures for each step, below.</code></p>
+<p>In addition to the general steps and guidance in the incident response plan:</p>
+<ol type="1">
+<li>TODO</li>
+</ol>
+<h3 id="resources-4">Resources</h3>
+<h4 id="additional-information-4">Additional Information</h4>
+<ol type="1">
+<li><a name="supply-chain-playbook-ref-1"></a><a href="#TODO-url">“Title”</a>, Author Last Name (Date)</li>
+</ol>
+<h1 id="roles">Roles</h1>
+<p>The following are the descriptions, duties, and training for each of the defined roles in an incident response.</p>
+<p><code>TODO: Customize roles, descriptions, duties, and training, if necessary.</code></p>
+<h2 id="structure-of-roles">Structure of Roles</h2>
+<ul>
+<li>Command Team
+<ul>
+<li><a href="#role-incident-commander-ic">Incident Commander</a></li>
+<li><a href="#role-deputy-incident-commander-deputy">Deputy Incident Commander</a></li>
+<li><a href="#role-scribe">Scribe</a></li>
+</ul></li>
+<li>Liaison Team
+<ul>
+<li>Internal <a href="#role-liaison">Liaison</a></li>
+<li>External Liaison</li>
+</ul></li>
+<li>Operations Team
+<ul>
+<li><a href="#role-subject-matter-expert-sme">Subject Matter Experts</a> (SMEs) for Systems</li>
+<li>SMEs for Teams/Business Units</li>
+<li>SMEs for Executive Functions (<em>e.g.</em>, Legal, HR, Finance) During larger complex incidents, the role structure may be adjusted to account for the creation of sub-teams. Read about how we handle <a href="/before/complex_incidents.md">complex incidents</a> for more information.</li>
+</ul></li>
+</ul>
+<p>This is a <strong>flexible structure</strong>: every role will not be filled by a different person for every incident. For example, in a small incident the Deputy might act as the Scribe and Internal Liaison. The structure is flexible and scales based on the incident.</p>
+<h2 id="wartime-vs.-peacetime">Wartime vs. Peacetime</h2>
+<p>On incident response calls (“wartime”), a different organizational structure overrides normal operations (“peacetime”):</p>
+<ul>
+<li>The Incident Commander is in charge. No matter their rank during peacetime, they are now the highest ranked individual on the call, higher than the CEO.</li>
+<li>Primary responders (folks acting as primary on-call for a team/service) are the highest ranked individuals for that service.</li>
+<li>Decisions will be made by the IC after consideration of the information presented. Once that decision is made, it is final.</li>
+<li>Riskier decisions can be made by the IC than would normally be considered during peacetime.</li>
+<li>The IC may go against a consensus decision. If a poll is done, and 9/10 people agree but 1 disagrees. The IC may choose the disagreement option despite a majority vote. Even if you disagree, the IC’s decision is final. During the call is not the time to argue with them.</li>
+<li>The IC may use language or behave in a way you find rude. This is wartime, and they need to do whatever it takes to resolve the situation, so sometimes rudeness occurs. This is not personal, and something you should be prepared to experience if you’ve never been in a wartime situation before.</li>
+<li>You may be asked to leave the call by the IC, or you may even be forcibly kicked off a call. It is at the IC’s discretion to do this if they feel you are not providing useful input. Again, this is not personal and you should remember that wartime is different than peacetime.</li>
+</ul>
+<h2 id="role-all-participants">Role: All Participants</h2>
+<h3 id="description">Description</h3>
+<p>All participants in an incident response have the responsibility to help resolve the incident according to the incident response plan, under the authority of the Incident Commander.</p>
+<h3 id="duties">Duties</h3>
+<h4 id="exhibit-call-etiquette">Exhibit Call Etiquette</h4>
+<ul>
+<li>Join both the call and chat.</li>
+<li>Keep background noise to a minimum.</li>
+<li>Keep your microphone muted until you have something to say.</li>
+<li>Identify yourself when you join the call; State your name and role (<em>e.g.</em>, “I am the SME for team x”).</li>
+<li>Speak up and speak clearly.</li>
+<li>Be direct and factual.</li>
+<li>Keep conversations/discussions short and to the point.</li>
+<li>Bring any concerns to the Incident Commander (IC) on the call.</li>
+<li>Respect time constraints given by the Incident Commander.</li>
+<li>If you join only one channel (call or chat), do not actively participate, as it causes disjoined communication.</li>
+<li><strong>Use clear terminology, and avoid acronyms or abbreviations. Clarity and accuracy is more important than brevity.</strong></li>
+</ul>
+<h5 id="reference-common-voice-procedure">Reference: Common Voice Procedure</h5>
+<p>Standard radio <a href="https://en.wikipedia.org/wiki/Voice_procedure#Words_in_voice_procedure">voice procedure</a> <strong>is not required</strong>, however you may hear certain terms (or need to use them yourself). Common phrases include:</p>
+<ul>
+<li><strong>Ack/Rog:</strong> “I have received and understood”</li>
+<li><strong>Say Again:</strong> “Repeat your last message”</li>
+<li><strong>Standby:</strong> “Please wait a moment for the next response”</li>
+<li><strong>Wilco:</strong> “Will comply”</li>
+</ul>
+<p><strong>Do not</strong> invent new abbreviations; favor being explicit over implicit.</p>
+<h4 id="follow-the-incident-commander">Follow the Incident Commander</h4>
+<p>The Incident Commander (IC) is the leader of the incident response process.</p>
+<ul>
+<li>Follow instructions from the incident commander.</li>
+<li>Do not perform any actions unless the incident commander has told you to do so.</li>
+<li>The commander will typically poll for strong objections before tasking a large action. Raise objections if you have them.</li>
+<li>Once the commander has made a decision, follow that decision (even if you disagreed).</li>
+<li>Answer any questions the commander asks you in a clear and concise way. Answering “I don’t know” is acceptable. Do not guess.</li>
+<li>The commander may ask you to investigate something and get back to them in X minutes. Be ready with an answer within that time. Asking for more time is acceptable, but provide the commander an estimate.</li>
+</ul>
+<h3 id="training">Training</h3>
+<p>Read and understand the incident response plan, including the roles and playbooks.</p>
+<h2 id="role-incident-commander-ic">Role: Incident Commander (IC)</h2>
+<h3 id="description-1">Description</h3>
+<p>The Incident Commander (IC) acts as the single source of truth of what is currently happening and what is going to happen during an major incident. The IC is the highest ranking individual on any incident call, regardless of their day-to-day rank. They are the decision maker during an incident; they delegate tasks and listen to subject matter experts to resolve the incident. Their decisions made as commander are final.</p>
+<p>Your job as an IC is to evaluate the situation, provide clear guidance and coordination, recruiting others to gather context/details. <strong>Do not perform any investigation or remediation:</strong> delegate these tasks.</p>
+<h3 id="duties-1">Duties</h3>
+<p>Resolve the incident as quickly and as safely as possible using the incident response plan as a framework: lead the team to investigate, remediate, communicate. Use the Deputy to assist you, and delegate to relevant liaisons and experts (SMEs) at your discretion.</p>
+<ol type="1">
+<li>Help prepare for incidents,
+<ul>
+<li>Setup communications channels for incidents.</li>
+<li>Funnel people to these communications channels when there is a major incident.</li>
+<li>Train team members on how to communicate during incidents and train other Incident Commanders.</li>
+</ul></li>
+<li>Drive incidents to resolution,
+<ul>
+<li>Get everyone on the same communication channel.</li>
+<li>Collect information from team members for their services/area of ownership status.</li>
+<li>Collect proposed repair actions, then recommend repair actions to be taken.</li>
+<li>Delegate all repair actions, the Incident Commander is NOT a resolver.</li>
+<li>Be the single authority on system status</li>
+</ul></li>
+<li>Facilitate calls and meetings,
+<ul>
+<li>Gain consensus (Poll During a Decision)</li>
+<li>Provide status updates</li>
+<li>Reduce scope (dismiss attendees when possible)</li>
+<li>Spin off sub-teams</li>
+<li>Transfer command when necessary</li>
+<li>Sign off calls</li>
+<li>Maintain order</li>
+<li>Get straight answers</li>
+<li>Handle executive swoop such as
+<ul>
+<li>Overriding the Incident Commander</li>
+<li>Anti-motivation</li>
+<li>Information requests</li>
+<li>Questioning severity</li>
+</ul></li>
+<li>Handle disruptive or belligerent responders</li>
+</ul></li>
+<li>Post Mortem,
+<ul>
+<li>Creating the initial template right after the incident so people can put in their thoughts while fresh.</li>
+<li>Assigning the post-mortem after the event is over, this can be done after the call.</li>
+<li>Work with Team Leads/Managers on scheduling preventive actions.</li>
+</ul></li>
+</ol>
+<p>The Incident Commander uses some additional call procedures and lingo:</p>
+<ul>
+<li>Always announce when you join the call if you are the on-call IC.</li>
+<li><strong>Do not</strong> let discussions get out of hand. Keep conversations short.</li>
+<li>Note objections from others, but your call is final.</li>
+<li>If anyone is being actively disruptive to your call, kick them off.</li>
+<li>Announce the end of the call.</li>
+<li>After an incident, communicate with other training Incident Commanders on any debrief actions you feel are necessary.</li>
+</ul>
+<p><strong>Use clear terminology, and avoid acronyms or abbreviations. Clarity and accuracy is more important than brevity.</strong></p>
+<h3 id="training-1">Training</h3>
+<ul>
+<li>Read the incident response plan, including all roles and playbooks.</li>
+<li>Participate in an incident response exercise.</li>
+<li>Shadow a current incident commander without actively participating, keeping your questions until the end.</li>
+<li>Reverse shadow a current incident commander. Respond to incidents with the current IC there to take over if necessary.</li>
+<li><em>OPTIONAL:</em> facilitation training</li>
+<li><em>OPTIONAL:</em> Refer to <a href="#FIX">Incident Responders as Facilitators (and Therapists)</a> and the <a href="https://response.pagerduty.com/training/incident_commander/">PagerDuty Incident Commander training</a> for more ideas and discussion.</li>
+</ul>
+<h4 id="prerequisites">Prerequisites</h4>
+<p>There is no seniority or business-unit prerequisites to become an Incident Commander, it is a role open to anyone with the training and ability. Before you can be an Incident Commander, it is expected that you meet the following criteria:</p>
+<ul>
+<li>Excellent verbal and written <strong>communication skills</strong>.</li>
+<li><strong>High-level knowledge</strong> of business infrastructure and functions.</li>
+<li>Excellent critical thinking, judgment, and decision-making.</li>
+<li>Flexibility and ability to <strong>listen to expert feedback</strong>, modifying plans as necessary.</li>
+<li><strong>Participated in at least two incident responses</strong>.</li>
+<li>Gravitas, ability to <strong>take command</strong>, and <strong>willingness to kick people off a call</strong> to remove distractions, even if it’s the CEO.</li>
+</ul>
+<p>Deep technical knowledge is not required! Incident Commanders do not require deep technical knowledge of our systems. Your job as Incident Commander is to coordinate the response, not make technical changes. Don’t think you can’t be an Incident Commander just because you’re not in the engineering department.</p>
+<h4 id="graduation">Graduation</h4>
+<p>Upon completion of training, add yourself to the Incident Commander roster.</p>
+<h2 id="role-deputy-incident-commander-deputy">Role: Deputy Incident Commander (Deputy)</h2>
+<h3 id="description-2">Description</h3>
+<p>A Deputy Incident Commander (Deputy) is a direct support role for the Incident Commander (IC). The Deputy enables the IC to focus on the problem at hand, rather than worrying about documenting steps or monitoring timers. The deputy supports the IC and keeps them focused on the incident. As a Deputy, you will be expected to take over command from the IC if they request it.</p>
+<h3 id="duties-2">Duties</h3>
+<ol type="1">
+<li>Bring up issues to the Incident Commander that may otherwise not be addressed (keeping an eye on timers that have been started, circling back around to missed items from a roll call, etc).</li>
+<li>Be a “hot standby” Incident Commander, should the primary need to either transition to a SME, or otherwise have to step away from the IC role.</li>
+<li>Manage the incident call, and be prepared to remove people from the call if instructed by the Incident Commander.</li>
+<li>Monitor the status of the incident, and notify the IC if/when the incident escalates in severity level.</li>
+<li>Monitor timers:
+<ul>
+<li>track how long the incident has been running</li>
+<li>notify the IC every X minutes so they can take actions (<em>e.g.</em>, “IC, be advised the incident is now at the 10 minute mark.”)</li>
+</ul></li>
+<li>Monitor task deadlines (e.g., “IC, be advised the timer for [TEAM]’s investigation is up.”)</li>
+</ol>
+<h3 id="training-2">Training</h3>
+<ul>
+<li>Read and understand the incident response plan, including the roles and playbooks.</li>
+</ul>
+<h4 id="prerequisites-1">Prerequisites</h4>
+<ul>
+<li>Be trained as an <a href="#role-incident-commander-ic">Incident Commander</a>.</li>
+</ul>
+<h2 id="role-scribe">Role: Scribe</h2>
+<h3 id="description-3">Description</h3>
+<p>A Scribe documents the timeline of an incident as it progresses, and makes sure all important decisions and data are captured for later review. The Scribe should focus on the incident file, as well as follow-up items for later action.</p>
+<h3 id="duties-3">Duties</h3>
+<ol type="1">
+<li>Ensure the incident call is being recorded.</li>
+<li>Note in chat and in the file timelines: important data, events, and actions, as they happen. Specifically:
+<ul>
+<li>Key actions as they are taken</li>
+<li>Status reports when one is provided by the IC</li>
+<li>Any key call-outs either during the call or at the ending review</li>
+</ul></li>
+<li>Update the chat with who the IC is, who the Deputy is, and that you’re the scribe (if not already done).</li>
+</ol>
+<p>Scribing is more art than science. The objective is to keep an accurate record of important events that occurred, Use your judgement and experience. But here are some general things you most definitely want to capture as scribe.</p>
+<ul>
+<li>The result of any polling decisions.</li>
+<li>Any followup items that are called out as “We should do this..”, “Why didn’t this?..”, etc.</li>
+</ul>
+<h3 id="training-3">Training</h3>
+<p>Read and understand the incident response plan, including the roles and playbooks.</p>
+<h4 id="prerequisites-2">Prerequisites</h4>
+<ul>
+<li>Excellent verbal and written <strong>communication skills</strong>.</li>
+<li>Anyone can act as a scribe during an incident, and are chosen by the Incident Commander at the start of the call.</li>
+<li>Typically the Deputy will act as the Scribe</li>
+</ul>
+<h4 id="training-process">Training Process</h4>
+<ul>
+<li>Read the incident response plan, including all roles and playbooks.</li>
+<li><em>OPTIONAL:</em> Parallel the actions of a scribe during an incident or exercise, and seek feedback from the actual Scribe and Incident Commander.</li>
+</ul>
+<h2 id="role-subject-matter-expert-sme">Role: Subject Matter Expert (SME)</h2>
+<h3 id="description-4">Description</h3>
+<p>A Subject Matter Expert (SME) is a domain expert or designated owner of a team, component, or service (an “area”). You are there to support the incident commander in identifying the cause of the incident, suggesting and evaluation investigation, remediation, and communication actions, and following through on them as tasked.</p>
+<h3 id="duties-4">Duties</h3>
+<ol type="1">
+<li>Diagnose common problems within your area of expertise.</li>
+<li>Rapidly fix issues found during an incident.</li>
+<li>Concise communication:
+<ul>
+<li>Condition: What is the current state of your area? Is it healthy or not?</li>
+<li>Actions: What actions need to be taken if your area is not in a healthy state?</li>
+<li>Needs: What support do you need need to perform an action?</li>
+</ul></li>
+<li>Participate in the investigation, remediation, and/or communication phases of the response.</li>
+<li>Announce all suggestions to the incident commander, it is their decision on how to proceed, do not follow any actions unless told to do so.</li>
+</ol>
+<p>If you are on-call for any team, you may be paged for an incident and will be expected to respond as a subject matter expert (SME) for your team, component, or service. Anyone who is considered a “domain expert” can act as a SME for an incident. Typically the team’s primary on-call will act as the SME for that team.</p>
+<h4 id="prepare-for-on-call-period">Prepare for On-Call Period</h4>
+<ol type="1">
+<li>Be prepared, by having already familiarized yourself with our incident response policies and procedures.</li>
+<li>Make sure you have set up your alerting methods in accordance with our on-call procedure.</li>
+<li>Check you can join the incident call. You may need to install a browser plugin.</li>
+<li>Be aware of your upcoming on-call time and arrange swaps around travel, vacations, appointments, etc.</li>
+<li>If you are an Incident Commander, make sure you are not on-call for your team at the same time as being on-call as Incident Commander.</li>
+</ol>
+<h4 id="during-on-call-period">During On-Call Period</h4>
+<ol type="1">
+<li>Have your laptop and Internet with you at all times during your on-call period (office, home, a MiFi, a phone with a tethering plan, etc).</li>
+<li>If you have important appointments, you need to get someone else on your team to cover that time slot in advance.</li>
+<li>When you receive an alert for an incident, you are expected to join the incident call and chat as quickly as possible (within minutes).</li>
+<li>You will be asked questions or given actions by the Incident Commander. Answer questions concisely, and follow all actions given (even if you disagree with them).</li>
+<li>If you’re not sure about something, bring in other SMEs from your team that can help. <strong>Never hesitate to escalate</strong>, if necessary.</li>
+<li>Do not blame. This incident response process is completely blameless: blaming is counter productive and distracts from the problem at hand. After-action review will identify places we can all improve.</li>
+</ol>
+<h3 id="training-4">Training</h3>
+<ul>
+<li>Read and understand the incident response plan, including the roles and playbooks.</li>
+</ul>
+<h2 id="role-liaison">Role: Liaison</h2>
+<h3 id="description-5">Description</h3>
+<p>Liaisons interact with other teams or stakeholders, outside the incident response team. These often include:</p>
+<ul>
+<li>External Liaison: responsible for interacting with customers, either directly, or via public communication.</li>
+<li>Internal Liaison: responsible for interacting with internal stakeholders. Whether it’s notifying an internal team of the incident, or mobilizing additional responders within the organization.</li>
+</ul>
+<h3 id="duties-5">Duties</h3>
+<h4 id="external-or-customer-liaison">External or Customer Liaison</h4>
+<ol type="1">
+<li>Post any publicly facing messages regarding the incident (Twitter, etc).</li>
+<li>Notify the IC of any customers or media coverage reporting affects of the incident.</li>
+<li>Provide customers with the external message from the post-mortem once it is completed.</li>
+<li>Contact or interact with external stakeholders such as vendors, partners, law enforcement, <em>etc.</em></li>
+<li><strong>Do not</strong> feel responsible for creating every message: work with the Incident Commander and other stakeholders.</li>
+<li>As appropriate, keep customers informed during an incident.</li>
+<li>Act as a voice for our customers to the Incident Commander, as this is useful for IC decision making.</li>
+<li>Gaining message approval after you have crafted the public message: copy the message into chat and wait for verbal/written confirmation from the IC before proceeding.</li>
+</ol>
+<h5 id="tips-for-public-messages">Tips for Public Messages</h5>
+<ul>
+<li>Prepare a default message in advance that can be used for the initial update if the scope of the issue is unknown.</li>
+<li>Be honest. Do not lie or guess.</li>
+<li>Describe our progress in resolving the incident.
+<ul>
+<li><em>“We are aware of an incident…”</em></li>
+<li><em>“We are investigating delayed notifications…”</em></li>
+<li><em>“A fix has been applied and is currently being deployed…”</em></li>
+<li><em>“The issue has been resolved…”</em></li>
+</ul></li>
+<li>Be clear about how the incident is affecting customers. This is the primary piece of information customers will care about.</li>
+<li>Provide workarounds customers can use until the incident is resolved.</li>
+<li>Don’t estimate resolution times.</li>
+<li>Provide the appropriate level of detail.</li>
+</ul>
+<h4 id="internal-liaison">Internal Liaison</h4>
+<ol type="1">
+<li>Page SME’s or other on-call personnel as instructed by the Incident Commander.</li>
+<li>Notify or mobilize other teams within the organization (e.g. Finance, Legal, Marketing), as instructed by the Incident Commander.</li>
+<li>Track and anticipate SMEs on the call.</li>
+<li>Interact with stakeholders and provide status updates as necessary.</li>
+<li>Interact with internal stakeholders to answer their questions, to keep the primary call distraction free.</li>
+<li>Provide regular status updates to the executive team, giving an executive summary of the current status.</li>
+</ol>
+<h3 id="training-5">Training</h3>
+<p>Read and understand the incident response plan, including the roles and playbooks.</p>
+<h4 id="prerequisites-3">Prerequisites</h4>
+<ul>
+<li>Excellent verbal and written <strong>communication skills</strong>.</li>
+<li><em>OPTIONAL:</em> Customer support training.</li>
+<li><em>OPTIONAL:</em> Corporate communication or marketing training.</li>
+</ul>
+<h1 id="conduct-an-after-action-review-aar">Conduct an After Action Review (AAR)</h1>
+<ol type="1">
+<li>Schedule an After Action Review (AAR) meeting within {{AAR_SLA}} and invite the attendees listed at {{AAR_ATTENDEES}}. Always include the following:
+<ul>
+<li>The incident commander.</li>
+<li>Service owners involved in the incident.</li>
+<li>Key engineer(s)/responders involved in the incident.</li>
+</ul></li>
+<li>Designate an AAR owner who will investigate the incident in advance of the meeting to prepare, looking into the incident process itself including reviewing notes and reports.</li>
+</ol>
+<h2 id="conduct-the-aar-meeting">Conduct the AAR Meeting</h2>
+<p>Document answers to the following key questions:</p>
+<ol type="1">
+<li><strong>What happened?</strong> Create a timeline, supported with data or other artifacts. <strong>Avoid blame. Find facts.</strong></li>
+<li><strong>What was supposed to happen?</strong>
+<ul>
+<li>Detail deviations from process, procedure, or best practice, including SME assessments.</li>
+<li>Identify ways the incident could have been detected sooner, or responded to more effectively</li>
+</ul></li>
+<li><strong>What were the root causes?</strong> Find root cause to things that happened and to things that should have happened.</li>
+<li><strong>How can we improve?</strong> Capture action items <em>with assignees and due dates</em>. Consider:
+<ul>
+<li>Stop: what should we stop doing?</li>
+<li>Start: what should we start doing?</li>
+<li>Continue: what should we keep doing?</li>
+</ul></li>
+</ol>
+<h2 id="communicate-aar-status-and-results">Communicate AAR Status and Results</h2>
+<p>The AAR owner, in coordination with the Internal Liaison, will communicate the status of the AAR (see below)</p>
+<h3 id="status-descriptions">Status Descriptions</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Draft</strong></td>
+<td>AAR investigation is still ongoing</td>
+</tr>
+<tr class="even">
+<td><strong>In Review</strong></td>
+<td>AAR investigation has been completed, and is ready to be reviewed during the AAR meeting.</td>
+</tr>
+<tr class="odd">
+<td><strong>Reviewed</strong></td>
+<td>AAR meeting is over and the content has been reviewed and agreed upon.<br>If there are additional “External Messages”, the communications team will take action to prepare.</td>
+</tr>
+<tr class="even">
+<td><strong>Closed</strong></td>
+<td>No further actions are needed on the AAR (outstanding issues are tracked in tickets).<br>If no “External Messages”, skip straight to this once the meeting is over.<br>If there are additional “External Messages”, communications team will update AAR Closed once sent.</td>
+</tr>
+</tbody>
+</table>
+<p>Communicate the results of the AAR internally and finalize the AAR documentation.</p>
+<h1 id="about">About</h1>
+<p>This template was developed by the team at <a href="https://www.counteractive.net">Counteractive Security</a>, to help all organizations get a good start on a concise, directive, specific, flexible, and free incident response plan. Build a <a href="https://www.counteractive.net/posts/an-ir-plan-you-will-use/">plan you will actually use</a> to respond effectively, minimize cost and impact, and get back to business as soon as possible.</p>
+<h2 id="license">License</h2>
+<p>This template is provided under the Apache License, version 2.0. You can view the source code for this plan at https://github.com/counteractive.</p>
+<h2 id="instructions">Instructions</h2>
+<p>Customize this plan template for your own organization. Instructions are available in the project’s <a href="https://github.com/counteractive">README</a>. For professional assistance with incident response, or with customizing, implementing, or testing your plan, please contact us by <a href="mailto:support@counteractive.net">email</a> or <a href="tel:+18889255765">phone</a>.</p>
+<h2 id="references-and-additional-reading">References and Additional Reading</h2>
+<ul>
+<li><a href="http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf">NIST Computer Security Incident Handling Guide</a> (NIST)</li>
+<li><a href="https://github.com/certsocietegenerale/IRM/tree/master/EN">CERT Societe Generale Incident Response Methodologies</a></li>
+<li><a href="https://www.nist.gov/cyberframework">NIST Cybersecurity Framework</a></li>
+<li><a href="https://www.sans.org/reading-room/whitepapers/incident/incident-handlers-handbook-33901">Incident Handler’s Handbook</a> (SANS)</li>
+<li><a href="https://technet.microsoft.com/en-us/library/cc700825.aspx">Responding to IT Security Incidents</a> (Microsoft)</li>
+<li><a href="http://resources.sei.cmu.edu/library/asset-view.cfm?assetid=7153">Defining Incident Management Processes for CSIRTs: A Work in Progress</a> (CMU)</li>
+<li><a href="https://www.first.org/conference/2008/papers/killcrece-georgia-slides.pdf">Creating and Managing Computer Security Incident Handling Teams (CSIRTS)</a> (CERT)</li>
+<li><a href="http://shop.oreilly.com/product/0636920036159.do">Incident Management for Operations</a> (Rob Schnepp, Ron Vidal, Chris Hawley)</li>
+<li><a href="http://a.co/cUkFzMh"><em>Incident Response &amp; Computer Forensics, Third Edition</em></a> (Jason Luttgens. Matthew Pepe. Kevin Mandia)</li>
+<li><a href="http://shop.oreilly.com/product/9780596001308.do"><em>Incident Response</em></a> (Kenneth R. van Wyk, Richard Forno)</li>
+<li><a href="http://atulgawande.com/book/the-checklist-manifesto/">The Checklist Manifesto</a> (Atul Gawande)</li>
+<li><a href="https://www.amazon.com/Field-Guide-Understanding-Human-Error/dp/0754648265">The Field Guide to Understanding Human Error</a> (Sidney Dekker)</li>
+<li><a href="https://www.amazon.com/Normal-Accidents-Living-High-Risk-Technologies/dp/0691004129">Normal Accidents: Living with High-Risk Technologies</a> (Charles Perrow)</li>
+<li><a href="https://landing.google.com/sre/book.html">Site Reliability Engineering</a> (Google)</li>
+<li><a href="http://extfiles.etsy.com/DebriefingFacilitationGuide.pdf">Debriefing Facilitation Guide</a> (Etsy)</li>
+<li><a href="https://www.heavybit.com/library/video/every-minute-counts-coordinating-herokus-incident-response/">Every Minute Counts: Leading Heroku’s Incident Response</a> (Blake Gentry)</li>
+<li><a href="https://www.youtube.com/watch?v=TqaFT-0cY7U">Three Analytical Traps in Accident Investigation</a> (Dr. Johan Bergström)</li>
+<li><a href="https://www.fema.gov/national-incident-management-system">US National Incident Management System (NIMS)</a> (FEMA)</li>
+<li><a href="https://www.amazon.com/gp/product/1284038408">Informed’s NIMS Incident Command System Field Guide</a> (Michael J. Ward)</li>
+<li><a href="http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011">Advanced PostMortem Fu and Human Error 101 (Velocity 2011)</a></li>
+<li><a href="http://fractio.nl/2015/10/30/blame-language-sharing/">Blame. Language. Sharing.</a></li>
+</ul>
+</body>
+</html>

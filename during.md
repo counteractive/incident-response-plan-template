@@ -214,7 +214,7 @@ If an incident turns out to be two or more distinct incidents:
 
 Resource                  | Location
 ------------------------- | ------------------------------------
-Critical information list  | {{CRITICAL_INFO_LIST_LOCATION}}
+Critical information list | {{CRITICAL_INFO_LIST_LOCATION}}
 Critical asset list       | {{CRITICAL_ASSET_LIST_LOCATION}}
 Asset management database | {{ASSET_MGMT_DB_LOCATION}}
 Network map               | {{NETWORK_MAP_LOCATION}}

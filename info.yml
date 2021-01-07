@@ -1,132 +1,133 @@
 ---
-# The name of your organization
-COMPANY_NAME: 'Acme, Inc.'
 
-# Name and email of plan author
-AUTHOR_NAME: 'Chris'
+# The name of your organization (e.g., Acme, Inc.)
+COMPANY_NAME: '{{COMPANY_NAME}}'
 
-# Email of plan author
-AUTHOR_EMAIL: 'contact@counteractive.net'
+# Name and email of plan author (e.g., Chris)
+AUTHOR_NAME: '{{AUTHOR_NAME}}'
 
-# Document control metadata
-REVISION_NUMBER: 1
+# Email of plan author (e.g., contact@counteractive.net)
+AUTHOR_EMAIL: '{{AUTHOR_EMAIL}}'
 
-# Document control metadata
-RELEASE_DATE: '3 Apr 2019'
+# Document control metadata (e.g., 1)
+REVISION_NUMBER: '{{REVISION_NUMBER}}'
 
-# Date someone last reviewed the plan
-REVIEW_DATE: '3 Apr 2019'
+# Document control metadata (e.g., 7 Jan 2021)
+RELEASE_DATE: '{{RELEASE_DATE}}'
 
-# Date someone last tested the plan
-TEST_DATE: '3 Apr 2019'
+# Date someone last reviewed the plan (e.g., 7 Jan 2021)
+REVIEW_DATE: '{{REVIEW_DATE}}'
 
-# URL or reference to IR chat program
-RESPONSE_CHAT: 'chat.acme.tld/codename'
+# Date someone last tested the plan (e.g., 7 Jan 2021)
+TEST_DATE: '{{TEST_DATE}}'
 
-# Phone number for response teleconference
-RESPONSE_PHONE: '555-HACK'
+# URL or reference to IR chat program like Teams, Slack, or Discord (e.g., chat.acme.tld/codename)
+RESPONSE_CHAT: '{{RESPONSE_CHAT}}'
 
-# URL for response video teleconference (VTC)
-RESPONSE_VTC: 'webex.acme.tld/codename'
+# Phone number for response teleconference (e.g., 123-456-7890)
+RESPONSE_PHONE: '{{RESPONSE_PHONE}}'
 
-# Description/URL for alternate email
-ALTERNATE_EMAIL: 'O365 at ir.acme.tld/othermail'
+# URL for response video teleconference (VTC) like Zoom or WebEx (e.g., zoom.acme.tld/codename)
+RESPONSE_VTC: '{{RESPONSE_VTC}}'
 
-# Domain name for your organization
-ORGANIZATION_DOMAIN: 'acme.tld'
+# Description/URL for alternate email (e.g., alt 365 tenant at ir.acme.tld/othermail)
+ALTERNATE_EMAIL: '{{ALTERNATE_EMAIL}}'
 
-# Number or URL to page Commander(s)
-INCIDENT_COMMANDER_PAGER_NUMBER: '555-PAGE'
+# Domain name for your organization (e.g., acme.tld)
+ORGANIZATION_DOMAIN: '{{ORGANIZATION_DOMAIN}}'
 
-# Number or URL to page Commander(s)
-INCIDENT_COMMANDER_PAGER_URL: 'ir.acme.tld/ic-page'
+# Number or URL to page Commander(s) (e.g., 555-PAGE)
+INCIDENT_COMMANDER_PAGER_NUMBER: '{{INCIDENT_COMMANDER_PAGER_NUMBER}}'
 
-# URL/path to Commander roster/list
-INCIDENT_COMMANDER_ROSTER: 'ir.acme.tld/ic-roster'
+# Number or URL to page Commander(s) (e.g., ir.acme.tld/ic-page)
+INCIDENT_COMMANDER_PAGER_URL: '{{INCIDENT_COMMANDER_PAGER_URL}}'
 
-# As above, for security team
-SECURITY_TEAM_ROSTER: 'ir.acme.tld/sec-roster'
+# URL/path to Commander roster/list (e.g., ir.acme.tld/ic-roster)
+INCIDENT_COMMANDER_ROSTER: '{{INCIDENT_COMMANDER_ROSTER}}'
 
-# As above, for SMEs
-TEAM_SME_ROSTER: 'ir.acme.tld/sme-roster'
+# As above, for security team (e.g., ir.acme.tld/sec-roster)
+SECURITY_TEAM_ROSTER: '{{SECURITY_TEAM_ROSTER}}'
 
-# As above, for executive team
-EXECUTIVE_ROSTER: 'ir.acme.tld/exec-roster'
+# As above, for SMEs (e.g., ir.acme.tld/sme-roster)
+TEAM_SME_ROSTER: '{{TEAM_SME_ROSTER}}'
 
-# Time to wait for on-duty IC on call
-INCIDENT_COMMANDER_RESPONSE_SLA: '15 minutes'
+# As above, for executive team (e.g., ir.acme.tld/exec-roster)
+EXECUTIVE_ROSTER: '{{EXECUTIVE_ROSTER}}'
 
-# Time between scheduled updates
-UPDATE_FREQUENCY: '4 hours'
+# Time to wait for on-duty IC on call (e.g., 15 minutes)
+INCIDENT_COMMANDER_RESPONSE_SLA: '{{INCIDENT_COMMANDER_RESPONSE_SLA}}'
 
-# URL/path to incident file
-INCIDENT_FILE_LOCATION: 'ir.acme.tld/files/codename'
+# Time between scheduled updates (e.g., 4 hours)
+UPDATE_FREQUENCY: '{{UPDATE_FREQUENCY}}'
 
-# URL/path to critical information list, data you want to protect
-CRITICAL_INFO_LIST_LOCATION: 'ir.acme.tld/cil'
+# URL/path to incident file (e.g., ir.acme.tld/files/codename)
+INCIDENT_FILE_LOCATION: '{{INCIDENT_FILE_LOCATION}}'
 
-# URL/path to critical asset list, systems you want to protect
-CRITICAL_ASSET_LIST_LOCATION: 'ir.acme.tld/cal'
+# URL/path to critical information list, data you want to protect (e.g., ir.acme.tld/cil)
+CRITICAL_INFO_LIST_LOCATION: '{{CRITICAL_INFO_LIST_LOCATION}}'
 
-# URL/path to asset management DB
-ASSET_MGMT_DB_LOCATION: 'ir.acme.tld/assets'
+# URL/path to critical asset list, systems you want to protect (e.g., ir.acme.tld/cal)
+CRITICAL_ASSET_LIST_LOCATION: '{{CRITICAL_ASSET_LIST_LOCATION}}'
 
-# URL/path to network map
-NETWORK_MAP_LOCATION:  'ir.acme.tld/netmap'
+# URL/path to asset management DB (e.g., ir.acme.tld/assets)
+ASSET_MGMT_DB_LOCATION: '{{ASSET_MGMT_DB_LOCATION}}'
 
-# URL to SIEM
-SIEM_CONSOLE_LOCATION: 'siem.acme.tld'
+# URL/path to network map (e.g., ir.acme.tld/netmap)
+NETWORK_MAP_LOCATION:  '{NETWORK_MAP_LOCATION{}}'
 
-# URL to log aggregator
-LOG_AGGREGATOR_CONSOLE: 'elk.acme.tld'
+# URL to SIEM (e.g., siem.acme.tld)
+SIEM_CONSOLE_LOCATION: '{{SIEM_CONSOLE_LOCATION}}'
 
-# Name/URL of live response tool
-LIVE_RESPONSE_TOOL: '[ir-rescue](https://github.com/diogo-fernan/ir-rescue)'
+# URL to log aggregator (e.g., elk.acme.tld)
+LOG_AGGREGATOR_CONSOLE: '{{LOG_AGGREGATOR_CONSOLE}}'
 
-# Name/URL of memory collection tool
-MEMORY_COLLECTION_TOOL: '[rekall](http://www.rekall-forensic.com/)'
+# Name/URL of live response tool (e.g., [velociraptor](https://www.velocidex.com))
+LIVE_RESPONSE_TOOL: '{{LIVE_RESPONSE_TOOL}}'
 
-# Name/URL of disk imaging tool
-DISK_IMAGE_TOOL: '[ftk imager](http://www.forensicswiki.org/wiki/FTK_Imager)'
+# Name/URL of memory collection tool (e.g., [winpmem](https://github.com/Velocidex/WinPmem))
+MEMORY_COLLECTION_TOOL: '{{MEMORY_COLLECTION_TOOL}}'
 
-# URL/path to IR report template
-INCIDENT_REPORT_TEMPLATE: 'ir.acme.tld/report/template'
+# Name/URL of disk imaging tool (e.g., [sumuri](https://sumuri.com/software))
+DISK_IMAGE_TOOL: '{{DISK_IMAGE_TOOL}}'
 
-# URL/path to report recipient list
-INCIDENT_REPORT_RECIPIENTS: 'ir.acme.tld/report/recipients'
+# URL/path to IR report template (e.g., ir.acme.tld/report/template)
+INCIDENT_REPORT_TEMPLATE: '{{INCIDENT_REPORT_TEMPLATE}}'
 
-# Compliance team name
-COMPLIANCE_TEAM:  'the legal team, legal@acme.tld'
+# URL/path to report recipient list (e.g., ir.acme.tld/report/recipients)
+INCIDENT_REPORT_RECIPIENTS: '{{INCIDENT_REPORT_RECIPIENTS}}'
 
-# Communications team name
-COMMUNICATIONS_TEAM: 'the marketing team, marketing@acme.tld'
+# Compliance team name and contact info (e.g., the legal team, legal@acme.tld)
+COMPLIANCE_TEAM:  '{COMPLIANCE_TEAM{}}'
 
-# Executive team name
-EXECUTIVE_TEAM: 'the front office, bosses@acme.tld'
+# Communications team name and contact info (e.g., the marketing team, marketing@acme.tld)
+COMMUNICATIONS_TEAM: '{{COMMUNICATIONS_TEAM}}'
 
-# Legal team name
-LEGAL_TEAM: 'the legal team, legal@acme.tld'
+# Executive team name and contact info (e.g., the front office, bosses@acme.tld)
+EXECUTIVE_TEAM: '{{EXECUTIVE_TEAM}}'
 
-# Local law enforcement contact info
-LOCAL_LE_CONTACT: 'police@local.gov.tld'
+# Legal team name (e.g., the legal team, legal@acme.tld)
+LEGAL_TEAM: '{{LEGAL_TEAM}}'
 
-# FBI contact info
-FBI_CONTACT: '1-800-CALL-FBI (225-5324), https://www.fbi.gov/contact-us'
+# Local law enforcement contact info (e.g., Detective Jane Doe, police@local.gov.tld)
+LOCAL_LE_CONTACT: '{{LOCAL_LE_CONTACT}}'
 
-# Vendor for IR and infosec support
-INCIDENT_RESPONSE_VENDOR: '[Counteractive Security](https://www.counteractive.net)'
+# FBI contact info (e.g., 1-800-CALL-FBI (225-5324), https://www.fbi.gov/contact-us)
+FBI_CONTACT: '{{FBI_CONTACT}}'
 
-# Vendor for PR support
-PUBLIC_RELATIONS_VENDOR: 'pr.firm.tld'
+# Vendor for IR and infosec support (e.g., [Counteractive Security](https://www.counteractive.net))
+INCIDENT_RESPONSE_VENDOR: '{{INCIDENT_RESPONSE_VENDOR}}'
 
-# (Cyber) insurance provider
-INSURANCE_VENDOR: 'cyber.insurance.tld'
+# Vendor for PR support (e.g., public relations llc, pr.firm.tld)
+PUBLIC_RELATIONS_VENDOR: '{{PUBLIC_RELATIONS_VENDOR}}'
 
-# Industry ISAC contact info
-ISAC_CONTACT: 'https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center'
+# (Cyber) insurance provider (e.g., AAA insurance co., cyber.insurance.tld)
+INSURANCE_VENDOR: '{{INSURANCE_VENDOR}}'
 
-# After action review (AAR) service level agreement (time after completion of incident to conduct AAR)
-AAR_SLA: '5 business days'
+# Industry ISAC contact info (e.g., FS ISAC, https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center)
+ISAC_CONTACT: '{{ISAC_CONTACT}}'
 
-# AAR attendees
-AAR_ATTENDEES: 'ir.acme.tld/aar/attendees'
+# After action review (AAR) service level agreement (time after completion of incident to conduct AAR) (e.g., 5 business days)
+AAR_SLA: '{{AAR_SLA}}'
+
+# AAR attendees (e.g., ir.acme.tld/aar/attendees)
+AAR_ATTENDEES: '{{AAR_ATTENDEES}}'

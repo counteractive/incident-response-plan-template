@@ -23,13 +23,18 @@ The layout is as follows:
 
 The template files have a lot of placeholders that `{{LOOK_LIKE_THIS}}`.  The purpose of each placeholder should be discernable from context, and the [default `info.yml` file](./info.yml) is commented for additional clarity.  This is the [mustache](https://mustache.github.io/) template syntax, and has wide support in a variety of tools and languages.  
 
-The easiest way to replace these variables is to customize the `info.yml` file with your organization's information and use the provided [Makefile](https://en.wikipedia.org/wiki/Make_(software)) (as of v1.0.0) to automatically find and replace all the relevant strings.  _NOTE:_ this requires `make` (naturally), `mustache`, and `pandoc` to be installed and available in the user's `$PATH` (as well as `git` if you want to clone the repository rather than download the zipped source). 
+The easiest way to replace these variables is to customize the `info.yml` file with your organization's information and use the provided [Makefile](https://en.wikipedia.org/wiki/Make_(software)) (as of v1.0.0) to automatically find and replace all the relevant strings.  _NOTE:_ this requires `make` (naturally), `mustache`, and `pandoc` to be installed and available in the user's `$PATH`.  _NOTE:_ pdf output needs `pdflatex` (see [this gist](https://gist.github.com/rain1024/98dd5e2c6c8c28f9ea9d) for instructions on Ubuntu/Debian), and you'll need `git` if you want to clone the repository rather than download the zipped source.
+
+* if you 
 
 In your terminal of choice (e.g., [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq) on Windows):
 
 ```bash
-# install dependencies if necessary. on ubuntu, for example:
-sudo apt-get install make ruby-mustache pandoc git
+# install core dependencies, if not already present
+sudo apt-get install make ruby-mustache pandoc
+
+# for pdf format (big)
+sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
 # clone this repository
 git clone https://github.com/counteractive/incident-response-plan-template

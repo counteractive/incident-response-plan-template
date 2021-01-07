@@ -1,12 +1,12 @@
-# Incident Response Plan for Acme, Inc.
+# Incident Response Plan for {{COMPANY_NAME}}
 
-Author: Chris, contact@counteractive.net
+Author: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}
 
-Revision 1, Released 3 Apr 2019
+Revision {{REVISION_NUMBER}}, Released {{RELEASE_DATE}}
 
 This incident response plan is based on the concise, directive, specific, flexible, and free plan available on Counteractive Security's [Github](https://github.com/counteractive/incident-response-plan-template) and discussed at [www.counteractive.net](https://www.counteractive.net/posts/an-ir-plan-you-will-use/)
 
-It was last reviewed on 3 Apr 2019. It was last tested on 3 Apr 2019.
+It was last reviewed on {{REVIEW_DATE}}. It was last tested on {{TEST_DATE}}.
 
 `TODO: Customize this plan template for your organization using instructions at https://github.com/counteractive/incident-response-plan-template.  For incident response services, or help customizing, implementing, or testing your plan, contact us at contact@counteractive.net or at (888) 925-5765.`
 
@@ -45,10 +45,10 @@ Create an [simple two-word phrase](http://creativityforyou.com/combomaker.html) 
 
 1. Page the on-duty/on-call Incident Commander. `TODO: Add Incident Commander call list or procedure`
 1. **Do not** discuss the incident outside the response team unless cleared by the Incident Commander
-1. Launch and/or join the response chat at chat.acme.tld/codename.  `TODO: Add response chat launch procedure.`
-1. Launch and/or join the response call at 555-HACK and/or webex.acme.tld/codename.  `TODO: Add response call launch procedure.`
+1. Launch and/or join the response chat at {{RESPONSE_CHAT}}.  `TODO: Add response chat launch procedure.`
+1. Launch and/or join the response call at {{RESPONSE_PHONE}} and/or {{RESPONSE_VTC}}.  `TODO: Add response call launch procedure.`
 1. Prefer voice call, chat, and secure file exchange over any other methods.
-1. **Do not** use primary email if possible.  If email is necessary, use sparingly or use O365 at ir.acme.tld/othermail.  Encrypt emails when any participant is outside the acme.tld domain.  `TODO: Add alternative email details and procedure, e.g., on-demand Office 365 or GSuite`
+1. **Do not** use primary email if possible.  If email is necessary, use sparingly or use {{ALTERNATE_EMAIL}}.  Encrypt emails when any participant is outside the {{ORGANIZATION_DOMAIN}} domain.  `TODO: Add alternative email details and procedure, e.g., on-demand Office 365 or GSuite`
 1. **Do not** use SMS/text to communicate about the incident, unless to tell someone to move to a more secure channel.
 1. Invite on-duty/on-call responders to the response call and response chat.
     * Invite the security team.  `TODO: Add security team contact list or procedure.`
@@ -76,12 +76,12 @@ Create an [simple two-word phrase](http://creativityforyou.com/combomaker.html) 
 
 Response Team Role           | Contact Information
 ---------------------------- | ---------------------------
-Incident Commander pager     | 555-PAGE
-Incident Commander pager url | ir.acme.tld/ic-page
-Incident Commander roster    | ir.acme.tld/ic-roster
-Security team roster         | ir.acme.tld/sec-roster
-Team SME roster              | ir.acme.tld/sme-roster
-Executive roster             | ir.acme.tld/exec-roster
+Incident Commander pager     | {{INCIDENT_COMMANDER_PAGER_NUMBER}}
+Incident Commander pager url | {{INCIDENT_COMMANDER_PAGER_URL}}
+Incident Commander roster    | {{INCIDENT_COMMANDER_ROSTER}}
+Security team roster         | {{SECURITY_TEAM_ROSTER}}
+Team SME roster              | {{TEAM_SME_ROSTER}}
+Executive roster             | {{EXECUTIVE_ROSTER}}
 
 `TODO: Customize response team contact information.  Include contact procedures in rosters, which can be static or dynamic.`
 
@@ -90,11 +90,11 @@ Executive roster             | ir.acme.tld/exec-roster
 ### Conduct Initial Response Call
 
 1. Conduct initial call using the [initial response call structure](#reference-initial-response-call-structure)
-1. Follow instructions from the Incident Commander.  If the on-duty/on-call Incident Commander does not join the call **within 15 minutes** and you are a trained incident commander, take command of the call.
+1. Follow instructions from the Incident Commander.  If the on-duty/on-call Incident Commander does not join the call **within {{INCIDENT_COMMANDER_RESPONSE_SLA}}** and you are a trained incident commander, take command of the call.
 1. Follow the [instructions for your role](#roles).
 1. Follow the call and chat, and comment as appropriate.  If you are not a SME, filter input through the SME for your team if possible.
 1. **Keep the call and chat active throughout the incident for event-driven communication.**
-1. Schedule updates **every 4 hours** on the active bridge.
+1. Schedule updates **every {{UPDATE_FREQUENCY}}** on the active bridge.
 
 #### Reference: Initial Response Call Structure
 
@@ -125,7 +125,7 @@ Executive roster             | ir.acme.tld/exec-roster
 
 ### Conduct Response Update
 
-* Conduct scheduled updates using the [update call structure](#reference-response-update-call-structure) every 4 hours on the active bridge. `TODO: Customize update frequency and scripts; recommend no more than twice daily.`
+* Conduct scheduled updates using the [update call structure](#reference-response-update-call-structure) every {{UPDATE_FREQUENCY}} on the active bridge. `TODO: Customize update frequency and scripts; recommend no more than twice daily.`
 * Adjust frequency as necessary.
 * Coordinate independent updates (_e.g._, executive, legal) as required, but as infrequently as practicable.
 
@@ -179,7 +179,7 @@ If an incident turns out to be two or more distinct incidents:
 
 ## Create Incident File
 
-1. Create a new incident file at ir.acme.tld/files/codename using the [incident name](#name-the-incident).  Use this file for secure storage of documentation, evidence, artifacts, _etc._
+1. Create a new incident file at {{INCIDENT_FILE_LOCATION}} using the [incident name](#name-the-incident).  Use this file for secure storage of documentation, evidence, artifacts, _etc._
     * Provision secure digital storage.
     * Provision secure file exchange.
     * Obtain physical storage.
@@ -214,12 +214,12 @@ If an incident turns out to be two or more distinct incidents:
 
 Resource                  | Location
 ------------------------- | ------------------------------------
-Critical information list  | ir.acme.tld/cil
-Critical asset list       | ir.acme.tld/cal
-Asset management database | ir.acme.tld/assets
-Network map               | ir.acme.tld/netmap
-SIEM console              | siem.acme.tld
-Log aggregator            | elk.acme.tld
+Critical information list | {{CRITICAL_INFO_LIST_LOCATION}}
+Critical asset list       | {{CRITICAL_ASSET_LIST_LOCATION}}
+Asset management database | {{ASSET_MGMT_DB_LOCATION}}
+Network map               | {NETWORK_MAP_LOCATION{}}
+SIEM console              | {{SIEM_CONSOLE_LOCATION}}
+Log aggregator            | {{LOG_AGGREGATOR_CONSOLE}}
 
 `TODO: Complete critical information and asset lists ("crown jewels"). This is incredibly important to effective response.`
 
@@ -234,7 +234,6 @@ Log aggregator            | elk.acme.tld
 1. Create hypotheses: what may have happened, and with what confidence.
 1. **Identify and prioritize key questions** (information gaps) to support or discredit hypotheses.
     * Use the MITRE ATT&CK matrix or similar framework to [develop questions](#reference-attacker-tactics-to-key-questions-matrix).
-        * [PRE-ATT&CK](https://attack.mitre.org/pre-attack/index.php/Main_Page) for "Left-of-Exploit."
         * [ATT&CK for Enterprise](https://attack.mitre.org/wiki/Main_Page), including links to Windows, Mac, and Linux specifics.
         * [ATT&CK Mobile Profile](https://attack.mitre.org/mobile/index.php/Main_Page) for mobile devices.
     * Use interrogative words as inspiration:
@@ -255,20 +254,28 @@ Log aggregator            | elk.acme.tld
 
 Attacker Tactic      | The way attackers ...         | Possible Key Questions
 -------------------- | ----------------------------- | -----------------------------------------
+Reconnaissance       | ... learn about targets       | How? Since when? Where? Which systems?
+Resource Development | ... build infrastructure      | Where? Which systems?
+Initial Access       | ... get in                    | How? Since when? Where? Which systems?
+Execution            | ... run hostile code          | What malware? What tools? Where? When?
 Persistence          | ... stick around              | How? Since when? Where? Which systems?
 Privilege Escalation | ... get higher level access   | How? Where? What tools?
 Defense Evasion      | ... dodge security            | How? Where? Since when?
 Credential Access    | ... get/create accounts       | Which accounts? Since when? Why?
 Discovery            | ... learn our network         | How? Where? What do they know?
 Lateral Movement     | ... move around               | How? When? Which accounts?
-Execution            | ... run hostile code          | What malware? What tools? Where? When?
 Collection           | ... find and gather data      | What data? Why? When? Where?
-Exfiltration         | ... take data                 | What data? How? When? Where?
 Command and Control  | ... control tools and systems | How? Where? Who? Why?
+Exfiltration         | ... take data                 | What data? How? When? Where?
+Impact               | ... break things              | What systems or data? How? When? Where? How bad?
+
+See the [MITRE ATT&CK page](https://attack.mitre.org/) for more insight and ideas.
 
 ## Create and Deploy Indicators of Compromise (IOCs)
 
-* Create IOCs based on [initial leads](#collect-initial-leads) and [analysis](#analyzeiterate).
+> Emphasize **dynamic and behavioral** indicators alongside static fingerprints.
+
+* Create IOCs based on [initial leads](#collect-initial-leads) and [analysis](#analyze-evidence).
 * Create IOCs using an open format supported by your tools (_e.g._, [STIX 2.0](https://oasis-open.github.io/cti-documentation/stix/intro)), if possible. `TODO: Customize IOC format as necessary.`
 * Use automation, if possible. `TODO: Add IOC deployment/revocation procedure.`
 * **Do not** deploy unrelated, un-curated "feeds" of IOCs; these can cause confusion and fatigue.
@@ -282,17 +289,45 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 ## Identify Systems of Interest
 
 1. Validate whether they are relevant.
-1. Categorize the reason(s) they are "of interest": has malware x, accessed by compromised account, has sensitive data, etc.  Treat these as "tags", there may be more than one category per system.
+1. Categorize the reason(s) they are "of interest": has malware, accessed by compromised account, has sensitive data, etc.  Treat these as "tags", there may be more than one category per system.
 1. Prioritize collection, analysis, and remediation based on investigative needs, business impact, _etc._
 
 ## Collect Evidence
 
 * Prioritize based on the investigative plan
-* Collect live response data using [ir-rescue](https://github.com/diogo-fernan/ir-rescue).  `TODO: Customize live response tools and procedure.`
+* Collect live response data using {{LIVE_RESPONSE_TOOL}}.  `TODO: Customize live response tools and procedure.`
 * Collect relevant logs from system(s) (if not part of live response), aggregator(s), SIEM(s), or device console(s).  `TODO: Customize log collection tools and procedure.`
-* Collect memory image, if necessary and if not part of live response, using [rekall](http://www.rekall-forensic.com/).  `TODO: Customize memory collection tools and procedure.`
-* Collect disk image, if necessary, using [ftk imager](http://www.forensicswiki.org/wiki/FTK_Imager).  `TODO: Customize disk image collection tool and procedure.`
+* Collect memory image, if necessary and if not part of live response, using {{MEMORY_COLLECTION_TOOL}}.  `TODO: Customize memory collection tools and procedure.`
+* Collect disk image, if necessary, using {{DISK_IMAGE_TOOL}}.  `TODO: Customize disk image collection tool and procedure.`
 * Collect and store evidence in accordance with policy, and with proper chain of custody. `TODO: Customize evidence collection and chain of custody policy.`
+
+Consider collecting the following artifacts as evidence, either in real time (_e.g., via EDR or a SIEM) or on demand:
+
+###  Example Useful Artifacts
+
+`TODO: Customize and prioritize useful artifacts.`
+
+* Running Processes
+* Running Services
+* Executable Hashes
+* Installed Applications
+* Local and Domain Users
+* Listening Ports and Associated Services
+* Domain Name System (DNS) Resolution Settings and Static Routes
+* Established and Recent Network Connections
+* Run Key and other AutoRun Persistence
+* Scheduled tasks and cron jobs
+* Artifacts of past execution (e.g., Prefetch and Shimcache)
+* Event logs
+* Group policy and WMI artifacts
+* Anti-virus detections
+* Binaries in temporary storage locations
+* Remote access credentials
+* Network connection telemetry (e.g., netflow, firewall permits)
+* DNS traffic and activity
+* Remote access activity including Remote Desktop Protocol (RDP), virtual private network (VPN), SSH, virtual network computing (VNC), and other remote access tools
+* Uniform Resource Identifier (URI) strings, user agent strings, and proxy enforcement actions
+* Web traffic (HTTP/HTTPS)
 
 ## Analyze Evidence
 
@@ -301,11 +336,26 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 * Analyze memory and disk images (_i.e._, conduct forensics)
 * Analyze malware
 * _OPTIONAL:_ Enrich with research and intelligence
+* Document new indicators of compromise (IOCs)
 * Update the case file
+
+### Example Useful Indicators
+
+`TODO: Customize and prioritize useful indicators.`
+
+* Unusual authentication behavior (_e.g._, frequency, systems, time of day, remote location)
+* Non-Standard formatted usernames
+* Unsigned binaries connecting to the network
+* Beaconing or significant data transfers
+* PowerShell command line requests with Base64-encoded commands
+* Excessive RAR, 7zip, or WinZip activity, especially with suspicious file names
+* Connections on previously unused ports.
+* Traffic patterns related to time, frequency, and byte count
+* Changes to routing tables, such as weighting, static entries, gateways, and peer relationships
 
 ## Iterate Investigation
 
-[Update the investigative plan](#update-investigative-plan) and repeat until closure.
+[Update the investigative plan](#update-investigative-plan-and-incident-file) and repeat until closure.
 
 # Remediate
 
@@ -313,7 +363,7 @@ Command and Control  | ... control tools and systems | How? Where? Who? Why?
 
 ## Update Remediation Plan
 
-1. Review the incident file at ir.acme.tld/files/codename using the [incident name](#name-the-incident)
+1. Review the incident file at {{INCIDENT_FILE_LOCATION}} using the [incident name](#name-the-incident)
 1. Review applicable [playbooks](#playbooks).
 1. Review the [Response Resource List](#reference-response-resource-list)).
 1. Consider which attacker tactics are in play in this incident.  Use the MITRE [ATT&CK](https://attack.mitre.org/wiki/Main_Page) list (_i.e._, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Lateral Movement, Execution, Collection, Exfiltration, and Command and Control), or similar framework.
@@ -424,8 +474,8 @@ All communication must include the most accurate information available.  Display
 
 ### Create Incident Report
 
-* Upon incident closure, capture information in the [incident file](#create-incident-file) for distribution using the format at ir.acme.tld/report/template.  **If the vector, impact, summary, timeline, and activity reports are complete, this can be fully automated.**
-* Distribute the incident report to the following: ir.acme.tld/report/recipients.
+* Upon incident closure, capture information in the [incident file](#create-incident-file) for distribution using the format at {{INCIDENT_REPORT_TEMPLATE}}.  **If the vector, impact, summary, timeline, and activity reports are complete, this can be fully automated.**
+* Distribute the incident report to the following: {{INCIDENT_REPORT_RECIPIENTS}}.
 * `TODO: Customize incident report creation and distribution, if necessary`
 
 ## Communicate Externally
@@ -434,12 +484,12 @@ All communication must include the most accurate information available.  Display
 
 * **Do not** notify or update non-response personnel until cleared by the Incident Commander.
 * Notify regulators (_e.g._, HIPAA/HITRUST, PCI DSS, SOX) if necessary, and in accordance with policy.
-* Coordinate requirements, format, and timeline with the legal team, legal@acme.tld.
+* Coordinate requirements, format, and timeline with {COMPLIANCE_TEAM{}}.
 
 ### Notify Customers
 
 * **Do not** notify or update non-response personnel until cleared by the Incident Commander.
-* Coordinate customer notifications with the marketing team, marketing@acme.tld.
+* Coordinate customer notifications with {{COMMUNICATIONS_TEAM}}.
 * Include the date in the title of any announcement, to avoid confusion.
 * **Do not** use platitudes such as "we take security very seriously". Focus on facts.
 * Be honest, accept responsibility, and present the facts, along with the plan to prevent similar incidents in future.
@@ -459,21 +509,32 @@ All communication must include the most accurate information available.  Display
 ### Notify Law Enforcement
 
 * **Do not** notify or update non-response personnel until cleared by the Incident Commander.
-* Coordinate with the front office, bosses@acme.tld and the legal team, legal@acme.tld prior to interacting with law enforcement
-* Contact local law enforcement at police@local.gov.tld.
-* Contact FBI at 1-800-CALL-FBI (225-5324), https://www.fbi.gov/contact-us or via the [Internet Crime Complaint Center (IC3)](https://www.ic3.gov).
+* Coordinate with {{EXECUTIVE_TEAM}} and {{LEGAL_TEAM}} prior to interacting with law enforcement
+* Contact local law enforcement at {{LOCAL_LE_CONTACT}}.
+* Contact FBI at {{FBI_CONTACT}} or via the [Internet Crime Complaint Center (IC3)](https://www.ic3.gov).
 * Contact operators for any systems used in the attack, their systems may also have been compromised.
 
 ### Contact External Response Support
 
-* Contact [Counteractive Security](https://www.counteractive.net) to help in assessing risk, incident management, incident response, and post-incident support.
-* Contact pr.firm.tld for help with PR and external communication.
-* Contact cyber.insurance.tld for help with cyber insurance.
+* Contact {{INCIDENT_RESPONSE_VENDOR}} to help in assessing risk, incident management, incident response, and post-incident support.
+* Contact {{PUBLIC_RELATIONS_VENDOR}} for help with PR and external communication.
+* Contact {{INSURANCE_VENDOR}} for help with cyber insurance.
 
 ### Share Intelligence
 
 * Share IOCs with [Infragard](https://www.infragard.org/) if applicable.
-* Share IOCs with your servicing [ISAC](https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center) through https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center, if applicable.
+* Share IOCs with your servicing [ISAC](https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center) through {{ISAC_CONTACT}}, if applicable.
+
+# Recover
+
+`TODO: Customize recovery steps.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+**Recovery is typically governed by business units and system owners.  Take recovery actions only in collaboration with relevant stakeholders.**
+
+1. Launch business continuity/disaster recovery plan(s): _e.g._, consider migration to alternate operating locations, fail-over sites, backup systems.
+1. Integrate security actions with organizational recovery efforts.
 
 # Playbooks
 
@@ -481,6 +542,410 @@ The following playbooks capture common [investigation](#investigate), [remediati
 
 `TODO: Create additional playbooks for highly likely or highly damaging incident types.`
 
+## Playbook: Website Defacement
+
+**Investigate, remediate (contain, eradicate), and communicate in parallel!**
+
+Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
+
+### Investigate
+1. Immediately take the defaced server offline for further investigation
+    * This is especially important if the defacement is insulting or triggering in any way. Remove this from the public eye as quickly as possible to avoid harm as well as to mitigate business impact.
+    * The defacement message may also contain false information that could mislead users or put them at risk.
+    * Taking the server offline will allow a deeper investigation of the defacement. This may be necessary as the hacker may have dove depper into the organization accessing application servers, databases, etc.
+2. Determine the system's source of vulnerability that was used by the attacker. Common exploits include:
+    * SQL injection attakcs
+        * This kind of attack occurs when an attacker interferes with an application's queries to the database. Therefore, this can lead to unauthorized access to private or sensitive data. Read more about SQL injection attacks [here](https://www.acunetix.com/websitesecurity/sql-injection/)
+    * Remote File Inclusion (RFI) attacks
+        * This kind of attack exploits an application's referencing function to upload malware from a remote URL. Read more about RFI attacks [here](https://www.acunetix.com/blog/articles/remote-file-inclusion-rfi/)
+    * webshells
+        * More about web shells and website defacement [here](https://www.wordfence.com/blog/2017/06/wso-shell/)
+    * poor web application design
+        * javascript hacks
+        * PHP/ASP hacks
+        * Here's more on [hacking with javascript](https://itnext.io/how-companies-are-hacked-via-malicious-javascript-code-12aa82560bdc)
+    * other methods of detection include: 
+        * Checking the server logs
+            * look through the web page's access log and error log for any suspicious or unfamiliar activity
+            * of course, it is also a good idea to check the IDS or IPS firewall logs, if available
+        * Checking files with static content
+        * Scanning databases for malicious content
+        * Checking links present in the page
+3. Collect any clues as to who the hacker is or what organization they are working for. Consider the following questions:
+    * What did the defacement portray? Did it include an obvious message?
+    * Did the defacement seem harmless or intentional? Could the hacker be a kid messing around or a professional group working with a motive?
+    * Does it seem like your organization was targeted? Who may want to target your organization?
+    * What did the hacker hope to accomplish?
+    * Consult [here](https://www.geeksforgeeks.org/types-of-hackers/) to learn more about the types of hackers that may have attacked your webpage.
+4. Collect other important information from the page that has been defaced such as:
+    * a screenshot of the defacement
+    * the domain and IP address of the page
+    * details of the web server
+    * page's source code
+        * analyze this carefully to identify the problem and ensure that it is on a server belonging to the company
+    * name or any information on the attacker
+6. There are also tools available to aid in both detection and log analysis. A few are listed below:
+    * Weblog Expert
+    * Sawmill
+    * Deep Log Analyzer
+
+
+`TODO: Expand investigation steps, including key questions and strategies, for website defacement.`
+
+### Remediate
+
+* **Plan remediation events** where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.
+* **Consider the timing and tradeoffs** of remediation actions: your response has consequences.
+
+#### Contain
+
+`TODO: Customize containment steps, tactical and strategic, for website defacement.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+1. Backup all data stored on the web server for forensic purposes.
+2. As previously mentioned, make sure to take the defaced page's server down temporarily while investigation occurs.
+    * You should have an error page prepared for this situation that informs user and/or employees that maintenance is undereway and the page they sought will return shortly. You may even wish to have a backup website prepared where you may publish content while investigation and remediation are underway and have your temporary error page redirect users to this backup site. 
+    * Check your network architecture map. If the breach is another system on the network, take that down and investigate it.
+3. Once the source of the attack has been determined, apply the necessarily steps to ensure this will not happen again. This may include modifying code or editing access rights.
+    * Reference the "Investigate" section for common sources of vulnerability.
+    * If this is outside of your domain, simply ensure that you have given the appropriate personnel all the information on the attack that you have and allow experts to do their job.
+
+### Recover
+
+`TODO: Customize recovery steps for defacement`
+
+`TODO: Specify tools and procedures for each step, below`
+
+1. Remove the hacker's message and replace with original, legitimate content. If data was lost in the attack, reference backups and restore the original page as much as possible.
+    * Check backups for indicators of compromise
+    * Consider partial recovery and backup integrity testing
+2. Consider asking users to change their login credentials if the web server has user authentication. 
+3. After implementing risk avoidance measures (as recommended below), restore your server showing the original page content. 
+4. If necessary and/or applicable, prepare an apology/explanation of the attack that occurred for users or anyone who witnessed the defacement. Ensure that is it clear that the defacement content does not reflect your organization in any way. 
+
+#### Risk Avoidance
+
+`TODO: Communicate with other employees to ensure that everyone understands and contributes to the following steps, where applicable`
+
+1. Use as few plug-ins as necessary. Hackers target websites that are vulnerable and have many sources of entry. You can limit these sources of entry by only using what you need and removing any unused or old plug ins and software. It is also important to update these as soon as possible. 
+2. Closely monitor and mandate access to administrative content. Only allow individuals access to what they need access to. This will reduce the chance of human error leading to cyber attacks. There are more DIY methods of prevention mentioned in [this article](https://cirt.gy/index.php/node/116) (steps 6-12) and in resource #4 at the end of this playbook.
+3. Regularly check for malware on your site by scanning the source code. Look for scripts, iframes, or URLs that look unfamiliar and make sure to also scan URLs that do look familiar.
+4. There are many highly reputable automated website scanners that will not cost any of your time and will thoroughly scan your site for vulnerabilities regularly. Here is a [link to popular scanners](https://resources.infosecinstitute.com/14-popular-web-application-vulnerability-scanners/#gref).
+5. Defend against common points of exploitation such as SQL injections and XSS attacks. [This article](https://www.banffcyber.com/knowledge-base/articles/best-practices-address-issue-web-defacement/) includes best practices to defend these attacks.
+6. Install defacement detection programs so that if an attack were to occurr again, you would be prepared and respond quickly. Here is an [article](https://www.techradar.com/news/best-website-defacement-monitoring-service) that summarizes some of 2020's best monitoring services. 
+7. Discuss with your employees the importance of keeping administrative access limited and confidential and inform them of these steps to avoid incidents including regular cybersecurity awareness training.
+
+#### Reference: Remediation Resources
+
+`TODO: Specify financial, personnel, and logistical resources to accomplish remediation`
+
+### Communicate
+
+`TODO: Customize communication steps for defacement`
+
+`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan`
+
+1. Escalate incident and communicate with leadership per procedure
+1. Document incident per procedure (and report if applicable)
+1. Communicate with internal and external legal counsel per procedure, including discussions of compliance, risk exposure, liability, law enforcement contact, _etc._
+1. Communicate with users (internal)
+    1. Communicate incident response updates per procedure
+    1. Communicate impact of incident **and** incident response actions (e.g., containment: "why is the file share down?")
+    1. Communicate requirements: "what should users do and not do?"  
+1. Communicate with customers
+    1. Focus particularly on those whose data was affected
+    1. Generate required notifications based on applicable regulations (particularly those that may consider defacement a data breach or otherwise requires notifications) `TODO: Expand notification requirements and procedures for applicable regulations`
+1. Contact insurance provider(s)
+    1. Discuss what resources they can make available, what tools and vendors they support and will pay for, _etc._
+    1. Comply with reporting and claims requirements to protect eligibility
+1. Consider notifying and involving law enforcement. TODO: Link the following bullets to actual resources for your organization
+    1. [Local law enforcement](#TODO-link-to-actual-resource)
+    1. [State or regional law enforcement](#TODO-link-to-actual-resource)
+    1. [Federal or national law enforcement](#TODO-link-to-actual-resource)
+1. Communicate with security and IT vendors TODO: Link the following bullets to actual resources for your organization
+    1. Notify and collaborate with [managed providers](#TODO-link-to-actual-resource) per procedure
+    1. Notify and collaborate with [incident response consultants](#TODO-link-to-actual-resource) per procedure
+
+### Resources
+
+#### Reference: User Actions for Suspected Defacement Attack
+
+`TODO: Customize steps for users dealing with suspected defacement`
+
+1. Stay calm, take a deep breath.
+1. Disconnect your system from the network `TODO: include detailed steps with screenshots, a pre-installed tool or script to make this easy ("break in case of emergency"), consider hardware network cut-off switches`
+1. Take pictures of the page you see using your smartphone showing the things you noticed: the defacement message and any other changes to the usual site.
+1. Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper.  Every little bit helps!  Document the following:
+    1. What did you notice?
+    1. When did it first occur, and how often since?
+    1. What data do you typically access?
+    1. Who else have you contacted about this incident, and what did you tell them?
+1. Contact the [help desk](#TODO-link-to-actual-resource) and be as helpful as possible.
+1. Be patient: allow the IT personnel get it under control, you may be protecting others from harm!  **Thank you.**
+
+#### Reference: Help Desk Actions for Suspected Defacement Attack
+
+`TODO: Customize steps for help desk personnel dealing with suspected defacement`
+
+1. Stay calm, take a deep breath.
+1. Open a ticket to document the incident, per procedure. `TODO: Customize template with key questions (see below) and follow-on workflow`
+1. Use your best judgement on which steps to prioritize (i.e. if the defacement left harmful or triggerring content, prioritize taking down the server immediately).
+1. Ask the user to take pictures of their screen using their smartphone showing the things they noticed.
+1. Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper.  If this is a user report, ask detailed questions, including:
+       1. What did you notice?
+    1. When did it first occur, and how often since?
+    1. What data do you typically access?
+    1. Who else have you contacted about this incident, and what did you tell them?
+1. Ask follow-up questions as necessary.  **You are an incident responder, we are counting on you.**
+1. Get detailed contact information from the user (home, office, mobile), if applicable.
+1. Record all information in the ticket, including hand-written and voice notes.
+1. Quarantine affected users and systems. `TODO: Customize containment steps, automate as much as possible`
+1. Contact the [security team](#TODO-link-to-actual-resource) and stand by to participate in the response as directed: investigation, remediation, communication, and recovery.
+
+#### Additional Information
+1. <a name="defacement-playbook-ref-1"></a>A helpful and detailed [paper](https://pdfs.semanticscholar.org/899e/2d629e06d920b9059edb21fcb52cdb33f783.pdf) on defacement detection
+2. <a name="defacement-playbook-ref-2"></a>10 tools for [better website monitoring and security](https://geekflare.com/website-defacement-monitoring/)
+3. <a name="defacement-playbook-ref-3"></a>[2019 Website Threat Research Report](https://sucuri.net/reports/2019-hacked-website-report/) with helpful statistics
+4. <a name="defacement-playbook-ref-4"></a>[Article](https://www.imperva.com/learn/application-security/website-defacement-attack/) including DIYs and Best practices to prevent website defacement## Playbook: Identity and Access Compromise
+
+**Investigate, remediate (contain, eradicate), and communicate in parallel!**
+
+Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
+
+### Investigate
+
+`TODO: Expand investigation steps, including key questions and strategies, for identity and access compromise.`
+
+1. TODO
+
+### Remediate
+
+* **Plan remediation events** where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.
+* **Consider the timing and tradeoffs** of remediation actions: your response has consequences.
+
+#### Contain
+
+`TODO: Customize containment steps, tactical and strategic, for identity and access compromise.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+* TODO
+
+`TODO: Consider automating containment measures using orchestration tools.`
+
+#### Eradicate
+
+`TODO: Customize eradication steps, tactical and strategic, for identity and access compromise.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+* TODO
+
+#### Reference: Remediation Resources
+
+`TODO: Specify financial, personnel, and logistical resources to accomplish remediation.`
+
+### Communicate
+
+`TODO: Customize communication steps for identity and access compromise`
+
+`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.`
+
+In addition to the general steps and guidance in the incident response plan:
+
+1. TODO
+
+### Recover
+
+`TODO: Customize recovery steps for identity and access compromise.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+In addition to the general steps and guidance in the incident response plan:
+
+1. TODO
+
+### Resources
+
+#### Additional Information
+
+1. <a name="identity-and-access-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
+
+## Playbook: Phishing
+
+**Investigate, remediate (contain, eradicate), and communicate in parallel!**
+
+Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
+
+### Investigate
+
+`TODO: Expand investigation steps, including key questions and strategies, for phishing.`
+
+1. **Scope the attack** Usually you will be notified that a potential phishing attack is underway, either by a user, customer, or partner.
+    * Determine **total number of impacted users**
+    * Understand **user actions** in response to the phishing email (_e.g._, did they download the attachment, visit the spoofed site, or give out any personal or business information such as credentials)
+    * Find the potentially related activity. Check:
+        * social media
+        * any possibly suspicious emails
+        * emails with links to external and unknown URLs
+        * non-returnable or non-deliverable emails
+        * any kind of notification of suspicious activity
+1. **Analyze the message** using a safe device (i.e., **do not** open messages on a device with access to sensitive data or credentials as the message may contain malware), determine: `TODO: Specify tools and procedure`
+    * who received the message
+    * who was targeted by the message (may be different than "successful" recipients)
+    * email address of the sender
+    * subject line
+    * message body
+    * attachments (**do not open attachments** except according to established procedures)
+    * links, domains, and hostnames (**do not follow links** except according to established procedures)
+    * email metadata including message headers (see below)
+        * sender information from the 'from' field and the X-authenticated user header
+        * all client and mail server IP addresses
+    * note "quirks" or suspicious features
+1. **Analyze links and attachments** `TODO: Specify tools and procedure`
+    * use passive collection such as nslookup and whois to find IP addresses and registration information
+    * find related domains using OSINT (_e.g._, [reverse whois](https://www.whoxy.com/reverse-whois/)) on email addresses and other registration data
+    * submit links, attachments, and/or hashes to [VirusTotal](https://www.virustotal.com/gui/)
+    * submit links, attachments, and/or hashes to a malware sandbox such as [Cuckoo](https://cuckoosandbox.org/), [Hybrid Analysis](https://www.hybrid-analysis.com/), [Joe Sandbox](https://www.joesecurity.org/), or [VMray](https://www.vmray.com/).
+1. Categorize the type of attack. `TODO: Customize categories and create additional playbooks for common or high-impact phishing types`
+1. **Determine the severity.** Consider:
+    * whether public or personal safety is at risk
+    * whether personal data (or other sensitive data) is at risk
+    * any evidence of who is behind the attack
+    * number of affected assets
+    * preliminary business impact
+    * whether services are affected
+    * whether you are able to control/record critical systems
+
+`TODO: Expand investigation steps, including key questions and strategies, for phishing.`
+
+### Remediate
+
+* **Plan remediation events** where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.
+* **Consider the timing and tradeoffs** of remediation actions: your response has consequences.
+
+#### Contain
+
+`TODO: Customize containment steps, tactical and strategic, for phishing.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+* Contain affected accounts
+    * change login credentials
+    * reduce access to critical services, systems, or data until investigation is complete
+    * reenforce multi-factor authentication (MFA)
+* Block activity based on discovered indicators of compromise, _e.g._:
+    * block malicious domains using DNS, firewalls, or proxies
+    * block messages with similar senders, message bodies, subjects, links, attachments, _etc._, using email gateway or service.
+* Implement forensic hold or retain forensic copies of messages
+* Purge related messages from other user inboxes, or otherwise make inaccessible
+* Contain broader compromise in accordance with general IR plan
+* Consider mobile device containment measures such as wiping via mobile device management (MDM).  Balance against investigative/forensic impact.
+* Increase detection "alert level," with enhanced monitoring, particularly from related accounts, domains, or IP addresses.
+* Consider outside security assistance to support investigation and remediation
+* Confirm relevant software upgrades and anti-malware updates on assets.
+
+#### Reference: Remediation Resources
+
+`TODO: Specify financial, personnel, and logistical resources to accomplish remediation`
+
+### Communicate
+
+`TODO: Customize communication steps for phishing`
+
+`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan`
+
+1. Escalate incident and communicate with leadership per procedure
+1. Document incident per procedure (and [report](https://us-cert.cisa.gov/report-phishing))
+1. Communicate with internal and external legal counsel per procedure, including discussions of compliance, risk exposure, liability, law enforcement contact, _etc._
+1. Communicate with users (internal)
+    1. Communicate incident response updates per procedure
+    1. Communicate impact of incident **and** incident response actions (e.g., containment: "why is the file share down?")
+    1. Communicate requirements: "what should users do and not do?"  
+1. Communicate with customers
+    1. Focus particularly on those whose data was affected
+    1. Generate required notifications based on applicable regulations (particularly those that may consider phishing a data breach or otherwise requires notifications) `TODO: Expand notification requirements and procedures for applicable regulations`
+1. Contact insurance provider(s)
+    1. Discuss what resources they can make available, what tools and vendors they support and will pay for, _etc._
+    1. Comply with reporting and claims requirements to protect eligibility
+1. Consider notifying and involving [law enforcement](https://www.usa.gov/stop-scams-frauds) TODO: Link the following bullets to actual resources for your organization
+    1. [Local law enforcement](#TODO-link-to-actual-resource)
+    1. [State or regional law enforcement](#TODO-link-to-actual-resource)
+    1. [Federal or national law enforcement](#TODO-link-to-actual-resource)
+1. Communicate with security and IT vendors TODO: Link the following bullets to actual resources for your organization
+    1. Notify and collaborate with [managed providers](#TODO-link-to-actual-resource) per procedure
+    1. Notify and collaborate with [incident response consultants](#TODO-link-to-actual-resource) per procedure
+
+### Recover
+
+`TODO: Customize recovery steps for phishing`
+
+`TODO: Specify tools and procedures for each step, below`
+
+1. Launch business continuity/disaster recovery plan(s) if compromise involved business outages: _e.g._, consider migration to alternate operating locations, fail-over sites, backup systems.
+1. Reinforce training programs regarding suspected phishing attacks. Key suspicious indicators may include: 
+    * misspellings in the message or subject
+    * phony-seeming sender names, including mismatches between display name and email address
+    * personal email addresses for official business (e.g., gmail or yahoo emails from business colleagues)
+    * subject lines marked "[EXTERNAL]" on emails that look internal
+    * [malicious or suspicious links](https://www.pcworld.com/article/248963/how-to-tell-if-a-link-is-safe-without-clicking-on-it.html)
+    * receiving an email or attachment they were not expecting but from someone they know (contact sender before opening it)
+    * reporting suspicious activity to IT or security
+1. Ensure that IT and security staff is up to date on recent phishing techniques.
+1. Determine if any controls have failed when falling victim to an attack and rectify them. Here is a [good source](https://www.proofpoint.com/us/security-awareness/post/14-things-do-after-phishing-attack) to consider following a phishing attack.
+
+### Resources
+
+#### Reference: User Actions for Suspected Phishing Attack
+
+`TODO: Customize steps for users dealing with suspected phishing`
+
+1. Stay calm, take a deep breath.
+1. Take pictures of your screen using your smartphone showing the things you noticed: the phishing message, the link if you opened it, the sender information.
+1. Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper.  Every little bit helps!  Document the following:
+    1. What did you notice?
+    1. Why did you think it was a problem?
+    1. What were you doing at the time you detected it?
+    1. When did it first occur, and how often since?
+    1. Where were you when it happened, and on what network? (office/home/shop, wired/wireless, with/without VPN, _etc._)
+    1. What systems are you using? (operating system, hostname, _etc._)
+    1. What account were you using?
+    1. What data do you typically access?
+    1. Who else have you contacted about this incident, and what did you tell them?
+1. Contact the [help desk](#TODO-link-to-actual-resource) using the [phishing hotline](#TODO-link-to-actual-resource) or the [phishing report toolbar](#TODO-link-to-actual-resource) and be as helpful as possible.
+1. Be patient: the response may be disruptive, but you are protecting your team and the organization!  **Thank you.**
+
+#### Reference: Help Desk Actions for Suspected Phishing Attack
+
+`TODO: Customize steps for help desk personnel dealing with suspected phishing`
+
+1. Stay calm, take a deep breath.
+1. Open a ticket to document the incident, per procedure. `TODO: Customize template with key questions (see below) and follow-on workflow`
+1. Ask the user to take pictures of their screen using their smartphone showing the things they noticed: the phishing message, the link if you opened it, the sender information, _etc._  If this is something you noticed directly, do the same yourself.
+1. Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper.  If this is a user report, ask detailed questions, including:
+    1. What did you notice?
+    1. Why did you think it was a problem?
+    1. What were you doing at the time you detected it?
+    1. When did it first occur, and how often since?
+    1. What networks are involved? (office/home/shop, wired/wireless, with/without VPN, _etc._)
+    1. What systems are involved? (operating system, hostname, _etc._)
+    1. What data is involved? (paths, file types, file shares, databases, software, _etc._)
+    1. What users and accounts are involved? (active directory, SaaS, SSO, service accounts, _etc._)
+    1. What data do the involved users typically access?
+    1. Who else have you contacted about this incident, and what did you tell them?
+1. Ask follow-up questions as necessary.  **You are an incident responder, we are counting on you.**
+1. Get detailed contact information from the user (home, office, mobile), if applicable.
+1. Record all information in the ticket, including hand-written and voice notes.
+1. Quarantine affected users and systems. `TODO: Customize containment steps, automate as much as possible`
+1. Contact the [security team](#TODO-link-to-actual-resource) and stand by to participate in the response as directed: investigation, remediation, communication, and recovery.
+
+#### Additional Information
+
+1. <a name="phishing-playbook-ref-1"></a>[Anti-Phishing Attack resources](https://resources.infosecinstitute.com/category/enterprise/phishing/phishing-countermeasures/top-16-anti-phishing-resources/#gref)
+1. <a name="phisphing-playbook-ref-2"></a>[Methods of Identifying a Phishing attack](https://www.securitymetrics.com/blog/7-ways-recognize-phishing-email) 
+1. <a name="phishing-playbook-ref-3"></a>[Phishing Email Examples](https://www.phishing.org/phishing-examples) 
+1. <a name="phishing-playbook-ref-4"></a>[Anti-Phishing best practices](https://resources.infosecinstitute.com/category/enterprise/phishing/phishing-countermeasures/anti-phishing-best-practices/#gref)
 ## Playbook: Ransomware
 
 **Investigate, remediate (contain, eradicate), and communicate in parallel! Containment is critical in ransomware incidents, prioritize accordingly.**
@@ -684,6 +1149,71 @@ Quarantines (logical, physical, or both) prevent spread _from_ infected systems 
 1. <a name="ransomware-playbook-ref-2"></a>[No More Ransom!](https://www.nomoreransom.org) Project, including their [Crypto Sheriff](https://www.nomoreransom.org/crypto-sheriff.php?lang=en) service and their [Q&A](https://www.nomoreransom.org/en/ransomware-qa.html)
 1. <a name="ransomware-playbook-ref-3"></a>[ID Ransomware](https://id-ransomware.malwarehunterteam.com/) service
 1. <a name="ransomware-playbook-ref-4"></a>[MITRE ATT&CK Matrix](https://attack.mitre.org), including the [Initial Access](https://attack.mitre.org/tactics/TA0001/) and [Impact](https://attack.mitre.org/tactics/TA0040/) tactics
+
+## Playbook: Supply Chain Compromise
+
+**Investigate, remediate (contain, eradicate), and communicate in parallel!**
+
+Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
+
+### Investigate
+
+`TODO: Expand investigation steps, including key questions and strategies, for supply chain compromise.`
+
+1. TODO
+
+### Remediate
+
+* **Plan remediation events** where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.
+* **Consider the timing and tradeoffs** of remediation actions: your response has consequences.
+
+#### Contain
+
+`TODO: Customize containment steps, tactical and strategic, for supply chain compromise.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+* TODO
+
+`TODO: Consider automating containment measures using orchestration tools.`
+
+#### Eradicate
+
+`TODO: Customize eradication steps, tactical and strategic, for supply chain compromise.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+* TODO
+
+#### Reference: Remediation Resources
+
+`TODO: Specify financial, personnel, and logistical resources to accomplish remediation.`
+
+### Communicate
+
+`TODO: Customize communication steps for supply chain compromise`
+
+`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.`
+
+In addition to the general steps and guidance in the incident response plan:
+
+1. TODO
+
+### Recover
+
+`TODO: Customize recovery steps for supply chain compromise.`
+
+`TODO: Specify tools and procedures for each step, below.`
+
+In addition to the general steps and guidance in the incident response plan:
+
+1. TODO
+
+### Resources
+
+#### Additional Information
+
+1. <a name="supply-chain-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
 
 # Roles
 
@@ -1004,7 +1534,7 @@ Read and understand the incident response plan, including the roles and playbook
 
 # Conduct an After Action Review (AAR)
 
-1. Schedule an After Action Review (AAR) meeting within 5 business days and invite the attendees listed at ir.acme.tld/aar/attendees.  Always include the following:
+1. Schedule an After Action Review (AAR) meeting within {{AAR_SLA}} and invite the attendees listed at {{AAR_ATTENDEES}}.  Always include the following:
     * The incident commander.
     * Service owners involved in the incident.
     * Key engineer(s)/responders involved in the incident.
