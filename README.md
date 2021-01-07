@@ -8,6 +8,10 @@ Download the latest release [here](https://github.com/counteractive/incident-res
 
 ## Instructions
 
+**💡 If you prefer to work in Microsoft Word (.docx format), please download the [example word version](examples/plan.docx) and customize directly using the [instructions below](#customize).** 
+
+For those working in other formats like markdown, html, or pdf, please read on.
+
 ### Download or fork this template
 
 The layout is as follows:
@@ -19,15 +23,13 @@ The layout is as follows:
 * `about.md`: a footer containing information about the plan/template as a whole.
 * `info.yml`: a file containing values for the template strings throughout the plan (see below)
 
-### Customize `info.yml` with your organization's information
+### Fill `info.yml` with your organization's information
 
 The template files have a lot of placeholders that `{{LOOK_LIKE_THIS}}`.  The purpose of each placeholder should be discernable from context, and the [default `info.yml` file](./info.yml) is commented for additional clarity.  This is the [mustache](https://mustache.github.io/) template syntax, and has wide support in a variety of tools and languages.  
 
 The easiest way to replace these variables is to customize the `info.yml` file with your organization's information and use the provided [Makefile](https://en.wikipedia.org/wiki/Make_(software)) (as of v1.0.0) to automatically find and replace all the relevant strings.  _NOTE:_ this requires `make` (naturally), `mustache`, and `pandoc` to be installed and available in the user's `$PATH`.  _NOTE:_ pdf output needs `pdflatex` (see [this gist](https://gist.github.com/rain1024/98dd5e2c6c8c28f9ea9d) for instructions on Ubuntu/Debian), and you'll need `git` if you want to clone the repository rather than download the zipped source.
 
-* if you 
-
-In your terminal of choice (e.g., [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq) on Windows):
+In your linux, mac, or [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq) terminal:
 
 ```bash
 # install core dependencies, if not already present
@@ -57,9 +59,11 @@ This merges the template components, combines them with your custom data from `i
 
 ### Customize
 
+1. Fill in any remaining template variables (the strings that `{{LOOK_LIKE_THIS}}`).
 1. Review all the `TODO` prompts for likely areas to customize, if desired.  Delete them if no changes are required.
 1. Add any roles or playbooks relevant to your organization. These can also be added over time.
 1. Customize anything else!  Whatever you feel is most effective for your organization.
+1. _Optional:_ Customize formatting directly or [using pandoc's options](https://learnbyexample.github.io/customizing-pandoc/).  The default Makefile uses the default pandoc styles, and they're not for everyone.
 
 ### Deploy
 
