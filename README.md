@@ -29,6 +29,10 @@ The template files have a lot of placeholders that `{{LOOK_LIKE_THIS}}`.  The pu
 
 The easiest way to replace these variables is to customize the `info.yml` file with your organization's information and use the provided [Makefile](https://en.wikipedia.org/wiki/Make_(software)) (as of v1.0.0) to automatically find and replace all the relevant strings.  _NOTE:_ this requires `make` (naturally), `mustache`, and `pandoc` to be installed and available in the user's `$PATH`.  _NOTE:_ pdf output needs `pdflatex` (see [this gist](https://gist.github.com/rain1024/98dd5e2c6c8c28f9ea9d) for instructions on Ubuntu/Debian), and you'll need `git` if you want to clone the repository rather than download the zipped source.
 
+If you don't have the information or tools referenced in the template variables, that's definitely worth fixing.  **Especially** the critical information list (data you want to protect) and critical asset list (systems you want to protect).
+
+### Build the template
+
 In your linux, mac, or [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq) terminal:
 
 ```bash
@@ -38,26 +42,18 @@ sudo apt-get install make ruby-mustache pandoc
 # for pdf format (big)
 sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
-# clone this repository
-git clone https://github.com/counteractive/incident-response-plan-template
-
 # change to the directory of the cloned repository
 cd /path/to/incident-response-plan-template
-
-# customize info.yml with your editor of choice
-vi info.yml
 
 # build the template
 make
 ```
 
-If you don't have the information or tools referenced in the template variables, that's definitely worth fixing.  **Especially** the critical information list (data you want to protect) and critical asset list (systems you want to protect).
-
 This merges the template components, combines them with your custom data from `info.yml`, and outputs all supported formats in the `public/` directory.  That's it!
 
 *If you have a specific case and want more details, read on!*
 
-### Customize
+### Further customize the plan
 
 1. Fill in any remaining template variables (the strings that `{{LOOK_LIKE_THIS}}`).
 1. Review all the `TODO` prompts for likely areas to customize, if desired.  Delete them if no changes are required.
@@ -65,13 +61,13 @@ This merges the template components, combines them with your custom data from `i
 1. Customize anything else!  Whatever you feel is most effective for your organization.
 1. _Optional:_ Customize formatting directly or [using pandoc's options](https://learnbyexample.github.io/customizing-pandoc/).  The default Makefile uses the default pandoc styles, and they're not for everyone.
 
-### Deploy
+### Deploy and use the plan
 
-The makefile uses [pandoc](https://pandoc.org/installing.html) to create a variety of formats, or you can use the markdown files with [mkdocs](http://www.mkdocs.org/), [hugo](https://gohugo.io/), or countless other platforms.
+The makefile uses [pandoc](https://pandoc.org) to create a variety of formats, or you can use the markdown files with [mkdocs](http://www.mkdocs.org/), [hugo](https://gohugo.io/), or countless other platforms.
 
-### Example
+### Examples
 
-An example is available in [the examples directory](./examples/example.md), where we leave the html rendering from markdown to github.
+Examples in each format are available in [the examples directory](./examples).  The [markdown version](./examples/plan.md) is a good place to start, rendered from markdown to html automatically by github.
 
 ### Contact Us
 
