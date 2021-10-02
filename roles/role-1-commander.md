@@ -1,4 +1,4 @@
-## Role: Incident Commander (IC)
+## Role: Incident Manager (IC)
 
 ### Description
 
