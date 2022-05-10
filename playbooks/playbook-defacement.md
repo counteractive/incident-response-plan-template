@@ -1,7 +1,7 @@
 
 ## Playbook: Desaparición de sitios web
 
-**Investigar, remediar (contener, erradicar) y comunicar en paralelo.
+**Investigar, remediar (contener, erradicar) y comunicar en paralelo!**
 Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
 
 ### Investigar
@@ -57,9 +57,9 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 
 #### Contención
 
-Tarea: Personalizar los pasos de contención, tácticos y estratégicos, para la desfiguración de sitios web.
+`TODO: Personalizar los pasos de contención, tácticos y estratégicos, para la desfiguración de sitios web.`
 
-Tarea: Especificar las herramientas y los procedimientos para cada paso, a continuación.
+`TODO: Especificar las herramientas y los procedimientos para cada paso, a continuación.`
 
 1. Haga una copia de seguridad de todos los datos almacenados en el servidor web con fines forenses.
 2. Como se ha mencionado anteriormente, asegúrese de que el servidor de la página desfigurada está temporalmente fuera de servicio mientras se lleva a cabo la investigación.
@@ -101,9 +101,9 @@ Tarea: Especificar las herramientas y los procedimientos para cada paso, a conti
 
 ### Comunicar
 
-TODO: Personalizar los pasos de comunicación para la desfiguración
+`TODO: Personalizar los pasos de comunicación para la desfiguración`
 
-TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general`.
+`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general`
 
 1. 1. Elevar el incidente y comunicarlo a la dirección según el procedimiento
 1. 2. Documentar el incidente según el procedimiento (e informar si procede)
@@ -130,7 +130,7 @@ TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe 
 
 #### Referencia: Acciones del usuario ante un ataque de sospecha de defacement
 
-Tarea: Personalizar los pasos a seguir por los usuarios ante una sospecha de defacement
+`TODO: Personalizar los pasos a seguir por los usuarios ante una sospecha de defacement`
 
 1. Mantenga la calma y respire profundamente.
 1. 2. Desconecte su sistema de la red `TODO: incluya pasos detallados con capturas de pantalla, una herramienta preinstalada o un script para hacer esto fácil ("romper en caso de emergencia"), considere interruptores de corte de red por hardware`.
