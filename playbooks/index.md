@@ -1,6 +1,6 @@
-# Playbooks
+# Libros de jugadas
 
-The following playbooks capture common [investigation](#investigate), [remediation](#remediate), and [communication](#communicate) steps for particular types of incident.
+Los siguientes libros de jugadas capturan los pasos comunes de [investigación](#investigación), [remediación](#remediación) y [comunicación](#comunicación) para determinados tipos de incidentes.
 
-`TODO: Create additional playbooks for highly likely or highly damaging incident types.`
+Tarea: Crear libros de juego adicionales para tipos de incidentes muy probables o muy perjudiciales.
 

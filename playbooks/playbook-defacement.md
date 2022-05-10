@@ -1,166 +1,169 @@
-## Playbook: Website Defacement
 
-**Investigate, remediate (contain, eradicate), and communicate in parallel!**
+## Playbook: Desaparición de sitios web
 
-Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
+**Investigar, remediar (contener, erradicar) y comunicar en paralelo.
+Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
 
-### Investigate
-1. Immediately take the defaced server offline for further investigation
-    * This is especially important if the defacement is insulting or triggering in any way. Remove this from the public eye as quickly as possible to avoid harm as well as to mitigate business impact.
-    * The defacement message may also contain false information that could mislead users or put them at risk.
-    * Taking the server offline will allow a deeper investigation of the defacement. This may be necessary as the hacker may have dove depper into the organization accessing application servers, databases, etc.
-2. Determine the system's source of vulnerability that was used by the attacker. Common exploits include:
-    * SQL injection attakcs
-        * This kind of attack occurs when an attacker interferes with an application's queries to the database. Therefore, this can lead to unauthorized access to private or sensitive data. Read more about SQL injection attacks [here](https://www.acunetix.com/websitesecurity/sql-injection/)
-    * Remote File Inclusion (RFI) attacks
-        * This kind of attack exploits an application's referencing function to upload malware from a remote URL. Read more about RFI attacks [here](https://www.acunetix.com/blog/articles/remote-file-inclusion-rfi/)
+### Investigar
+
+1. Desconecte inmediatamente el servidor desfigurado para investigarlo.
+    * Esto es especialmente importante si la desfiguración es insultante o provocadora de algún modo. Elimine esto de la vista del público tan pronto como sea posible para evitar daños, así como para mitigar el impacto del negocio.
+    * El mensaje de desfiguración también puede contener información falsa que podría confundir a los usuarios o ponerlos en peligro.
+    * Desconectar el servidor permitirá una investigación más profunda de la desfiguración. Esto puede ser necesario, ya que el hacker puede haberse adentrado en la organización accediendo a servidores de aplicaciones, bases de datos, etc.
+2. Determine el origen de la vulnerabilidad del sistema que ha utilizado el atacante. Los exploits más comunes son:
+    * Ataques de inyección SQL
+        * Este tipo de ataque se produce cuando un atacante interfiere en las consultas de una aplicación a la base de datos. Por lo tanto, esto puede conducir a un acceso no autorizado a datos privados o sensibles. Lea más sobre los ataques de inyección SQL [aquí](https://www.acunetix.com/websitesecurity/sql-injection/)
+    * Ataques de inclusión remota de archivos (RFI)
+        * Este tipo de ataque explota la función de referencia de una aplicación para cargar malware desde una URL remota. Más información sobre los ataques RFI [aquí](https://www.acunetix.com/blog/articles/remote-file-inclusion-rfi/)
     * webshells
-        * More about web shells and website defacement [here](https://www.wordfence.com/blog/2017/06/wso-shell/)
-    * poor web application design
-        * javascript hacks
-        * PHP/ASP hacks
-        * Here's more on [hacking with javascript](https://itnext.io/how-companies-are-hacked-via-malicious-javascript-code-12aa82560bdc)
-    * other methods of detection include: 
-        * Checking the server logs
-            * look through the web page's access log and error log for any suspicious or unfamiliar activity
-            * of course, it is also a good idea to check the IDS or IPS firewall logs, if available
-        * Checking files with static content
-        * Scanning databases for malicious content
-        * Checking links present in the page
-3. Collect any clues as to who the hacker is or what organization they are working for. Consider the following questions:
-    * What did the defacement portray? Did it include an obvious message?
-    * Did the defacement seem harmless or intentional? Could the hacker be a kid messing around or a professional group working with a motive?
-    * Does it seem like your organization was targeted? Who may want to target your organization?
-    * What did the hacker hope to accomplish?
-    * Consult [here](https://www.geeksforgeeks.org/types-of-hackers/) to learn more about the types of hackers that may have attacked your webpage.
-4. Collect other important information from the page that has been defaced such as:
-    * a screenshot of the defacement
-    * the domain and IP address of the page
-    * details of the web server
-    * page's source code
-        * analyze this carefully to identify the problem and ensure that it is on a server belonging to the company
-    * name or any information on the attacker
-6. There are also tools available to aid in both detection and log analysis. A few are listed below:
+        * Más información sobre web shells y defacement de sitios web [aquí](https://www.wordfence.com/blog/2017/06/wso-shell/)
+    * mal diseño de aplicaciones web
+        * hacks de javascript
+        * hacks de PHP/ASP
+        * Aquí hay más sobre [hacking con javascript](https://itnext.io/how-companies-are-hacked-via-malicious-javascript-code-12aa82560bdc)
+    * otros métodos de detección incluyen: 
+        * Comprobar los registros del servidor
+            * buscar en el registro de acceso y en el registro de errores de la página web cualquier actividad sospechosa o desconocida
+            * por supuesto, también es una buena idea comprobar los registros del firewall IDS o IPS, si están disponibles
+        * Comprobar los archivos con contenido estático
+        * Escanear las bases de datos en busca de contenido malicioso
+        * Comprobación de los enlaces presentes en la página
+3. Recoge cualquier pista sobre quién es el hacker o para qué organización trabaja. Considera las siguientes preguntas:
+    * ¿Qué representa la desfiguración? ¿Incluía un mensaje obvio?
+    * ¿Parece que la desfiguración es inofensiva o intencionada? ¿Podría ser el hacker un niño jugando o un grupo profesional que trabaja con un motivo?
+    * ¿Parece que su organización haya sido el objetivo? ¿Quién podría querer atacar a su organización?
+    * ¿Qué esperaba conseguir el hacker?
+    * Consulta [aquí](https://www.geeksforgeeks.org/types-of-hackers/) para saber más sobre los tipos de hackers que pueden haber atacado tu página web.
+4. Recoge otra información importante de la página que ha sido desfigurada, como por ejemplo
+    * una captura de pantalla de la desfiguración
+    * el dominio y la dirección IP de la página
+    * detalles del servidor web
+    * el código fuente de la página
+        * analizarlo cuidadosamente para identificar el problema y asegurarse de que se encuentra en un servidor de la empresa
+    * nombre o cualquier información sobre el atacante
+6. También existen herramientas que ayudan a la detección y al análisis de los registros. A continuación se enumeran algunas de ellas:
     * Weblog Expert
     * Sawmill
     * Deep Log Analyzer
 
 
-`TODO: Expand investigation steps, including key questions and strategies, for website defacement.`
 
-### Remediate
+`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas clave y las estrategias, para la desfiguración de sitios web.`
 
-* **Plan remediation events** where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.
-* **Consider the timing and tradeoffs** of remediation actions: your response has consequences.
+### Remediar
 
-#### Contain
+**Planificar eventos de reparación** en los que estos pasos se pongan en marcha juntos (o de forma coordinada), con los equipos adecuados listos para responder a cualquier interrupción.
+* **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
 
-`TODO: Customize containment steps, tactical and strategic, for website defacement.`
+#### Contención
 
-`TODO: Specify tools and procedures for each step, below.`
+Tarea: Personalizar los pasos de contención, tácticos y estratégicos, para la desfiguración de sitios web.
 
-1. Backup all data stored on the web server for forensic purposes.
-2. As previously mentioned, make sure to take the defaced page's server down temporarily while investigation occurs.
-    * You should have an error page prepared for this situation that informs user and/or employees that maintenance is undereway and the page they sought will return shortly. You may even wish to have a backup website prepared where you may publish content while investigation and remediation are underway and have your temporary error page redirect users to this backup site. 
-    * Check your network architecture map. If the breach is another system on the network, take that down and investigate it.
-3. Once the source of the attack has been determined, apply the necessarily steps to ensure this will not happen again. This may include modifying code or editing access rights.
-    * Reference the "Investigate" section for common sources of vulnerability.
-    * If this is outside of your domain, simply ensure that you have given the appropriate personnel all the information on the attack that you have and allow experts to do their job.
+Tarea: Especificar las herramientas y los procedimientos para cada paso, a continuación.
+
+1. Haga una copia de seguridad de todos los datos almacenados en el servidor web con fines forenses.
+2. Como se ha mencionado anteriormente, asegúrese de que el servidor de la página desfigurada está temporalmente fuera de servicio mientras se lleva a cabo la investigación.
+    * Debe tener una página de error preparada para esta situación que informe al usuario y/o a los empleados de que el mantenimiento está en marcha y que la página que buscaban volverá en breve. Incluso podría tener preparada una página web de respaldo en la que pueda publicar contenido mientras se lleva a cabo la investigación y la reparación, y hacer que su página de error temporal redirija a los usuarios a este sitio de respaldo. 
+    * Compruebe su mapa de arquitectura de red. Si la brecha es otro sistema de la red, descárguelo e investíguelo.
+3. Una vez que se haya determinado el origen del ataque, aplique los pasos necesarios para garantizar que esto no vuelva a suceder. Esto puede incluir la modificación del código o la edición de los derechos de acceso.
+    * Consulte la sección "Investigar" para conocer las fuentes comunes de vulnerabilidad.
+    * Si esto está fuera de su dominio, simplemente asegúrese de que ha dado al personal apropiado toda la información sobre el ataque que tiene y permita que los expertos hagan su trabajo.
+
 
 ### Recover
 
-`TODO: Customize recovery steps for defacement`
+`TODO: Personalizar los pasos de recuperación para la desfiguración`
 
-`TODO: Specify tools and procedures for each step, below`
+`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación`
 
-1. Remove the hacker's message and replace with original, legitimate content. If data was lost in the attack, reference backups and restore the original page as much as possible.
-    * Check backups for indicators of compromise
-    * Consider partial recovery and backup integrity testing
-2. Consider asking users to change their login credentials if the web server has user authentication. 
-3. After implementing risk avoidance measures (as recommended below), restore your server showing the original page content. 
-4. If necessary and/or applicable, prepare an apology/explanation of the attack that occurred for users or anyone who witnessed the defacement. Ensure that is it clear that the defacement content does not reflect your organization in any way. 
+1. Elimine el mensaje del hacker y reemplácelo por el contenido original y legítimo. Si se han perdido datos en el ataque, consulte las copias de seguridad y restaure la página original en la medida de lo posible.
+    * Compruebe las copias de seguridad en busca de indicadores de compromiso
+    * Considere la recuperación parcial y la prueba de integridad de las copias de seguridad
+2. Considere pedir a los usuarios que cambien sus credenciales de acceso si el servidor web tiene autenticación de usuario. 
+3. Después de aplicar las medidas para evitar riesgos (como se recomienda a continuación), restaure su servidor mostrando el contenido original de la página. 
+4. Si es necesario y/o aplicable, prepare una disculpa/explicación del ataque ocurrido para los usuarios o cualquier persona que haya presenciado la desfiguración. Asegúrese de que queda claro que el contenido desfigurado no refleja a su organización de ninguna manera. 
 
-#### Risk Avoidance
+#### Evitar riesgos
 
-`TODO: Communicate with other employees to ensure that everyone understands and contributes to the following steps, where applicable`
+`TODO: Comuníquese con otros empleados para asegurarse de que todos entienden y contribuyen a los siguientes pasos, cuando sea aplicable`.
 
-1. Use as few plug-ins as necessary. Hackers target websites that are vulnerable and have many sources of entry. You can limit these sources of entry by only using what you need and removing any unused or old plug ins and software. It is also important to update these as soon as possible. 
-2. Closely monitor and mandate access to administrative content. Only allow individuals access to what they need access to. This will reduce the chance of human error leading to cyber attacks. There are more DIY methods of prevention mentioned in [this article](https://cirt.gy/index.php/node/116) (steps 6-12) and in resource #4 at the end of this playbook.
-3. Regularly check for malware on your site by scanning the source code. Look for scripts, iframes, or URLs that look unfamiliar and make sure to also scan URLs that do look familiar.
-4. There are many highly reputable automated website scanners that will not cost any of your time and will thoroughly scan your site for vulnerabilities regularly. Here is a [link to popular scanners](https://resources.infosecinstitute.com/14-popular-web-application-vulnerability-scanners/#gref).
-5. Defend against common points of exploitation such as SQL injections and XSS attacks. [This article](https://www.banffcyber.com/knowledge-base/articles/best-practices-address-issue-web-defacement/) includes best practices to defend these attacks.
-6. Install defacement detection programs so that if an attack were to occurr again, you would be prepared and respond quickly. Here is an [article](https://www.techradar.com/news/best-website-defacement-monitoring-service) that summarizes some of 2020's best monitoring services. 
-7. Discuss with your employees the importance of keeping administrative access limited and confidential and inform them of these steps to avoid incidents including regular cybersecurity awareness training.
+1. Utilice el menor número de plug-ins posible. Los piratas informáticos tienen como objetivo los sitios web que son vulnerables y tienen muchas fuentes de entrada. Puedes limitar estas fuentes de entrada utilizando sólo lo que necesites y eliminando los plug-ins y el software que no utilices o sean antiguos. También es importante actualizarlos lo antes posible. 
+2. Controle de cerca y ordene el acceso a los contenidos administrativos. Permita que las personas accedan sólo a lo que necesitan. Esto reducirá la posibilidad de que un error humano provoque un ciberataque. Hay más métodos de prevención DIY mencionados en [este artículo](https://cirt.gy/index.php/node/116) (pasos 6-12) y en el recurso #4 al final de este libro de jugadas.
+3. Comprueba regularmente si hay malware en tu sitio web escaneando el código fuente. Busca scripts, iframes o URLs que te parezcan desconocidos y asegúrate de escanear también las URLs que sí te resulten familiares.
+4. Hay muchos escáneres automáticos de sitios web de gran reputación que no le costarán nada de su tiempo y escanearán a fondo su sitio en busca de vulnerabilidades con regularidad. Aquí hay un [enlace a escáneres populares](https://resources.infosecinstitute.com/14-popular-web-application-vulnerability-scanners/#gref).
+5. Defiéndase contra los puntos comunes de explotación, como las inyecciones SQL y los ataques XSS. [Este artículo](https://www.banffcyber.com/knowledge-base/articles/best-practices-address-issue-web-defacement/) incluye las mejores prácticas para defender estos ataques.
+6. Instala programas de detección de desfiguración para que, si volviera a producirse un ataque, estés preparado y respondas rápidamente. Aquí hay un [artículo](https://www.techradar.com/news/best-website-defacement-monitoring-service) que resume algunos de los mejores servicios de monitoreo de 2020. 
+7. Habla con tus empleados de la importancia de mantener el acceso administrativo limitado y confidencial e infórmales de estos pasos para evitar incidentes, incluyendo la formación periódica de concienciación sobre ciberseguridad.
 
-#### Reference: Remediation Resources
+#### Referencia: Recursos de remediación
 
-`TODO: Specify financial, personnel, and logistical resources to accomplish remediation`
+`TODO: especificar los recursos financieros, de personal y logísticos para llevar a cabo la reparación`.
 
-### Communicate
+### Comunicar
 
-`TODO: Customize communication steps for defacement`
+TODO: Personalizar los pasos de comunicación para la desfiguración
 
-`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan`
+TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general`.
 
-1. Escalate incident and communicate with leadership per procedure
-1. Document incident per procedure (and report if applicable)
-1. Communicate with internal and external legal counsel per procedure, including discussions of compliance, risk exposure, liability, law enforcement contact, _etc._
-1. Communicate with users (internal)
-    1. Communicate incident response updates per procedure
-    1. Communicate impact of incident **and** incident response actions (e.g., containment: "why is the file share down?")
-    1. Communicate requirements: "what should users do and not do?"  
-1. Communicate with customers
-    1. Focus particularly on those whose data was affected
-    1. Generate required notifications based on applicable regulations (particularly those that may consider defacement a data breach or otherwise requires notifications) `TODO: Expand notification requirements and procedures for applicable regulations`
-1. Contact insurance provider(s)
-    1. Discuss what resources they can make available, what tools and vendors they support and will pay for, _etc._
-    1. Comply with reporting and claims requirements to protect eligibility
-1. Consider notifying and involving law enforcement. TODO: Link the following bullets to actual resources for your organization
-    1. [Local law enforcement](#TODO-link-to-actual-resource)
-    1. [State or regional law enforcement](#TODO-link-to-actual-resource)
-    1. [Federal or national law enforcement](#TODO-link-to-actual-resource)
-1. Communicate with security and IT vendors TODO: Link the following bullets to actual resources for your organization
-    1. Notify and collaborate with [managed providers](#TODO-link-to-actual-resource) per procedure
-    1. Notify and collaborate with [incident response consultants](#TODO-link-to-actual-resource) per procedure
+1. 1. Elevar el incidente y comunicarlo a la dirección según el procedimiento
+1. 2. Documentar el incidente según el procedimiento (e informar si procede)
+1. Comunicarse con los asesores jurídicos internos y externos según el procedimiento, incluyendo discusiones sobre el cumplimiento, la exposición al riesgo, la responsabilidad, el contacto con las fuerzas del orden, _etc._.
+1. Comunicarse con los usuarios (internos)
+    1. Comunicar las actualizaciones de la respuesta a incidentes según el procedimiento
+    1. Comunicar el impacto del incidente **y** las acciones de respuesta al incidente (por ejemplo, contención: "¿por qué está caído el archivo compartido?")
+    1. Comunicar los requisitos: "¿qué deben hacer y no hacer los usuarios?"  
+1. Comunicar a los clientes
+    1. Centrarse especialmente en aquellos cuyos datos se vieron afectados
+    1. Generar las notificaciones requeridas en base a las regulaciones aplicables (particularmente aquellas que puedan considerar la desfiguración como una violación de datos o que requieran notificaciones de otro tipo) `TODO: Ampliar los requisitos y procedimientos de notificación para las regulaciones aplicables`.
+1. Contactar con los proveedores de seguros
+    1. Discutir qué recursos pueden poner a disposición, qué herramientas y proveedores apoyan y pagarán, _etc._.
+    1. Cumplir con los requisitos de presentación de informes y reclamaciones para proteger la elegibilidad
+1. Considerar la posibilidad de notificar e implicar a las fuerzas del orden. TODO: Vincule las siguientes viñetas con los recursos reales de su organización
+    1. [Aplicación de la ley local](#TODO-link-to-actual-resource)
+    1. 1. [Aplicación de la ley a nivel estatal o regional](#TODO-link-to-actual-resource)
+    1. 1. [Fuerzas de seguridad federales o nacionales](#TODO-link-to-actual-resource)
+1. Comuníquese con los proveedores de seguridad y de TI TODO: Vincule las siguientes viñetas con los recursos reales de su organización
+    1. Notifique y colabore con [proveedores gestionados](#TODO-link-to-actual-resource) según el procedimiento
+    1. 2. Notificar y colaborar con [consultores de respuesta a incidentes](#TODO-link-to-actual-resource) por procedimiento
 
-### Resources
+### Recursos
 
-#### Reference: User Actions for Suspected Defacement Attack
+#### Referencia: Acciones del usuario ante un ataque de sospecha de defacement
 
-`TODO: Customize steps for users dealing with suspected defacement`
+Tarea: Personalizar los pasos a seguir por los usuarios ante una sospecha de defacement
 
-1. Stay calm, take a deep breath.
-1. Disconnect your system from the network `TODO: include detailed steps with screenshots, a pre-installed tool or script to make this easy ("break in case of emergency"), consider hardware network cut-off switches`
-1. Take pictures of the page you see using your smartphone showing the things you noticed: the defacement message and any other changes to the usual site.
-1. Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper.  Every little bit helps!  Document the following:
-    1. What did you notice?
-    1. When did it first occur, and how often since?
-    1. What data do you typically access?
-    1. Who else have you contacted about this incident, and what did you tell them?
-1. Contact the [help desk](#TODO-link-to-actual-resource) and be as helpful as possible.
-1. Be patient: allow the IT personnel get it under control, you may be protecting others from harm!  **Thank you.**
+1. Mantenga la calma y respire profundamente.
+1. 2. Desconecte su sistema de la red `TODO: incluya pasos detallados con capturas de pantalla, una herramienta preinstalada o un script para hacer esto fácil ("romper en caso de emergencia"), considere interruptores de corte de red por hardware`.
+1. Haz fotos de la página que veas con tu smartphone mostrando las cosas que has notado: el mensaje de desfiguración y cualquier otro cambio en el sitio habitual.
+1. 2. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz.  Todo ayuda.  Documenta lo siguiente:
+    1. ¿Qué has notado?
+    1. ¿Cuándo ocurrió por primera vez, y con qué frecuencia desde entonces?
+    1. ¿A qué datos suele acceder?
+    1. ¿Con quién más se ha puesto en contacto en relación con este incidente y qué le ha dicho?
+1. Ponte en contacto con el [servicio de asistencia](#TODO-enlace-al-recurso) y sé lo más servicial posible.
+1. Ten paciencia: deja que el personal informático lo controle, ¡puedes estar protegiendo a otros de un daño!  **Gracias.**
 
-#### Reference: Help Desk Actions for Suspected Defacement Attack
+#### Referencia: Acciones del Help Desk ante un presunto ataque de defacement
 
-`TODO: Customize steps for help desk personnel dealing with suspected defacement`
+`TODO: Personalizar los pasos para el personal del servicio de asistencia ante una sospecha de defacement`.
 
-1. Stay calm, take a deep breath.
-1. Open a ticket to document the incident, per procedure. `TODO: Customize template with key questions (see below) and follow-on workflow`
-1. Use your best judgement on which steps to prioritize (i.e. if the defacement left harmful or triggerring content, prioritize taking down the server immediately).
-1. Ask the user to take pictures of their screen using their smartphone showing the things they noticed.
-1. Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper.  If this is a user report, ask detailed questions, including:
-       1. What did you notice?
-    1. When did it first occur, and how often since?
-    1. What data do you typically access?
-    1. Who else have you contacted about this incident, and what did you tell them?
-1. Ask follow-up questions as necessary.  **You are an incident responder, we are counting on you.**
-1. Get detailed contact information from the user (home, office, mobile), if applicable.
-1. Record all information in the ticket, including hand-written and voice notes.
-1. Quarantine affected users and systems. `TODO: Customize containment steps, automate as much as possible`
-1. Contact the [security team](#TODO-link-to-actual-resource) and stand by to participate in the response as directed: investigation, remediation, communication, and recovery.
+1. Mantenga la calma y respire profundamente.
+1. Abra un ticket para documentar el incidente, según el procedimiento. Tarea: Personalizar la plantilla con las preguntas clave (véase más abajo) y el flujo de trabajo posterior.
+1. Utiliza tu mejor criterio para decidir qué pasos priorizar (por ejemplo, si la desfiguración dejó contenido dañino o desencadenante, prioriza la retirada del servidor inmediatamente).
+1. Pídele al usuario que tome fotos de su pantalla con su teléfono inteligente mostrando las cosas que notó.
+1. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz.  2. Si se trata de un informe de usuario, haga preguntas detalladas, incluyendo
+       1. ¿Qué has notado?
+    1. ¿Cuándo ocurrió por primera vez, y con qué frecuencia desde entonces?
+    1. ¿A qué datos suele acceder?
+    1. ¿Con quién más se ha puesto en contacto en relación con este incidente y qué le ha dicho?
+1. Haga las preguntas de seguimiento que sean necesarias.  **Usted es una persona que responde al incidente, contamos con usted.**
+1. Obtenga información de contacto detallada del usuario (domicilio, oficina, móvil), si procede.
+1. Registre toda la información en el ticket, incluyendo notas manuscritas y de voz.
+1. Ponga en cuarentena a los usuarios y sistemas afectados. `TODO: Personalizar los pasos de contención, automatizar todo lo posible`.
+1. Póngase en contacto con el [equipo de seguridad] (#TODO-link-to-actual-resource) y prepárese para participar en la respuesta según las indicaciones: investigación, reparación, comunicación y recuperación.
 
-#### Additional Information
-1. <a name="defacement-playbook-ref-1"></a>A helpful and detailed [paper](https://pdfs.semanticscholar.org/899e/2d629e06d920b9059edb21fcb52cdb33f783.pdf) on defacement detection
-2. <a name="defacement-playbook-ref-2"></a>10 tools for [better website monitoring and security](https://geekflare.com/website-defacement-monitoring/)
-3. <a name="defacement-playbook-ref-3"></a>[2019 Website Threat Research Report](https://sucuri.net/reports/2019-hacked-website-report/) with helpful statistics
-4. <a name="defacement-playbook-ref-4"></a>[Article](https://www.imperva.com/learn/application-security/website-defacement-attack/) including DIYs and Best practices to prevent website defacement
+#### Información adicional
+1. <a name="defacement-playbook-ref-1"></a>Un útil y detallado [paper](https://pdfs.semanticscholar.org/899e/2d629e06d920b9059edb21fcb52cdb33f783.pdf) sobre la detección de la desfiguraciónw
+2. <a name="defacement-playbook-ref-2"></a>10 herramientas para[better website monitoring and security](https://geekflare.com/website-defacement-monitoring/)
+3. <a name="defacement-playbook-ref-3"></a>[2019 Website Threat Research Report](https://sucuri.net/reports/2019-hacked-website-report/) con estadísticas útiles
+4. <a name="defacement-playbook-ref-4"></a>[Article](https://www.imperva.com/learn/application-security/website-defacement-attack/) incluyendo bricolaje y mejores prácticas para evitar la desfiguración de sitios web
