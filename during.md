@@ -1,538 +1,537 @@
-# Incident Response Plan for {{COMPANY_NAME}}
+# Plan de respuesta a incidentes para {{COMPANY_NAME}}
 
-Author: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}
+Autor: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}
 
-Revision {{REVISION_NUMBER}}, Released {{RELEASE_DATE}}
+Revisión {{REVISION_NUMBER}}, Publicado {{RELEASE_DATE}}
 
-This incident response plan is based on the concise, directive, specific, flexible, and free plan available on Counteractive Security's [Github](https://github.com/counteractive/incident-response-plan-template) and discussed at [www.counteractive.net](https://www.counteractive.net/posts/an-ir-plan-you-will-use/)
+Este plan de respuesta a incidentes está basado en el plan conciso, directivo, específico, flexible y gratuito disponible en [Github](https://github.com/counteractive/incident-response-plan-template) de Counteractive Security y discutido en [www.counteractive.net](https://www.counteractive.net/posts/an-ir-plan-you-will-use/)
 
-It was last reviewed on {{REVIEW_DATE}}. It was last tested on {{TEST_DATE}}.
+Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en {{TEST_DATE}}.
 
-`TODO: Customize this plan template for your organization using instructions at https://github.com/counteractive/incident-response-plan-template.  For incident response services, or help customizing, implementing, or testing your plan, contact us at contact@counteractive.net or at (888) 925-5765.`
+`TODO: Personalice esta plantilla de plan para su organización utilizando las instrucciones en https://github.com/counteractive/incident-response-plan-template.  Para obtener servicios de respuesta a incidentes, o ayuda para personalizar, implementar o probar su plan, póngase en contacto con nosotros en contact@counteractive.net o en el (888) 925-5765.`
 
-# Assess
+# Evaluar
 
-1. **Stay calm and professional.**
-1. Gather pertinent information, _e.g._, alarms, events, data, assumptions, intuitions (**observe**).
-1. Consider impact categories, below (**orient**), and determine if there is a possible incident (**decide**):
-1. Initiate a response if there is an incident (**act**).  If in doubt, initiate a response. The incident commander and response team can adjust upon investigation and review.
+1. **Mantenga la calma y la profesionalidad.**
+2. Reúna la información pertinente, _por ejemplo_, alarmas, eventos, datos, suposiciones, intuiciones (**observe**).
+3. Considerar las categorías de impacto, a continuación (**orientar**), y determinar si hay un posible incidente (**decidir**):
+4. Iniciar una respuesta si hay un incidente (**actuar**).  En caso de duda, inicie una respuesta. El jefe del incidente y el equipo de respuesta pueden ajustarse tras la investigación y la revisión.
 
-## Assess Functional Impact
+## Evaluar el impacto funcional
 
-What is the direct or likely impact on your mission? (_e.g._, business operations, employees, customers, users)
+¿Cuál es el impacto directo o probable en su misión? (_por ejemplo_, operaciones comerciales, empleados, clientes, usuarios)
 
-* Mission/business degradation or failure: **incident!**
-* None: assess information impact.
+* Degradación o fracaso de la misión/negocio: **incidente!**
+* Ninguno: evalúe el impacto de la información.
 
-## Assess Information Impact
+## Evaluar el impacto de la información
 
-What is the direct or likely impact on your information/data, particularly anything sensitive? (_e.g._, PII, proprietary, financial, or healthcare data)
+¿Cuál es el impacto directo o probable sobre su información/datos, en particular los sensibles? (_por ejemplo_, información personal, datos de propiedad, financieros o sanitarios)
 
-* Information accessed, taken, changed, or deleted: **incident!**
-* None: handle via non-incident channels (_e.g._, support ticket).
+* Información a la que se ha accedido, tomado, cambiado o borrado: **incidente!**
+* Ninguno: gestión a través de canales no relacionados con incidentes (por ejemplo, un ticket de soporte).
 
-**Every team member is empowered to start this process.**  If you see something, say something.
+**Cada miembro del equipo está facultado para iniciar este proceso.** Si ves algo, di algo.
 
-`TODO: Customize categories/severities as necessary.  This simple example (incident vs. no incident) is based on impact categories in NIST SP 800-61r2.`
+`TODO: Personalizar las categorías/severidades según sea necesario.  Este sencillo ejemplo (incidente vs. no incidente) se basa en las categorías de impacto del NIST SP 800-61r2.`
 
-# Initiate Response
+#Iniciar la respuesta
 
-## Name the Incident
+## Nombrar el incidente
 
-Create an [simple two-word phrase](http://creativityforyou.com/combomaker.html) to refer to the incident---a codename---to use for the incident file and channel(s). `TODO: Customize incident naming procedure.`
+Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.html) para referirse al incidente -un nombre en clave- que se utilizará para el archivo y el canal del incidente. `Todo: Personalizar el procedimiento de nomenclatura de incidentes.`
 
-## Assemble the Response Team
+## Reunir el equipo de respuesta
 
-1. Page the on-duty/on-call Incident Commander. `TODO: Add Incident Commander call list or procedure`
-1. **Do not** discuss the incident outside the response team unless cleared by the Incident Commander
-1. Launch and/or join the response chat at {{RESPONSE_CHAT}}.  `TODO: Add response chat launch procedure.`
-1. Launch and/or join the response call at {{RESPONSE_PHONE}} and/or {{RESPONSE_VTC}}.  `TODO: Add response call launch procedure.`
-1. Prefer voice call, chat, and secure file exchange over any other methods.
-1. **Do not** use primary email if possible.  If email is necessary, use sparingly or use {{ALTERNATE_EMAIL}}.  Encrypt emails when any participant is outside the {{ORGANIZATION_DOMAIN}} domain.  `TODO: Add alternative email details and procedure, e.g., on-demand Office 365 or GSuite`
-1. **Do not** use SMS/text to communicate about the incident, unless to tell someone to move to a more secure channel.
-1. Invite on-duty/on-call responders to the response call and response chat.
-    * Invite the security team.  `TODO: Add security team contact list or procedure.`
-    * Invite a SME for affected teams and systems.  `TODO: Add team SME contact list or procedure.`
-    * Invite executive stakeholders and legal counsel at earliest opportunity, but prioritize operational responders.  `TODO: Add executive stakeholder contact list or procedure.`
-1. _OPTIONAL:_ Establish an in-person collaboration room ("war room") for complex or severe incidents. `TODO: Add collaboration room procedure.`
+1. Llame al jefe de Incidentes de turno/de guardia. `TODO: Añadir lista o procedimiento de llamada del jefe de Incidentes`.
+2. **No** discuta el incidente fuera del equipo de respuesta a menos que el jefe del Incidente lo autorice
+3. Inicie y/o únase al chat de respuesta en {{RESPONSE_CHAT}}. `ToDo: Añadir el procedimiento de lanzamiento del chat de respuesta.`
+4. Iniciar y/o unirse a la llamada de respuesta en {{RESPONSE_PHONE}} y/o {{RESPONSE_VTC}}. `TODO: Añadir el procedimiento de lanzamiento de la llamada de respuesta.`
+5. Prefiera la llamada de voz, el chat y el intercambio seguro de archivos sobre cualquier otro método.
+6. **No** utilizar el correo electrónico principal si es posible.  Si el correo electrónico es necesario, utilícelo con moderación o use {{ALTERNATE_EMAIL}}.  Encripte los correos electrónicos cuando cualquier participante esté fuera del dominio {{ORGANIZATION_DOMAIN}}.  `TODO: Añadir detalles y procedimiento de correo electrónico alternativo, por ejemplo, Office 365 o GSuite bajo demanda`.
+7. **No** usar SMS/texto para comunicar el incidente, a menos que sea para decirle a alguien que se mueva a un canal más seguro.
+8. Invite a los intervinientes de guardia/de guardia a la llamada de respuesta y al chat de respuesta.
+    * Invite al equipo de seguridad.  `TODO: Añadir lista de contactos del equipo de seguridad o procedimiento.`
+    * Invitar a una PYME de los equipos y sistemas afectados. `TODO: Añadir la lista de contactos de la PYME del equipo o el procedimiento.`
+    * Invitar a las partes interesadas ejecutivas y a los asesores jurídicos lo antes posible, pero dar prioridad a los responsables operativos.  `TODO: añadir una lista de contactos de las partes interesadas ejecutivas o un procedimiento.`
+9. OPCIONAL:_ Establecer una sala de colaboración en persona ("sala de guerra") para incidentes complejos o graves. `TODO: Añadir el procedimiento de la sala de colaboración.`
 
-### Reference: Response Team Structure
+### Referencia: Estructura del equipo de respuesta
 
-* Command Team
-  * [Incident Commander](#role-incident-commander-ic)
-  * [Deputy Incident Commander](#role-deputy-incident-commander-deputy)
-  * [Scribe](#role-scribe)
-* Liaison Team
-  * Internal [Liaison](#role-liaison)
-  * External Liaison
-* Operations Team
-  * [Subject Matter Experts](#role-subject-matter-expert-sme) (SMEs) for Systems
-  * SMEs for Teams/Business Units
-  * SMEs for Executive Functions (_e.g._, Legal, HR, Finance)
+* Equipo de Mando
+  * [jefe del Incidente](#role-incident-commander-ic)
+  * [jefe Adjunto de Incidentes](#role-deputy-incident-commander-deputy)
+  * [Escribano](#role-scribe)
+* Equipo de enlace
+  * Enlace [interno](#role-liaison)
+  * Enlace externo
+* Equipo de operaciones
+  * [Expertos en la materia](#role-subject-matter-expert-sme) (PYMES) para sistemas
+  * PYMES para equipos/unidades de negocio
+  * PYMES para Funciones Ejecutivas (_por ejemplo_, Legal, RRHH, Finanzas)
 
-`TODO: Modify role structure as necessary.`
+`TODO: Modificar la estructura de roles según sea necesario`.
 
-### Reference: Response Team Contact Information
+### Referencia: Información de contacto del equipo de respuesta
 
-Response Team Role           | Contact Information
----------------------------- | ---------------------------
-Incident Commander pager     | {{INCIDENT_COMMANDER_PAGER_NUMBER}}
-Incident Commander pager url | {{INCIDENT_COMMANDER_PAGER_URL}}
-Incident Commander roster    | {{INCIDENT_COMMANDER_ROSTER}}
-Security team roster         | {{SECURITY_TEAM_ROSTER}}
-Team SME roster              | {{TEAM_SME_ROSTER}}
-Executive roster             | {{EXECUTIVE_ROSTER}}
+Rol del equipo de respuesta         | Información de contacto
+----------------------------------- | ---------------------------
+Localizador del jefe del incidente  | {INCIDENT_COMMANDER_PAGER_NUMBER}}
+Url del jefe de Incidentes          | {{INCIDENT_COMMANDER_PAGER_URL}}
+Lista del jefe de incidentes        | {{INCIDENT_COMMANDER_ROSTER}}
+Lista del equipo de seguridad       | {{SECURITY_TEAM_ROSTER}}
+Lista del equipo SME                | {{TEAM_SME_ROSTER}}
+Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
-`TODO: Customize response team contact information.  Include contact procedures in rosters, which can be static or dynamic.`
+`TODO: Personalizar la información de contacto del equipo de respuesta.  Incluya los procedimientos de contacto en las listas, que pueden ser estáticas o dinámicas.`
 
-## Establish Battle Rhythm
+## Establecer el ritmo de la batalla
 
-### Conduct Initial Response Call
+### Realizar la llamada de respuesta inicial
 
-1. Conduct initial call using the [initial response call structure](#reference-initial-response-call-structure)
-1. Follow instructions from the Incident Commander.  If the on-duty/on-call Incident Commander does not join the call **within {{INCIDENT_COMMANDER_RESPONSE_SLA}}** and you are a trained incident commander, take command of the call.
-1. Follow the [instructions for your role](#roles).
-1. Follow the call and chat, and comment as appropriate.  If you are not a SME, filter input through the SME for your team if possible.
-1. **Keep the call and chat active throughout the incident for event-driven communication.**
-1. Schedule updates **every {{UPDATE_FREQUENCY}}** on the active bridge.
+1. Realice la llamada inicial utilizando la [estructura de llamada de respuesta inicial](#reference-initial-response-call-structure)
+2. Siga las instrucciones del Jefe del Incidente.  Si el Jefe de Incidentes de turno/de guardia no se une a la llamada **dentro de {{INCIDENT_COMMANDER_RESPONSE_SLA}}** y usted es un Jefe de incidentes capacitado, tome el mando de la llamada.
+3. Siga las [instrucciones correspondientes a su función](#roles).
+4. Siga la llamada y el chat, y comente según corresponda.  Si no es un SME, filtre las aportaciones a través del SME de su equipo si es posible.
+5. **Mantenga la llamada y el chat activos durante todo el incidente para una comunicación basada en eventos.**
+6. Programe actualizaciones **cada {{UPDATE_FREQUENCY}}** en el puente activo.
 
-#### Reference: Initial Response Call Structure
+#### Referencia: Estructura de la llamada de respuesta inicial
 
-* INCIDENT COMMANDER (IC): My name is [NAME], I am the Incident Commander.  I have designated [NAME] as Deputy, and [NAME] as Scribe. Who is on the call?
-* SCRIBE: [Takes attendance]
-* IC: [If missing key personnel] Deputy, please page [MISSING PERSONNEL].
-* IC: [Asks questions to understand situation, symptoms, scope, vector, impact, and timeline from the incident reporter, applicable SMEs for systems and business units]
-* SMEs: [Brief answers to IC's questions]
-* IC:[If this is an incident]:
-  * At this time, the incident summary is as follows: [reiterates summary].  The Investigation team will be led by [NAME], the Remediation team will be led by [NAME], and the Communication team will be led by [NAME].  They will coordinate team membership and report to me.  SMEs, please report to your appropriate team leader.
-  * What investigation, remediation, or communication steps have already been taken? [this should be a short list, but needs to come out now]
-  * This call and chat will remain up and available until incident closure, please use it for all incident related communications.  Provide real-time status updates in the chat, if possible.  Are there any questions or remaining inputs? [answers questions]
-  * Team leaders, please proceed with your planned actions.  We will reconvene at [UPDATE_TIME] to discuss the status.  Thank you.
-* IC: [If this is not an incident]: At this time, these facts do not rise to the level of an incident.  I will coordinate directly with the incident reporter for follow-on actions.  Thank you for your time.
+*Jefe DEL INCIDENTE (IC): Mi nombre es [NOMBRE], soy el Jefe del Incidente.  He designado a [NOMBRE] como adjunto y a [NOMBRE] como escribiente. ¿Quién está en la llamada?
+* SCRIBE: [Toma asistencia]
+* IC: [Si falta personal clave] Diputado, por favor llame a [PERSONAL FALTANTE].
+* IC: [Hace preguntas para comprender la situación, los síntomas, el alcance, el vector, el impacto y el calendario del informador del incidente, los SME aplicables para los sistemas y las unidades de negocio].
+* PYMES: [Responde brevemente a las preguntas del CI].
+* IC: [Si se trata de un incidente]:
+  * En este momento, el resumen del incidente es el siguiente: [reitera el resumen].  El equipo de investigación estará dirigido por [NOMBRE], el equipo de reparación estará dirigido por [NOMBRE] y el equipo de comunicación estará dirigido por [NOMBRE].  Ellos coordinarán la composición del equipo y me informarán.  Los miembros del equipo, por favor, informen a su jefe de equipo correspondiente.
+  * ¿Qué medidas de investigación, corrección o comunicación se han tomado ya? [esta debería ser una lista corta, pero tiene que salir ahora]
+  * Esta llamada y el chat permanecerán activos y disponibles hasta el cierre del incidente, por favor, utilícelos para todas las comunicaciones relacionadas con el incidente.  Proporcione actualizaciones de estado en tiempo real en el chat, si es posible.  ¿Hay alguna pregunta o aportación restante? [responde a las preguntas]
+  * Líderes de equipo, por favor procedan con sus acciones planeadas.  Nos reuniremos de nuevo en [UPDATE_TIME] para discutir el estado.  Gracias.
+* IC: [Si esto no es un incidente]: En este momento, estos hechos no alcanzan el nivel de un incidente.  Me coordinaré directamente con el informador del incidente para las acciones de seguimiento.  Gracias por su tiempo.
 
-#### Reference: Call Etiquette
+#### Referencia: Etiqueta de la llamada
 
-* Join both the call and chat.
-* Keep background noise to a minimum.
-* Keep your microphone muted until you have something to say.
-* Identify yourself when you join the call; State your name and role (_e.g._, "I am the SME for team x").
-* Speak up and speak clearly.
-* Be direct and factual.
-* Keep conversations/discussions short and to the point.
-* Bring any concerns to the Incident Commander (IC) on the call.
-* Respect time constraints given by the Incident Commander.
-* **Use clear terminology, and avoid acronyms or abbreviations. Clarity and accuracy is more important than brevity.**
+* Únase tanto a la llamada como al chat.
+* Mantenga el ruido de fondo al mínimo.
+* Mantenga su micrófono silenciado hasta que tenga algo que decir.
+* Identifícate cuando te unas a la llamada; di tu nombre y tu función (por ejemplo, "Soy el SME del equipo x").
+* Habla con claridad.
+* Sea directo y objetivo.
+* Mantenga conversaciones/discusiones cortas y al grano.
+* Comunicar cualquier preocupación al Jefe de Incidentes (CI) en la llamada.
+* Respetar las limitaciones de tiempo impuestas por el Jefe del Incidente.
+* **Utilizar una terminología clara y evitar acrónimos o abreviaturas. La claridad y la precisión son más importantes que la brevedad.
 
-### Conduct Response Update
+### Realizar la actualización de la respuesta
 
-* Conduct scheduled updates using the [update call structure](#reference-response-update-call-structure) every {{UPDATE_FREQUENCY}} on the active bridge. `TODO: Customize update frequency and scripts; recommend no more than twice daily.`
-* Adjust frequency as necessary.
-* Coordinate independent updates (_e.g._, executive, legal) as required, but as infrequently as practicable.
+* Llevar a cabo actualizaciones programadas utilizando la [estructura de llamada de actualización](#reference-response-update-call-structure) cada {{UPDATE_FREQUENCY}} en el puente activo. `TODO: Personalizar la frecuencia de actualización y los scripts; se recomienda no más de dos veces al día.`
+* Ajustar la frecuencia según sea necesario.
+* Coordinar las actualizaciones independientes (_por ejemplo_, ejecutivas, legales) según sea necesario, pero con la menor frecuencia posible.
 
-#### Reference: Response Update Call Structure
+#### Referencia: Estructura de la llamada de actualización de la respuesta
 
-* INCIDENT COMMANDER (IC): Since our last scheduled update, the incident summary is as follows:
-  * [Impact]
+* Jefe DEL INCIDENTE (IC): Desde la última actualización programada, el resumen del incidente es el siguiente:
+  * [Impacto]
   * [Vector]
-  * [Summary update]
-  * [Timeline update]
-* IC: Investigation team, please provide a brief update
-  * INVESTIGATION LEAD: [Investigative activities or "nothing to report"]
-  * What is your recommended investigations plan?
-  * What investigation actions need tasking or approval?  [listen, gain consensus, task/approve]
-* IC: Remediation team, please provide a brief update
-  * REMEDIATION LEAD: [Remediation activities or "nothing to report"]
-  * What is your recommended remediation strategy?  Strong objections? [listen, gain consensus, task/approve]
-  * What remediation actions need tasking or approval?
-* IC: Communication team, please provide a brief update:
-  * COMMUNICATIONS LEAD: [Communication activities or "nothing to report"]
-  * What is your recommended communication strategy?  Strong objections? [listen, gain consensus, task/approve]
-  * What communication actions need tasking or approval?
-* IC: This call and chat will remain up and available until incident closure, please use it for all incident related communications.  Provide real-time status updates in the chat, if possible.  Are there any questions or remaining inputs? [answers questions]
-* IC: Team leaders, please proceed.  We will reconvene in [{{UPDATE_TIME}}] to discuss the status.  Thank you.
-
-## Monitor Scope
-
-* Monitor the scope of the response to ensure it does not exceed the Incident Commander's span of control.
-* If an incident gets sufficiently complex, and there are sufficient responders, consider spinning off sub-teams.
-
-### Create Sub-Teams
-
-* In preparation for complex incidents, three sub-teams are pre-defined: Investigation, Remediation, and Communication, generally responsible for those response functions. `TODO: Customize sub-team structure if necessary.`
-* Create a call bridge and chat for each sub-team.
-* The Incident Commander will designate team leaders, who report to the IC, and team members, who report to their team leader.  _Team leaders do not have to be trained as incident commanders, however some leadership experience is preferable._
-* The Incident Commander may adjust the purpose or name of the sub-teams as necessary.
-* If you wish to switch teams, ask your **current team leader**.  **Do not** ask the Incident Commander, or the leader of the other team(s).  Use the chain of command.
-
-### Split Incident
-
-If an incident turns out to be two or more distinct incidents:
-
-* Establish a new [incident file](#create-incident-file).
-* Track and coordinate investigation, remediation, and communication in the appropriate file.
-* Consider establishing sub-teams for each incident.
-* **Maintain one top-level Incident Commander**, to coordinate low-density, high-demand assets and maintain unity of command.
-
-# Investigate
-
-**[Investigate](#investigate), [remediate](#remediate), and [communicate](#communicate) in parallel, using separate teams, if possible.**  The Incident Commander will coordinate these activities.  Notify the Incident Commander if there are steps the team should consider.
-
-## Create Incident File
-
-1. Create a new incident file at {{INCIDENT_FILE_LOCATION}} using the [incident name](#name-the-incident).  Use this file for secure storage of documentation, evidence, artifacts, _etc._
-    * Provision secure digital storage.
-    * Provision secure file exchange.
-    * Obtain physical storage.
-    * Share the incident file location on the call and chat.
-    * `TODO: Customize and automate file location and procedure`
-1. Document the functional and information impact, if known (see [Assess](#assess)). `TODO: Customize impact categories, if necessary.`
-1. Document the vector, if known (_e.g.,_ web, email, removable media). `TODO: Customize vector list, if necessary.`
-1. Document the incident summary: a brief overview of the vector, impact, investigation, and remediation situation, if known.
-1. Document the incident timeline, including attacker activity and responder activity. `TODO: Add timelines of varying details, as necessary.`
-1. Document investigation, remediation, and communication steps.  Document activities independently so they can be combined and reused, if possible.
-1. Track significant information such as:
-    * **Evidence**, with time of collection, source, chain of custody, _etc._
-    * **Affected systems**, with how and when system was identified, and summary of effect (_e.g._, has malware, data accessed).
-    * **Files of interest**, such as malware or data files, with system and metadata.
-    * **Accessed and taken data**, with filenames, metadata, and time of suspected exposure.
-    * **Significant attacker activity**, such as logins and malware execution, with time of the event.
-    * **Network-based indicators of compromise (IOCs)**, such as IP addresses and domains.
-    * **Host-based IOCs**, such as filenames, hashes, and registry keys.
-    * **Compromised accounts**, with scope of access and time of compromise.
-
-`TODO: Customize incident documentation procedure, including spreadsheets, databases, forms, systems, and templates, if necessary.`
-
-## Collect Initial Leads
-
-1. Interview incident reporter(s).
-1. Collect initial supporting data (_e.g._, alarms, events, data, assumptions, intuitions) in the incident file.
-1. Interview SME(s) with domain or system expertise, to understand technical detail, context, and risk.
-1. Interview SME(s) in affected business unit, to understand mission/business impact, context, and risk.
-1. Ensure leads are relevant, detailed, and actionable.
-
-### Reference: Response Resource List
-
-Resource                  | Location
-------------------------- | ------------------------------------
-Critical information list | {{CRITICAL_INFO_LIST_LOCATION}}
-Critical asset list       | {{CRITICAL_ASSET_LIST_LOCATION}}
-Asset management database | {{ASSET_MGMT_DB_LOCATION}}
-Network map               | {{NETWORK_MAP_LOCATION}}
-SIEM console              | {{SIEM_CONSOLE_LOCATION}}
-Log aggregator            | {{LOG_AGGREGATOR_CONSOLE}}
-
-`TODO: Complete critical information and asset lists ("crown jewels"). This is incredibly important to effective response.`
-
-`TODO: Customize response resource list`
-
-## Update Investigative Plan and Incident File
-
-1. Review and refine incident impact.
-1. Review and refine incident vector.
-1. Review and refine incident summary.
-1. Review and refine incident timeline with facts and inferences.
-1. Create hypotheses: what may have happened, and with what confidence.
-1. **Identify and prioritize key questions** (information gaps) to support or discredit hypotheses.
-    * Use the MITRE ATT&CK matrix or similar framework to [develop questions](#reference-attacker-tactics-to-key-questions-matrix).
-        * [ATT&CK for Enterprise](https://attack.mitre.org/wiki/Main_Page), including links to Windows, Mac, and Linux specifics.
-        * [ATT&CK Mobile Profile](https://attack.mitre.org/mobile/index.php/Main_Page) for mobile devices.
-    * Use interrogative words as inspiration:
-        * **When?**: first compromise, first data loss, access to x data, access to y system, _etc._
-        * **What?**: impact, vector, root cause, motivation, tools/exploits used, accounts/systems compromised, data targeted/lost, infrastructure, IOCs, _etc._
-        * **Where?**: attacker location, affected business units, infrastructure, _etc._
-        * **How?**: compromise (exploit), persistence, access, exfiltration, lateral movement, _etc._
-        * **Why?**: targeted, timing, access x data, access y system, _etc._
-        * **Who?**: attacker, affected users, affected customers, _etc._
-1. **Identify and prioritize witness devices and strategies** to answer key questions.
-    * Consult network diagrams, asset management systems, and SME expertise
-    * Check the [Response Resource List](#reference-response-resource-list))
-1. Refer to [incident playbooks](#playbooks) for key questions, witness devices, and strategies for investigating common or highly damaging threats.
-
-**The investigative plan is critical to an effective response; it drives all investigative actions.  Use critical thinking, creativity, and sound judgment.**
-
-### Reference: Attacker Tactics to Key Questions Matrix
-
-Attacker Tactic      | The way attackers ...         | Possible Key Questions
--------------------- | ----------------------------- | -----------------------------------------
-Reconnaissance       | ... learn about targets       | How? Since when? Where? Which systems?
-Resource Development | ... build infrastructure      | Where? Which systems?
-Initial Access       | ... get in                    | How? Since when? Where? Which systems?
-Execution            | ... run hostile code          | What malware? What tools? Where? When?
-Persistence          | ... stick around              | How? Since when? Where? Which systems?
-Privilege Escalation | ... get higher level access   | How? Where? What tools?
-Defense Evasion      | ... dodge security            | How? Where? Since when?
-Credential Access    | ... get/create accounts       | Which accounts? Since when? Why?
-Discovery            | ... learn our network         | How? Where? What do they know?
-Lateral Movement     | ... move around               | How? When? Which accounts?
-Collection           | ... find and gather data      | What data? Why? When? Where?
-Command and Control  | ... control tools and systems | How? Where? Who? Why?
-Exfiltration         | ... take data                 | What data? How? When? Where?
-Impact               | ... break things              | What systems or data? How? When? Where? How bad?
-
-See the [MITRE ATT&CK page](https://attack.mitre.org/) for more insight and ideas.
-
-## Create and Deploy Indicators of Compromise (IOCs)
-
-> Emphasize **dynamic and behavioral** indicators alongside static fingerprints.
-
-* Create IOCs based on [initial leads](#collect-initial-leads) and [analysis](#analyze-evidence).
-* Create IOCs using an open format supported by your tools (_e.g._, [STIX 2.0](https://oasis-open.github.io/cti-documentation/stix/intro)), if possible. `TODO: Customize IOC format as necessary.`
-* Use automation, if possible. `TODO: Add IOC deployment/revocation procedure.`
-* **Do not** deploy unrelated, un-curated "feeds" of IOCs; these can cause confusion and fatigue.
-* Consider all IOC types:
-  * Network-based IOCs such as IP or MAC addresses, ports, email addresses, email content or metadata, URLs, domains, or PCAP patterns.
-  * Host-based IOCs such as paths, file hashes, file content or metadata, registry keys, MUTEXes, autoruns, or user artifacts and permissions.
-  * Cloud-based IOCs such as log patterns for [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) or [IaaS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service) deployments
-  * Behavioral IOCs (a.k.a., patterns, TTPs) such as process tree patterns, heuristics, deviation from baseline, and login patterns.
-* Correlate various IOC types, such as network and host-based indicators on the same systems(s).
-
-## Identify Systems of Interest
-
-1. Validate whether they are relevant.
-1. Categorize the reason(s) they are "of interest": has malware, accessed by compromised account, has sensitive data, etc.  Treat these as "tags", there may be more than one category per system.
-1. Prioritize collection, analysis, and remediation based on investigative needs, business impact, _etc._
-
-## Collect Evidence
-
-* Prioritize based on the investigative plan
-* Collect live response data using {{LIVE_RESPONSE_TOOL}}.  `TODO: Customize live response tools and procedure.`
-* Collect relevant logs from system(s) (if not part of live response), aggregator(s), SIEM(s), or device console(s).  `TODO: Customize log collection tools and procedure.`
-* Collect memory image, if necessary and if not part of live response, using {{MEMORY_COLLECTION_TOOL}}.  `TODO: Customize memory collection tools and procedure.`
-* Collect disk image, if necessary, using {{DISK_IMAGE_TOOL}}.  `TODO: Customize disk image collection tool and procedure.`
-* Collect and store evidence in accordance with policy, and with proper chain of custody. `TODO: Customize evidence collection and chain of custody policy.`
-
-Consider collecting the following artifacts as evidence, either in real time (_e.g., via EDR or a SIEM) or on demand:
-
-###  Example Useful Artifacts
-
-`TODO: Customize and prioritize useful artifacts.`
-
-* Running Processes
-* Running Services
-* Executable Hashes
-* Installed Applications
-* Local and Domain Users
-* Listening Ports and Associated Services
-* Domain Name System (DNS) Resolution Settings and Static Routes
-* Established and Recent Network Connections
-* Run Key and other AutoRun Persistence
-* Scheduled tasks and cron jobs
-* Artifacts of past execution (e.g., Prefetch and Shimcache)
-* Event logs
-* Group policy and WMI artifacts
-* Anti-virus detections
-* Binaries in temporary storage locations
-* Remote access credentials
-* Network connection telemetry (e.g., netflow, firewall permits)
-* DNS traffic and activity
-* Remote access activity including Remote Desktop Protocol (RDP), virtual private network (VPN), SSH, virtual network computing (VNC), and other remote access tools
-* Uniform Resource Identifier (URI) strings, user agent strings, and proxy enforcement actions
-* Web traffic (HTTP/HTTPS)
-
-## Analyze Evidence
-
-* Prioritize based on the investigative plan
-* Analyze and triage live response data
-* Analyze memory and disk images (_i.e._, conduct forensics)
-* Analyze malware
-* _OPTIONAL:_ Enrich with research and intelligence
-* Document new indicators of compromise (IOCs)
-* Update the case file
-
-### Example Useful Indicators
-
-`TODO: Customize and prioritize useful indicators.`
-
-* Unusual authentication behavior (_e.g._, frequency, systems, time of day, remote location)
-* Non-Standard formatted usernames
-* Unsigned binaries connecting to the network
-* Beaconing or significant data transfers
-* PowerShell command line requests with Base64-encoded commands
-* Excessive RAR, 7zip, or WinZip activity, especially with suspicious file names
-* Connections on previously unused ports.
-* Traffic patterns related to time, frequency, and byte count
-* Changes to routing tables, such as weighting, static entries, gateways, and peer relationships
-
-## Iterate Investigation
-
-[Update the investigative plan](#update-investigative-plan-and-incident-file) and repeat until closure.
-
-# Remediate
-
-**[Investigate](#investigate), [remediate](#remediate), and [communicate](#communicate) in parallel, using separate teams, if possible.**  The Incident Commander will coordinate these activities.  Notify the Incident Commander if there are steps the team should consider
-
-## Update Remediation Plan
-
-1. Review the incident file at {{INCIDENT_FILE_LOCATION}} using the [incident name](#name-the-incident)
-1. Review applicable [playbooks](#playbooks).
-1. Review the [Response Resource List](#reference-response-resource-list)).
-1. Consider which attacker tactics are in play in this incident.  Use the MITRE [ATT&CK](https://attack.mitre.org/wiki/Main_Page) list (_i.e._, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Lateral Movement, Execution, Collection, Exfiltration, and Command and Control), or similar framework.
-1. Develop remediations for each tactic in play, as feasible given existing tools and resources.  Consider remediations to [Protect](#protect), [Detect](#detect), [Contain](#contain), and [Eradicate](#eradicate) each attacker behavior.
-1. Prioritize based on [timing strategy](#choose-remediation-timing), impact, and urgency.
-1. Document in incident file.
-
-Use [information security (infosec) frameworks](https://www.nist.gov/cyberframework) as inspiration, but **do not use incident remediation as a substitute for an infosec program with an appropriate framework.**  Use them to supplement one another.
-
-### Protect
+  * [Actualización del resumen]
+  * [Actualización de la línea de tiempo]
+* IC: Equipo de investigación, por favor proporcione una breve actualización
+  * LÍDER DE LA INVESTIGACIÓN: [Actividades de investigación o "nada que informar"]
+  * ¿Cuál es su plan de investigación recomendado?
+  * ¿Qué acciones de investigación necesitan ser asignadas o aprobadas?  [escuchar, obtener consenso, encargar/aprobar]
+* IC: Equipo de remediación, por favor proporcione una breve actualización
+  * Líder de remediación: [Actividades de remediación o "nada que informar"]
+  * ¿Cuál es su estrategia de corrección recomendada?  ¿Objeciones fuertes? [escuchar, obtener el consenso, asignar/aprobar]
+  * ¿Qué acciones de corrección necesitan ser asignadas o aprobadas?
+* IC: Equipo de comunicación, por favor, proporcione una breve actualización:
+  * COMMUNICATIONS LEAD: [Actividades de comunicación o "nada que informar"]
+  * ¿Cuál es su estrategia de comunicación recomendada?  ¿Objeciones fuertes? [escuchar, obtener consenso, encargar/aprobar]
+  * ¿Qué acciones de comunicación necesitan ser asignadas o aprobadas?
+* IC: Esta llamada y el chat permanecerán activos y disponibles hasta el cierre del incidente, por favor, utilícelos para todas las comunicaciones relacionadas con el incidente.  Si es posible, proporcione actualizaciones del estado en tiempo real en el chat.  ¿Hay alguna pregunta o aportación restante? [responde a las preguntas]
+* IC: Líderes de equipo, por favor procedan.  Nos reuniremos de nuevo en [{{UPDATE_TIME}}] para discutir el estado. Gracias.
+
+## Supervisar el alcance
+
+* Supervisar el alcance de la respuesta para asegurarse de que no excede el ámbito de control del Jefe del incidente.
+* Si un incidente es lo suficientemente complejo y hay suficientes intervinientes, considere la posibilidad de crear subequipos.
+
+### Crear Sub-Equipos
+
+* En la preparación de incidentes complejos, se predefinen tres subequipos: Investigación, Remediación y Comunicación, generalmente responsables de esas funciones de respuesta. `TODO: Personalizar la estructura de los subequipos si es necesario.`
+* Crear un puente de llamadas y un chat para cada subequipo.
+* El Jefe del Incidente designará a los líderes de los equipos, que dependen del CI, y a los miembros de los equipos, que dependen de su líder.  _Los líderes de equipo no tienen que estar formados como Jefes de incidentes, pero es preferible que tengan alguna experiencia de liderazgo._
+* El Jefe del Incidente puede ajustar el propósito o el nombre de los subequipos según sea necesario.
+* Si desea cambiar de equipo, pregunte a su **líder de equipo actual**.  **No** pregunte al Jefe de Incidentes, o al líder del otro(s) equipo(s).  Utilice la cadena de mando.
+
+### Incidente dividido
+
+Si un incidente resulta ser dos o más incidentes distintos:
+
+* Establezca un nuevo [archivo de incidentes](#create-incident-file).
+* Haga un seguimiento y coordine la investigación, la reparación y la comunicación en el archivo correspondiente.
+* Considere la posibilidad de establecer subequipos para cada incidente.
+* **Mantener un Jefe de incidentes de alto nivel**, para coordinar los activos de baja densidad y alta demanda y mantener la unidad de mando.
+
+# Investigar
+
+**[Investigar](#investigate), [remediar](#remediate) y [comunicar](#communicate) en paralelo, utilizando equipos separados, si es posible.** El Jefe del Incidente coordinará estas actividades.  Notifique al Jefe del Incidente si hay pasos que el equipo debe considerar.
+
+## Crear el archivo del incidente
+
+1. Cree un nuevo archivo de incidentes en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente] (#name-the-incident).  Utilice este archivo para el almacenamiento seguro de documentación, pruebas, artefactos, _etc._.
+    * Proporcionar un almacenamiento digital seguro.
+    * Proporcionar un intercambio de archivos seguro.
+    * Obtener almacenamiento físico.
+    * Compartir la ubicación del archivo del incidente en la llamada y el chat.
+    * `TODO: Personalizar y automatizar la ubicación del archivo y el procedimiento`.
+1. Documente el impacto funcional y de la información, si se conoce (véase [Assess](#assess)). `TODO: Personalizar las categorías de impacto, si es necesario.`
+2. Documentar el vector, si se conoce (_por ejemplo_ web, correo electrónico, medios extraíbles). Tarea: Personalizar la lista de vectores, si es necesario.
+3. Documente el resumen del incidente: un breve resumen del vector, el impacto, la investigación y la situación de la reparación, si se conoce.
+4. Documente la línea de tiempo del incidente, incluyendo la actividad del atacante y la actividad de la respuesta. `TODO: Añadir líneas de tiempo con diferentes detalles, según sea necesario.`
+5. Documente los pasos de investigación, reparación y comunicación.  Documente las actividades de forma independiente para que puedan combinarse y reutilizarse, si es posible.
+6. Registre la información significativa, como:
+    **Pruebas**, con la hora de recogida, la fuente, la cadena de custodia, _etc._.
+    * **Sistemas afectados**, con el modo y el momento en que se identificó el sistema, y el resumen del efecto (_por ejemplo, tiene malware, datos a los que se ha accedido).
+    * **Archivos de interés**, como el malware o los archivos de datos, con el sistema y los metadatos.
+    * **Datos accedidos y tomados**, con nombres de archivos, metadatos y hora de presunta exposición.
+    * **Actividad significativa del atacante**, como inicios de sesión y ejecución de malware, con la hora del evento.
+    * **Indicadores de compromiso (IOC)** basados en la red, como direcciones IP y dominios.
+    * **Indicadores de compromiso basados en el host**, como nombres de archivos, hashes y claves de registro.
+ * **Cuentas comprometidas**, con el alcance del acceso y la hora del compromiso.
+
+`TODO: Personalizar el procedimiento de documentación del incidente, incluyendo hojas de cálculo, bases de datos, formularios, sistemas y plantillas, si es necesario.`
+
+## Recoger las pistas iniciales
+
+1. Entrevistar a los informadores del incidente.
+2. Recoger los datos de apoyo iniciales (_e._, alarmas, eventos, datos, suposiciones, intuiciones) en el archivo del incidente.
+3. Entrevistar a la(s) PYME con experiencia en el dominio o el sistema, para comprender los detalles técnicos, el contexto y el riesgo.
+4. Entrevistar a la(s) PYME de la unidad de negocio afectada, para comprender el impacto de la misión/negocio, el contexto y el riesgo.
+5. Asegúrese de que las pistas son relevantes, detalladas y procesables.
+
+### Referencia: Lista de recursos de respuesta
+
+Recurso                             | Ubicación
+----------------------------------- | ------------------------------------
+Lista de información crítica        | {{CRITICAL_INFO_LIST_LOCATION}}
+Lista de activos críticos           | {{CRITICAL_ASSET_LIST_LOCATION}}
+Base de datos de gestión de activos | {{ASSET_MGMT_DB_LOCATION}}
+Mapa de red                         | {{NETWORK_MAP_LOCATION}}
+Consola SIEM                        | {{SIEM_CONSOLE_LOCATION}}
+Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
+
+`TODO: Completar la información crítica y las listas de activos ("joyas de la corona"). Esto es increíblemente importante para una respuesta eficaz.`
+
+`TODO: Personalizar la lista de recursos de respuesta`.
+
+## Actualizar el plan de investigación y el archivo del incidente
+
+1. Revisar y perfeccionar el impacto del incidente.
+2. Revisar y refinar el vector del incidente.
+3. Revisar y perfeccionar el resumen del incidente.
+4. Revisar y perfeccionar la línea de tiempo del incidente con hechos e inferencias.
+5. Crear hipótesis: qué puede haber ocurrido y con qué seguridad.
+6. **Identificar y priorizar las preguntas clave** (lagunas de información) para apoyar o desacreditar las hipótesis.
+    * Utilizar la matriz ATT&CK de MITRE o un marco similar para [desarrollar preguntas](#reference-attacker-tactics-to-key-questions-matrix).
+        * [ATT&CK for Enterprise](https://attack.mitre.org/wiki/Main_Page), incluyendo enlaces a los específicos de Windows, Mac y Linux.
+        * [ATT&CK Mobile Profile](https://attack.mitre.org/mobile/index.php/Main_Page) para dispositivos móviles.
+    * Utilizar palabras interrogativas como inspiración:
+        * **¿Cuándo?**: primer compromiso, primera pérdida de datos, acceso a x datos, acceso a y sistema, etc.
+        * **¿Qué?**: impacto, vector, causa de origen, motivación, herramientas/explotaciones utilizadas, cuentas/sistemas comprometidos, datos atacados/perdidos, infraestructura, COIs, etc.?
+        * **¿Dónde?**: ubicación del atacante, unidades de negocio afectadas, infraestructura, etc.?
+        * **¿Cómo?**: compromiso (explotación), persistencia, acceso, exfiltración, movimiento lateral, etc.?
+        * **¿Por qué?**: objetivo, momento, acceso a x datos, acceso a y sistema, etc.
+        * **¿Quién?**: atacante, usuarios afectados, clientes afectados, etc.?
+1. **Identificar y priorizar los dispositivos y estrategias testigo** para responder a las preguntas clave.
+    * Consultar los diagramas de la red, los sistemas de gestión de activos y la experiencia de las PYMES
+    * Consultar la [Lista de recursos de respuesta](#reference-response-resource-list))
+1. Consulte los [playbook de incidentes](#playbooks) para conocer las preguntas clave, los dispositivos testigos y las estrategias para investigar las amenazas comunes o muy dañinas.
+
+**El plan de investigación es fundamental para una respuesta eficaz; impulsa todas las acciones de investigación.  Utilice el pensamiento crítico, la creatividad y el buen juicio.**
+
+### Referencia: Táctica del atacante a la matriz de preguntas clave
+
+Táctica del atacante    | La forma en que los atacantes ...         | Posibles preguntas clave
+----------------------- | ----------------------------------------- | -----------------------------------------
+Reconocimiento          | ... aprender sobre los objetivos          | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
+Desarrollo de recursos  | construir infraestructuras.               | ¿Qué sistemas?
+Acceso inicial          | ... entrar                                | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
+Ejecución               | ... ejecutar código hostil                | ¿Qué malware? ¿Qué herramientas? ¿Dónde? ¿Cuándo?
+Persistencia            | ... quédate por aquí                      | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
+Escalada de Privilegios | ... obtener acceso de mayor nivel         | ¿Cómo? ¿Dónde? ¿Qué herramientas?
+Evasión de la defensa   | ... esquivar la seguridad                 | ¿Cómo? ¿Dónde? ¿Desde cuándo?
+Acceso a credenciales   | ... obtener/crear cuentas                 | ¿Qué cuentas? ¿Desde cuándo? ¿Por qué?
+Descubrimiento          | ... aprender nuestra red                  | ¿Cómo? ¿Dónde? ¿Qué saben?
+Movimiento lateral      | ... moverse                               | ¿Cómo? ¿Cuándo? ¿Qué cuentas?
+Recogida                | ... encontrar y reunir datos              | ¿Qué datos? ¿Por qué? ¿Cuándo? ¿Dónde?
+Mando y control         | ... herramientas y sistemas de control    | ¿Cómo? ¿Dónde? ¿Quién? ¿Por qué?
+Exfiltración            | ... tomar datos                           | ¿Qué datos? ¿Cómo? ¿Cuándo? ¿Dónde?
+Impacto                 |... romper cosas.                          | ¿Qué sistemas o datos? ¿Cómo? ¿Cuándo? ¿Dónde? ¿Cómo de malo?
+
+Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más información e ideas.
+
+## Crear y desplegar indicadores de compromiso (IOC)
+
+> Haga hincapié en los indicadores **dinámicos y de comportamiento** junto con las huellas digitales estáticas.
+
+* Crear IOCs basados en [pistas iniciales](#collect-initial-leads) y [análisis](#analyze-evidence).
+* Cree IOCs usando un formato abierto soportado por sus herramientas (_por ejemplo_, [STIX 2.0](https://oasis-open.github.io/cti-documentation/stix/intro)), si es posible. `TODO: Personalizar el formato de los COIs según sea necesario.`
+* Utilice la automatización, si es posible. `TODO: Añadir un procedimiento de despliegue/revocación de COIs.`
+* **No** desplegar "feeds" de COIs no relacionados y no curados, ya que pueden causar confusión y fatiga.
+* Considerar todos los tipos de COI:
+  * IOC basados en la red, como direcciones IP o MAC, puertos, direcciones de correo electrónico, contenido o metadatos del correo electrónico, URLs, dominios o patrones PCAP.
+  * IOC basados en el host, como rutas, hashes de archivos, contenido o metadatos de archivos, claves de registro, MUTEXes, autoejecuciones o artefactos y permisos de usuarios.
+  * COIs basados en la nube, como patrones de registro para despliegues [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) o [IaaS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service)
+  * IOCs de comportamiento (a.ka., patrones, TTPs) tales como patrones de árbol de procesos, heurística, desviación de la línea base y patrones de inicio de sesión.
+* Correlacionar varios tipos de IOC, como indicadores basados en la red y en el host en los mismos sistemas.
+
+## Identificar los sistemas de interés
+
+1. Validar si son relevantes.
+2. Categorizar la(s) razón(es) por la(s) que son "de interés": tiene malware, acceso por cuenta comprometida, tiene datos sensibles, etc.  Trátelas como "etiquetas", puede haber más de una categoría por sistema.
+3. Prioriza la recogida, el análisis y la reparación en función de las necesidades de la investigación, el impacto en el negocio, _etc_.
+
+## Recogida de pruebas
+
+* Priorizar en base al plan de investigación
+* Recoger datos de respuesta en vivo utilizando {{LIVE_RESPONSE_TOOL}}.  `TODO: Personalizar las herramientas y el procedimiento de respuesta en vivo.`
+* Recoger los registros relevantes de los sistemas (si no forman parte de la respuesta en vivo), agregadores, SIEM o consolas de dispositivos.  `TODO: Personalizar las herramientas y el procedimiento de recopilación de registros.`
+* Recoger la imagen de la memoria, si es necesario y si no forma parte de la respuesta en vivo, utilizando {{MEMORY_COLLECTION_TOOL}}.  `TODO: Personalizar las herramientas y el procedimiento de recogida de memoria.`
+* Recoger la imagen del disco, si es necesario, utilizando {{DISK_IMAGE_TOOL}}.  `TODO: Personalizar la herramienta y el procedimiento de recogida de imágenes de disco.`
+* Recoger y almacenar las pruebas de acuerdo con la política, y con la cadena de custodia adecuada. ToDo: Personalizar la política de recogida de pruebas y cadena de custodia.
+
+Considere la posibilidad de recopilar los siguientes artefactos como evidencia, ya sea en tiempo real (_por ejemplo_, a través de EDR o un SIEM) o bajo demanda:
+
+###  Ejemplo de artefactos útiles
+
+`TODO: Personalizar y priorizar los artefactos útiles.`
+
+* Procesos en ejecución
+* Servicios en ejecución
+* Hashes ejecutables
+* Aplicaciones instaladas
+* Usuarios locales y de dominio
+* Puertos de escucha y servicios asociados
+* Configuración de resolución del sistema de nombres de dominio (DNS) y rutas estáticas
+* Conexiones de red establecidas y recientes
+* Clave de ejecución y otra persistencia de la ejecución automática
+* Tareas programadas y trabajos cron
+* Artefactos de ejecución pasada (por ejemplo, Prefetch y Shimcache)
+* Registros de eventos
+* Política de grupo y artefactos WMI
+* Detecciones antivirus
+* Binarios en ubicaciones de almacenamiento temporal
+* Credenciales de acceso remoto
+* Telemetría de conexiones de red (por ejemplo, netflow, permisos de cortafuegos)
+* Tráfico y actividad de DNS
+* Actividad de acceso remoto, incluido el Protocolo de Escritorio Remoto (RDP), la red privada virtual (VPN), SSH, la informática de red virtual (VNC) y otras herramientas de acceso remoto
+* Cadenas de identificadores de recursos uniformes (URI), cadenas de agentes de usuario y acciones de aplicación del proxy
+* Tráfico web (HTTP/HTTPS)
+
+## Analizar las pruebas
+
+* Priorizar basándose en el plan de investigación
+* Analizar y clasificar los datos de la respuesta en vivo
+* Analizar la memoria y las imágenes de disco (es decir, realizar análisis forenses)
+* Analizar el malware
+* _OPCIONAL:_ Enriquecer con investigación e inteligencia
+* Documentar nuevos indicadores de compromiso (IOCs)
+* Actualizar el archivo del caso
+
+### Ejemplo de indicadores útiles
+
+`TODO: Personalizar y priorizar los indicadores útiles.`
+
+* Comportamiento inusual de autenticación (_e._, frecuencia, sistemas, hora del día, ubicación remota)
+* Nombres de usuario con formato no estándar
+* Binarios no firmados que se conectan a la red
+* Balizamiento o transferencias de datos significativas
+* Solicitudes de línea de comandos PowerShell con comandos codificados en Base64
+* Actividad excesiva de RAR, 7zip o WinZip, especialmente con nombres de archivo sospechosos
+* Conexiones en puertos no utilizados previamente.
+* Patrones de tráfico relacionados con el tiempo, la frecuencia y el recuento de bytes
+* Cambios en las tablas de enrutamiento, como la ponderación, las entradas estáticas, las pasarelas y las relaciones entre pares.
+
+## Iterar la investigación
+
+[Actualizar el plan de investigación](#update-investigative-plan-and-incident-file) y repetir hasta el cierre.
+
+# Remediar
+
+**Investigar](#investigate), [remediar](#remediate) y [comunicar](#comunicate) en paralelo, utilizando equipos separados, si es posible.** El Jefe del incidente coordinará estas actividades. Notifique al Jefe del Incidente si hay pasos que el equipo debe considerar
+
+## Actualización del plan de remediación
+
+1. Revise el archivo del incidente en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente](#name-the-incident)
+1. 2. Revise los [playbook](#playbooks) aplicables.
+1. Revise la [lista de recursos de respuesta](#reference-response-resource-list)).
+1. Considere qué tácticas del atacante están en juego en este incidente.  Utilice la lista de MITRE [ATT&CK](https://attack.mitre.org/wiki/Main_Page) (_i._, Persistencia, Escalada de Privilegios, Evasión de la Defensa, Acceso a Credenciales, Descubrimiento, Movimiento Lateral, Ejecución, Recolección, Exfiltración y Mando y Control), o un marco similar.
+1. Desarrollar remedios para cada táctica en juego, en la medida en que sea factible teniendo en cuenta las herramientas y los recursos existentes.  Considere remedios para [Proteger](#protect), [Detectar](#detect), [Contener](#contain), y [Erradicar](#eradicate) cada comportamiento del atacante.
+1. Priorizar en base a la [estrategia de tiempo](#choose-remediation-timing), el impacto y la urgencia.
+1. Documentar en el archivo de incidentes.
+
+Utilice [marcos de seguridad de la información (infosec)](https://www.nist.gov/cyberframework) como inspiración, pero **no utilice la reparación de incidentes como sustituto de un programa de infosec con un marco apropiado.** Utilícelos para complementarse.
+
+### Protección
 
-> "How can we stop tactic X from happening again, or reduce risk?  How can we improve future protection?"
-
-Use the following as a starting point for protective remediation:
+> "¿Cómo podemos evitar que la táctica X se repita o reducir el riesgo?  ¿Cómo podemos mejorar la protección futura?"
+
+Utilice lo siguiente como punto de partida para la corrección de la protección:
 
-* Patch applications.
-* Patch operating systems.
-* Update network and host IPS signatures.
-* Update endpoint protection/EDR/anti-virus signatures.
-* Reduce locations with critical data.
-* Reduce administrative or privileged accounts.
-* Enable multi-factor authentication.
-* Strengthen password requirements.
-* Block unused ports and protocols at segment and network boundaries, both inbound and outbound.
-* Whitelist network connections for critical servers and services.
+* Parchear las aplicaciones.
+* Parchee los sistemas operativos.
+* Actualice las firmas de IPS de la red y del host.
+* Actualizar las firmas de protección de puntos finales/EDR/antivirus.
+* Reducir las ubicaciones con datos críticos.
+* Reducir las cuentas administrativas o privilegiadas.
+* Habilitar la autenticación multifactor.
+* Reforzar los requisitos de las contraseñas.
+* Bloquear los puertos y protocolos no utilizados en los límites del segmento y de la red, tanto entrantes como salientes.
+* Poner en lista blanca las conexiones de red para los servidores y servicios críticos.
 
-### Detect
+### Detección
 
-> "How can we detect this on new systems or in the future?  How can we improve future detection and investigation?"
+> "¿Cómo podemos detectar esto en los nuevos sistemas o en el futuro?  ¿Cómo podemos mejorar la detección y la investigación en el futuro?"
 
-Use the following as a starting point for detective remediation:
-
-* Enhance logging and retention for system logs, particularly critical systems.
-* Enhance logging for applications, including SaaS applications.
-* Enhance log aggregation.
-* Update network and host IDS signatures using IOCs.
-
-### Contain
+Utilice lo siguiente como punto de partida para la corrección de detecciones:
+
+* Mejorar el registro y la retención de los registros del sistema, en particular de los sistemas críticos.
+* Mejorar el registro de las aplicaciones, incluidas las aplicaciones SaaS.
+* Mejorar la agregación de registros.
+* Actualizar las firmas de IDS de la red y del host utilizando IOC.
+
+### Contención
 
-> "How can we stop this from spreading, or getting more severe? How can we improve future containment?"
-
-Use the following as a starting point for containment remediation:
+> "¿Cómo podemos evitar que esto se extienda o se agrave? ¿Cómo podemos mejorar la contención en el futuro?"
+
+Utilice lo siguiente como punto de partida para la corrección de la contención:
 
-* Implement access lists (ACLs) at network segment boundaries
-* Implement blocks at the enterprise boundary, at multiple layers of the [OSI model](https://en.wikipedia.org/wiki/OSI_model).
-* Disable or remove compromised account access.
-* Block malicious IP addresses or networks.
-* Black hole or sinkhole malicious domains.
-* Update network and host IPS and anti-malware signatures using IOCs.
-* Remove critical or compromised systems from the network.
-* Contact providers for assistance (_e.g._, internet service providers, SaaS vendors)
-* Whitelist network connections for critical servers and services.
-* Kill or disable processes or services.
-* Block or remove access for external vendors and partners, especially privileged access.
+* Implementar listas de acceso (ACL) en los límites de los segmentos de la red.
+* Implementar bloqueos en el límite de la empresa, en múltiples capas del [modelo OSI](https://en.wikipedia.org/wiki/OSI_model).
+* Desactivar o eliminar el acceso de las cuentas comprometidas.
+* Bloquear direcciones IP o redes maliciosas.
+* Bloquee los dominios maliciosos.
+* Actualizar las firmas de IPS y antimalware de la red y el host mediante COI.
+* Retirar de la red los sistemas críticos o comprometidos.
+* Póngase en contacto con los proveedores para obtener ayuda (por ejemplo, proveedores de servicios de Internet, proveedores de SaaS).
+* Poner en lista blanca las conexiones de red para los servidores y servicios críticos.
+* Matar o deshabilitar procesos o servicios.
+* Bloquear o eliminar el acceso de proveedores y socios externos, especialmente el acceso privilegiado.
 
-### Eradicate
+### Erradicar
 
-> "How can we eliminate this from our assets?  How can we improve future eradication?"
+> "¿Cómo podemos eliminar esto de nuestros activos?  ¿Cómo podemos mejorar la erradicación en el futuro?"
 
-Use the following as a starting point for eradication remediation:
+Utilice lo siguiente como punto de partida para la remediación de la erradicación:
 
-* Rebuild or restore compromised systems and data from known-good state.
-* Reset account passwords.
-* Remove hostile accounts or credentials.
-* Delete or remove specific malware (difficult!).
-* Implement alternative vendors.
-* Activate and migrate to alternate locations, services, or servers.
+* Reconstruir o restaurar los sistemas y datos comprometidos a partir de un estado bueno conocido.
+* Restablecer las contraseñas de las cuentas.
+* Eliminar cuentas o credenciales hostiles.
+* Borrar o eliminar malware específico (¡difícil!).
+* Implementar proveedores alternativos.
+* Activar y migrar a ubicaciones, servicios o servidores alternativos.
 
-## Choose Remediation Timing
+## Elegir el momento de la reparación
 
-Determine the timing strategy---when remediation actions will be taken---by engaging the Incident Commander, the system SMEs and owners, business unit SMEs and owners, and the executive team.  Each strategy is appropriate under different circumstances:
+Determine la estrategia de plazos -cuando se llevarán a cabo las acciones de remediación- involucrando al Jefe de Incidentes, a los PYMES y propietarios del sistema, a los PYMES y propietarios de la unidad de negocio, y al equipo ejecutivo.  Cada estrategia es apropiada en diferentes circunstancias:
 
-* Choose **immediate** remediation when it is more important to immediately stop attacker activities than to continue investigating.  For example, ongoing financial loss, or ongoing mission failure, active data loss, or prevention of an imminent significant threat.
-* Choose **delayed** remediation when it is important to complete the investigation, or important not to alert the attacker.  For example, long-term compromise by an advanced attacker, corporate espionage, or large-scale compromise of an an unknown number of systems.
-* Choose **combined** remediation when both immediate and delayed circumstances apply in the same incident.  For example, immediate segmentation of a sensitive server or network to meet regulatory requirements while still investigating a long-term compromise.
+* Elija la reparación **inmediata** cuando sea más importante detener inmediatamente las actividades del atacante que seguir investigando.  Por ejemplo, una pérdida financiera en curso, o un fracaso de la misión en curso, una pérdida de datos activa, o la prevención de una amenaza significativa inminente.
+* Elija una reparación **retrasada** cuando sea importante completar la investigación o no alertar al atacante.  Por ejemplo, el compromiso a largo plazo de un atacante avanzado, el espionaje corporativo o el compromiso a gran escala de un número desconocido de sistemas.
+* Elija la remediación **combinada** cuando las circunstancias inmediatas y retardadas se apliquen en el mismo incidente.  Por ejemplo, la segmentación inmediata de un servidor o red sensible para cumplir con los requisitos reglamentarios mientras se investiga un compromiso a largo plazo.
 
-## Execute Remediation
+## Ejecutar la remediación
 
-* Assess and explain risks of remediation actions to stakeholders.  `TODO: Customize remediation risk approval procedure, if necessary.`
-* Immediately implement those remediation actions with little or no affect on the attacker (sometimes called "posturing actions").  For example, many of the [protection](#protect) and [detection](#detect) actions above are good candidates.
-* Schedule and task remediation actions according to the timing strategy.
-* Execute remediation actions in batches, as events, for maximum effectiveness and minimum risk.
-* Document execution status and time in the incident file, especially for temporary measures.
+* Evaluar y explicar los riesgos de las acciones de remediación a las partes interesadas.  `TODO: Personalizar el procedimiento de aprobación de los riesgos de la remediación, si es necesario.`
+* Implementar inmediatamente aquellas acciones de remediación que afecten poco o nada al atacante (a veces llamadas "acciones de postura"). Por ejemplo, muchas de las acciones de [protección](#protect) y [detección](#detect) anteriores son buenas candidatas.
+* Programar y asignar acciones de remediación de acuerdo con la estrategia de tiempo.
+* Ejecute las acciones de corrección en lotes, como eventos, para lograr la máxima eficacia y el mínimo riesgo.
+* Documentar el estado de ejecución y el tiempo en el archivo de incidentes, especialmente para las medidas temporales.
 
-## Iterate Remediation
+## Iterar la remediación
 
-[Update the remediation plan](#update-remediation-plan) and repeat until closure.
+[Actualizar el plan de remediación](#update-remediation-plan) y repetir hasta el cierre.
 
-# Communicate
+#Comunicar
 
-**[Investigate](#investigate), [remediate](#remediate), and [communicate](#communicate) in parallel, using separate teams, if possible.**  The Incident Commander will coordinate these activities.  Notify the Incident Commander if there are steps the team should consider
+**Investigar](#investigate), [remediar](#remediate) y [comunicar](#comunicate) en paralelo, utilizando equipos separados, si es posible.  Notifique al Jefe del Incidente si hay pasos que el equipo debe considerar
 
-All communication must include the most accurate information available.  Display integrity.  Do not communicate speculation.
+Toda comunicación debe incluir la información más precisa disponible.  Muestre integridad.  No comunicar especulaciones.
 
-## Communicate Internally
+## Comunicación Interna
 
-### Notify and Update Stakeholders
+### Notificar y actualizar a las partes interesadas
 
-* Communicate with stakeholders as part of the initial and update calls, as well as via event-driven updates on the call and chat.
-* Coordinate independent updates (_e.g._, executive, legal) as required, but as infrequently as practicable, to keep the focus on investigation and remediation.
-* Focus on the best assessment of the vector, impact, summary, and highlights of the timeline including remediation steps.  Do not speculate.
+* Comunicarse con las partes interesadas como parte de las llamadas iniciales y de actualización, así como a través de actualizaciones basadas en eventos en la llamada y el chat.
+* Coordinar las actualizaciones independientes (_e._, ejecutivas, legales) según sea necesario, pero con la menor frecuencia posible, para mantener el foco en la investigación y la reparación.
+* Concéntrese en la mejor evaluación del vector, el impacto, el resumen y los aspectos más destacados de la línea de tiempo, incluidos los pasos de remediación.  No especule.
 
-### Notify and Update Organization
+### Notificar y actualizar la organización
 
-* **Do not** notify or update non-response personnel until cleared by the Incident Commander, particularly if there is a risk of an insider threat.
-* Coordinate updates for teams or the entire organization with executives and business leadership.
-* Focus on the best assessment of the vector, impact, summary, and highlights of the timeline including remediation steps.  Do not speculate.
+* **No** notifique o actualice al personal que no responde hasta que el Jefe del Incidente lo autorice, en particular si existe el riesgo de una amenaza interna.
+* Coordine las actualizaciones de los equipos o de toda la organización con los ejecutivos y la dirección de la empresa.
+* Concéntrese en la mejor evaluación del vector, el impacto, el resumen y los aspectos más destacados de la línea de tiempo, incluidos los pasos de remediación.  No especule.
 
-### Create Incident Report
+### Crear Informe de Incidentes
 
-* Upon incident closure, capture information in the [incident file](#create-incident-file) for distribution using the format at {{INCIDENT_REPORT_TEMPLATE}}.  **If the vector, impact, summary, timeline, and activity reports are complete, this can be fully automated.**
-* Distribute the incident report to the following: {{INCIDENT_REPORT_RECIPIENTS}}.
-* `TODO: Customize incident report creation and distribution, if necessary`
+* Tras el cierre del incidente, capture la información en el [archivo del incidente](#create-incident-file) para su distribución utilizando el formato en {{INCIDENT_REPORT_TEMPLATE}}.  **Si los informes de vector, impacto, resumen, línea de tiempo y actividad están completos, esto puede ser totalmente automatizado.**
+* Distribuir el informe de incidentes a lo siguiente: {{INCIDENT_REPORT_RECIPIENTS}}.
+* `TODO: Personalizar la creación y distribución del informe de incidentes, si es necesario`.
 
-## Communicate Externally
+## Comunicar al exterior
 
-### Notify Regulators
+### Notificar a los reguladores
 
-* **Do not** notify or update non-response personnel until cleared by the Incident Commander.
-* Notify regulators (_e.g._, HIPAA/HITRUST, PCI DSS, SOX) if necessary, and in accordance with policy.
-* Coordinate requirements, format, and timeline with {{COMPLIANCE_TEAM}}.
+* **No** notifique ni ponga al día al personal que no ha respondido hasta que el Jefe del Incidente lo autorice.
+* Notificar a los organismos reguladores (por ejemplo, HIPAA/HITRUST, PCI DSS, SOX) si es necesario y de acuerdo con la política.
+* Coordinar los requisitos, el formato y los plazos con el {{COMPLIANCE_TEAM}}.
 
-### Notify Customers
+### Notificar a los clientes
 
-* **Do not** notify or update non-response personnel until cleared by the Incident Commander.
-* Coordinate customer notifications with {{COMMUNICATIONS_TEAM}}.
-* Include the date in the title of any announcement, to avoid confusion.
-* **Do not** use platitudes such as "we take security very seriously". Focus on facts.
-* Be honest, accept responsibility, and present the facts, along with the plan to prevent similar incidents in future.
-* Be as detailed as possible with the timeline.
-* Be as detailed as possible in what information was compromised, and how it affects customers. If we were storing something we shouldn't have been, be honest about it. It'll come out later and it'll be much worse.
-* **Do not** discuss external parties that might have caused the compromise, unless they've already publicly disclosed, in which case link to their disclosure.  Communicate with them independently (see [Notify Vendors](#notify-vendors-and-partners))
-* Release the external communication as soon as possible.  Bad news does not get better with age.
-* If possible, contact customers' internal security teams before notifying the public.
+* **No** notifique o actualice al personal que no responde hasta que el Jefe del Incidente lo autorice.
+* Coordine las notificaciones a los clientes con {{COMMUNICATIONS_TEAM}}.
+* Incluya la fecha en el título de cualquier anuncio, para evitar confusiones.
+* No utilice tópicos como "nos tomamos la seguridad muy en serio". Céntrese en los hechos.
+* Sea honesto, acepte la responsabilidad y presente los hechos, junto con el plan para prevenir incidentes similares en el futuro.
+* Sea lo más detallado posible con la línea de tiempo.
+* Sea lo más detallado posible en cuanto a la información que se vio comprometida y cómo afecta a los clientes. Si estábamos almacenando algo que no debíamos, sé honesto al respecto. Saldrá a la luz más tarde y será mucho peor.
+* No hablemos de las partes externas que podrían haber causado el problema, a menos que ya lo hayan hecho público, en cuyo caso enlazaremos con su información. Comunícate con ellos de forma independiente (ver [Notificar a los proveedores](#notify-vendors-and-partners))
+* Publique la comunicación externa lo antes posible. Las malas noticias no mejoran con el tiempo.
+* Si es posible, contacte con los equipos de seguridad internos de los clientes antes de notificar al público.
 
-### Notify Vendors and Partners
+### Notificar a los proveedores y socios
 
-* **Do not** notify or update non-response personnel until cleared by the Incident Commander.
-* If possible, contact vendors' and partners' internal security teams before notifying the public.
-* Focus on the specific aspects of the incident that affect or implicate the vendor or partner.
-* Coordinate response efforts and share information if possible.
+* **No** notifique o actualice al personal que no responde hasta que el Jefe del Incidente lo autorice.
+* Si es posible, póngase en contacto con los equipos de seguridad internos de los proveedores y socios antes de notificar al público.
+* Céntrese en los aspectos específicos del incidente que afectan o implican al proveedor o socio.
+* Coordine los esfuerzos de respuesta y comparta la información si es posible.
 
-### Notify Law Enforcement
+### Notificar a las Fuerzas de Seguridad
 
-* **Do not** notify or update non-response personnel until cleared by the Incident Commander.
-* Coordinate with {{EXECUTIVE_TEAM}} and {{LEGAL_TEAM}} prior to interacting with law enforcement
-* Contact local law enforcement at {{LOCAL_LE_CONTACT}}.
-* Contact FBI at {{FBI_CONTACT}} or via the [Internet Crime Complaint Center (IC3)](https://www.ic3.gov).
-* Contact operators for any systems used in the attack, their systems may also have been compromised.
+* **No** notifique o actualice al personal que no responde hasta que el Jefe del Incidente lo autorice.
+* Coordinar con {{EXECUTIVE_TEAM}} y {{LEGAL_TEAM}} antes de interactuar con las fuerzas del orden.
+* Póngase en contacto con las fuerzas del orden locales en {{LOCAL_LE_CONTACT}}.
+* Póngase en contacto con el FBI en {{FBI_CONTACT}} o a través del [Internet Crime Complaint Center (IC3)](https://www.ic3.gov).
+* Póngase en contacto con los operadores de los sistemas utilizados en el ataque, sus sistemas también pueden haber sido comprometidos.
 
-### Contact External Response Support
+### Contactar con el servicio de asistencia de respuesta externa
 
-* Contact {{INCIDENT_RESPONSE_VENDOR}} to help in assessing risk, incident management, incident response, and post-incident support.
-* Contact {{PUBLIC_RELATIONS_VENDOR}} for help with PR and external communication.
-* Contact {{INSURANCE_VENDOR}} for help with cyber insurance.
+* Póngase en contacto con {{INCIDENT_RESPONSE_VENDOR}} para que le ayude a evaluar el riesgo, la gestión de incidentes, la respuesta a los mismos y el apoyo posterior al incidente.
+* Póngase en contacto con {{PUBLIC_RELATIONS_VENDOR}} para que le ayude con las relaciones públicas y la comunicación externa.
+* Póngase en contacto con {{INSURANCE_VENDOR}} para obtener ayuda con el seguro cibernético.
 
-### Share Intelligence
+### Compartir Inteligencia
 
-* Share IOCs with [Infragard](https://www.infragard.org/) if applicable.
-* Share IOCs with your servicing [ISAC](https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center) through {{ISAC_CONTACT}}, if applicable.
+* Comparta los IOCs con [Infragard](https://www.infragard.org/) si procede.
+* Comparta los IOCs con su [ISAC](https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center) de servicio a través de {{ISAC_CONTACT}}, si procede.
 
-# Recover
+# Recuperación
 
-`TODO: Customize recovery steps.`
+`TODO: Personalizar los pasos de recuperación.`
 
-`TODO: Specify tools and procedures for each step, below.`
+`TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.`
 
-**Recovery is typically governed by business units and system owners.  Take recovery actions only in collaboration with relevant stakeholders.**
+**La recuperación suele estar dirigida por las unidades de negocio y los propietarios de los sistemas.  Tome medidas de recuperación sólo en colaboración con las partes interesadas pertinentes.**
 
-1. Launch business continuity/disaster recovery plan(s): _e.g._, consider migration to alternate operating locations, fail-over sites, backup systems.
-1. Integrate security actions with organizational recovery efforts.
-
+1. Poner en marcha un plan de continuidad de negocio/recuperación de desastres: Por ejemplo, considerar la migración a ubicaciones operativas alternativas, sitios de conmutación por error, sistemas de copia de seguridad.
+2. Integrar las acciones de seguridad con los esfuerzos de recuperación de la organización.
