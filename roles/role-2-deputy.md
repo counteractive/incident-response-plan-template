@@ -1,25 +1,26 @@
-## Role: Deputy Incident Commander (Deputy)
+## Rol: Delegado del Comandante de Incidentes (Subdelegado)
 
-### Description
+### Descripción
 
-A Deputy Incident Commander (Deputy) is a direct support role for the Incident Commander (IC). The Deputy enables the IC to focus on the problem at hand, rather than worrying about documenting steps or monitoring timers. The deputy supports the IC and keeps them focused on the incident.  As a Deputy, you will be expected to take over command from the IC if they request it.
+Un Subdelegado de Incidentes (Subdelegado es un papel de apoyo directo al Jefe de Incidentes (JI). El subdelegado permite que el JII se centre en el problema que tiene entre manos, en lugar de preocuparse por documentar los pasos o controlar los temporizadores. El Subdelegado apoya al JI y lo mantiene centrado en el incidente.  Como Subdelegado, se espera que asuma el mando del JI si éste lo solicita.
 
-### Duties
+### Funciones
 
-1. Bring up issues to the Incident Commander that may otherwise not be addressed (keeping an eye on timers that have been started, circling back around to missed items from a roll call, etc).
-1. Be a "hot standby" Incident Commander, should the primary need to either transition to a SME, or otherwise have to step away from the IC role.
-1. Manage the incident call, and be prepared to remove people from the call if instructed by the Incident Commander.
-1. Monitor the status of the incident, and notify the IC if/when the incident escalates in severity level.
-1. Monitor timers:
-    * track how long the incident has been running
-    * notify the IC every X minutes so they can take actions (_e.g._, "IC, be advised the incident is now at the 10 minute mark.")
-1. Monitor task deadlines (e.g., "IC, be advised the timer for [TEAM]'s investigation is up.")
+1. 1. Plantear al Jefe de Incidentes cuestiones que, de otro modo, no se abordarían (vigilar los temporizadores que se han puesto en marcha, dar vueltas a los elementos que se han perdido en una toma de lista, etc.).
+1. 1. Ser un Jefe de Incidentes "de reserva", en caso de que el jefe principal tenga que hacer la transición a un SME, o tenga que alejarse de la función de JI.
+1. 1. Gestionar la llamada del incidente y estar preparado para retirar a las personas de la llamada si así lo indica el Jefe del Incidente.
+1. Supervisar el estado del incidente y notificar al JI si el nivel de gravedad del incidente aumenta.
+1. Supervise los temporizadores:
+    * controlar el tiempo que ha durado el incidente
+    * Notificar al JI cada X minutos para que pueda tomar medidas (por ejemplo, "JI, el incidente está ahora en la marca de 10 minutos").
+1. Supervisar los plazos de las tareas (p. ej., "JI, avisa de que el temporizador de la investigación de [TEAM] se ha agotado").
 
-### Training
+### Formación
 
-* Read and understand the incident response plan, including the roles and playbooks.
+* Leer y comprender el plan de respuesta a incidentes, incluyendo los roles y los libros de jugadas.
 
-#### Prerequisites
+#### Requisitos previos
 
-* Be trained as an [Incident Commander](#role-incident-commander-ic).
+* Estar entrenado como [Jefe de Incidentes](#role-incident-commander-ic).
 
+Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
