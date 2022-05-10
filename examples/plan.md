@@ -71,7 +71,7 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
   * PYMES para equipos/unidades de negocio
   * PYMES para Funciones Ejecutivas (por ejemplo, Legal, RRHH, Finanzas)
 
-`TODO: Modificar la estructura de roles según sea necesario.
+`TODO: Modificar la estructura de roles según sea necesario.`
 
 ### Referencia: Información de contacto del equipo de respuesta
 
