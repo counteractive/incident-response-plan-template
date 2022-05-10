@@ -1,4 +1,4 @@
-# Libros de jugadas
+# Playbook
 
 Los siguientes libros de jugadas capturan los pasos comunes de [investigación](#investigación), [remediación](#remediación) y [comunicación](#comunicación) para determinados tipos de incidentes.
 
