@@ -1,6 +1,6 @@
 # Glosario
 
-1. **El jefe de incidentes es la persona responsable de resolver cualquier incidente grave. Es la persona de mayor rango en cualquier llamada de incidente mayor, independientemente de su rango diario. Sus decisiones como comandante son definitivas.
+1. **El Incident Commander es la persona responsable de resolver cualquier incidente grave. Es la persona de mayor rango en cualquier llamada de incidente mayor, independientemente de su rango diario. Sus decisiones como comandante son definitivas.**
 1. **El adjunto:** Normalmente es el CI de apoyo. El trabajo del ayudante es apoyar al CI durante la llamada, proporcionándole cualquier ayuda que necesite.
 1. **Escriba:** El trabajo del escriba es mantener un registro de todas las actividades realizadas durante la llamada en un registro de chat escrito en Slack.
 1. **Resolver:** Una persona en la llamada de incidentes que es capaz de ayudar a resolver problemas dentro de un sistema particular. También se le conoce como PYME (ver más abajo).
