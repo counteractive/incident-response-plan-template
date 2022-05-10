@@ -40,12 +40,13 @@ Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en 
 
 ## Nombre del incidente
 
-Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.html) para referirse al incidente -un nombre en clave- para utilizarlo en el archivo de incidentes y en los canales. ##Todo: Personalizar el procedimiento de nomenclatura de incidentes.
+Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.html) para referirse al incidente -un nombre en clave- para utilizarlo en el archivo de incidentes y en los canales. 
+## Todo: Personalizar el procedimiento de nomenclatura de incidentes.
 
 ## Reunir el equipo de respuesta
 
 1. Llame al Comandante de Incidentes de turno/de guardia. `TODO: Añadir lista o procedimiento de llamada del Comandante de Incidentes`.
-1. *No hable del incidente fuera del equipo de respuesta, a menos que el Comandante del Incidente lo autorice.
+1. * No hable del incidente fuera del equipo de respuesta, a menos que el Comandante del Incidente lo autorice.
 1. Inicie y/o únase al chat de respuesta en {{RESPONSE_CHAT}}.  ToDo: Añadir el procedimiento de lanzamiento del chat de respuesta.
 1. Inicie y/o únase a la llamada de respuesta en {{RESPONSE_PHONE}} y/o {{RESPONSE_VTC}}.  Tarea: Añadir el procedimiento de lanzamiento de la llamada de respuesta.
 1. Prefiera la llamada de voz, el chat y el intercambio seguro de archivos sobre cualquier otro método.
@@ -84,7 +85,7 @@ Lista del equipo de seguridad | {{SECURITY_TEAM_ROSTER}}
 Lista del equipo SME | {{TEAM_SME_ROSTER}}
 Lista de ejecutivos | {{EXECUTIVE_ROSTER}}
 
-`TODO: Personalizar la información de contacto del equipo de respuesta.  Incluya los procedimientos de contacto en las listas, que pueden ser estáticas o dinámicas.
+`TODO: Personalizar la información de contacto del equipo de respuesta.  Incluya los procedimientos de contacto en las listas, que pueden ser estáticas o dinámicas.`
 
 ## Establecer el ritmo de la batalla
 
@@ -175,7 +176,7 @@ Si un incidente resulta ser dos o más incidentes distintos:
 * Considere la posibilidad de establecer subequipos para cada incidente.
 * **Mantener un comandante de incidentes de alto nivel**, para coordinar los activos de baja densidad y alta demanda y mantener la unidad de mando.
 
-**Investigar
+**Investigar**
 
 **[Investigar](#investigar), [remediar](#remediación) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.** El Comandante del Incidente coordinará estas actividades.  Notifique al Comandante del Incidente si hay pasos que el equipo debe considerar.
 
@@ -202,7 +203,6 @@ Si un incidente resulta ser dos o más incidentes distintos:
     * Indicadores de compromiso basados en el host**, como nombres de archivos, hashes y claves de registro.
     * Cuentas comprometidas**, con el alcance del acceso y la hora del compromiso.
 
-Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
 
 `TODO: Personalizar el procedimiento de documentación de incidentes, incluyendo hojas de cálculo, bases de datos, formularios, sistemas y plantillas, si es necesario.`
 
