@@ -1,12 +1,12 @@
 ## Playbook: Compromiso de identidad y acceso
 
-**Investigar, remediar (contener, erradicar) y comunicar en paralelo.
+**Investigar, remediar (contener, erradicar) y comunicar en paralelo!.**
 
 Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
 
 ### Investigar
 
-Tarea: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el compromiso de la identidad y el acceso.
+`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el compromiso de la identidad y el acceso.`
 
 1. TODO
 
@@ -17,19 +17,19 @@ Tarea: Ampliar los pasos de la investigación, incluyendo las preguntas y estrat
 
 #### Contención
 
-Tarea: Personalizar los pasos de contención, tácticos y estratégicos, para el compromiso de la identidad y el acceso.
+`TODO: Personalizar los pasos de contención, tácticos y estratégicos, para el compromiso de la identidad y el acceso.`
 
-TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.
+`TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.`
 
-*TODO
+* TODO
 
 `TODO: Considerar la automatización de las medidas de contención utilizando herramientas de orquestación.`
 
 #### Erradicar
 
-TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la identidad y el acceso.
+`TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la identidad y el acceso.`
 
-TODO: Especificar herramientas y procedimientos para cada paso, a continuación.
+`TODO: Especificar herramientas y procedimientos para cada paso, a continuación.`
 
 * TODO
 
@@ -39,7 +39,7 @@ TODO: Especificar herramientas y procedimientos para cada paso, a continuación.
 
 ### Comunicar
 
-TODO: Personalizar los pasos de comunicación para el compromiso de la identidad y el acceso.
+`TODO: Personalizar los pasos de comunicación para el compromiso de la identidad y el acceso.`
 
 `TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`
 
