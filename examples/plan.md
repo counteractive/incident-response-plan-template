@@ -15,7 +15,7 @@ Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en 
 1. **Mantenga la calma y la profesionalidad.**
 1. Reúna la información pertinente, _e._, alarmas, eventos, datos, suposiciones, intuiciones (**observe**).
 1. Considerar las categorías de impacto, a continuación (**orientar**), y determinar si hay un posible incidente (**decidir**):
-1. 2. Iniciar una respuesta si hay un incidente (**actuar**).  En caso de duda, inicie una respuesta. El comandante del incidente y el equipo de respuesta pueden ajustarse tras la investigación y la revisión.
+1. 2. Iniciar una respuesta si hay un incidente (**actuar**).  En caso de duda, inicie una respuesta. El Jefe de incidente y el equipo de respuesta pueden ajustarse tras la investigación y la revisión.
 
 ## Evaluar el impacto funcional
 
@@ -46,7 +46,7 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
 ## Reunir el equipo de respuesta
 
 1. Llame al Comandante de Incidentes de turno/de guardia. `TODO: Añadir lista o procedimiento de llamada del Comandante de Incidentes`.
-1. * No hable del incidente fuera del equipo de respuesta, a menos que el Comandante del Incidente lo autorice.
+1. * No hable del incidente fuera del equipo de respuesta, a menos que el Jefe de incidente lo autorice.
 1. Inicie y/o únase al chat de respuesta en {{RESPONSE_CHAT}}.  ToDo: Añadir el procedimiento de lanzamiento del chat de respuesta.
 1. Inicie y/o únase a la llamada de respuesta en {{RESPONSE_PHONE}} y/o {{RESPONSE_VTC}}.  Tarea: Añadir el procedimiento de lanzamiento de la llamada de respuesta.
 1. Prefiera la llamada de voz, el chat y el intercambio seguro de archivos sobre cualquier otro método.
@@ -61,7 +61,7 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
 ### Referencia: Estructura del equipo de respuesta
 
 * Equipo de Mando
-  * [Comandante del Incidente](#role-incident-commander-ic)
+  * [Jefe de incidente](#role-incident-commander-ic)
   * [Comandante Adjunto de Incidentes](#role-deputy-incident-commander-deputy)
   * [Escribano](#role-scribe)
 * Equipo de enlace
@@ -78,7 +78,7 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
 
 Rol del equipo de respuesta | Información de contacto
 ---------------------------- | ---------------------------
-Localizador del comandante del incidente | {{INCIDENT_COMMANDER_PAGER_NUMBER}}
+Localizador del Jefe de incidente | {{INCIDENT_COMMANDER_PAGER_NUMBER}}
 Url del Comandante de Incidentes | {{INCIDENT_COMMANDER_PAGER_URL}}
 Lista de comandantes de incidentes | {{INCIDENT_COMMANDER_ROSTER}}
 Lista del equipo de seguridad | {{SECURITY_TEAM_ROSTER}}
@@ -92,7 +92,7 @@ Lista de ejecutivos | {{EXECUTIVE_ROSTER}}
 ### Realizar la llamada de respuesta inicial
 
 1. Realice la llamada inicial utilizando la [estructura de llamada de respuesta inicial] (#referencia-estructura-de-llamada-de-respuesta-inicial)
-1. Siga las instrucciones del Comandante del Incidente.  Si el Comandante de Incidentes de turno/de guardia no se une a la llamada dentro de {{INCIDENT_COMMANDER_RESPONSE_SLA}} y usted es un comandante de incidentes capacitado, tome el mando de la llamada.
+1. Siga las instrucciones del Jefe de incidente.  Si el Comandante de Incidentes de turno/de guardia no se une a la llamada dentro de {{INCIDENT_COMMANDER_RESPONSE_SLA}} y usted es un comandante de incidentes capacitado, tome el mando de la llamada.
 1. Siga las [instrucciones para su función](#roles).
 1. Siga la llamada y el chat, y comente según corresponda.  Si no es un SME, filtre las aportaciones a través del SME de su equipo si es posible.
 1. *Mantenga la llamada y el chat activos durante todo el incidente para una comunicación basada en eventos.
@@ -100,7 +100,7 @@ Lista de ejecutivos | {{EXECUTIVE_ROSTER}}
 
 #### Referencia: Estructura de la llamada de respuesta inicial
 
-*COMANDANTE DEL INCIDENTE (IC): Mi nombre es [NOMBRE], soy el Comandante del Incidente.  He designado a [NOMBRE] como adjunto y a [NOMBRE] como escribiente. ¿Quién está en la llamada?
+* Jefe de incidente (IC): Mi nombre es [NOMBRE], soy el Jefe de incidente.  He designado a [NOMBRE] como adjunto y a [NOMBRE] como escribiente. ¿Quién está en la llamada?
 * SCRIBE: [Toma asistencia]
 * IC: [Si falta personal clave] Diputado, por favor llame a [PERSONAL FALTANTE].
 * IC: [Hace preguntas para entender la situación, los síntomas, el alcance, el vector, el impacto y el calendario del informador del incidente, los SME aplicables para los sistemas y las unidades de negocio].
@@ -122,8 +122,8 @@ Lista de ejecutivos | {{EXECUTIVE_ROSTER}}
 * Speak up and speak clearly.
 * Be direct and factual.
 * Keep conversations/discussions short and to the point.
-* Bring any concerns to the Incident Commander (IC) on the call.
-* Respect time constraints given by the Incident Commander.
+* Bring any concerns to the Jefe de incidente (IC) on the call.
+* Respect time constraints given by the Jefe de incidente.
 * **Use clear terminology, and avoid acronyms or abbreviations. Clarity and accuracy is more important than brevity.**
 
 ### Conduct Response Update
@@ -134,7 +134,7 @@ Lista de ejecutivos | {{EXECUTIVE_ROSTER}}
 
 #### Referencia: Estructura de la llamada de actualización de la respuesta
 
-* COMANDANTE DEL INCIDENTE (IC): Desde nuestra última actualización programada, el resumen del incidente es el siguiente:
+* Jefe de incidente (IC): Desde nuestra última actualización programada, el resumen del incidente es el siguiente:
   * [Impacto]
   * [Vector]
   * [Actualización del resumen]
@@ -156,15 +156,15 @@ Lista de ejecutivos | {{EXECUTIVE_ROSTER}}
 
 ## Supervisar el alcance
 
-* Supervisar el alcance de la respuesta para asegurarse de que no excede el ámbito de control del comandante del incidente.
+* Supervisar el alcance de la respuesta para asegurarse de que no excede el ámbito de control del Jefe de incidente.
 * Si un incidente es lo suficientemente complejo y hay suficientes intervinientes, considere la posibilidad de crear subequipos.
 
 ### Crear Sub-Equipos
 
 * En la preparación de incidentes complejos, se predefinen tres subequipos: Investigación, Remediación y Comunicación, generalmente responsables de esas funciones de respuesta. `TODO: Personalizar la estructura de los subequipos si es necesario.
 * Crear un puente de llamadas y un chat para cada subequipo.
-* El Comandante del Incidente designará a los líderes de los equipos, que dependen del CI, y a los miembros de los equipos, que dependen de su líder.  Los líderes de equipo no tienen que estar formados como comandantes de incidentes, pero es preferible que tengan alguna experiencia de liderazgo.
-* El Comandante del Incidente puede ajustar el propósito o el nombre de los subequipos según sea necesario.
+* El Jefe de incidente designará a los líderes de los equipos, que dependen del CI, y a los miembros de los equipos, que dependen de su líder.  Los líderes de equipo no tienen que estar formados como comandantes de incidentes, pero es preferible que tengan alguna experiencia de liderazgo.
+* El Jefe de incidente puede ajustar el propósito o el nombre de los subequipos según sea necesario.
 * Si desea cambiar de equipo, pregunte a su **líder de equipo actual**.  **No** pregunte al Comandante de Incidentes, o al líder del otro(s) equipo(s).  Utilice la cadena de mando.
 
 ### Incidente dividido
@@ -178,7 +178,7 @@ Si un incidente resulta ser dos o más incidentes distintos:
 
 **Investigar**
 
-**[Investigar](#investigar), [remediar](#remediación) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.** El Comandante del Incidente coordinará estas actividades.  Notifique al Comandante del Incidente si hay pasos que el equipo debe considerar.
+**[Investigar](#investigar), [remediar](#remediación) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.** El Jefe de incidente coordinará estas actividades.  Notifique al Jefe de incidente si hay pasos que el equipo debe considerar.
 
 ## Crear el archivo del incidente
 
@@ -225,7 +225,7 @@ Mapa de red | {{NETWORK_MAP_LOCATION{}}
 Consola SIEM | {{SIEM_CONSOLE_LOCATION}}
 Agregador de registros | {{LOG_AGGREGATOR_CONSOLE}}
 
-`TODO: Completar la información crítica y las listas de activos ("joyas de la corona"). Esto es increíblemente importante para una respuesta eficaz.
+`TODO: Completar la información crítica y las listas de activos ("joyas de la corona"). Esto es increíblemente importante para una respuesta eficaz.`
 
 `TODO: Personalizar la lista de recursos de respuesta`.
 
@@ -363,7 +363,7 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 
 # Remediar
 
-**Investigar](#investigar), [remediar](#remediación) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.** El comandante del incidente coordinará estas actividades.  Notifique al Comandante del Incidente si hay pasos que el equipo debe considerar
+**Investigar](#investigar), [remediar](#remediación) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.** El Jefe de incidente coordinará estas actividades.  Notifique al Jefe de incidente si hay pasos que el equipo debe considerar
 
 ## Actualizar el plan de remediación
 
@@ -458,7 +458,7 @@ Determine la estrategia de tiempo -cuando se tomarán las acciones de remediaci�
 
 #Comunicar
 
-**Investigar](#investigar), [remediar](#remediación) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.  Notifique al Comandante del Incidente si hay pasos que el equipo debe considerar**
+**Investigar](#investigar), [remediar](#remediación) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.  Notifique al Jefe de incidente si hay pasos que el equipo debe considerar**
 
 Toda comunicación debe incluir la información más precisa disponible.  Muestre integridad.  No comunique especulaciones.
 
@@ -472,7 +472,7 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 
 ### Notificar y actualizar la organización
 
-* No notifique ni ponga al día al personal que no ha respondido hasta que el Comandante del Incidente lo autorice, especialmente si existe riesgo de amenaza interna.
+* No notifique ni ponga al día al personal que no ha respondido hasta que el Jefe de incidente lo autorice, especialmente si existe riesgo de amenaza interna.
 * Coordine las actualizaciones de los equipos o de toda la organización con los ejecutivos y la dirección de la empresa.
 * Concéntrese en la mejor evaluación del vector, el impacto, el resumen y los aspectos más destacados de la línea de tiempo, incluidos los pasos de remediación.  No especule.
 
@@ -486,13 +486,13 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 
 ### Notificar a los reguladores
 
-* **No** notifique o actualice al personal que no responde hasta que el Comandante del Incidente lo autorice.
+* **No** notifique o actualice al personal que no responde hasta que el Jefe de incidente lo autorice.
 * Notificar a los organismos reguladores (por ejemplo, HIPAA/HITRUST, PCI DSS, SOX) si es necesario, y de acuerdo con la política.
 * Coordinar los requisitos, el formato y el calendario con el {COMPLIANCE_TEAM{}}.
 
 ### Notificar a los clientes
 
-* **No** notifique ni ponga al día al personal que no responde hasta que el Comandante del Incidente lo autorice.
+* **No** notifique ni ponga al día al personal que no responde hasta que el Jefe de incidente lo autorice.
 * Coordinar las notificaciones a los clientes con {{COMMUNICATIONS_TEAM}}.
 * Incluya la fecha en el título de cualquier anuncio, para evitar confusiones.
 * No utilice tópicos como "nos tomamos la seguridad muy en serio". Céntrese en los hechos.
@@ -505,14 +505,14 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 
 ### Notificar a los proveedores y socios
 
-* **No** notifique ni ponga al día al personal que no responde hasta que el Comandante del Incidente lo autorice.
+* **No** notifique ni ponga al día al personal que no responde hasta que el Jefe de incidente lo autorice.
 * Si es posible, póngase en contacto con los equipos de seguridad internos de los proveedores y socios antes de notificar al público.
 * Céntrese en los aspectos específicos del incidente que afectan o implican al proveedor o socio.
 * Coordine los esfuerzos de respuesta y comparta la información si es posible.
 
 ### Notificar a las fuerzas de seguridad
 
-* **No** notifique o ponga al día al personal que no ha respondido hasta que el Comandante del Incidente lo autorice.
+* **No** notifique o ponga al día al personal que no ha respondido hasta que el Jefe de incidente lo autorice.
 * Coordinar con {{EXECUTIVE_TEAM}} y {{LEGAL_TEAM}} antes de interactuar con las fuerzas del orden.
 * Póngase en contacto con las fuerzas del orden locales en {{LOCAL_LE_CONTACT}}.
 * Póngase en contacto con el FBI en {{FBI_CONTACT}} o a través del [Internet Crime Complaint Center (IC3)](https://www.ic3.gov).
@@ -1246,7 +1246,7 @@ Esta es una **estructura flexible**: cada rol no será ocupado por una persona d
 
 En las llamadas de respuesta a incidentes ("tiempos de guerra"), una estructura organizativa diferente anula las operaciones normales ("tiempos de paz"):
 
-* El comandante del incidente está al mando. Independientemente de su rango en tiempos de paz, ahora es la persona de mayor rango en la llamada, superior al director general.
+* El Jefe de incidente está al mando. Independientemente de su rango en tiempos de paz, ahora es la persona de mayor rango en la llamada, superior al director general.
 * Los primeros intervinientes (las personas que actúan como primeros intervinientes de un equipo/servicio) son las personas de mayor rango de ese servicio.
 * Las decisiones serán tomadas por el CI tras considerar la información presentada. Una vez tomada la decisión, es definitiva.
 * El CI puede tomar decisiones más arriesgadas que las que normalmente se considerarían en tiempos de paz.
@@ -1272,7 +1272,7 @@ Todos los participantes en la respuesta a un incidente tienen la responsabilidad
 * Sea directo y objetivo.
 * Mantenga conversaciones/discusiones cortas y al grano.
 * Comunicar cualquier preocupación al Comandante de Incidentes (CI) en la llamada.
-* Respetar las limitaciones de tiempo dadas por el Comandante del Incidente.
+* Respetar las limitaciones de tiempo dadas por el Jefe de incidente.
 * Si te unes a un solo canal (llamada o chat), no participes activamente, ya que provoca una comunicación inconexa.
 * **Utilizar una terminología clara, y evitar acrónimos o abreviaturas. La claridad y la precisión son más importantes que la brevedad.
 
@@ -1287,12 +1287,12 @@ El [procedimiento de voz] estándar de la radio (https://en.wikipedia.org/wiki/V
 
 **No** invente nuevas abreviaturas; favorezca ser explícito sobre lo implícito.
 
-#### Seguir al Comandante del Incidente
+#### Seguir al Jefe de incidente
 
-El comandante del incidente (IC) es el líder del proceso de respuesta al incidente.
+El Jefe de incidente (IC) es el líder del proceso de respuesta al incidente.
 
-* Siga las instrucciones del comandante del incidente.
-* No realice ninguna acción a menos que el comandante del incidente se lo indique.
+* Siga las instrucciones del Jefe de incidente.
+* No realice ninguna acción a menos que el Jefe de incidente se lo indique.
 * El comandante normalmente sondeará si hay objeciones fuertes antes de asignar una acción importante. Plantee objeciones si las tiene.
 * Una vez que el comandante haya tomado una decisión, sígala (incluso si no está de acuerdo).
 * Responde a cualquier pregunta que te haga el comandante de forma clara y concisa.  Responder "no sé" es aceptable. No adivine.
@@ -1391,7 +1391,7 @@ Un Comandante Adjunto de Incidentes (Deputy) es una función de apoyo directo al
 
 1. Plantear al Comandante de Incidentes cuestiones que, de otro modo, podrían no abordarse (vigilar los temporizadores que se han puesto en marcha, dar vueltas a los elementos que se han perdido al pasar lista, etc.).
 1. 1. Ser un Comandante de Incidentes "de reserva", en caso de que el comandante principal tenga que hacer la transición a un SME, o tenga que alejarse de la función de CI.
-1. 1. Gestionar la llamada del incidente y estar preparado para retirar a las personas de la llamada si así lo indica el Comandante del Incidente.
+1. 1. Gestionar la llamada del incidente y estar preparado para retirar a las personas de la llamada si así lo indica el Jefe de incidente.
 1. Supervisar el estado del incidente y notificar al CI si el nivel de gravedad del incidente aumenta.
 1. Supervise los temporizadores:
     * controlar el tiempo que ha durado el incidente
@@ -1456,7 +1456,7 @@ Un experto en la materia (SME) es un experto en el dominio o propietario designa
     * Acciones: ¿Qué medidas hay que tomar si su zona no se encuentra en un estado saludable?
     * Necesidades: ¿Qué apoyo necesita para realizar una acción?
 1. Participar en las fases de investigación, remediación y/o comunicación de la respuesta.
-1. Anuncie todas las sugerencias al comandante del incidente, es su decisión cómo proceder, no siga ninguna acción a menos que se le indique.
+1. Anuncie todas las sugerencias al Jefe de incidente, es su decisión cómo proceder, no siga ninguna acción a menos que se le indique.
 
 Si está de guardia para cualquier equipo, puede ser llamado para un incidente y se espera que responda como experto en la materia (SME) para su equipo, componente o servicio.  Cualquiera que se considere un "experto en la materia" puede actuar como SME para un incidente. Por lo general, el principal de guardia del equipo actuará como SME para ese equipo.
 
@@ -1473,7 +1473,7 @@ Si está de guardia para cualquier equipo, puede ser llamado para un incidente y
 1. Tenga su ordenador portátil e Internet con usted en todo momento durante su período de guardia (oficina, casa, un MiFi, un teléfono con un plan de anclaje, etc.).
 1. Si tienes citas importantes, debes conseguir que otra persona de tu equipo cubra esa franja horaria con antelación.
 1. Cuando recibas una alerta de incidente, se espera que te unas a la llamada de incidente y chatees lo antes posible (en cuestión de minutos).
-1. El Comandante del Incidente le hará preguntas o le dará acciones. Responda a las preguntas de forma concisa y siga todas las acciones indicadas (incluso si no está de acuerdo con ellas).
+1. El Jefe de incidente le hará preguntas o le dará acciones. Responda a las preguntas de forma concisa y siga todas las acciones indicadas (incluso si no está de acuerdo con ellas).
 1. Si no está seguro de algo, traiga a otras personas de su equipo que puedan ayudarle.  **Nunca dudes en escalar**, si es necesario.
 1. No culpes.  Este proceso de respuesta a incidentes no tiene ninguna culpa: culpar es contraproducente y distrae del problema en cuestión.  La revisión posterior a la acción identificará los puntos en los que todos podemos mejorar.
 
@@ -1498,7 +1498,7 @@ Los enlaces interactúan con otros equipos o partes interesadas, fuera del equip
 1. 2. Notificar al CI cualquier cliente o cobertura de los medios de comunicación que informen de los efectos del incidente.
 1. Proporcionar a los clientes el mensaje externo de la autopsia una vez que se haya completado.
 1. Ponerse en contacto o interactuar con las partes interesadas externas, como proveedores, socios, fuerzas de seguridad, _etc._.
-1. **No** te sientas responsable de crear todos los mensajes: trabaja con el comandante del incidente y con otras partes interesadas.
+1. **No** te sientas responsable de crear todos los mensajes: trabaja con el Jefe de incidente y con otras partes interesadas.
 1. Según proceda, mantenga a los clientes informados durante un incidente.
 1. Actuar como voz de nuestros clientes ante el Comandante de Incidentes, ya que esto es útil para la toma de decisiones del CI.
 1. Obtener la aprobación del mensaje después de haber elaborado el mensaje público: copie el mensaje en el chat y espere la confirmación verbal/escrita del CI antes de continuar.
@@ -1519,8 +1519,8 @@ Los enlaces interactúan con otros equipos o partes interesadas, fuera del equip
 
 #### Enlace interno
 
-1. Llame a los SME u otro personal de guardia según las instrucciones del Comandante del Incidente.
-1. Notifique o movilice a otros equipos de la organización (por ejemplo, Finanzas, Legal, Marketing), según las instrucciones del Comandante del Incidente.
+1. Llame a los SME u otro personal de guardia según las instrucciones del Jefe de incidente.
+1. Notifique o movilice a otros equipos de la organización (por ejemplo, Finanzas, Legal, Marketing), según las instrucciones del Jefe de incidente.
 1. Seguir y anticiparse a las PYMES en la llamada.
 1. 2. Interactuar con las partes interesadas y proporcionar actualizaciones de estado según sea necesario.
 1. Interactuar con las partes interesadas internas para responder a sus preguntas, para mantener la llamada principal libre de distracciones.
@@ -1539,7 +1539,7 @@ Leer y comprender el plan de respuesta a incidentes, incluidos los roles y los l
 # Llevar a cabo una revisión posterior a la acción (AAR)
 
 1. Programe una reunión de revisión posterior a la acción (AAR) dentro de {{AAR_SLA}} e invite a los asistentes que figuran en {{AAR_ATTENDEES}}.  Incluya siempre a los siguientes:
-    * El comandante del incidente.
+    * El Jefe de incidente.
     * Los propietarios de los servicios implicados en el incidente.
     * Ingeniero(s)/responsable(s) clave involucrados en el incidente.
 1. Designe a un propietario del AAR que investigue el incidente antes de la reunión para prepararlo, estudiando el proceso del incidente en sí, incluida la revisión de notas e informes.
