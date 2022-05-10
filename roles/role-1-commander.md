@@ -1,79 +1,77 @@
-## Role: Incident Commander (IC)
+## Rol: Jefe de incidente 
 
-### Description
+### Descripcion
+El jefe de incidente (JI) actua como la unica fuente de lo que realmente esta ocurriendo y va a ocurrir durante un incidente grave. El JI es el individuo con mayor ranking  en cualquier llamada de incidente, sin importar el rango en el dia a dia. Ellos son los que toman decisiones durante un incidente; delegan tareas y prestan atencion a expertos en la materia que estan tratando para resolver el incidente. Las decisiones tomadas por el el jefe de incidente son las decisivas.
 
-The Incident Commander (IC) acts as the single source of truth of what is currently happening and what is going to happen during an major incident.  The IC is the highest ranking individual on any incident call, regardless of their day-to-day rank.  They are the decision maker during an incident; they delegate tasks and listen to subject matter experts to resolve the incident.  Their decisions made as commander are final.
+Tu trabajo como jefe de incidente es evaluar la situacion, proveer un guiado claro y cordinado, contratar otros trabajadores para recolectar contexto/detalles.**No realizar investigaciones o remedios** delega estos trabajos.
 
-Your job as an IC is to evaluate the situation, provide clear guidance and coordination, recruiting others to gather context/details. **Do not perform any investigation or remediation:** delegate these tasks.
+### Deberes
 
-### Duties
+Resuelve el incidente lo mas rapido y seguro posible usando el plan de respuesta de incidentes como plantilla de trabajo: guia al equipo de investigacion, remedio, comunicación. Utiliza al diputado para que te ayude, y delegue a relevantes enlaces y expertos a tu discreción.
 
-Resolve the incident as quickly and as safely as possible using the incident response plan as a framework: lead the team to investigate, remediate, communicate.  Use the Deputy to assist you, and delegate to relevant liaisons and experts (SMEs) at your discretion.
-
-1. Help prepare for incidents,
-    * Setup communications channels for incidents.
-    * Funnel people to these communications channels when there is a major incident.
-    * Train team members on how to communicate during incidents and train other Incident Commanders.
-1. Drive incidents to resolution,
-    * Get everyone on the same communication channel.
-    * Collect information from team members for their services/area of ownership status.
-    * Collect proposed repair actions, then recommend repair actions to be taken.
-    * Delegate all repair actions, the Incident Commander is NOT a resolver.
-    * Be the single authority on system status
-1. Facilitate calls and meetings,
-    * Gain consensus (Poll During a Decision)
-    * Provide status updates
-    * Reduce scope (dismiss attendees when possible)
-    * Spin off sub-teams
-    * Transfer command when necessary
-    * Sign off calls
-    * Maintain order
-    * Get straight answers
-    * Handle executive swoop such as
-        * Overriding the Incident Commander
-        * Anti-motivation
-        * Information requests
-        * Questioning severity
-    * Handle disruptive or belligerent responders
+1. Ayuda a preparos para incidentes,
+    * Establecer canales de comunicacion para incidentes.
+    * Redirige a las personas hacia estos canales de comunicacion cuando acurra algun incidente grave.
+    * Entrena a miembros del equipo sobre como comunicarte durante incidentes y entrena a otros jefes de incidentes.
+1. Dirige los incidentes hacia una solucion,
+    * Lleva a todos al mismo canal de comunicacion.
+    * Recolecta informacion de los miembros del equipo por sus servicios de estatus.
+    * Recolecta propuestas de reparacion de acciones, despues recomienda acciones de reparacion para que se lleven acabo.
+    * Delega todas la acciones de reparacion, el jefe de incidentes no es un resolutor.
+    * Se la unica fuente de autoridad en el estado del sistema.
+1. Facilita las llamadas y reuniones,
+    * Gana concenso (Realiza encuentas durante las llamadas)
+    * Proporciona actualizaciones de estatus
+    * Reduce el alcance (despedir a los asistentes cuando sea posible)
+    * Spin off sub-equipos
+    * Transfiere el control cuando sea necesario
+    * Firmar las llamadas
+    * Mantener el orden
+    * Obten respuestas directas
+    * Manejar las caidas de ejecutivos como
+        * Anular al jefe de incidentes
+        * Desmotivación
+        * Peticion de informacion
+        * Cuestionar la severidad
+    * Manejar respuestas perturbadoras o beligerantes
 1. Post Mortem,
-    * Creating the initial template right after the incident so people can put in their thoughts while fresh.
-    * Assigning the post-mortem after the event is over, this can be done after the call.
-    * Work with Team Leads/Managers on scheduling preventive actions.
+    * Crear la plantilla inicial justo despues del incidente para que las personas puedan escribir sus opiniones mientras estan frescas.
+    * Asignar el post-mortem despues de que el evento termine, esto puede darse despues de terminar la llamada.
+    * Trabaja con los manager o jefes de equipo para organizar acciones preventivas.
 
-The Incident Commander uses some additional call procedures and lingo:
+El jefe de incidentes utiliza metodos y lenguajes adicionales:
 
-* Always announce when you join the call if you are the on-call IC.
-* **Do not** let discussions get out of hand. Keep conversations short.
-* Note objections from others, but your call is final.
-* If anyone is being actively disruptive to your call, kick them off.
-* Announce the end of the call.
-* After an incident, communicate with other training Incident Commanders on any debrief actions you feel are necessary.
+* Siempre anuncie cuando se una a la llamada si es el JI de guardia.
+* **No** permita que las discusiones se salgan de control. Mantenga las conversaciones cortas.
+* Tenga en cuenta las objeciones de los demás, pero tu decision es la definitiva.
+* Si alguien está interrumpiendo activamente tu decision, expulsalo.
+* Anuncia el final de la llamada.
+* Después de un incidente, comuníquese con otros jefes de incidentes  sobre cualquier acción que considere necesaria.
 
-**Use clear terminology, and avoid acronyms or abbreviations. Clarity and accuracy is more important than brevity.**
+**Utilice una terminología clara y evite las siglas o abreviaturas. La claridad y la precisión son más importantes que la brevedad.**
 
-### Training
+### Practicas
 
-* Read the incident response plan, including all roles and playbooks.
-* Participate in an incident response exercise.
-* Shadow a current incident commander without actively participating, keeping your questions until the end.
-* Reverse shadow a current incident commander.  Respond to incidents with the current IC there to take over if necessary.
-* _OPTIONAL:_ facilitation training
-* _OPTIONAL:_ Refer to [Incident Responders as Facilitators (and Therapists)](#FIX) and the [PagerDuty Incident Commander training](https://response.pagerduty.com/training/incident_commander/) for more ideas and discussion.
+* Lea el plan de respuesta a incidentes, incluidos todos los roles y manuales.
+* Participar en un ejercicio de respuesta a incidentes.
+* Seguir a un jefe de incidentes actual sin participar activamente, manteniendo sus preguntas hasta el final.
+* Tomar la iniciativa de un jefe de incidentes. Responda a incidentes con el JI actual allí para hacerse cargo si es necesario.
+* _OPCIONAL:_ facilitar las practicas
+* _OPCIONAL:_ recurre a [Incident Responders as Facilitators (and Therapists)](#FIX) y al [PagerDuty Incident Commander training](https://response.pagerduty.com/training/incident_commander/) para mas ideas y discussiones.
 
-#### Prerequisites
+#### prerequisitos
 
-There is no seniority or business-unit prerequisites to become an Incident Commander, it is a role open to anyone with the training and ability.  Before you can be an Incident Commander, it is expected that you meet the following criteria:
+No hay requisitos previos de antigüedad o unidad de negocios para convertirse en jefe de Incidentes, es un rol abierto a cualquier persona con la capacitación y la capacidad. Antes de que pueda ser un jefe de incidentes, se espera que cumpla con los siguientes criterios:
 
-* Excellent verbal and written **communication skills**.
-* **High-level knowledge** of business infrastructure and functions.
-* Excellent critical thinking, judgment, and decision-making.
-* Flexibility and ability to **listen to expert feedback**, modifying plans as necessary.
-* **Participated in at least two incident responses**.
-* Gravitas, ability to **take command**, and **willingness to kick people off a call** to remove distractions, even if it's the CEO.
+* Excelentes **habilidades de comunicación** verbal y escrita.
+* **Conocimiento de alto nivel** de la infraestructura y las funciones comerciales.
+* Excelente pensamiento crítico, juicio y toma de decisiones.
+* Flexibilidad y capacidad para **escuchar comentarios de expertos**, modificando los planes según sea necesario.
+* **Participó en al menos dos respuestas a incidentes**.
+* Capacidad para **tomar el mando** y **disposición para expulsar a las personas de una llamada** para eliminar las distracciones, incluso si se trata del director ejecutivo.
 
-Deep technical knowledge is not required!  Incident Commanders do not require deep technical knowledge of our systems. Your job as Incident Commander is to coordinate the response, not make technical changes. Don’t think you can’t be an Incident Commander just because you’re not in the engineering department.
+¡No se requieren conocimientos técnicos profundos! Los jefes de incidentes no requieren un conocimiento técnico profundo de nuestros sistemas. Su trabajo como jefe de incidentes es coordinar la respuesta, no realizar cambios técnicos. No crea que no puede ser un jefe de Incidentes solo porque no está en el departamento de ingeniería.
 
-#### Graduation
+#### Graduación
 
-Upon completion of training, add yourself to the Incident Commander roster.
-
+Al finalizar el entrenamiento, agréguese a la lista de jefes de incidentes.
