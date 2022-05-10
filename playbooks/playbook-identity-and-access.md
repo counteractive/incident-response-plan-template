@@ -1,65 +1,64 @@
-## Playbook: Identity and Access Compromise
+## Playbook: Compromiso de identidad y acceso
 
-**Investigate, remediate (contain, eradicate), and communicate in parallel!**
+**Investigar, remediar (contener, erradicar) y comunicar en paralelo.
 
-Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
+Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
 
-### Investigate
+### Investigar
 
-`TODO: Expand investigation steps, including key questions and strategies, for identity and access compromise.`
+Tarea: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el compromiso de la identidad y el acceso.
 
 1. TODO
 
-### Remediate
+### Remediar
 
-* **Plan remediation events** where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.
-* **Consider the timing and tradeoffs** of remediation actions: your response has consequences.
+* **Planificar eventos de remediación** en los que estos pasos se lancen juntos (o de forma coordinada), con los equipos apropiados listos para responder a cualquier interrupción.
+* **Considere el tiempo y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
 
-#### Contain
+#### Contención
 
-`TODO: Customize containment steps, tactical and strategic, for identity and access compromise.`
+Tarea: Personalizar los pasos de contención, tácticos y estratégicos, para el compromiso de la identidad y el acceso.
 
-`TODO: Specify tools and procedures for each step, below.`
+TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.
+
+*TODO
+
+`TODO: Considerar la automatización de las medidas de contención utilizando herramientas de orquestación.`
+
+#### Erradicar
+
+TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la identidad y el acceso.
+
+TODO: Especificar herramientas y procedimientos para cada paso, a continuación.
 
 * TODO
 
-`TODO: Consider automating containment measures using orchestration tools.`
+#### Referencia: Recursos de remediación
 
-#### Eradicate
+`TODO: Especificar los recursos financieros, de personal y logísticos para llevar a cabo la remediación.`
 
-`TODO: Customize eradication steps, tactical and strategic, for identity and access compromise.`
+### Comunicar
 
-`TODO: Specify tools and procedures for each step, below.`
+TODO: Personalizar los pasos de comunicación para el compromiso de la identidad y el acceso.
 
-* TODO
+`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`
 
-#### Reference: Remediation Resources
-
-`TODO: Specify financial, personnel, and logistical resources to accomplish remediation.`
-
-### Communicate
-
-`TODO: Customize communication steps for identity and access compromise`
-
-`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.`
-
-In addition to the general steps and guidance in the incident response plan:
+Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
 
 1. TODO
 
-### Recover
+### Recuperación
 
-`TODO: Customize recovery steps for identity and access compromise.`
+`TODO: Personalizar los pasos de recuperación para el compromiso de la identidad y el acceso.`
 
-`TODO: Specify tools and procedures for each step, below.`
+`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.`
 
-In addition to the general steps and guidance in the incident response plan:
+Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
 
 1. TODO
 
-### Resources
+### Recursos
 
-#### Additional Information
+#### Información adicional
 
 1. <a name="identity-and-access-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
-
