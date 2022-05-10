@@ -252,7 +252,7 @@ Agregador de registros | {{LOG_AGGREGATOR_CONSOLE}}
     * Consultar la [Lista de recursos de respuesta](#reference-response-resource-list))
 1. Consulte los [libros de jugadas de incidentes](#librosdejugadas) para conocer las preguntas clave, los dispositivos testigos y las estrategias para investigar las amenazas comunes o muy dañinas.
 
-**El plan de investigación es fundamental para una respuesta eficaz; impulsa todas las acciones de investigación.  Utilice el pensamiento crítico, la creatividad y el buen juicio.
+**El plan de investigación es fundamental para una respuesta eficaz; impulsa todas las acciones de investigación.  Utilice el pensamiento crítico, la creatividad y el buen juicio.**
 
 ### Referencia: Táctica del atacante a la matriz de preguntas clave
 
@@ -296,7 +296,7 @@ Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más 
 1. Categorizar la(s) razón(es) por la(s) que son "de interés": tiene malware, acceso por cuenta comprometida, tiene datos sensibles, etc.  Trátelas como "etiquetas", puede haber más de una categoría por sistema.
 1. Prioriza la recogida, el análisis y la reparación en función de las necesidades de la investigación, el impacto en el negocio, etc.
 
-#Recogida de pruebas
+# Recogida de pruebas
 
 * Priorizar en base al plan de investigación
 * Recoger datos de respuesta en vivo utilizando {{LIVE_RESPONSE_TOOL}}.  `TODO: Personalizar las herramientas y el procedimiento de respuesta en vivo.`
@@ -309,7 +309,7 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 
 ### Ejemplo de artefactos útiles
 
-`TODO: Personalizar y priorizar los artefactos útiles.
+`TODO: Personalizar y priorizar los artefactos útiles.`
 
 * Procesos en ejecución
 * Servicios en ejecución
@@ -458,7 +458,7 @@ Determine la estrategia de tiempo -cuando se tomarán las acciones de remediaci�
 
 #Comunicar
 
-**Investigar](#investigar), [remediar](#remediación) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.  Notifique al Comandante del Incidente si hay pasos que el equipo debe considerar
+**Investigar](#investigar), [remediar](#remediación) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.  Notifique al Comandante del Incidente si hay pasos que el equipo debe considerar**
 
 Toda comunicación debe incluir la información más precisa disponible.  Muestre integridad.  No comunique especulaciones.
 
@@ -529,7 +529,7 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 * Comparta los IOC con [Infragard](https://www.infragard.org/) si procede.
 * Comparta los IOC con su [ISAC](https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center) de servicio a través de {{ISAC_CONTACT}}, si procede.
 
-# `Recuperación
+# Recuperación
 
 `TODO: Personalizar los pasos de recuperación.`
 
@@ -548,7 +548,7 @@ Tarea: Crear libros de juego adicionales para tipos de incidentes muy probables 
 
 ## Playbook: Desaparición de sitios web
 
-**Investigar, remediar (contener, erradicar) y comunicar en paralelo.
+**Investigar, remediar (contener, erradicar) y comunicar en paralelo.**
 
 Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utilice su mejor criterio.
 
@@ -646,9 +646,9 @@ Tarea: Especificar las herramientas y los procedimientos para cada paso, a conti
 
 ### Comunicar
 
-TODO: Personalizar los pasos de comunicación para la desfiguración
+`TODO: Personalizar los pasos de comunicación para la desfiguración`
 
-TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general`.
+`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general`.
 
 1. 1. Elevar el incidente y comunicarlo a la dirección según el procedimiento
 1. 2. Documentar el incidente según el procedimiento (e informar si procede)
@@ -713,7 +713,7 @@ TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe 
 3. <a name="defacement-playbook-ref-3"></a>[2019 Website Threat Research Report](https://sucuri.net/reports/2019-hacked-website-report/) with helpful statistics
 4. <a name="defacement-playbook-ref-4"></a>[Article](https://www.imperva.com/learn/application-security/website-defacement-attack/) including DIYs and Best practices to prevent website defacement## Playbook: Identity and Access Compromise
 
-**Investigar, remediar (contener, erradicar) y comunicar en paralelo.
+**Investigar, remediar (contener, erradicar) y comunicar en paralelo.**
 
 Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utilice su mejor criterio.
 
@@ -732,19 +732,19 @@ Tarea: Ampliar los pasos de la investigación, incluyendo las preguntas y estrat
 
 Tarea: Personalizar los pasos de contención, tácticos y estratégicos, para el compromiso de la identidad y el acceso.
 
-TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.
+`TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.`
 
-*TODO
+* TODO
 
 `TODO: Considerar la automatización de las medidas de contención utilizando herramientas de orquestación.`
 
 #### Erradicar
 
-TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la identidad y el acceso.
+`TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la identidad y el acceso.`
 
-TODO: Especificar herramientas y procedimientos para cada paso, a continuación.
+`TODO: Especificar herramientas y procedimientos para cada paso, a continuación.`
 
-* `TODO
+* TODO
 
 #### Referencia: Remediation Resources
 
@@ -813,7 +813,7 @@ Tarea: Ampliar los pasos de la investigación, incluyendo las preguntas y estrat
     * enviar enlaces, archivos adjuntos y/o hashes a [VirusTotal](https://www.virustotal.com/gui/)
     * enviar enlaces, archivos adjuntos y/o hashes a un sandbox de malware como [Cuckoo](https://cuckoosandbox.org/), [Hybrid Analysis](https://www.hybrid-analysis.com/), [Joe Sandbox](https://www.joesecurity.org/), o [VMray](https://www.vmray.com/).
 1. Categorice el tipo de ataque. `TODO: Personalizar las categorías y crear libros de jugadas adicionales para tipos de phishing comunes o de alto impacto`.
-1. **Determine la gravedad:
+1. **Determine la gravedad:**
     * si la seguridad pública o personal está en riesgo
     * si los datos personales (u otros datos sensibles) están en riesgo
     * si hay pruebas de quién está detrás del ataque
@@ -833,7 +833,7 @@ Tarea: Ampliar los pasos de la investigación, incluyendo las preguntas y estrat
 
 Tarea: Personalizar los pasos de contención, tácticos y estratégicos, para el phishing.
 
-ToDo: Especifique las herramientas y los procedimientos para cada paso, a continuación.
+`ToDo: Especifique las herramientas y los procedimientos para cada paso, a continuación.`
 
 * Contener las cuentas afectadas
     * cambiar las credenciales de acceso
@@ -856,9 +856,9 @@ ToDo: Especifique las herramientas y los procedimientos para cada paso, a contin
 
 ### Comunicar
 
-TODO: Personalizar los pasos de comunicación para la suplantación de identidad.
+`TODO: Personalizar los pasos de comunicación para la suplantación de identidad.`
 
-TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general`.
+`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general`.
 
 1. 1. Elevar el incidente y comunicarlo a la dirección según el procedimiento
 1. Documente el incidente según el procedimiento (y [informe](https://us-cert.cisa.gov/report-phishing))
@@ -1041,7 +1041,7 @@ Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los
 
 Tarea: Personalizar los pasos de erradicación, tácticos y estratégicos, para el ransomware.
 
-ToDo: Especifique las herramientas y los procedimientos para cada paso, a continuación.
+`ToDo: Especifique las herramientas y los procedimientos para cada paso, a continuación.`
 
 * Reconstruir los sistemas infectados a partir de soportes conocidos y buenos.
 * Restaurar a partir de copias de seguridad conocidas y limpias.
@@ -1552,8 +1552,8 @@ Documente las respuestas a las siguientes preguntas clave:
 1. **¿Qué se suponía que iba a ocurrir?**
     * Detallar las desviaciones del proceso, procedimiento o mejor práctica, incluyendo las evaluaciones de las PYMES.
     * Identificar las formas en que el incidente podría haberse detectado antes, o haber respondido con mayor eficacia.
-1. **¿Qué causas fundamentales se han producido?
-1. **¿Cómo podemos mejorar? ** Capturar los elementos de acción _con asignados y fechas de vencimiento_.  Considerar:
+1. **¿Qué causas fundamentales se han producido?**
+1. **¿Cómo podemos mejorar?** Capturar los elementos de acción _con asignados y fechas de vencimiento_.  Considerar:
     * Detener: ¿qué deberíamos dejar de hacer?
     * Empezar: ¿qué deberíamos empezar a hacer?
     * Continuar: ¿qué debemos seguir haciendo?
