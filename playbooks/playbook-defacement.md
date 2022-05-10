@@ -148,7 +148,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 `TODO: Personalizar los pasos para el personal del servicio de asistencia ante una sospecha de defacement`.
 
 1. Mantenga la calma y respire profundamente.
-1. Abra un ticket para documentar el incidente, según el procedimiento. Tarea: Personalizar la plantilla con las preguntas clave (véase más abajo) y el flujo de trabajo posterior.
+1. Abra un ticket para documentar el incidente, según el procedimiento. `TODO: Personalizar la plantilla con las preguntas clave (véase más abajo) y el flujo de trabajo posterior`
 1. Utiliza tu mejor criterio para decidir qué pasos priorizar (por ejemplo, si la desfiguración dejó contenido dañino o desencadenante, prioriza la retirada del servidor inmediatamente).
 1. Pídele al usuario que tome fotos de su pantalla con su teléfono inteligente mostrando las cosas que notó.
 1. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz.  2. Si se trata de un informe de usuario, haga preguntas detalladas, incluyendo
