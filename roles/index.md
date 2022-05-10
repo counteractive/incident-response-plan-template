@@ -7,8 +7,8 @@ A continuación se presentan las descripciones, los deberes y la formación para
 ## Estrcutura de los roles
 
 * Equipo de Mando
-  * [Comandante de Incidente](#role-incident-commander-ic)
-  * [Comandante-Adjunto de Incidente](#role-deputy-incident-commander-deputy)
+  * [Jefe de Incidente](#role-incident-commander-ic)
+  * [Jefe-Adjunto de Incidente](#role-deputy-incident-commander-deputy)
   * [Escribano o Escribiente](#role-scribe)
 * Equipo de enlace
   * Enlace Interno [Enlace](#role-liaison)
