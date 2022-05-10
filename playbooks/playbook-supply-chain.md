@@ -1,6 +1,6 @@
 ## Playbook: Compromiso de la cadena de suministro
 
-**Investigar, remediar (contener, erradicar) y comunicar en paralelo.
+**Investigar, remediar (contener, erradicar) y comunicar en paralelo!.**
 
 Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
 
