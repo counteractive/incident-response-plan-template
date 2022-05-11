@@ -1,3 +1,4 @@
+
 ## Playbook: Ransomware
 
 **Investigar, remediar (contener, erradicar) y comunicar en paralelo. La contención es fundamental en los incidentes de ransomware, priorice en consecuencia.**
