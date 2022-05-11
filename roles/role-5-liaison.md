@@ -15,9 +15,9 @@ Los enlaces interactuan con otros equipos o partes interesadas fuera del equipo 
 1. Notificar al IC (Intelligence Customer) de cualquier cliente o cobertura de los medios de comunicación que informen de los efectos del incidente.
 1. Proporcionar a los clientes el mensaje externo de la autopsia una vez que se haya completado.
 1. Contactar o interactuar con las partes interesadas externas, como proveedores, socios, fuerzas de seguridad, _etc._
-1. **No** sentirse responsable de la creación de cada mensaje: trabajar con el Jefe del Incidente y otras partes interesadas.
+1. **No** sentirse responsable de la creación de cada mensaje: trabajar con el Incident Commander y otras partes interesadas.
 1. Según proceda, mantener a los clientes informados durante un incidente.
-1. Actuar como voz de nuestros clientes ante el Jefe de Incidentes, ya que esto es útil para la toma de decisiones del IC.
+1. Actuar como voz de nuestros clientes ante el Incident Commander, ya que esto es útil para la toma de decisiones del IC.
 1. Obtener la aprobación del mensaje después de haber elaborado el mensaje público: copiar el mensaje en el chat y esperar la confirmación verbal/escrita del IC antes de continuar.
 
 ##### Pistas para mensajes públicos
@@ -36,8 +36,8 @@ Los enlaces interactuan con otros equipos o partes interesadas fuera del equipo 
 
 #### Enlace interno
 
-1. Página PYMES u otro personal de guardia según las instrucciones del Jefe del Incidente.
-1. Notificar o movilizar a otros equipos de la organización (por ejemplo, Finanzas, Legal, Marketing), según las instrucciones del Jefe del Incidente.
+1. Página PYMES u otro personal de guardia según las instrucciones del Incident Commander.
+1. Notificar o movilizar a otros equipos de la organización (por ejemplo, Finanzas, Legal, Marketing), según las instrucciones del Incident Commander.
 1. Seguir y anticiparse a las PYMES en la convocatoria.
 1. Interactuar con las partes interesadas y proporcionar actualizaciones de estado cuando sea necesario.
 1. Interactuar con las partes interesadas internas para responder a sus preguntas, para mantener la llamada principal libre de distracciones.
