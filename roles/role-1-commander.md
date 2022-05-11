@@ -1,7 +1,7 @@
-## Rol: Incident commander
+## Rol: Incident Commander
 
 ### Descripcion
-El Incident commander(IC) actua como la unica fuente de lo que realmente esta ocurriendo y va a ocurrir durante un incidente grave. El JI es el individuo con mayor ranking  en cualquier llamada de incidente, sin importar el rango en el dia a dia. Ellos son los que toman decisiones durante un incidente; delegan tareas y prestan atencion a expertos en la materia que estan tratando para resolver el incidente. Las decisiones tomadas por el el Incident commander las decisivas.
+El Incident Commander(IC) actua como la unica fuente de lo que realmente esta ocurriendo y va a ocurrir durante un incidente grave. El JI es el individuo con mayor ranking  en cualquier llamada de incidente, sin importar el rango en el dia a dia. Ellos son los que toman decisiones durante un incidente; delegan tareas y prestan atencion a expertos en la materia que estan tratando para resolver el incidente. Las decisiones tomadas por el el Incident commander las decisivas.
 
 Tu trabajo como Incident commander evaluar la situacion, proveer un guiado claro y cordinado, contratar otros trabajadores para recolectar contexto/detalles.**No realizar investigaciones o remedios** delega estos trabajos.
 
