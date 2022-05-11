@@ -1,3 +1,4 @@
+
 # Glosario
 
 1. **El Incident Commander es la persona responsable de resolver cualquier incidente grave. Es la persona de mayor rango en cualquier llamada de incidente mayor, independientemente de su rango diario. Sus decisiones como comandante son definitivas.**
