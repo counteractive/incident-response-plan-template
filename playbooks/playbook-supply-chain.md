@@ -1,3 +1,4 @@
+
 ## Playbook: Compromiso de la cadena de suministro
 
 **Investigar, remediar (contener, erradicar) y comunicar en paralelo!.**
