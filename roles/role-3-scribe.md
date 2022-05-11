@@ -31,5 +31,5 @@ Lea y comprenda el plan de respuesta a incidentes, incluyendo los roles y los li
 #### Proceso de formación
 
 * Lea el plan de respuesta a incidentes, incluyendo todos los roles y libros de jugadas.
-* _OPCIONAL:_ Paralizar las acciones de un escriba durante un incidente o ejercicio, y buscar la opinión del escriba real y del jefe de Incidentes.
+* _OPCIONAL:_ Paralizar las acciones de un escriba durante un incidente o ejercicio, y buscar la opinión del escriba real y del Incident Commander.
 
