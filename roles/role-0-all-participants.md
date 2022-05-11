@@ -2,7 +2,7 @@
 
 ### Descripción
 
-Todos los participantes en la respuesta a un incidente tienen la responsabilidad de ayudar a resolver el incidente de acuerdo con el plan de respuesta a incidentes, bajo la autoridad del Jefe de Incidentes.
+Todos los participantes en la respuesta a un incidente tienen la responsabilidad de ayudar a resolver el incidente de acuerdo con el plan de respuesta a incidentes, bajo la autoridad del Incident Commander.
 
 ### Deberes
 
@@ -15,8 +15,8 @@ Todos los participantes en la respuesta a un incidente tienen la responsabilidad
 * Habla con claridad.
 * Sea directo y objetivo.
 * Mantenga las conversaciones/debates breves y al grano.
-* Comunicar cualquier preocupación al Jefe de Incidentes (IC) en la llamada.
-* Respetar las limitaciones de tiempo dadas por el Jefe del Incidente.
+* Comunicar cualquier preocupación al Incident Commander (IC) en la llamada.
+* Respetar las limitaciones de tiempo dadas por el Incident Commander.
 * Si te unes a un solo canal (llamada o chat), no participes activamente, ya que provoca una comunicación inconexa.
 * **Utilice una terminología clara y evite acrónimos o abreviaturas. La claridad y la precisión son más importantes que la brevedad.**
 
@@ -31,12 +31,12 @@ El [procedimiento de voz] estándar de la radio (https://en.wikipedia.org/wiki/V
 
 **No** invente nuevas abreviaturas; favorezca ser explícito sobre lo implícito.
 
-#### Seguir al jefe del Incidente
+#### Seguir al Incident Commander
 
-El jefe del incidente (IC) es el líder del proceso de respuesta al incidente.
+El Incident Commander (IC) es el líder del proceso de respuesta al incidente.
 
-* Siga las instrucciones del jefe del incidente.
-* No realice ninguna acción a menos que el jefe del incidente se lo indique.
+* Siga las instrucciones del Incident Commander.
+* No realice ninguna acción a menos que el Incident Commander se lo indique.
 * El jefe normalmente sondeará si hay objeciones fuertes antes de asignar una acción importante. Plantee sus objeciones si las tiene.
 * Una vez que el jefe haya tomado una decisión, sígala (incluso si no está de acuerdo).
 * Responde a cualquier pregunta que te haga el jefe de forma clara y concisa. Responder "no sé" es aceptable. No adivine.
