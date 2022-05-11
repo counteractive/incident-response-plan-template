@@ -1,3 +1,4 @@
+
 ## Rol: Delegado del Incident Commander (Subdelegado)
 
 ### Descripción
