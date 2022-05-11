@@ -1,7 +1,7 @@
 # Realizar una revisión posterior a la acción (Conduct an After Action Review, AAR)
 
 1. Programe una reunión de revisión posterior a la acción (AAR) dentro de {{AAR_SLA}} e invite a los asistentes que figuran en {{AAR_ATTENDEES}}. Incluya siempre a los siguientes:
-    * El jefe del incidente.
+    * El Incident Commander.
     * Los propietarios de los servicios implicados en el incidente.
     * Ingeniero(s)/responsable(s) clave(s) implicado(s) en el incidente.
 1. Designe a un propietario del AAR que investigue el incidente antes de la reunión para prepararlo, estudiando el proceso del incidente en sí, incluyendo la revisión de notas e informes.
