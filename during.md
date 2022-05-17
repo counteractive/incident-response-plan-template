@@ -35,7 +35,7 @@ Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en 
 
 `TODO: Personalizar las categorías/severidades según sea necesario.  Este sencillo ejemplo (incidente vs. no incidente) se basa en las categorías de impacto del NIST SP 800-61r2.`
 
-#Iniciar la respuesta
+# Iniciar la respuesta
 
 ## Nombrar el incidente
 
@@ -98,7 +98,7 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 #### Referencia: Estructura de la llamada de respuesta inicial
 
-*Incident Commander (IC): Mi nombre es [NOMBRE], soy el Incident Commander.  He designado a [NOMBRE] como adjunto y a [NOMBRE] como escribiente. ¿Quién está en la llamada?
+* Incident Commander (IC): Mi nombre es [NOMBRE], soy el Incident Commander.  He designado a [NOMBRE] como adjunto y a [NOMBRE] como escribiente. ¿Quién está en la llamada?
 * SCRIBE: [Toma asistencia]
 * IC: [Si falta personal clave] Diputado, por favor llame a [PERSONAL FALTANTE].
 * IC: [Hace preguntas para comprender la situación, los síntomas, el alcance, el vector, el impacto y el calendario del informador del incidente, los SME aplicables para los sistemas y las unidades de negocio].
@@ -179,7 +179,7 @@ Si un incidente resulta ser dos o más incidentes distintos:
 
 ## Crear el archivo del incidente
 
-1. Cree un nuevo archivo de incidentes en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente] (#name-the-incident).  Utilice este archivo para el almacenamiento seguro de documentación, pruebas, artefactos, _etc._.
+1. Cree un nuevo archivo de incidentes en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente](#name-the-incident).  Utilice este archivo para el almacenamiento seguro de documentación, pruebas, artefactos, _etc._.
     * Proporcionar un almacenamiento digital seguro.
     * Proporcionar un intercambio de archivos seguro.
     * Obtener almacenamiento físico.
@@ -359,17 +359,17 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 
 # Remediar
 
-**Investigar](#investigate), [remediar](#remediate) y [comunicar](#comunicate) en paralelo, utilizando equipos separados, si es posible.** El Incident Commander coordinará estas actividades. Notifique al Incident Commander si hay pasos que el equipo debe considerar
+**[Investigar](#investigate), [remediar](#remediate) y [comunicar](#comunicate) en paralelo, utilizando equipos separados, si es posible.** El Incident Commander coordinará estas actividades. Notifique al Incident Commander si hay pasos que el equipo debe considerar
 
 ## Actualización del plan de remediación
 
 1. Revise el archivo del incidente en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente](#name-the-incident)
-1. 2. Revise los [playbook](#playbooks) aplicables.
-1. Revise la [lista de recursos de respuesta](#reference-response-resource-list)).
-1. Considere qué tácticas del atacante están en juego en este incidente.  Utilice la lista de MITRE [ATT&CK](https://attack.mitre.org/wiki/Main_Page) (_i._, Persistencia, Escalada de Privilegios, Evasión de la Defensa, Acceso a Credenciales, Descubrimiento, Movimiento Lateral, Ejecución, Recolección, Exfiltración y Mando y Control), o un marco similar.
-1. Desarrollar remedios para cada táctica en juego, en la medida en que sea factible teniendo en cuenta las herramientas y los recursos existentes.  Considere remedios para [Proteger](#protect), [Detectar](#detect), [Contener](#contain), y [Erradicar](#eradicate) cada comportamiento del atacante.
-1. Priorizar en base a la [estrategia de tiempo](#choose-remediation-timing), el impacto y la urgencia.
-1. Documentar en el archivo de incidentes.
+2. Revise los [playbook](#playbooks) aplicables.
+3. Revise la [lista de recursos de respuesta](#reference-response-resource-list).
+4. Considere qué tácticas del atacante están en juego en este incidente.  Utilice la lista de MITRE [ATT&CK](https://attack.mitre.org/wiki/Main_Page) (_i._, Persistencia, Escalada de Privilegios, Evasión de la Defensa, Acceso a Credenciales, Descubrimiento, Movimiento Lateral, Ejecución, Recolección, Exfiltración y Mando y Control), o un marco similar.
+5. Desarrollar remedios para cada táctica en juego, en la medida en que sea factible teniendo en cuenta las herramientas y los recursos existentes.  Considere remedios para [Proteger](#protect), [Detectar](#detect), [Contener](#contain), y [Erradicar](#eradicate) cada comportamiento del atacante.
+6. Priorizar en base a la [estrategia de tiempo](#choose-remediation-timing), el impacto y la urgencia.
+7. Documentar en el archivo de incidentes.
 
 Utilice [marcos de seguridad de la información (infosec)](https://www.nist.gov/cyberframework) como inspiración, pero **no utilice la reparación de incidentes como sustituto de un programa de infosec con un marco apropiado.** Utilícelos para complementarse.
 
@@ -452,9 +452,9 @@ Determine la estrategia de plazos -cuando se llevarán a cabo las acciones de re
 
 [Actualizar el plan de remediación](#update-remediation-plan) y repetir hasta el cierre.
 
-#Comunicar
+# Comunicar
 
-**Investigar](#investigate), [remediar](#remediate) y [comunicar](#comunicate) en paralelo, utilizando equipos separados, si es posible.  Notifique al Incident Commander si hay pasos que el equipo debe considerar
+* [Investigar](#investigate), [remediar](#remediate) y [comunicar](#comunicate) en paralelo, utilizando equipos separados, si es posible.  Notifique al Incident Commander si hay pasos que el equipo debe considerar
 
 Toda comunicación debe incluir la información más precisa disponible.  Muestre integridad.  No comunicar especulaciones.
 
