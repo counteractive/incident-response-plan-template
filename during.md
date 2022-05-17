@@ -59,14 +59,14 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
 ### Referencia: Estructura del equipo de respuesta
 
 * Equipo de Mando
-  * [Incident Commander](#role-incident-commander-ic)
-  * [Incident Commander-Adjunto](#role-deputy-incident-commander-deputy)
-  * [Escriba](#role-scribe)
+  * [Incident Commander](#rol-incident-commander)
+  * [Incident Commander-Adjunto](#rol-delegado-del-incident-commander-subdelegado)
+  * [Escriba](#rol-scriba)
 * Equipo de enlace
-  * Enlace [interno](#role-liaison)
+  * Enlace [interno](#rol-enlace)
   * Enlace externo
 * Equipo de operaciones
-  * [Expertos en la materia](#role-subject-matter-expert-sme) (PYMES) para sistemas
+  * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (PYMES) para sistemas
   * PYMES para equipos/unidades de negocio
   * PYMES para Funciones Ejecutivas (_por ejemplo_, Legal, RRHH, Finanzas)
 
@@ -89,7 +89,7 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 ### Realizar la llamada de respuesta inicial
 
-1. Realice la llamada inicial utilizando la [estructura de llamada de respuesta inicial](#reference-initial-response-call-structure)
+1. Realice la llamada inicial utilizando la [estructura de llamada de respuesta inicial](#referencia-estructura-de-la-llamada-de-respuesta-inicial)
 2. Siga las instrucciones del Incident Commander.  Si el Incident Commander de turno/de guardia no se une a la llamada **dentro de {{INCIDENT_COMMANDER_RESPONSE_SLA}}** y usted es un Incident Commander capacitado, tome el mando de la llamada.
 3. Siga las [instrucciones correspondientes a su función](#roles).
 4. Siga la llamada y el chat, y comente según corresponda.  Si no es un SME, filtre las aportaciones a través del SME de su equipo si es posible.
@@ -102,7 +102,7 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 * SCRIBE: [Toma asistencia]
 * IC: [Si falta personal clave] Diputado, por favor llame a [PERSONAL FALTANTE].
 * IC: [Hace preguntas para comprender la situación, los síntomas, el alcance, el vector, el impacto y el calendario del informador del incidente, los SME aplicables para los sistemas y las unidades de negocio].
-* PYMES: [Responde brevemente a las preguntas del CI].
+* PYMES: [Responde brevemente a las preguntas del IC].
 * IC: [Si se trata de un incidente]:
   * En este momento, el resumen del incidente es el siguiente: [reitera el resumen].  El equipo de investigación estará dirigido por [NOMBRE], el equipo de reparación estará dirigido por [NOMBRE] y el equipo de comunicación estará dirigido por [NOMBRE].  Ellos coordinarán la composición del equipo y me informarán.  Los miembros del equipo, por favor, informen a su jefe de equipo correspondiente.
   * ¿Qué medidas de investigación, corrección o comunicación se han tomado ya? [esta debería ser una lista corta, pero tiene que salir ahora]
@@ -125,7 +125,7 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 ### Realizar la actualización de la respuesta
 
-* Llevar a cabo actualizaciones programadas utilizando la [estructura de llamada de actualización](#reference-response-update-call-structure) cada {{UPDATE_FREQUENCY}} en el puente activo. `TODO: Personalizar la frecuencia de actualización y los scripts; se recomienda no más de dos veces al día.`
+* Llevar a cabo actualizaciones programadas utilizando la [estructura de llamada de actualización](#referencia-estructura-de-la-llamada-de-actualización-de-la-respuesta) cada {{UPDATE_FREQUENCY}} en el puente activo. `TODO: Personalizar la frecuencia de actualización y los scripts; se recomienda no más de dos veces al día.`
 * Ajustar la frecuencia según sea necesario.
 * Coordinar las actualizaciones independientes (_por ejemplo_, ejecutivas, legales) según sea necesario, pero con la menor frecuencia posible.
 
@@ -168,24 +168,24 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 Si un incidente resulta ser dos o más incidentes distintos:
 
-* Establezca un nuevo [archivo de incidentes](#create-incident-file).
+* Establezca un nuevo [archivo de incidentes](#crear-el-archivo-del-incidente).
 * Haga un seguimiento y coordine la investigación, la reparación y la comunicación en el archivo correspondiente.
 * Considere la posibilidad de establecer subequipos para cada incidente.
 * **Mantener un Incident Commander de alto nivel**, para coordinar los activos de baja densidad y alta demanda y mantener la unidad de mando.
 
 # Investigar
 
-**[Investigar](#investigate), [remediar](#remediate) y [comunicar](#communicate) en paralelo, utilizando equipos separados, si es posible.** El Incident Commander coordinará estas actividades.  Notifique al Incident Commander si hay pasos que el equipo debe considerar.
+**[Investigar](#investigar), [Remediar](#remediar) y [comunicar](#communicate) en paralelo, utilizando equipos separados, si es posible.** El Incident Commander coordinará estas actividades.  Notifique al Incident Commander si hay pasos que el equipo debe considerar.
 
 ## Crear el archivo del incidente
 
-1. Cree un nuevo archivo de incidentes en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente](#name-the-incident).  Utilice este archivo para el almacenamiento seguro de documentación, pruebas, artefactos, _etc._.
+1. Cree un nuevo archivo de incidentes en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente](#nombre-del-incidente).  Utilice este archivo para el almacenamiento seguro de documentación, pruebas, artefactos, _etc._.
     * Proporcionar un almacenamiento digital seguro.
     * Proporcionar un intercambio de archivos seguro.
     * Obtener almacenamiento físico.
     * Compartir la ubicación del archivo del incidente en la llamada y el chat.
     * `TODO: Personalizar y automatizar la ubicación del archivo y el procedimiento`.
-1. Documente el impacto funcional y de la información, si se conoce (véase [Assess](#assess)). `TODO: Personalizar las categorías de impacto, si es necesario.`
+1. Documente el impacto funcional y de la información, si se conoce (véase [Evaluar](#evaluar)). `TODO: Personalizar las categorías de impacto, si es necesario.`
 2. Documentar el vector, si se conoce (_por ejemplo_ web, correo electrónico, medios extraíbles). Tarea: Personalizar la lista de vectores, si es necesario.
 3. Documente el resumen del incidente: un breve resumen del vector, el impacto, la investigación y la situación de la reparación, si se conoce.
 4. Documente la línea de tiempo del incidente, incluyendo la actividad del atacante y la actividad de la respuesta. `TODO: Añadir líneas de tiempo con diferentes detalles, según sea necesario.`
@@ -245,7 +245,7 @@ Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
         * **¿Quién?**: atacante, usuarios afectados, clientes afectados, etc.?
 1. **Identificar y priorizar los dispositivos y estrategias testigo** para responder a las preguntas clave.
     * Consultar los diagramas de la red, los sistemas de gestión de activos y la experiencia de las PYMES
-    * Consultar la [Lista de recursos de respuesta](#reference-response-resource-list))
+    * Consultar la [Lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta))
 1. Consulte los [playbook de incidentes](#playbooks) para conocer las preguntas clave, los dispositivos testigos y las estrategias para investigar las amenazas comunes o muy dañinas.
 
 **El plan de investigación es fundamental para una respuesta eficaz; impulsa todas las acciones de investigación.  Utilice el pensamiento crítico, la creatividad y el buen juicio.**
@@ -275,7 +275,7 @@ Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más 
 
 > Haga hincapié en los indicadores **dinámicos y de comportamiento** junto con las huellas digitales estáticas.
 
-* Crear IOCs basados en [pistas iniciales](#collect-initial-leads) y [análisis](#analyze-evidence).
+* Crear IOCs basados en [pistas iniciales](#recoger-las-pistas-iniciales) y [análisis](#analyze-evidence).
 * Cree IOCs usando un formato abierto soportado por sus herramientas (_por ejemplo_, [STIX 2.0](https://oasis-open.github.io/cti-documentation/stix/intro)), si es posible. `TODO: Personalizar el formato de los COIs según sea necesario.`
 * Utilice la automatización, si es posible. `TODO: Añadir un procedimiento de despliegue/revocación de COIs.`
 * **No** desplegar "feeds" de COIs no relacionados y no curados, ya que pueden causar confusión y fatiga.
@@ -355,19 +355,19 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 
 ## Iterar la investigación
 
-[Actualizar el plan de investigación](#update-investigative-plan-and-incident-file) y repetir hasta el cierre.
+[Actualizar el plan de investigación](#actualizar-el-plan-de-investigación-y-el-archivo-del-incidente) y repetir hasta el cierre.
 
 # Remediar
 
-**[Investigar](#investigate), [remediar](#remediate) y [comunicar](#comunicate) en paralelo, utilizando equipos separados, si es posible.** El Incident Commander coordinará estas actividades. Notifique al Incident Commander si hay pasos que el equipo debe considerar
+**[Investigar](#investigar), [Remediar](#remediar) y [Comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.** El Incident Commander coordinará estas actividades. Notifique al Incident Commander si hay pasos que el equipo debe considerar
 
 ## Actualización del plan de remediación
 
-1. Revise el archivo del incidente en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente](#name-the-incident)
+1. Revise el archivo del incidente en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente](#nombre-del-incidente)
 2. Revise los [playbook](#playbooks) aplicables.
-3. Revise la [lista de recursos de respuesta](#reference-response-resource-list).
+3. Revise la [lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta).
 4. Considere qué tácticas del atacante están en juego en este incidente.  Utilice la lista de MITRE [ATT&CK](https://attack.mitre.org/wiki/Main_Page) (_i._, Persistencia, Escalada de Privilegios, Evasión de la Defensa, Acceso a Credenciales, Descubrimiento, Movimiento Lateral, Ejecución, Recolección, Exfiltración y Mando y Control), o un marco similar.
-5. Desarrollar remedios para cada táctica en juego, en la medida en que sea factible teniendo en cuenta las herramientas y los recursos existentes.  Considere remedios para [Proteger](#protect), [Detectar](#detect), [Contener](#contain), y [Erradicar](#eradicate) cada comportamiento del atacante.
+5. Desarrollar remedios para cada táctica en juego, en la medida en que sea factible teniendo en cuenta las herramientas y los recursos existentes.  Considere remedios para [Proteger](#protección), [Detectar](#detección), [Contener](#contención), y [Erradicar](#erradicar) cada comportamiento del atacante.
 6. Priorizar en base a la [estrategia de tiempo](#choose-remediation-timing), el impacto y la urgencia.
 7. Documentar en el archivo de incidentes.
 
@@ -443,18 +443,18 @@ Determine la estrategia de plazos -cuando se llevarán a cabo las acciones de re
 ## Ejecutar la remediación
 
 * Evaluar y explicar los riesgos de las acciones de remediación a las partes interesadas.  `TODO: Personalizar el procedimiento de aprobación de los riesgos de la remediación, si es necesario.`
-* Implementar inmediatamente aquellas acciones de remediación que afecten poco o nada al atacante (a veces llamadas "acciones de postura"). Por ejemplo, muchas de las acciones de [protección](#protect) y [detección](#detect) anteriores son buenas candidatas.
+* Implementar inmediatamente aquellas acciones de remediación que afecten poco o nada al atacante (a veces llamadas "acciones de postura"). Por ejemplo, muchas de las acciones de [protección](#protección) y [detección](#detección) anteriores son buenas candidatas.
 * Programar y asignar acciones de remediación de acuerdo con la estrategia de tiempo.
 * Ejecute las acciones de corrección en lotes, como eventos, para lograr la máxima eficacia y el mínimo riesgo.
 * Documentar el estado de ejecución y el tiempo en el archivo de incidentes, especialmente para las medidas temporales.
 
 ## Iterar la remediación
 
-[Actualizar el plan de remediación](#update-remediation-plan) y repetir hasta el cierre.
+[Actualizar el plan de remediación](#actualización-del-plan-de-remediación) y repetir hasta el cierre.
 
 # Comunicar
 
-* [Investigar](#investigate), [remediar](#remediate) y [comunicar](#comunicate) en paralelo, utilizando equipos separados, si es posible.  Notifique al Incident Commander si hay pasos que el equipo debe considerar
+* [Investigar](#investigar), [Remediar](#remediar) y [Comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.  Notifique al Incident Commander si hay pasos que el equipo debe considerar
 
 Toda comunicación debe incluir la información más precisa disponible.  Muestre integridad.  No comunicar especulaciones.
 
@@ -474,7 +474,7 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 
 ### Crear Informe de Incidentes
 
-* Tras el cierre del incidente, capture la información en el [archivo del incidente](#create-incident-file) para su distribución utilizando el formato en {{INCIDENT_REPORT_TEMPLATE}}.  **Si los informes de vector, impacto, resumen, línea de tiempo y actividad están completos, esto puede ser totalmente automatizado.**
+* Tras el cierre del incidente, capture la información en el [archivo del incidente](#crear-archivo-del-incidente) para su distribución utilizando el formato en {{INCIDENT_REPORT_TEMPLATE}}.  **Si los informes de vector, impacto, resumen, línea de tiempo y actividad están completos, esto puede ser totalmente automatizado.**
 * Distribuir el informe de incidentes a lo siguiente: {{INCIDENT_REPORT_RECIPIENTS}}.
 * `TODO: Personalizar la creación y distribución del informe de incidentes, si es necesario`.
 
@@ -495,7 +495,7 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 * Sea honesto, acepte la responsabilidad y presente los hechos, junto con el plan para prevenir incidentes similares en el futuro.
 * Sea lo más detallado posible con la línea de tiempo.
 * Sea lo más detallado posible en cuanto a la información que se vio comprometida y cómo afecta a los clientes. Si estábamos almacenando algo que no debíamos, sé honesto al respecto. Saldrá a la luz más tarde y será mucho peor.
-* No hablemos de las partes externas que podrían haber causado el problema, a menos que ya lo hayan hecho público, en cuyo caso enlazaremos con su información. Comunícate con ellos de forma independiente (ver [Notificar a los proveedores](#notify-vendors-and-partners))
+* No hablemos de las partes externas que podrían haber causado el problema, a menos que ya lo hayan hecho público, en cuyo caso enlazaremos con su información. Comunícate con ellos de forma independiente (ver [Notificar a los proveedores](#notificar-a-los-proveedores-y-socios))
 * Publique la comunicación externa lo antes posible. Las malas noticias no mejoran con el tiempo.
 * Si es posible, contacte con los equipos de seguridad internos de los clientes antes de notificar al público.
 
