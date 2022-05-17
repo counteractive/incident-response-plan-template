@@ -1,4 +1,6 @@
----
+# Para generar correctamente el plan de respuestas
+# hay que cambiar el string de la derecha (incluido los corchetes) 
+# por el dato que queramos. 
 
 # The name of your organization (e.g., Acme, Inc.)
 COMPANY_NAME: '{{COMPANY_NAME}}'
