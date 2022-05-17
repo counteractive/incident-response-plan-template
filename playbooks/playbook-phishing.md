@@ -126,7 +126,7 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
     * Recibir un correo electrónico o un archivo adjunto que no se esperaba, pero que proviene de alguien conocido (contactar con el remitente antes de abrirlo).
     * Informar de actividades sospechosas al departamento de TI o de seguridad.
 1. Asegúrate de que el personal de TI y de seguridad está al día de las técnicas de phishing más recientes.
-1. Determine si ha fallado algún conrol al ser victima de un ataque y rectifíquelo. He aquí una [buena fuente](https://www.proofpoint.com/us/security-awareness/post/14-things-do-after-phishing-attack) a tener en cuenta tras un ataque de phishing.
+1. Determine si ha fallado algún control al ser victima de un ataque y rectifíquelo. He aquí una [buena fuente](https://www.proofpoint.com/us/security-awareness/post/14-things-do-after-phishing-attack) a tener en cuenta tras un ataque de phishing.
 
 ### Recursos
 
