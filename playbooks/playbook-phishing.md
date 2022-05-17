@@ -53,7 +53,7 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 ### Remediar
 
 * **Planificar eventos de remediación** en los que estos pasos se pongan en marcha juntos (o de forma coordinada), con los equipos adecuados listos para responder a cualquier interrupción.
-* **Considere el momento y las compensaciones** de las acciones de reparación: su respuesta tiene consecuencias.
+* **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
 
 #### Contener
 
