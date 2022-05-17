@@ -8,13 +8,13 @@ A continuación se presentan las descripciones, los deberes y la formación para
 
 * Equipo de Mando
   * [Incident Commander](#rol-incident-commander)
-  * [Incident Commander-Adjunto](#rol-delegado-del-incident-commander-(subdelegado))
+  * [Incident Commander-Adjunto](#rol-delegado-del-incident-commander-subdelegado)
   * [Escriba](#rol-escriba)
 * Equipo de enlace
   * Enlace Interno [Enlace](#rol-enlace)
   * Enlace externo
 * Equipo de Operaciones
-  * [Expertos en la materia](#rol-experto-en-la-materia-{subject-matter-expert-(sme)}) (PYMES) para Sistemas
+  * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (PYMES) para Sistemas
   * PYMES para equipos/unidades de negocio
   * PYMES para las funciones ejecutivas (_e.j._, Legal, RRHH, Finanzas)
 En el caso de incidentes complejos de mayor envergadura, la estructura de funciones puede ajustarse para tener en cuenta la creación de subequipos. Para más información, lea cómo gestionamos los [Incidentes Complejos](/before/complex_incidents.md).
