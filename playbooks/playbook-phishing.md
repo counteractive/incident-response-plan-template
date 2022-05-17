@@ -11,7 +11,7 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 1. **Ámbito del ataque** Normalmente se le notificará que se está produciendo un posible ataque de phishing, ya sea por parte de un usuario, cliente o socio.
     * Determinar el **número total de usuarios afectados**.
-    * Comprender **las acciones de los usuarios** en la respuesta al phishing de un correo electrónico (_e.j._, ¿Descargaroón el archivo adjunto?, ¿Visitarón el sitio suplantado?, ¿O, dieron alguna información personal o comercial como credenciales?)
+    * Comprender **las acciones de los usuarios** en la respuesta al phishing de un correo electrónico (_e.j._, ¿Descargarón el archivo adjunto?, ¿Visitarón el sitio suplantado?, ¿O, dieron alguna información personal o comercial como credenciales?)
     * Encontrar la actividad potencialmente relacionada. Comprueba:
         * Redes Sociales
         * Cualquier correo electrónico sospechoso posible.
@@ -173,7 +173,7 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 7. Registra toda la información en el ticket, incluyendo notas manuscritas y de voz.
 8. Poner en cuarentena a los usuarios y sistemas afectados.
    `TODO: Personalizar el contenido de los pasos, automatizar tanto como sea posible.`
-10. Póngase en contacto con el [equipo de seguridad](#TODO-enlace-a-actual-recurso) y prepárase para participar en la respuesta según las indicaciones: investigación, reparación comunicación y recuperación.
+10. Póngase en contacto con el [equipo de seguridad](#TODO-enlace-a-actual-recurso) y prepárase para participar en la respuesta según las indicaciones: investigación, remediación comunicación y recuperación.
 
 #### Información adicional
 
