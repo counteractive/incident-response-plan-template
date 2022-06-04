@@ -6,7 +6,7 @@
 COMPANY_NAME: '{{COMPANY_NAME}}'
 
 # Name and email of plan author (e.g., Chris)
-AUTHOR_NAME: '{{AUTHOR_NAME}}'
+AUTHOR_NAME: 'Angel Manuel Aragón'
 
 # Email of plan author (e.g., contact@counteractive.net)
 AUTHOR_EMAIL: '{{AUTHOR_EMAIL}}'
