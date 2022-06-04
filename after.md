@@ -12,7 +12,7 @@ Documente las respuestas a las siguientes preguntas clave:
 
 1. **¿Qué ocurrió?** Cree una línea de tiempo, apoyada con datos u otros artefactos. **Evitar las culpas. Busca los hechos.**
 1. **¿Qué se suponía que iba a ocurrir?**
-    * Detallar las desviaciones del proceso, el procedimiento o las mejores prácticas, incluidas las evaluaciones de las PYMES.
+    * Detallar las desviaciones del proceso, el procedimiento o las mejores prácticas, incluidas las evaluaciones de los SME.
     * Identifique las formas en que el incidente podría haberse detectado antes o haberse respondido con mayor eficacia.
 1. **¿Cuáles fueron las causas fundamentales?** Encuentre la raíz de lo que ocurrió y de lo que debería haber ocurrido.
 1. **¿Cómo podemos mejorar?**  Capture los elementos de acción con asignados y fechas de vencimiento. Considerar:
