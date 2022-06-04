@@ -8,30 +8,30 @@ Este plan de respuesta a incidentes está basado en el plan conciso, directivo, 
 
 Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en {{TEST_DATE}}.
 
-`TODO: Personalice esta plantilla de plan para su organización utilizando las instrucciones en https://github.com/counteractive/incident-response-plan-template.  Para obtener servicios de respuesta a incidentes, o ayuda para personalizar, implementar o probar su plan, póngase en contacto con nosotros en contact@counteractive.net o en el (888) 925-5765.`
+`TODO: Personalice esta plantilla para su organización utilizando las instrucciones en https://github.com/counteractive/incident-response-plan-template.  Para obtener servicios de respuesta a incidentes, o ayuda para personalizar, implementar o probar su plan, póngase en contacto con nosotros en contact@counteractive.net o en el (888) 925-5765.`
 
 # Evaluar
 
 1. **Mantenga la calma y la profesionalidad.**
-2. Reúna la información pertinente, _por ejemplo_, alarmas, eventos, datos, suposiciones, intuiciones (**observe**).
+2. Reúna la información pertinente, _por ejemplo_, alarmas, eventos, datos, suposiciones, intuiciones (**observar**).
 3. Considerar las categorías de impacto, a continuación (**orientar**), y determinar si hay un posible incidente (**decidir**):
-4. Iniciar una respuesta si hay un incidente (**actuar**).  En caso de duda, inicie una respuesta. El Incident Commander y el equipo de respuesta pueden ajustarse tras la investigación y la revisión.
+4. Iniciar una respuesta si hay un incidente (**actuar**).  En caso de duda, inicie una respuesta. El responsable de gestión de incidentes y el equipo de respuesta pueden ajustarse tras la investigación y la revisión.
 
 ## Evaluar el impacto funcional
 
-¿Cuál es el impacto directo o probable en su misión? (_por ejemplo_, operaciones comerciales, empleados, clientes, usuarios)
+¿Cuál es el impacto directo o probable en su trabajo? (_por ejemplo_, operaciones comerciales, empleados, clientes, usuarios)
 
-* Degradación o fracaso de la misión/negocio: **incidente!**
+* Degradación o fracaso del trabajo/negocio: **incidente!**
 * Ninguno: evalúe el impacto de la información.
 
 ## Evaluar el impacto de la información
 
-¿Cuál es el impacto directo o probable sobre su información/datos, en particular los sensibles? (_por ejemplo_, información personal, datos de propiedad, financieros o sanitarios)
+¿Cuál es el impacto directo o probable sobre sus datos/información, en particular los sensibles? (_por ejemplo_, información personal, datos de propiedad, financieros o sanitarios)
 
-* Información a la que se ha accedido, tomado, cambiado o borrado: **incidente!**
+* Información a la que se ha accedido, cogido, cambiado o borrado: **incidente!**
 * Ninguno: gestión a través de canales no relacionados con incidentes (por ejemplo, un ticket de soporte).
 
-**Cada miembro del equipo está facultado para iniciar este proceso.** Si ves algo, di algo.
+**Cada miembro del equipo está facultado para comenzar este proceso.** Si ves algo, dilo.
 
 `TODO: Personalizar las categorías/severidades según sea necesario.  Este sencillo ejemplo (incidente vs. no incidente) se basa en las categorías de impacto del NIST SP 800-61r2.`
 
@@ -47,12 +47,12 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
 2. **No** discuta el incidente fuera del equipo de respuesta a menos que el Incident Commander lo autorice
 3. Inicie y/o únase al chat de respuesta en {{RESPONSE_CHAT}}. `ToDo: Añadir el procedimiento de lanzamiento del chat de respuesta.`
 4. Iniciar y/o unirse a la llamada de respuesta en {{RESPONSE_PHONE}} y/o {{RESPONSE_VTC}}. `TODO: Añadir el procedimiento de lanzamiento de la llamada de respuesta.`
-5. Prefiera la llamada de voz, el chat y el intercambio seguro de archivos sobre cualquier otro método.
+5. Preferible usar la llamada de voz, el chat y el intercambio seguro de archivos sobre cualquier otro método.
 6. **No** utilizar el correo electrónico principal si es posible.  Si el correo electrónico es necesario, utilícelo con moderación o use {{ALTERNATE_EMAIL}}.  Encripte los correos electrónicos cuando cualquier participante esté fuera del dominio {{ORGANIZATION_DOMAIN}}.  `TODO: Añadir detalles y procedimiento de correo electrónico alternativo, por ejemplo, Office 365 o GSuite bajo demanda`.
 7. **No** usar SMS/texto para comunicar el incidente, a menos que sea para decirle a alguien que se mueva a un canal más seguro.
-8. Invite a los intervinientes de guardia/de guardia a la llamada de respuesta y al chat de respuesta.
+8. Invite al personal de turno/guardia a la llamada y al chat de respuesta.
     * Invite al equipo de seguridad.  `TODO: Añadir lista de contactos del equipo de seguridad o procedimiento.`
-    * Invitar a una PYME de los equipos y sistemas afectados. `TODO: Añadir la lista de contactos de la PYME del equipo o el procedimiento.`
+    * Invitar al SME de los equipos y sistemas afectados. `TODO: Añadir la lista de contactos de la PYME del equipo o el procedimiento.`
     * Invitar a las partes interesadas ejecutivas y a los asesores jurídicos lo antes posible, pero dar prioridad a los responsables operativos.  `TODO: añadir una lista de contactos de las partes interesadas ejecutivas o un procedimiento.`
 9. OPCIONAL:_ Establecer una sala de colaboración en persona ("sala de guerra") para incidentes complejos o graves. `TODO: Añadir el procedimiento de la sala de colaboración.`
 
@@ -67,8 +67,8 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
   * Enlace externo
 * Equipo de operaciones
   * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (PYMES) para sistemas
-  * PYMES para equipos/unidades de negocio
-  * PYMES para Funciones Ejecutivas (_por ejemplo_, Legal, RRHH, Finanzas)
+  * SME para equipos/unidades de negocio
+  * SME para Funciones Ejecutivas (_por ejemplo_, Legal, RRHH, Finanzas)
 
 `TODO: Modificar la estructura de roles según sea necesario`.
 
@@ -85,30 +85,30 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 `TODO: Personalizar la información de contacto del equipo de respuesta.  Incluya los procedimientos de contacto en las listas, que pueden ser estáticas o dinámicas.`
 
-## Establecer el ritmo de la batalla
+## Establecer el ritmo de batalla
 
-### Realizar la llamada de respuesta inicial
+### Realizar la primera llamada de respuesta
 
 1. Realice la llamada inicial utilizando la [estructura de llamada de respuesta inicial](#referencia-estructura-de-la-llamada-de-respuesta-inicial)
 2. Siga las instrucciones del Incident Commander.  Si el Incident Commander de turno/de guardia no se une a la llamada **dentro de {{INCIDENT_COMMANDER_RESPONSE_SLA}}** y usted es un Incident Commander capacitado, tome el mando de la llamada.
 3. Siga las [instrucciones correspondientes a su función](#roles).
-4. Siga la llamada y el chat, y comente según corresponda.  Si no es un SME, filtre las aportaciones a través del SME de su equipo si es posible.
+4. Siga la llamada y el chat, y comente según corresponda.  Si no es un SME, comunique las aportaciones a través del SME de su equipo si es posible.
 5. **Mantenga la llamada y el chat activos durante todo el incidente para una comunicación basada en eventos.**
-6. Programe actualizaciones **cada {{UPDATE_FREQUENCY}}** en el puente activo.
+6. Programe actualizaciones **cada {{UPDATE_FREQUENCY}}** sobre la comunicación activa.
 
 #### Referencia: Estructura de la llamada de respuesta inicial
 
-* Incident Commander (IC): Mi nombre es [NOMBRE], soy el Incident Commander.  He designado a [NOMBRE] como adjunto y a [NOMBRE] como escribiente. ¿Quién está en la llamada?
-* SCRIBE: [Toma asistencia]
-* IC: [Si falta personal clave] Diputado, por favor llame a [PERSONAL FALTANTE].
-* IC: [Hace preguntas para comprender la situación, los síntomas, el alcance, el vector, el impacto y el calendario del informador del incidente, los SME aplicables para los sistemas y las unidades de negocio].
-* PYMES: [Responde brevemente a las preguntas del IC].
+* Incident Commander (IC): Mi nombre es [NOMBRE], soy el Incident Commander.  He designado a [NOMBRE] como adjunto y a [NOMBRE] como esccriba. ¿Quién está en la llamada?
+* ESCRIBA: [Toma asistencia]
+* IC: [Si falta personal clave] Adjunto, por favor llame a [PERSONAL FALTANTE].
+* IC: [Hace preguntas para comprender la situación, los síntomas, el alcance, el vector, el impacto y el calendario del reportador del incidente, los SME aplicables para los sistemas y las unidades de negocio].
+* SMEs: [Responde brevemente a las preguntas del IC].
 * IC: [Si se trata de un incidente]:
   * En este momento, el resumen del incidente es el siguiente: [reitera el resumen].  El equipo de investigación estará dirigido por [NOMBRE], el equipo de reparación estará dirigido por [NOMBRE] y el equipo de comunicación estará dirigido por [NOMBRE].  Ellos coordinarán la composición del equipo y me informarán.  Los miembros del equipo, por favor, informen a su jefe de equipo correspondiente.
   * ¿Qué medidas de investigación, corrección o comunicación se han tomado ya? [esta debería ser una lista corta, pero tiene que salir ahora]
   * Esta llamada y el chat permanecerán activos y disponibles hasta el cierre del incidente, por favor, utilícelos para todas las comunicaciones relacionadas con el incidente.  Proporcione actualizaciones de estado en tiempo real en el chat, si es posible.  ¿Hay alguna pregunta o aportación restante? [responde a las preguntas]
   * Líderes de equipo, por favor procedan con sus acciones planeadas.  Nos reuniremos de nuevo en [UPDATE_TIME] para discutir el estado.  Gracias.
-* IC: [Si esto no es un incidente]: En este momento, estos hechos no alcanzan el nivel de un incidente.  Me coordinaré directamente con el informador del incidente para las acciones de seguimiento.  Gracias por su tiempo.
+* IC: [Si esto no es un incidente]: En este momento, estos hechos no alcanzan el nivel de un incidente.  Me coordinaré directamente con el reportador del incidente para las acciones de seguimiento.  Gracias por su tiempo.
 
 #### Referencia: Etiqueta de la llamada
 
@@ -160,7 +160,7 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 * En la preparación de incidentes complejos, se predefinen tres subequipos: Investigación, Remediación y Comunicación, generalmente responsables de esas funciones de respuesta. `TODO: Personalizar la estructura de los subequipos si es necesario.`
 * Crear un puente de llamadas y un chat para cada subequipo.
-* El Incident Commander designará a los líderes de los equipos, que dependen del CI, y a los miembros de los equipos, que dependen de su líder.  _Los líderes de equipo no tienen que estar formados como Incident Commanders, pero es preferible que tengan alguna experiencia de liderazgo._
+* El Incident Commander designará a los líderes de los equipos, que dependen del IC, y a los miembros de los equipos, que dependen de su líder.  _Los líderes de equipo no tienen que estar formados como Incident Commanders, pero es preferible que tengan alguna experiencia de liderazgo._
 * El Incident Commander puede ajustar el propósito o el nombre de los subequipos según sea necesario.
 * Si desea cambiar de equipo, pregunte a su **líder de equipo actual**.  **No** pregunte al Incident Commander, o al líder del otro(s) equipo(s).  Utilice la cadena de mando.
 
@@ -186,7 +186,7 @@ Si un incidente resulta ser dos o más incidentes distintos:
     * Compartir la ubicación del archivo del incidente en la llamada y el chat.
     * `TODO: Personalizar y automatizar la ubicación del archivo y el procedimiento`.
 1. Documente el impacto funcional y de la información, si se conoce (véase [Evaluar](#evaluar)). `TODO: Personalizar las categorías de impacto, si es necesario.`
-2. Documentar el vector, si se conoce (_por ejemplo_ web, correo electrónico, medios extraíbles). Tarea: Personalizar la lista de vectores, si es necesario.
+2. Documentar el vector, si se conoce (_por ejemplo_ web, correo electrónico, medios extraíbles). `TODO: Personalizar la lista de vectores, si es necesario.`
 3. Documente el resumen del incidente: un breve resumen del vector, el impacto, la investigación y la situación de la reparación, si se conoce.
 4. Documente la línea de tiempo del incidente, incluyendo la actividad del atacante y la actividad de la respuesta. `TODO: Añadir líneas de tiempo con diferentes detalles, según sea necesario.`
 5. Documente los pasos de investigación, reparación y comunicación.  Documente las actividades de forma independiente para que puedan combinarse y reutilizarse, si es posible.
@@ -204,10 +204,10 @@ Si un incidente resulta ser dos o más incidentes distintos:
 
 ## Recoger las pistas iniciales
 
-1. Entrevistar a los informadores del incidente.
+1. Entrevistar a los reportadores del incidente.
 2. Recoger los datos de apoyo iniciales (_e._, alarmas, eventos, datos, suposiciones, intuiciones) en el archivo del incidente.
-3. Entrevistar a la(s) PYME con experiencia en el dominio o el sistema, para comprender los detalles técnicos, el contexto y el riesgo.
-4. Entrevistar a la(s) PYME de la unidad de negocio afectada, para comprender el impacto de la misión/negocio, el contexto y el riesgo.
+3. Entrevistar a lo(s) SME con experiencia en el dominio o el sistema, para comprender los detalles técnicos, el contexto y el riesgo.
+4. Entrevistar a lo(s) SME de la unidad de negocio afectada, para comprender el impacto de la misión/negocio, el contexto y el riesgo.
 5. Asegúrese de que las pistas son relevantes, detalladas y procesables.
 
 ### Referencia: Lista de recursos de respuesta
@@ -244,7 +244,7 @@ Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
         * **¿Por qué?**: objetivo, momento, acceso a x datos, acceso a y sistema, etc.
         * **¿Quién?**: atacante, usuarios afectados, clientes afectados, etc.?
 1. **Identificar y priorizar los dispositivos y estrategias testigo** para responder a las preguntas clave.
-    * Consultar los diagramas de la red, los sistemas de gestión de activos y la experiencia de las PYMES
+    * Consultar los diagramas de la red, los sistemas de gestión de activos y la experiencia de las SME
     * Consultar la [Lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta))
 1. Consulte los [playbook de incidentes](#playbooks) para conocer las preguntas clave, los dispositivos testigos y las estrategias para investigar las amenazas comunes o muy dañinas.
 
@@ -252,22 +252,22 @@ Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
 
 ### Referencia: Táctica del atacante a la matriz de preguntas clave
 
-Táctica del atacante    | La forma en que los atacantes ...         | Posibles preguntas clave
------------------------ | ----------------------------------------- | -----------------------------------------
-Reconocimiento          | ... aprender sobre los objetivos          | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
-Desarrollo de recursos  | construir infraestructuras.               | ¿Qué sistemas?
-Acceso inicial          | ... entrar                                | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
-Ejecución               | ... ejecutar código hostil                | ¿Qué malware? ¿Qué herramientas? ¿Dónde? ¿Cuándo?
-Persistencia            | ... quédate por aquí                      | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
-Escalada de Privilegios | ... obtener acceso de mayor nivel         | ¿Cómo? ¿Dónde? ¿Qué herramientas?
-Evasión de la defensa   | ... esquivar la seguridad                 | ¿Cómo? ¿Dónde? ¿Desde cuándo?
-Acceso a credenciales   | ... obtener/crear cuentas                 | ¿Qué cuentas? ¿Desde cuándo? ¿Por qué?
-Descubrimiento          | ... aprender nuestra red                  | ¿Cómo? ¿Dónde? ¿Qué saben?
-Movimiento lateral      | ... moverse                               | ¿Cómo? ¿Cuándo? ¿Qué cuentas?
-Recogida                | ... encontrar y reunir datos              | ¿Qué datos? ¿Por qué? ¿Cuándo? ¿Dónde?
-Mando y control         | ... herramientas y sistemas de control    | ¿Cómo? ¿Dónde? ¿Quién? ¿Por qué?
-Exfiltración            | ... tomar datos                           | ¿Qué datos? ¿Cómo? ¿Cuándo? ¿Dónde?
-Impacto                 |... romper cosas.                          | ¿Qué sistemas o datos? ¿Cómo? ¿Cuándo? ¿Dónde? ¿Cómo de malo?
+Táctica del atacante    | La forma en que los atacantes ...      | Posibles preguntas clave
+----------------------- |----------------------------------------| -----------------------------------------
+Reconocimiento          | ... aprender sobre los objetivos       | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
+Desarrollo de recursos  | ... construir infraestructuras.        | ¿Qué sistemas?
+Acceso inicial          | ... entrar                             | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
+Ejecución               | ... ejecutar código hostil             | ¿Qué malware? ¿Qué herramientas? ¿Dónde? ¿Cuándo?
+Persistencia            | ... quedarse en el sistema             | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
+Escalada de Privilegios | ... obtener acceso de mayor nivel      | ¿Cómo? ¿Dónde? ¿Qué herramientas?
+Evasión de la defensa   | ... esquivar la seguridad              | ¿Cómo? ¿Dónde? ¿Desde cuándo?
+Acceso a credenciales   | ... obtener/crear cuentas              | ¿Qué cuentas? ¿Desde cuándo? ¿Por qué?
+Descubrimiento          | ... aprender nuestra red               | ¿Cómo? ¿Dónde? ¿Qué saben?
+Movimiento lateral      | ... moverse                            | ¿Cómo? ¿Cuándo? ¿Qué cuentas?
+Recogida                | ... encontrar y reunir datos           | ¿Qué datos? ¿Por qué? ¿Cuándo? ¿Dónde?
+Mando y control         | ... herramientas y sistemas de control | ¿Cómo? ¿Dónde? ¿Quién? ¿Por qué?
+Exfiltración            | ... tomar datos                        | ¿Qué datos? ¿Cómo? ¿Cuándo? ¿Dónde?
+Impacto                 | ... romper cosas.                      | ¿Qué sistemas o datos? ¿Cómo? ¿Cuándo? ¿Dónde? ¿Cómo de malo?
 
 Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más información e ideas.
 
@@ -278,11 +278,11 @@ Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más 
 * Crear IOCs basados en [pistas iniciales](#recoger-las-pistas-iniciales) y [análisis](#analyze-evidence).
 * Cree IOCs usando un formato abierto soportado por sus herramientas (_por ejemplo_, [STIX 2.0](https://oasis-open.github.io/cti-documentation/stix/intro)), si es posible. `TODO: Personalizar el formato de los COIs según sea necesario.`
 * Utilice la automatización, si es posible. `TODO: Añadir un procedimiento de despliegue/revocación de COIs.`
-* **No** desplegar "feeds" de COIs no relacionados y no curados, ya que pueden causar confusión y fatiga.
-* Considerar todos los tipos de COI:
+* **No** desplegar "feeds" de IOCs no relacionados y no curados, ya que pueden causar confusión y fatiga.
+* Considerar todos los tipos de IOC:
   * IOC basados en la red, como direcciones IP o MAC, puertos, direcciones de correo electrónico, contenido o metadatos del correo electrónico, URLs, dominios o patrones PCAP.
   * IOC basados en el host, como rutas, hashes de archivos, contenido o metadatos de archivos, claves de registro, MUTEXes, autoejecuciones o artefactos y permisos de usuarios.
-  * COIs basados en la nube, como patrones de registro para despliegues [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) o [IaaS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service)
+  * IOCs basados en la nube, como patrones de registro para despliegues [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) o [IaaS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service)
   * IOCs de comportamiento (a.ka., patrones, TTPs) tales como patrones de árbol de procesos, heurística, desviación de la línea base y patrones de inicio de sesión.
 * Correlacionar varios tipos de IOC, como indicadores basados en la red y en el host en los mismos sistemas.
 
@@ -299,7 +299,7 @@ Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más 
 * Recoger los registros relevantes de los sistemas (si no forman parte de la respuesta en vivo), agregadores, SIEM o consolas de dispositivos.  `TODO: Personalizar las herramientas y el procedimiento de recopilación de registros.`
 * Recoger la imagen de la memoria, si es necesario y si no forma parte de la respuesta en vivo, utilizando {{MEMORY_COLLECTION_TOOL}}.  `TODO: Personalizar las herramientas y el procedimiento de recogida de memoria.`
 * Recoger la imagen del disco, si es necesario, utilizando {{DISK_IMAGE_TOOL}}.  `TODO: Personalizar la herramienta y el procedimiento de recogida de imágenes de disco.`
-* Recoger y almacenar las pruebas de acuerdo con la política, y con la cadena de custodia adecuada. ToDo: Personalizar la política de recogida de pruebas y cadena de custodia.
+* Recoger y almacenar las pruebas de acuerdo con la política, y con la cadena de custodia adecuada. `TODO: Personalizar la política de recogida de pruebas y cadena de custodia.`
 
 Considere la posibilidad de recopilar los siguientes artefactos como evidencia, ya sea en tiempo real (_por ejemplo_, a través de EDR o un SIEM) o bajo demanda:
 
@@ -434,7 +434,7 @@ Utilice lo siguiente como punto de partida para la remediación de la erradicaci
 
 ## Elegir el momento de la reparación
 
-Determine la estrategia de plazos -cuando se llevarán a cabo las acciones de remediación- involucrando al Incident Commander, a los PYMES y propietarios del sistema, a los PYMES y propietarios de la unidad de negocio, y al equipo ejecutivo.  Cada estrategia es apropiada en diferentes circunstancias:
+Determine la estrategia de plazos -cuando se llevarán a cabo las acciones de remediación- involucrando al Incident Commander, a los SME y propietarios del sistema, a los SMEs y propietarios de la unidad de negocio, y al equipo ejecutivo.  Cada estrategia es apropiada en diferentes circunstancias:
 
 * Elija la reparación **inmediata** cuando sea más importante detener inmediatamente las actividades del atacante que seguir investigando.  Por ejemplo, una pérdida financiera en curso, o un fracaso de la misión en curso, una pérdida de datos activa, o la prevención de una amenaza significativa inminente.
 * Elija una reparación **retrasada** cuando sea importante completar la investigación o no alertar al atacante.  Por ejemplo, el compromiso a largo plazo de un atacante avanzado, el espionaje corporativo o el compromiso a gran escala de un número desconocido de sistemas.
