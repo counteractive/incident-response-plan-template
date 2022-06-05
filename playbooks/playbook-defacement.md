@@ -2,14 +2,14 @@
 ## Playbook: Desaparición de sitios web
 
 **Investigar, remediar (contener, erradicar) y comunicar en paralelo!**
-Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
+Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utilice su mejor criterio.
 
 ### Investigar
 
-1. Desconecte inmediatamente el servidor desfigurado para investigarlo.
+1. Desconecte inmediatamente el servidor desconfigurado para investigarlo.
     * Esto es especialmente importante si la desfiguración es insultante o provocadora de algún modo. Elimine esto de la vista del público tan pronto como sea posible para evitar daños, así como para mitigar el impacto del negocio.
     * El mensaje de desfiguración también puede contener información falsa que podría confundir a los usuarios o ponerlos en peligro.
-    * Desconectar el servidor permitirá una investigación más profunda de la desfiguración. Esto puede ser necesario, ya que el hacker puede haberse adentrado en la organización accediendo a servidores de aplicaciones, bases de datos, etc.
+    * Desconectar el servidor permitirá una investigación más profunda de la desfiguración. Esto puede ser necesario, ya que el ciberdelincuente puede haberse adentrado en la organización accediendo a servidores de aplicaciones, bases de datos, etc.
 2. Determine el origen de la vulnerabilidad del sistema que ha utilizado el atacante. Los exploits más comunes son:
     * Ataques de inyección SQL
         * Este tipo de ataque se produce cuando un atacante interfiere en las consultas de una aplicación a la base de datos. Por lo tanto, esto puede conducir a un acceso no autorizado a datos privados o sensibles. Lea más sobre los ataques de inyección SQL [aquí](https://www.acunetix.com/websitesecurity/sql-injection/)
@@ -28,12 +28,12 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
         * Comprobar los archivos con contenido estático
         * Escanear las bases de datos en busca de contenido malicioso
         * Comprobación de los enlaces presentes en la página
-3. Recoge cualquier pista sobre quién es el hacker o para qué organización trabaja. Considera las siguientes preguntas:
+3. Recoge cualquier pista sobre quién es el ciberdelincuente o para qué organización trabaja. Considera las siguientes preguntas:
     * ¿Qué representa la desfiguración? ¿Incluía un mensaje obvio?
-    * ¿Parece que la desfiguración es inofensiva o intencionada? ¿Podría ser el hacker un niño jugando o un grupo profesional que trabaja con un motivo?
+    * ¿Parece que la desfiguración es inofensiva o intencionada? ¿Podría ser el ciberdelincuente un niño jugando o un grupo profesional que trabaja con un motivo?
     * ¿Parece que su organización haya sido el objetivo? ¿Quién podría querer atacar a su organización?
-    * ¿Qué esperaba conseguir el hacker?
-    * Consulta [aquí](https://www.geeksforgeeks.org/types-of-hackers/) para saber más sobre los tipos de hackers que pueden haber atacado tu página web.
+    * ¿Qué esperaba conseguir el ciberdelincuente?
+    * Consulta [aquí](https://www.geeksforgeeks.org/types-of-hackers/) para saber más sobre los tipos de ciberdelincuentes que pueden haber atacado tu página web.
 4. Recoge otra información importante de la página que ha sido desfigurada, como por ejemplo
     * una captura de pantalla de la desfiguración
     * el dominio y la dirección IP de la página
@@ -76,7 +76,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 
 `TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación`
 
-1. Elimine el mensaje del hacker y reemplácelo por el contenido original y legítimo. Si se han perdido datos en el ataque, consulte las copias de seguridad y restaure la página original en la medida de lo posible.
+1. Elimine el mensaje del ciberdelincuente y reemplácelo por el contenido original y legítimo. Si se han perdido datos en el ataque, consulte las copias de seguridad y restaure la página original en la medida de lo posible.
     * Compruebe las copias de seguridad en busca de indicadores de compromiso
     * Considere la recuperación parcial y la prueba de integridad de las copias de seguridad
 2. Considere pedir a los usuarios que cambien sus credenciales de acceso si el servidor web tiene autenticación de usuario. 
@@ -88,7 +88,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 `TODO: Comuníquese con otros empleados para asegurarse de que todos entienden y contribuyen a los siguientes pasos, cuando sea aplicable`.
 
 1. Utilice el menor número de plug-ins posible. Los piratas informáticos tienen como objetivo los sitios web que son vulnerables y tienen muchas fuentes de entrada. Puedes limitar estas fuentes de entrada utilizando sólo lo que necesites y eliminando los plug-ins y el software que no utilices o sean antiguos. También es importante actualizarlos lo antes posible. 
-2. Controle de cerca y ordene el acceso a los contenidos administrativos. Permita que las personas accedan sólo a lo que necesitan. Esto reducirá la posibilidad de que un error humano provoque un ciberataque. Hay más métodos de prevención DIY mencionados en [este artículo](https://cirt.gy/index.php/node/116) (pasos 6-12) y en el recurso #4 al final de este libro de jugadas.
+2. Controle de cerca y ordene el acceso a los contenidos administrativos. Permita que las personas accedan sólo a lo que necesitan. Esto reducirá la posibilidad de que un error humano provoque un ciberataque. Hay más métodos de prevención DIY mencionados en [este artículo](https://cirt.gy/index.php/node/116) (pasos 6-12) y en el recurso #4 al final de este playbook.
 3. Comprueba regularmente si hay malware en tu sitio web escaneando el código fuente. Busca scripts, iframes o URLs que te parezcan desconocidos y asegúrate de escanear también las URLs que sí te resulten familiares.
 4. Hay muchos escáneres automáticos de sitios web de gran reputación que no le costarán nada de su tiempo y escanearán a fondo su sitio en busca de vulnerabilidades con regularidad. Aquí hay un [enlace a escáneres populares](https://resources.infosecinstitute.com/14-popular-web-application-vulnerability-scanners/#gref).
 5. Defiéndase contra los puntos comunes de explotación, como las inyecciones SQL y los ataques XSS. [Este artículo](https://www.banffcyber.com/knowledge-base/articles/best-practices-address-issue-web-defacement/) incluye las mejores prácticas para defender estos ataques.
@@ -122,7 +122,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
     1. [Aplicación de la ley local](#TODO-link-to-actual-resource)
     1. 1. [Aplicación de la ley a nivel estatal o regional](#TODO-link-to-actual-resource)
     1. 1. [Fuerzas de seguridad federales o nacionales](#TODO-link-to-actual-resource)
-1. Comuníquese con los proveedores de seguridad y de TI TODO: Vincule las siguientes viñetas con los recursos reales de su organización
+1. Comuníquese con los proveedores de seguridad y de TI `TODO: Vincule las siguientes viñetas con los recursos reales de su organización`
     1. Notifique y colabore con [proveedores gestionados](#TODO-link-to-actual-resource) según el procedimiento
     1. 2. Notificar y colaborar con [consultores de respuesta a incidentes](#TODO-link-to-actual-resource) por procedimiento
 
