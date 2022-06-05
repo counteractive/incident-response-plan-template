@@ -10,16 +10,16 @@ Todos los participantes en la respuesta a un incidente tienen la responsabilidad
 #### Exhibir la etiqueta de la llamada
 
 * Participar tanto en la llamada como en el chat.
-* Mantenga el ruido de fondo al mínimo.
-* Mantenga el micrófono silenciado hasta que tenga algo que decir.
-* Identifíquese cuando entre en la llamada; diga su nombre y su función (por ejemplo, "Soy el SME del equipo x").
-* Habla con claridad.
-* Sea directo y objetivo.
-* Mantenga las conversaciones/debates breves y al grano.
+* Mantener el ruido de fondo al mínimo.
+* Mantener el micrófono silenciado hasta que tenga algo que decir.
+* Identifícarse cuando entre en la llamada; diga su nombre y su función (por ejemplo, "Soy el SME del equipo x").
+* Hablar con claridad.
+* Ser directo y objetivo.
+* Mantener las conversaciones/debates breves y al grano.
 * Comunicar cualquier preocupación al Incident Commander (IC) en la llamada.
 * Respetar las limitaciones de tiempo dadas por el Incident Commander.
-* Si te unes a un solo canal (llamada o chat), no participes activamente, ya que provoca una comunicación inconexa.
-* **Utilice una terminología clara y evite acrónimos o abreviaturas. La claridad y la precisión son más importantes que la brevedad.**
+* Si te unes a un solo canal (llamada o chat), no participar activamente, ya que provoca una comunicación inconexa.
+* **Utilizar una terminología clara y evitar usar acrónimos o abreviaturas. La claridad y la precisión son más importantes que la brevedad.**
 
 ##### Referencia: Procedimiento común de voz
 

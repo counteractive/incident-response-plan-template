@@ -13,8 +13,8 @@ Los enlaces interactuan con otros equipos o partes interesadas fuera del equipo 
 #### Enlace con el exterior o con el cliente
 
 1. Subir cualquier mensaje de cara al público con respecto al incidente (Twitter, etc).
-1. Notificar al IC (Intelligence Customer) de cualquier cliente o cobertura de los medios de comunicación que informen de los efectos del incidente.
-1. Proporcionar a los clientes el mensaje externo de la autopsia una vez que se haya completado.
+1. Notificar al IC de cualquier cliente o medios de comunicación que informen de los efectos del incidente.
+1. Proporcionar a los clientes el mensaje externo del post-mortem una vez que se haya completado.
 1. Contactar o interactuar con las partes interesadas externas, como proveedores, socios, fuerzas de seguridad, _etc._
 1. **No** sentirse responsable de la creación de cada mensaje: trabajar con el Incident Commander y otras partes interesadas.
 1. Según proceda, mantener a los clientes informados durante un incidente.
@@ -37,9 +37,9 @@ Los enlaces interactuan con otros equipos o partes interesadas fuera del equipo 
 
 #### Enlace interno
 
-1. Página PYMES u otro personal de guardia según las instrucciones del Incident Commander.
+1. Página de SMEs u otro personal de guardia según las instrucciones del Incident Commander.
 1. Notificar o movilizar a otros equipos de la organización (por ejemplo, Finanzas, Legal, Marketing), según las instrucciones del Incident Commander.
-1. Seguir y anticiparse a las PYMES en la convocatoria.
+1. Seguir y anticiparse a los SMEs en la convocatoria.
 1. Interactuar con las partes interesadas y proporcionar actualizaciones de estado cuando sea necesario.
 1. Interactuar con las partes interesadas internas para responder a sus preguntas, para mantener la llamada principal libre de distracciones.
 1. Proporcionar actualizaciones periódicas de la situación al equipo ejecutivo, ofreciendo un resumen ejecutivo de la situación actual.

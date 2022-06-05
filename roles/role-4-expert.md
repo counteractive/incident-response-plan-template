@@ -3,15 +3,15 @@
 
 ### Descripción
 
-Un experto en la materia (SME) es un experto en el dominio o propietario designado de un equipo, componente o servicio (un "área"). Está ahí para apoyar al Incident Commander en la identificación de la causa del incidente, sugiriendo y evaluando las acciones de investigación, remediación y comunicación, y realizando el seguimiento de las mismas según se le encomiende.
+Un experto en la materia (SME) es un experto en el dominio o responsable designado de un equipo, componente o servicio (un "área"). Está ahí para apoyar al Incident Commander en la identificación de la causa del incidente, sugiriendo y evaluando las acciones de investigación, remediación y comunicación, y realizando el seguimiento de las mismas según se le encomiende.
 
 ### Funciones
 
 1. Diagnosticar problemas comunes dentro de su área de experiencia.
 1. Solucionar rápidamente los problemas detectados durante un incidente.
 1. Comunicación concisa:
-    * Estado: ¿Cuál es el estado actual de su área? ¿Es saludable o no?
-    * Acciones: ¿Qué medidas hay que tomar si su zona no se encuentra en un estado saludable?
+    * Estado: ¿Cuál es el estado actual de su área? ¿Está buen estado o no?
+    * Acciones: ¿Qué medidas hay que tomar si su zona no se encuentra en un buen estado?
     * Necesidades: ¿Qué apoyo necesita para realizar una acción?
 1. Participar en las fases de investigación, remediación y/o comunicación de la respuesta.
 1. Anunciar todas las sugerencias al comandante del incidente, es su decisión cómo proceder, no siga ninguna acción a menos que se le indique.
@@ -24,8 +24,8 @@ Si está de guardia para cualquier equipo, puede ser llamado para un incidente y
 1. Esté preparado, habiéndose familiarizado ya con nuestras políticas y procedimientos de respuesta a incidentes.
 1. Asegúrese de que ha configurado sus métodos de alerta de acuerdo con nuestro procedimiento de guardia.
 1. Compruebe que puede unirse a la llamada de incidentes. Es posible que tenga que instalar un plugin para el navegador.
-1. Tenga en cuenta su próximo tiempo de guardia y organice los cambios en función de los viajes, las vacaciones, las citas, etc.
-1. Si usted es comandante de incidentes, asegúrese de no estar de guardia para su equipo al mismo tiempo que está de guardia como comandante de incidentes.
+1. Tenga en cuenta su próxima vez de guardia y organice los cambios en función de los viajes, las vacaciones, las citas, etc.
+1. Si usted es el Incident Commander, asegúrese de no estar de guardia con su equipo al mismo tiempo que está de guardia como Incident Commander.
 
 #### Durante el periodo de guardia
 
