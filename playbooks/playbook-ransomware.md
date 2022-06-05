@@ -13,20 +13,20 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
     1. Encuentre cualquier mensaje relacionado.  Compruebe:
         * las interfaces gráficas de usuario (GUI) del propio malware
         * archivos de texto o html, que a veces se abren automáticamente tras el cifrado
-        * image files, often as wallpaper on infected systems
-        * contact emails in encrypted file extensions
-        * pop-ups after trying to open an encrypted file
-        * voice messages
+        * archivos de imange, a menudo, como fondos de pantalla del sistema infectado
+        * correos electrónicos de contacto en extensiones de archivo encriptadas
+        * ventanas emergentes después de intentar abrir un archivo encriptado
+        * mensajes de voz
     1. Analice los mensajes en busca de pistas sobre el tipo de ransomware:
         * nombre del ransomware
         * lenguaje, estructura, frases, material gráfico
         * correo electrónico de contacto
         * formato de la identificación del usuario
-        * especificaciones de la demanda de rescate (_e._, moneda digital, tarjetas de regalo)
+        * especificaciones de la demanda de rescate (_p.ej._, moneda digital, tarjetas de regalo)
         * dirección de pago en caso de moneda digital
         * chat de soporte o página de soporte
     1. Analice los archivos afectados y/o nuevos.  Compruebe:
-        * el esquema de cambio de nombre de los archivos encriptados, incluyendo la extensión (_e.g._, `.cry`, `.cry`, `.locked`) y el nombre base
+        * el esquema de cambio de nombre de los archivos encriptados, incluyendo la extensión (_p.ej._, `.cry`, `.cry`, `.locked`) y el nombre base
         * corrupción de archivos frente a encriptación
         * Tipos de archivos y ubicaciones objetivo
         * usuario/grupo propietario de los archivos afectados
@@ -34,32 +34,31 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
         * marcadores de archivos
         * existencia de listados de archivos, archivos clave u otros archivos de datos
 
-    1. Analice los tipos de software o sistemas afectados.  Algunas variantes de ransomware sólo afectan a determinadas herramientas (_e.g._, [databases](https://www.bleepingcomputer.com/news/security/mongodb-apocalypse-professional-ransomware-group-gets-involved-infections-reach-28k-servers/)) or platforms (_e.g._, [NAS products](https://forum.synology.com/enu/viewtopic.php?f=3&t=88716))
+    1. Analice los tipos de software o sistemas afectados.  Algunas variantes de ransomware sólo afectan a determinadas herramientas (_p.ej._, [databases](https://www.bleepingcomputer.com/news/security/mongodb-apocalypse-professional-ransomware-group-gets-involved-infections-reach-28k-servers/)) or platforms (_e.g._, [NAS products](https://forum.synology.com/enu/viewtopic.php?f=3&t=88716))
     1. Subir los indicadores a servicios de categorización automatizados como [Crypto Sheriff](https://www.nomoreransom.org/crypto-sheriff.php), [ID Ransomware](https://id-ransomware.malwarehunterteam.com/), o similar.
 1. **Determinar el alcance:**
     1. ¿Qué sistemas están afectados? `TODO: Especificar herramientas y procedimientos`
         * Busque indicadores de compromiso (IOC), como archivos/hashes, procesos, conexiones de red, etc.  Utilice [endpoint protection/EDR](#TODO-link-to-actual-resource), [endpoint telemetry](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), etc.
         * Comprobar la infección de sistemas similares (_por ejemplo, usuarios, grupos, datos, herramientas, departamento, configuración, estado de los parches): comprobar [IAM tools](#TODO-link-to-actual-resource), [permissions management tools](#TODO-link-to-actual-resource), [directory services](#TODO-link-to-actual-resource), _etc._
         * Find external command and control (C2), if present, and find other systems connecting to it: check [firewall or IDS logs](#TODO-link-to-actual-resource), [system logs/EDR](#TODO-link-to-actual-resource), [DNS logs](#TODO-link-to-actual-resource), [netflow or router logs](#TODO-link-to-actual-resource), _etc._
-    1. ¿Qué datos están afectados? (_e._, tipos de archivo, departamento o grupo, software afectado) `TODO: Especifique la(s) herramienta(s) y el procedimiento`.
+    1. ¿Qué datos están afectados? (_e.g._, tipos de archivo, departamento o grupo, software afectado) `TODO: Especifique la(s) herramienta(s) y el procedimiento`.
         * Buscar cambios anómalos en los metadatos de los archivos, como cambios masivos en las horas de creación o modificación.  Comprobar [herramientas de búsqueda de metadatos de archivos](#TODO-link-to-actual-resource)
-        * Buscar cambios en archivos de datos normalmente estables o críticos.  Comprobar [supervisión de la integridad de los archivos](#TODO-link-to-actual-resource) tools
+        * Buscar cambios en archivos de datos normalmente estables o críticos.  Comprobar las herramientas de [supervisión de la integridad de los archivos](#TODO-link-to-actual-resource)
 1. **Evaluar el impacto** para priorizar y motivar los recursos
     1. Evaluar el impacto funcional: impacto en la empresa o en la misión.
         * ¿Cuánto dinero se pierde o está en riesgo?
         * ¿Cuántas (y cuáles) misiones se degradan o están en riesgo?
     1. Evaluar el impacto en la información: impacto en la confidencialidad, integridad y disponibilidad de los datos.
         * ¿Qué importancia tienen los datos para la empresa/misión?
-        * ¿Cuán sensibles son los datos? (_p. ej., secretos comerciales)
-        * ¿Cuál es la situación reglamentaria de los datos (por ejemplo, PII, PHI)?
+        * ¿Cuán sensibles son los datos? (_p.ej._, secretos comerciales)
+        * ¿Cuál es la situación reglamentaria de los datos (_p.ej._, PII, PHI)?
 
 1. **Encuentra el vector de infección.** Comprueba las tácticas capturadas en la [Initial Access tactic](https://attack.mitre.org/tactics/TA0001/) of MITRE ATT&CK[<sup>[4]</sup>](#ransomware-playbook-ref-4).  Los datos más comunes y las fuentes de datos son:
     * archivo adjunto de correo electrónico: comprobar [email logs](#TODO-link-to-actual-resource), [email security appliances and services](#TODO-link-to-actual-resource), [e-discovery tools](#TODO-link-to-actual-resource), _etc._
     * insecure remote desktop protocol (RDP): check [vulnerability scanning results](#TODO-link-to-actual-resource), [firewall configurations](#TODO-link-to-actual-resource), _etc._
     * auto-propagación (worm or virus) (check [host telemetry/EDR](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), [forensic analysis](#TODO-link-to-actual-resource), _etc._)
-    * 
 
-### Remediate
+### Remediar
 
 **Planificar eventos de remediación** en los que estos pasos se lancen juntos (o de forma coordinada), con los equipos apropiados listos para responder a cualquier interrupción.
 **Considere el momento y las compensaciones** de las acciones de reparación: su respuesta tiene consecuencias.
