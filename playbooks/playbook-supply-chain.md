@@ -7,7 +7,7 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 ### Investigar
 
-Tarea: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el compromiso de la cadena de suministro.
+`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el compromiso de la cadena de suministro.`
 
 1. TODO
 
@@ -18,9 +18,9 @@ Tarea: Ampliar los pasos de la investigación, incluyendo las preguntas y estrat
 
 #### Contención
 
-Tarea: Personalizar los pasos de contención, tácticos y estratégicos, para el compromiso de la cadena de suministro.
+`TODO: Personalizar los pasos de contención, tácticos y estratégicos, para el compromiso de la cadena de suministro.`
 
-TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.
+`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.`
 
 *TODO
 
@@ -28,9 +28,9 @@ TODO: Especifique las herramientas y los procedimientos para cada paso, a contin
 
 #### Erradicar
 
-TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la cadena de suministro.
+`TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la cadena de suministro.`
 
-TODO: Especificar las herramientas y los procedimientos para cada paso, a continuación.
+`TODO: Especificar las herramientas y los procedimientos para cada paso, a continuación.`
 
 * TODO
 
