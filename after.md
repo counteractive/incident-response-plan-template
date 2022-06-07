@@ -26,11 +26,11 @@ El propietario del informe, en coordinación con el enlace interno, comunicará 
 
 ### Descripciones de estado
 
-| Estado | Descripción |
-|-|-|
-| **Borrador** | La investigación de la AAR sigue en curso |
-| **En revisión** | La investigación AAR se ha completado, y está lista para ser revisada durante la reunión AAR. |
-| **Revisado** | La reunión de AAR ha terminado y el contenido ha sido revisado y acordado.<br>Si hay "Mensajes externos" adicionales, el equipo de comunicación tomará medidas para prepararlos. |
-| **Cerrado** | No es necesario realizar más acciones en el AAR (los problemas pendientes se rastrean en los tickets).<br>Si no hay "Mensajes Externos", pase directamente a esto una vez que la reunión haya terminado.<br>Si hay "Mensajes Externos" adicionales, el equipo de comunicaciones actualizará el AAR Cerrado una vez enviado. |
+| Estado          | Descripción                                                                                                                                                                                                                                                                                                              |
+|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Borrador**    | La investigación de la AAR sigue en curso                                                                                                                                                                                                                                                                                |
+| **En revisión** | La investigación AAR se ha completado, y está lista para ser revisada durante la reunión AAR.                                                                                                                                                                                                                            |
+| **Revisado**    | La reunión de AAR ha terminado y el contenido ha sido revisado y acordado. <br/>Si hay "Mensajes externos" adicionales, el equipo de comunicación tomará medidas para prepararlos.                                                                                                                                            |
+| **Cerrado**     | No es necesario realizar más acciones en el AAR (los problemas pendientes se rastrean en los tickets).<br>Si no hay "Mensajes Externos", pase directamente a esto una vez que la reunión haya terminado.<br/>Si hay "Mensajes Externos" adicionales, el equipo de comunicaciones actualizará el AAR Cerrado una vez enviado. |
 
 Comunicar internamente los resultados del AAR y finalizar la documentación del AAR.

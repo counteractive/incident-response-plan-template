@@ -52,7 +52,7 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
 7. **No** usar SMS/texto para comunicar el incidente, a menos que sea para decirle a alguien que se mueva a un canal más seguro.
 8. Invite al personal de turno/guardia a la llamada y al chat de respuesta.
     * Invite al equipo de seguridad.  `TODO: Añadir lista de contactos del equipo de seguridad o procedimiento.`
-    * Invitar al SME de los equipos y sistemas afectados. `TODO: Añadir la lista de contactos de la PYME del equipo o el procedimiento.`
+    * Invitar al SME de los equipos y sistemas afectados. `TODO: Añadir la lista de contactos del SME del equipo o el procedimiento.`
     * Invitar a las partes interesadas ejecutivas y a los asesores jurídicos lo antes posible, pero dar prioridad a los responsables operativos.  `TODO: añadir una lista de contactos de las partes interesadas ejecutivas o un procedimiento.`
 9. OPCIONAL:_ Establecer una sala de colaboración en persona ("sala de guerra") para incidentes complejos o graves. `TODO: Añadir el procedimiento de la sala de colaboración.`
 
@@ -66,7 +66,7 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
   * Enlace [interno](#rol-enlace)
   * Enlace externo
 * Equipo de operaciones
-  * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (PYMES) para sistemas
+  * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (SME) para sistemas
   * SME para equipos/unidades de negocio
   * SME para Funciones Ejecutivas (_por ejemplo_, Legal, RRHH, Finanzas)
 
