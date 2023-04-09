@@ -7,8 +7,6 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 ### Investigar
 
-`TODO: Ampliar los pasos de las investigaciones, incluyendo preguntas y estrategias claves, para el phishing.`
-
 1. **Ámbito del ataque** Normalmente se le notificará que se está produciendo un posible ataque de phishing, ya sea por parte de un usuario, cliente o socio.
     * Determinar el **número total de usuarios afectados**.
     * Comprender **las acciones de los usuarios** en la respuesta al phishing de un correo electrónico (_e.j._, ¿Descargarón el archivo adjunto?, ¿Visitarón el sitio suplantado?, ¿O, dieron alguna información personal o comercial como credenciales?)
@@ -19,7 +17,6 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
         * Correos electrónicos de no-retorno o no-entregables.
         * Cualquier tipo de notificación de actividad sospechosa.
 1. **Analizar el mensaje** utilizando un dispositivo seguro (es decir, **no** abrir los mensajes en un dispositivo con acceso a datos sensibles o credenciales ya que el mensaje puede contener malware), determinar:
-`TODO: Especificar las herramientas y el procedimiento`.
     * Quién ha recibido el mensaje
     * Quién era el objetivo del mensaje (puede ser diferente de los destinatarios a los que iba realmente dirigido el mensaje)
     * Dirección de correo electrónico del remitente
@@ -32,13 +29,11 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
         * Todas las direcciones IP del cliente y del servidor de correo
     * Anotar las "peculiaridades" o características sospechosas
 1. **Analizar los enlaces y los archivos adjuntos**
-`TODO: Especificar las herramientas y el procedimiento`
     * Utilizar la recopilación pasiva como nslookup y whois para encontrar direcciones IP e información de registro
     * Encontrar dominios relacionados utilizando OSINT (_e.j._, [reverse whois](https://www.whoxy.com/reverse-whois/)) en direcciones de correo electrónico y otros datos de registro.
     * Enviar enlaces, archivos adjuntos y/o hashes a [VirusTotal](https://www.virustotal.com/gui/)
     * Enviar enlaces, adjuntos y/o hashes a un sandbox de malware como [Cuckoo](https://cuckoosandbox.org/), [Hybrid Analysis](https://www.hybrid-analysis.com/), [Joe Sandbox](https://www.joesecurity.org/), o [VMray](https://www.vmray.com/).
 1. Categorice el tipo de ataque.
-`TODO: Personalizar las categorías y crear playbooks adicionales para tipos de phishing comunes o de alto impacto`
 1. **Determine la gravedad.** Considerar:
     * Si la seguridad pública o personal está en riesgo
     * Si los datos personales (u otros datos sensibles) están en riesgo
@@ -47,8 +42,6 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
     * El impacto preliminar en el negocio
     * Si los servicios se ven afectados
     * Si se pueden controlar/registrar los sistemas críticos
- 
-`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el phishing.`
 
 ### Remediar
 
@@ -56,10 +49,6 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 * **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
 
 #### Contener
-
-`TODO: Personalizar los pasos de contención, tácticos y estrátegicos, para el phishing.`
-
-`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.`
 
 * Contener las cuentas afectadas
     * Cambiar las credenciales de acceso
@@ -78,13 +67,7 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 #### Referencia: Recursos de Reparación
 
-`TODO: Especifique los recursos financieros, de personal y logísticos para llevar a cabo la reparación.`
-
 ### Comunicar
-
-`TODO: Personalizar los pasos de comunicación para el phishing`
-
-`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`
 
 1. Elevar el incidente y comunicarlo a la dirección según el procedimiento
 1. Documente el incidente según el procedimiento (y [informe](https://us-cert.cisa.gov/report-phishing))
@@ -96,25 +79,18 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 1. Comunicar a los clientes
     1. Centrarse especialmente en aquellos cuyos datos se vieron afectados
     1. Genere las notificaciones requeridas en base a las regulaciones aplicables (particularmente aquellas que puedan considerar el phishing como una violación de datos o que requieren notificaciones de otro tipo)
-   `TODO: Ampliar los requisitos y procedimientos de notificación para las regulaciones aplicables`
 1. Contactar con el/los proveedor/es de seguros
     1. Discutir qué recursos pueden poner a disposición, qué herramientas y proveedores apoyan y pagarán, _etc._
     1. Cumplir con los requisitos de presentación de informes y reclamaciones para proteger la elegibilidad.
 1. Considere la posibilidad de notificar e implicar a [las fuerzas del orden](https://www.policia.es/_es/tupolicia_conocenos_estructura_dao_cgpoliciajudicial_bcit.php)
-   `TODO: Vincule los siguiente puntos con los recursos reales de su organización`
     1. [Aplicación de la ley local](#TODO-enlace-a-actual-recurso)
     1. [Aplicación de la ley a nivel estatal o regional](#TODO-enlace-a-actual-recurso)
     1. [Fuerzas de seguridad nacionales o europeas](#TODO-enlace-a-actual-recurso)
 1. Comuníquese con los proveedores de seguridad y de TI
-   `TODO: Vincule las siguientes viñetas con los recursos reales de su organización`
     1. Notifique y colabore con [proveedores gestionados](#TODO-enlace-a-actual-recurso) para el procedimiento
     1. Notifique y colabore con [consultores de respuesta ante incidentes](#TODO-enlace-a-actual-recurso) para el procedimiento
 
 ### Recuperación
-
-`TODO: Personalizar los pasos de recuperación para el phishing`
-
-`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación`
 
 1. Poner en marcha un plan de continuidad de negocio/recuperación de desastres si el compromiso implica interrupciones de negocio: _e.j._, considerar la migración a ubicaciones operativas alternativas, clústers de conmutación por error, sistemas de copias de seguridad.
 1. Reforzar los programas de formación sobre los ataques de phishing sospechosos. Los principales indicadores de sospecha pueden ser:
@@ -131,8 +107,6 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 ### Recursos
 
 #### Referencia: Acciones del usuario ante la sospecha de un ataque de phishing
-
-`TODO: Personalizar los pasos para los usuarios ante una sospecha de phishing`
 
 1. Mantenga la calma y respire profundamente.
 1. Haz fotos de tu pantalla con tu smartphone mostrando las cosas que has notado: el mensaje de phishing, el enlace si lo has abierto, la información del remitente.
@@ -151,11 +125,8 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 #### Referencia: Acciones del servicio de ayuda ante un presunto ataque phishing
 
-`TODO: Personalizar los pasos para el personal del servicio de asistencia ante una sospecha de phishing`
-
 1. Mantenga la calma y respire profundamente.
 1. Abra un ticket para documentar el incidente, según el procedimiento.
-   `TODO: Personalizar la plantilla con las preguntas clave (véase más abajo) y el flujo de trabajo posterior`
 3. Pídale al usuario que tome fotos de su pantalla usando su smartphone mostrando las cosas que notó: el mensaje de phishing, el enlace si lo abrió, la información del remitente, _etc._  Si es algo que notó directamente, haga lo mismo usted.
 4. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y boli. Si se trata de un informe de usurio, haz preguntas detalladas, incluyendo:
     1. ¿Qué has notado?
@@ -172,7 +143,6 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 6. Obtenga información de contacto detallada del usuario (domicilio, oficina, móvil), si procede.
 7. Registra toda la información en el ticket, incluyendo notas manuscritas y de voz.
 8. Poner en cuarentena a los usuarios y sistemas afectados.
-   `TODO: Personalizar el contenido de los pasos, automatizar tanto como sea posible.`
 10. Póngase en contacto con el [equipo de seguridad](#TODO-enlace-a-actual-recurso) y prepárase para participar en la respuesta según las indicaciones: investigación, remediación comunicación y recuperación.
 
 #### Información adicional

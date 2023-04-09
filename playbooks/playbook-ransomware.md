@@ -7,7 +7,6 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 ### Investigación
 
-`OBJETIVO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el ransomware.`
 
 1. **Determinar el tipo** de ransomware (_es decir, _ ¿cuál es la familia, la variante o el tipo?)[<sup>[1]</sup>](#ransomware-playbook-ref-1)
     1. Encuentre cualquier mensaje relacionado.  Compruebe:
@@ -65,10 +64,6 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 #### Contención
 
-`OBJETIVO: Personalizar los pasos de contención, tácticos y estratégicos, para el ransomware.`
-
-`OBJETIVO: especificar las herramientas y los procedimientos para cada paso, a continuación.`
-
 **En situaciones de ransomware, la contención es fundamental.  Informar de las medidas de contención con los datos de la investigación.  Dé mayor prioridad a las cuarentenas y otras medidas de contención que durante una respuesta típica.**
 
 Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los sistemas infectados y evitan la propagación _hacia_ los sistemas y datos críticos. Las cuarentenas deben ser exhaustivas: incluir el acceso a la nube/SaaS, el inicio de sesión único, el acceso a sistemas como el ERP u otras herramientas empresariales, _etc._.
@@ -84,13 +79,7 @@ Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los
 * Confirmar que los parches se despliegan en todos los sistemas (priorizando los sistemas, SOs, software, _etc._).
 * Despliegue de firmas personalizadas en las herramientas de protección de puntos finales y de seguridad de la red, basándose en los COI descubiertos.
 
-`OBJETIVO: Considerar la posibilidad de automatizar las medidas de contención mediante herramientas de orquestación.`
-
 #### Erradicar
-
-`OBJETIVO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el ransomware.`
-
-`OBJETIVO: Especificar las herramientas y los procedimientos para cada paso, a continuación.`
 
 * Reconstruir los sistemas infectados a partir de soportes conocidos como buenos.
 * Restaurar a partir de copias de seguridad conocidas y limpias.
@@ -101,13 +90,7 @@ Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los
 
 #### Referencia: Recursos de remediación
 
-`OBJETIVO: Especifique los recursos financieros, de personal y logísticos para llevar a cabo la reparación.`
-
 ### Comunicar
-
-`OBJETIVO: Personalizar los pasos de comunicación para el ransomware.`
-
-`OBJETIVO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`
 
 > **No recomendamos pagar el rescate:** no garantiza la solución del problema. Puede salir mal (_e._, los errores podrían hacer que los datos sean irrecuperables incluso con la clave).  Además, pagar demuestra que el ransomware funciona y podría aumentar los ataques contra ti o contra otros grupos.[<sup>[2, paraphrased]</sup>](#ransomware-playbook-ref-2)
 
@@ -126,8 +109,6 @@ Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los
 
 #### Referencia: Acciones de los usuarios ante la sospecha de ransomware
 
-`OBJETIVO: Personalizar los pasos para los usuarios ante la sospecha de ransomware`.
-
 1. Mantenga la calma y respire profundamente.
 1. Desconecte su sistema de la red `OBJETIVO: incluya pasos detallados con capturas de pantalla, una herramienta preinstalada o un script para facilitar esta tarea ("romper en caso de emergencia"), considere los interruptores de corte de red por hardware`.
 1. Haz fotos de tu pantalla con tu smartphone mostrando las cosas que has notado: mensajes de rescate, archivos encriptados, mensajes de error del sistema, _etc._.
@@ -145,8 +126,6 @@ Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los
 1. Tenga paciencia: la respuesta puede ser perturbadora, pero está protegiendo a su equipo y a la organización.  **Gracias.**
 
 #### Referencia: Acciones del servicio de asistencia técnica ante la sospecha de ransomware
-
-`OBJETIVO: Personalizar los pasos para el personal de la mesa de ayuda ante la sospecha de ransomware`.
 
 1. Mantenga la calma y respire profundamente.
 1. Abra un ticket para documentar el incidente, según el procedimiento `TODO: Personalizar la plantilla con las preguntas clave (ver abajo) y el flujo de trabajo de seguimiento`.
