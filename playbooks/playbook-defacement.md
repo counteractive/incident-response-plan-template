@@ -46,20 +46,12 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
     * Sawmill
     * Deep Log Analyzer
 
-
-
-`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas clave y las estrategias, para la desfiguración de sitios web.`
-
 ### Remediar
 
 **Planificar eventos de reparación** en los que estos pasos se pongan en marcha juntos (o de forma coordinada), con los equipos adecuados listos para responder a cualquier interrupción.
 * **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
 
 #### Contención
-
-`TODO: Personalizar los pasos de contención, tácticos y estratégicos, para la desfiguración de sitios web.`
-
-`TODO: Especificar las herramientas y los procedimientos para cada paso, a continuación.`
 
 1. Haga una copia de seguridad de todos los datos almacenados en el servidor web con fines forenses.
 2. Como se ha mencionado anteriormente, asegúrese de que el servidor de la página desfigurada está temporalmente fuera de servicio mientras se lleva a cabo la investigación.
@@ -72,10 +64,6 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 
 ### Recover
 
-`TODO: Personalizar los pasos de recuperación para la desfiguración`
-
-`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación`
-
 1. Elimine el mensaje del ciberdelincuente y reemplácelo por el contenido original y legítimo. Si se han perdido datos en el ataque, consulte las copias de seguridad y restaure la página original en la medida de lo posible.
     * Compruebe las copias de seguridad en busca de indicadores de compromiso
     * Considere la recuperación parcial y la prueba de integridad de las copias de seguridad
@@ -84,8 +72,6 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 4. Si es necesario y/o aplicable, prepare una disculpa/explicación del ataque ocurrido para los usuarios o cualquier persona que haya presenciado la desfiguración. Asegúrese de que queda claro que el contenido desfigurado no refleja a su organización de ninguna manera. 
 
 #### Evitar riesgos
-
-`TODO: Comuníquese con otros empleados para asegurarse de que todos entienden y contribuyen a los siguientes pasos, cuando sea aplicable`.
 
 1. Utilice el menor número de plug-ins posible. Los piratas informáticos tienen como objetivo los sitios web que son vulnerables y tienen muchas fuentes de entrada. Puedes limitar estas fuentes de entrada utilizando sólo lo que necesites y eliminando los plug-ins y el software que no utilices o sean antiguos. También es importante actualizarlos lo antes posible. 
 2. Controle de cerca y ordene el acceso a los contenidos administrativos. Permita que las personas accedan sólo a lo que necesitan. Esto reducirá la posibilidad de que un error humano provoque un ciberataque. Hay más métodos de prevención DIY mencionados en [este artículo](https://cirt.gy/index.php/node/116) (pasos 6-12) y en el recurso #4 al final de este playbook.
@@ -97,13 +83,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 
 #### Referencia: Recursos de remediación
 
-`TODO: especificar los recursos financieros, de personal y logísticos para llevar a cabo la reparación`.
-
 ### Comunicar
-
-`TODO: Personalizar los pasos de comunicación para la desfiguración`
-
-`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general`
 
 1. 1. Elevar el incidente y comunicarlo a la dirección según el procedimiento
 1. 2. Documentar el incidente según el procedimiento (e informar si procede)
@@ -130,10 +110,8 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 
 #### Referencia: Acciones del usuario ante un ataque de sospecha de defacement
 
-`TODO: Personalizar los pasos a seguir por los usuarios ante una sospecha de defacement`
-
 1. Mantenga la calma y respire profundamente.
-1. 2. Desconecte su sistema de la red `TODO: incluya pasos detallados con capturas de pantalla, una herramienta preinstalada o un script para hacer esto fácil ("romper en caso de emergencia"), considere interruptores de corte de red por hardware`.
+1. 2. Desconecte su sistema de la red.
 1. Haz fotos de la página que veas con tu smartphone mostrando las cosas que has notado: el mensaje de desfiguración y cualquier otro cambio en el sitio habitual.
 1. 2. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz.  Todo ayuda.  Documenta lo siguiente:
     1. ¿Qué has notado?
@@ -144,8 +122,6 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 1. Ten paciencia: deja que el personal informático lo controle, ¡puedes estar protegiendo a otros de un daño!  **Gracias.**
 
 #### Referencia: Acciones del Help Desk ante un presunto ataque de defacement
-
-`TODO: Personalizar los pasos para el personal del servicio de asistencia ante una sospecha de defacement`.
 
 1. Mantenga la calma y respire profundamente.
 1. Abra un ticket para documentar el incidente, según el procedimiento. `TODO: Personalizar la plantilla con las preguntas clave (véase más abajo) y el flujo de trabajo posterior`
@@ -159,7 +135,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 1. Haga las preguntas de seguimiento que sean necesarias.  **Usted es una persona que responde al incidente, contamos con usted.**
 1. Obtenga información de contacto detallada del usuario (domicilio, oficina, móvil), si procede.
 1. Registre toda la información en el ticket, incluyendo notas manuscritas y de voz.
-1. Ponga en cuarentena a los usuarios y sistemas afectados. `TODO: Personalizar los pasos de contención, automatizar todo lo posible`.
+1. Ponga en cuarentena a los usuarios y sistemas afectados.
 1. Póngase en contacto con el [equipo de seguridad] (#TODO-link-to-actual-resource) y prepárese para participar en la respuesta según las indicaciones: investigación, reparación, comunicación y recuperación.
 
 #### Información adicional
