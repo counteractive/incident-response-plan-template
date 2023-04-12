@@ -1,55 +1,56 @@
-## Role: Liaison
 
-### Description
+## Rol: Enlace
 
-Liaisons interact with other teams or stakeholders, outside the incident response team.  These often include:
+### Descripción
 
-* External Liaison: responsible for interacting with customers, either directly, or via public communication.
-* Internal Liaison: responsible for interacting with internal stakeholders. Whether it's notifying an internal team of the incident, or mobilizing additional responders within the organization.
+Los enlaces interactuan con otros equipos o partes interesadas fuera del equipo de respuesta a incidentes. A menudo incluyen:
 
-### Duties
+* Enlace externo: responsable de interactuar con clientes, ya sea directamente o por vía pública.
+* Enlace interno: responsable de interactuar con las partes interesadas internas. Tanto si se trata de notificar un incidente al equipo interno como al movilizar respuestas adicionales dentro de la organización.
 
-#### External or Customer Liaison
+### Deberes
 
-1. Post any publicly facing messages regarding the incident (Twitter, etc).
-1. Notify the IC of any customers or media coverage reporting affects of the incident.
-1. Provide customers with the external message from the post-mortem once it is completed.
-1. Contact or interact with external stakeholders such as vendors, partners, law enforcement, _etc._
-1. **Do not** feel responsible for creating every message: work with the Incident Commander and other stakeholders.
-1. As appropriate, keep customers informed during an incident.
-1. Act as a voice for our customers to the Incident Commander, as this is useful for IC decision making.
-1. Gaining message approval after you have crafted the public message: copy the message into chat and wait for verbal/written confirmation from the IC before proceeding.
+#### Enlace con el exterior o con el cliente
 
-##### Tips for Public Messages
+1. Subir cualquier mensaje de cara al público con respecto al incidente (Twitter, etc).
+1. Notificar al IC de cualquier cliente o medios de comunicación que informen de los efectos del incidente.
+1. Proporcionar a los clientes el mensaje externo del post-mortem una vez que se haya completado.
+1. Contactar o interactuar con las partes interesadas externas, como proveedores, socios, fuerzas de seguridad, _etc._
+1. **No** sentirse responsable de la creación de cada mensaje: trabajar con el Incident Commander y otras partes interesadas.
+1. Según proceda, mantener a los clientes informados durante un incidente.
+1. Actuar como voz de nuestros clientes ante el Incident Commander, ya que esto es útil para la toma de decisiones del IC.
+1. Obtener la aprobación del mensaje después de haber elaborado el mensaje público: copiar el mensaje en el chat y esperar la confirmación verbal/escrita del IC antes de continuar.
 
-* Prepare a default message in advance that can be used for the initial update if the scope of the issue is unknown.
-* Be honest. Do not lie or guess.
-* Describe our progress in resolving the incident.
-  * _"We are aware of an incident..."_
-  * _"We are investigating delayed notifications..."_
-  * _"A fix has been applied and is currently being deployed..."_
-  * _"The issue has been resolved..."_
-* Be clear about how the incident is affecting customers. This is the primary piece of information customers will care about.
-* Provide workarounds customers can use until the incident is resolved.
-* Don't estimate resolution times.
-* Provide the appropriate level of detail.
+##### Pistas para mensajes públicos
 
-#### Internal Liaison
+* Preparar de antemano un mensaje por defecto que pueda utilizarse para la actualización inicial si se desconoce el alcance del problema.
+* Sé honesto. No mientas o supongas.
+* Describa nuestros progresos en la resolución del incidente.
+  * _"Somos conscientes de un incidente..."_
+  * _"Estamos investigando los retrasos en las notificaciones..."_
+  * _"Se ha aplicado una corrección y se está desplegando actualmente..."_
+  * _"El problema ha sido resuelto..."_
+* Explique claramente cómo afecta el incidente a los clientes. Esta es la principal información que les interesa a los clientes.
+* Proporcionar soluciones que los clientes puedan utilizar hasta que se resuelva la incidencia.
+* No calcule los tiempos de resolución.
+* Proporcionar el nivel de detalle adecuado.
 
-1. Page SME's or other on-call personnel as instructed by the Incident Commander.
-1. Notify or mobilize other teams within the organization (e.g. Finance, Legal, Marketing), as instructed by the Incident Commander.
-1. Track and anticipate SMEs on the call.
-1. Interact with stakeholders and provide status updates as necessary.
-1. Interact with internal stakeholders to answer their questions, to keep the primary call distraction free.
-1. Provide regular status updates to the executive team, giving an executive summary of the current status.
+#### Enlace interno
 
-### Training
+1. Página de SMEs u otro personal de guardia según las instrucciones del Incident Commander.
+1. Notificar o movilizar a otros equipos de la organización (por ejemplo, Finanzas, Legal, Marketing), según las instrucciones del Incident Commander.
+1. Seguir y anticiparse a los SMEs en la convocatoria.
+1. Interactuar con las partes interesadas y proporcionar actualizaciones de estado cuando sea necesario.
+1. Interactuar con las partes interesadas internas para responder a sus preguntas, para mantener la llamada principal libre de distracciones.
+1. Proporcionar actualizaciones periódicas de la situación al equipo ejecutivo, ofreciendo un resumen ejecutivo de la situación actual.
 
-Read and understand the incident response plan, including the roles and playbooks.
+### Formación
 
-#### Prerequisites
+Leer y comprender el plan de respuesta a incidentes, incluyendo los roles y las guías.
 
-* Excellent verbal and written **communication skills**.
-* _OPTIONAL:_ Customer support training.
-* _OPTIONAL:_ Corporate communication or marketing training.
+#### Prerequisitos
+
+* Excelentes **habilidades de comunicación** verbal y escrita.
+* _OPCIONAL:_ Formación en atención al cliente.
+* _OPCIONAL:_ Comunicación corporativa o formación en marketing.
 

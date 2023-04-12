@@ -1,37 +1,36 @@
-# Conduct an After Action Review (AAR)
+# Realizar una revisión posterior a la acción (Conduct an After Action Review, AAR)
 
-1. Schedule an After Action Review (AAR) meeting within {{AAR_SLA}} and invite the attendees listed at {{AAR_ATTENDEES}}.  Always include the following:
-    * The incident commander.
-    * Service owners involved in the incident.
-    * Key engineer(s)/responders involved in the incident.
-1. Designate an AAR owner who will investigate the incident in advance of the meeting to prepare, looking into the incident process itself including reviewing notes and reports.
+1. Programe una reunión de revisión posterior a la acción (AAR) dentro de {{AAR_SLA}} e invite a los asistentes que figuran en {{AAR_ATTENDEES}}. Incluya siempre a los siguientes:
+    * El Incident Commander.
+    * Los propietarios de los servicios implicados en el incidente.
+    * Ingeniero(s)/responsable(s) clave(s) implicado(s) en el incidente.
+1. Designe a un propietario del AAR que investigue el incidente antes de la reunión para prepararlo, estudiando el proceso del incidente en sí, incluyendo la revisión de notas e informes.
 
-## Conduct the AAR Meeting
+## Realización de la reunión AAR
 
-Document answers to the following key questions:
+Documente las respuestas a las siguientes preguntas clave:
 
-1. **What happened?** Create a timeline, supported with data or other artifacts. **Avoid blame. Find facts.**
-1. **What was supposed to happen?**
-    * Detail deviations from process, procedure, or best practice, including SME assessments.
-    * Identify ways the incident could have been detected sooner, or responded to more effectively
-1. **What were the root causes?** Find root cause to things that happened and to things that should have happened.
-1. **How can we improve?** Capture action items _with assignees and due dates_.  Consider:
-    * Stop: what should we stop doing?
-    * Start: what should we start doing?
-    * Continue: what should we keep doing?
+1. **¿Qué ocurrió?** Cree una línea de tiempo, apoyada con datos u otros artefactos. **Evitar las culpas. Busca los hechos.**
+1. **¿Qué se suponía que iba a ocurrir?**
+    * Detallar las desviaciones del proceso, el procedimiento o las mejores prácticas, incluidas las evaluaciones de los SME.
+    * Identifique las formas en que el incidente podría haberse detectado antes o haberse respondido con mayor eficacia.
+1. **¿Cuáles fueron las causas fundamentales?** Encuentre la raíz de lo que ocurrió y de lo que debería haber ocurrido.
+1. **¿Cómo podemos mejorar?**  Capture los elementos de acción con asignados y fechas de vencimiento. Considerar:
+    * Detener: ¿Qué debemos dejar de hacer?
+    * Empezar: ¿Qué deberíamos empezar a hacer?
+    * Continuar: ¿Qué debemos seguir haciendo?
 
-## Communicate AAR Status and Results
+## Comunicar el estado y los resultados del AAR
 
-The AAR owner, in coordination with the Internal Liaison, will  communicate the status of the AAR (see below)
+El propietario del informe, en coordinación con el enlace interno, comunicará el estado del informe (véase más abajo).
 
-### Status Descriptions
+### Descripciones de estado
 
-| Status | Description |
-|-|-|
-| **Draft** | AAR investigation is still ongoing |
-| **In Review** | AAR investigation has been completed, and is ready to be reviewed during the AAR meeting. |
-| **Reviewed** | AAR meeting is over and the content has been reviewed and agreed upon.<br>If there are additional "External Messages", the communications team will take action to prepare. |
-| **Closed** | No further actions are needed on the AAR (outstanding issues are tracked in tickets).<br>If no "External Messages", skip straight to this once the meeting is over.<br>If there are additional "External Messages", communications team will update AAR Closed once sent. |
+| Estado          | Descripción                                                                                                                                                                                                                                                                                                              |
+|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Borrador**    | La investigación de la AAR sigue en curso                                                                                                                                                                                                                                                                                |
+| **En revisión** | La investigación AAR se ha completado, y está lista para ser revisada durante la reunión AAR.                                                                                                                                                                                                                            |
+| **Revisado**    | La reunión de AAR ha terminado y el contenido ha sido revisado y acordado. <br/>Si hay "Mensajes externos" adicionales, el equipo de comunicación tomará medidas para prepararlos.                                                                                                                                            |
+| **Cerrado**     | No es necesario realizar más acciones en el AAR (los problemas pendientes se rastrean en los tickets).<br>Si no hay "Mensajes Externos", pase directamente a esto una vez que la reunión haya terminado.<br/>Si hay "Mensajes Externos" adicionales, el equipo de comunicaciones actualizará el AAR Cerrado una vez enviado. |
 
-Communicate the results of the AAR internally and finalize the AAR documentation.
-
+Comunicar internamente los resultados del AAR y finalizar la documentación del AAR.
