@@ -36,11 +36,11 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
     1. Analice los tipos de software o sistemas afectados.  Algunas variantes de ransomware sólo afectan a determinadas herramientas (_p.ej._, [databases](https://www.bleepingcomputer.com/news/security/mongodb-apocalypse-professional-ransomware-group-gets-involved-infections-reach-28k-servers/)) or platforms (_e.g._, [NAS products](https://forum.synology.com/enu/viewtopic.php?f=3&t=88716))
     1. Subir los indicadores a servicios de categorización automatizados como [Crypto Sheriff](https://www.nomoreransom.org/crypto-sheriff.php), [ID Ransomware](https://id-ransomware.malwarehunterteam.com/), o similar.
 1. **Determinar el alcance:**
-    1. ¿Qué sistemas están afectados? `TODO: Especificar herramientas y procedimientos`
+    1. ¿Qué sistemas están afectados? 
         * Busque indicadores de compromiso (IOC), como archivos/hashes, procesos, conexiones de red, etc.  Utilice [endpoint protection/EDR](#TODO-link-to-actual-resource), [endpoint telemetry](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), etc.
         * Comprobar la infección de sistemas similares (_por ejemplo, usuarios, grupos, datos, herramientas, departamento, configuración, estado de los parches): comprobar [IAM tools](#TODO-link-to-actual-resource), [permissions management tools](#TODO-link-to-actual-resource), [directory services](#TODO-link-to-actual-resource), _etc._
         * Find external command and control (C2), if present, and find other systems connecting to it: check [firewall or IDS logs](#TODO-link-to-actual-resource), [system logs/EDR](#TODO-link-to-actual-resource), [DNS logs](#TODO-link-to-actual-resource), [netflow or router logs](#TODO-link-to-actual-resource), _etc._
-    1. ¿Qué datos están afectados? (_e.g._, tipos de archivo, departamento o grupo, software afectado) `TODO: Especifique la(s) herramienta(s) y el procedimiento`.
+    1. ¿Qué datos están afectados? (_e.g._, tipos de archivo, departamento o grupo, software afectado).
         * Buscar cambios anómalos en los metadatos de los archivos, como cambios masivos en las horas de creación o modificación.  Comprobar [herramientas de búsqueda de metadatos de archivos](#TODO-link-to-actual-resource)
         * Buscar cambios en archivos de datos normalmente estables o críticos.  Comprobar las herramientas de [supervisión de la integridad de los archivos](#TODO-link-to-actual-resource)
 1. **Evaluar el impacto** para priorizar y motivar los recursos
@@ -99,7 +99,7 @@ Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los
     *Comprobar las copias de seguridad en busca de indicadores de peligro
     * Considerar la recuperación parcial y las pruebas de integridad de las copias de seguridad
 1. ¡Encuentre y pruebe desencriptadores conocidos para la(s) variante(s) descubierta(s) utilizando recursos como el proyecto No More Ransom! Project's [Decryption Tools page](https://www.nomoreransom.org/en/decryption-tools.html).
-1. Considerar el pago del rescate por los activos/datos críticos irrecuperables, de acuerdo con la política `OBJETIVO: Ampliar y socializar esta matriz de decisión`.
+1. Considerar el pago del rescate por los activos/datos críticos irrecuperables, de acuerdo con la política.
     * Considerar las ramificaciones con las partes interesadas apropiadas
     * Comprender las implicaciones financieras y el presupuesto
     * Comprender las implicaciones legales, reglamentarias y de seguros
@@ -110,7 +110,7 @@ Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los
 #### Referencia: Acciones de los usuarios ante la sospecha de ransomware
 
 1. Mantenga la calma y respire profundamente.
-1. Desconecte su sistema de la red `OBJETIVO: incluya pasos detallados con capturas de pantalla, una herramienta preinstalada o un script para facilitar esta tarea ("romper en caso de emergencia"), considere los interruptores de corte de red por hardware`.
+1. Desconecte su sistema de la red.
 1. Haz fotos de tu pantalla con tu smartphone mostrando las cosas que has notado: mensajes de rescate, archivos encriptados, mensajes de error del sistema, _etc._.
 1. 2. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz.  Todo ayuda.  Documenta lo siguiente:
     1. ¿Qué has notado?
@@ -128,7 +128,7 @@ Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los
 #### Referencia: Acciones del servicio de asistencia técnica ante la sospecha de ransomware
 
 1. Mantenga la calma y respire profundamente.
-1. Abra un ticket para documentar el incidente, según el procedimiento `TODO: Personalizar la plantilla con las preguntas clave (ver abajo) y el flujo de trabajo de seguimiento`.
+1. Abra un ticket para documentar el incidente, según el procedimiento.
 1. 2. Pida al usuario que tome fotos de su pantalla usando su smartphone mostrando las cosas que ha notado: mensajes de rescate, archivos encriptados, mensajes de error del sistema, _etc._ Si es algo que ha notado directamente, haga lo mismo usted.
 1. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz.  2. Si se trata de un informe de usuario, haz preguntas detalladas, incluyendo
     1. ¿Qué ha notado?
@@ -144,7 +144,7 @@ Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los
 1. Haz las preguntas de seguimiento que sean necesarias.  **Usted es el encargado de responder al incidente, contamos con usted.**
 1. Obtenga información de contacto detallada del usuario (domicilio, oficina, móvil), si procede
 1. Registre toda la información en el ticket, incluyendo notas manuscritas y de voz
-1. Poner en cuarentena a los usuarios y sistemas afectados `OBJETIVO: Personalizar los pasos de contención, automatizar todo lo posible`.
+1. Poner en cuarentena a los usuarios y sistemas afectados.
 1. Póngase en contacto con el [equipo de seguridad](#TODO-link-to-actual-resource) y estar preparados para participar en la respuesta según las indicaciones: investigación, reparación, comunicación y recuperación
 
 #### Información adicional
