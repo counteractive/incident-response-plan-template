@@ -272,11 +272,10 @@ Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más 
   * IOCs de comportamiento (a.ka., patrones, TTPs) tales como patrones de árbol de procesos, heurística, desviación de la línea base y patrones de inicio de sesión.
 * Correlacionar varios tipos de IOC, como indicadores basados en la red y en el host en los mismos sistemas.
 
-## Identificar los sistemas de interés
-
-1. Validar si son relevantes.
-2. Categorizar la(s) razón(es) por la(s) que son "de interés": tiene malware, acceso por cuenta comprometida, tiene datos sensibles, etc.  Trátelas como "etiquetas", puede haber más de una categoría por sistema.
-3. Prioriza la recogida, el análisis y la reparación en función de las necesidades de la investigación, el impacto en el negocio, _etc_.
+## Políticas y procedimientos
+- Definir claramente las **políticas y procedimientos** relacionados con la seguridad de la información y la respuesta a incidentes.
+- Establecer **roles y responsabilidades** dentro del equipo de respuesta a incidentes y otras partes interesadas.
+- Desarrollar un **proceso de notificación y escalada** de incidentes, incluidos los puntos de contacto internos y externos.
 
 ## Recogida de pruebas
 
@@ -335,10 +334,6 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 * Patrones de tráfico relacionados con el tiempo, la frecuencia y el recuento de bytes
 * Cambios en las tablas de enrutamiento, como la ponderación, las entradas estáticas, las pasarelas y las relaciones entre pares.
 
-## Iterar la investigación
-
-[Actualizar el plan de investigación](#actualizar-el-plan-de-investigación-y-el-archivo-del-incidente) y repetir hasta el cierre.
-
 # Remediar
 
 **[Investigar](#investigar), [Remediar](#remediar) y [Comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.** El Incident Commander coordinará estas actividades. Notifique al Incident Commander si hay pasos que el equipo debe considerar
@@ -353,7 +348,10 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 6. Priorizar en base a la [estrategia de tiempo](#choose-remediation-timing), el impacto y la urgencia.
 7. Documentar en el archivo de incidentes.
 
-Utilice [marcos de seguridad de la información (infosec)](https://www.nist.gov/cyberframework) como inspiración, pero **no utilice la reparación de incidentes como sustituto de un programa de infosec con un marco apropiado.** Utilícelos para complementarse.
+## Playbooks
+- Crear **playbooks específicos** para diferentes tipos de incidentes de seguridad (por ejemplo, malware, phishing, violación de datos).
+- Incluir **pasos detallados y acciones** a tomar durante cada fase del proceso de respuesta al incidente (investigación, remediación, comunicación, recuperación).
+- Asegurarse de que los playbooks sean **actualizados y revisados** periódicamente para mantener su relevancia y eficacia.
 
 ### Protección
 
@@ -501,14 +499,22 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 * Póngase en contacto con {{PUBLIC_RELATIONS_VENDOR}} para que le ayude con las relaciones públicas y la comunicación externa.
 * Póngase en contacto con {{INSURANCE_VENDOR}} para obtener ayuda con el seguro cibernético.
 
+### Formación y concientización
+- Implementar **programas de formación y concientización** en seguridad de la información para todo el personal de la organización.
+- Realizar **ejercicios y simulacros** de respuesta a incidentes para mejorar la preparación y habilidades del equipo de respuesta a incidentes.
+- Fomentar una **cultura de seguridad** de la información y responsabilidad compartida en toda la organización.
+
 ### Compartir Inteligencia
 
 * Comparta los IOCs con [Infragard](https://www.infragard.org/) si procede.
 * Comparta los IOCs con su [ISAC](https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center) de servicio a través de {{ISAC_CONTACT}}, si procede.
 
-# Recuperación
+## Evaluación de riesgos
+- Identificar y clasificar los **riesgos** según su impacto y probabilidad de ocurrencia.
+- Establecer un **proceso de evaluación y priorización de riesgos** durante la respuesta al incidente.
+- Utilizar la evaluación de riesgos para **asignar recursos y esfuerzos** de forma eficiente durante el proceso de respuesta al incidente.
 
-**La recuperación suele estar dirigida por las unidades de negocio y los propietarios de los sistemas.  Tome medidas de recuperación sólo en colaboración con las partes interesadas pertinentes.**
-
-1. Poner en marcha un plan de continuidad de negocio/recuperación de desastres: Por ejemplo, considerar la migración a ubicaciones operativas alternativas, sitios de conmutación por error, sistemas de copia de seguridad.
-2. Integrar las acciones de seguridad con los esfuerzos de recuperación de la organización.
+## Análisis posterior al incidente y mejoras
+- Llevar a cabo un **análisis detallado del incidente** después de su resolución para identificar lecciones aprendidas y áreas de mejora.
+- Asegurar la **retroalimentación y la mejora continua** de las políticas, procedimientos y playbooks de respuesta a incidentes.
+- Medir la **efectividad de las mejoras** implementadas y ajustarlas según sea necesario.
