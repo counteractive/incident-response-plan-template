@@ -1,13 +1,13 @@
-# Glossary
 
-1. **Incident Commander / IC:** The incident commander is the person responsible for bringing any major incident to resolution. They are the highest ranking individual on any major incident call, regardless of their day-to-day rank. Their decisions made as commander are final.
-1. **Deputy:** Typically the backup IC. The deputy's job is to support the IC during the call, providing them with any help they need.
-1. **Scribe:** The scribe's job is to keep a log of all activities performed during the call in a written chat log on Slack.
-1. **Resolver:** A person on the incident call who is able to help resolve issues within a particular system. Also referred to as an SME (see below).
-1. **SME:** "Subject Matter Expert", someone who is an expert in a particular service or subject who can provide information to the IC, and perform resolution actions for a particular system.
-1. **Command Staff:** The Command Staff consists of the Incident Commander, Deputy, and Scribe.
-1. **CAN Report:** CAN stands for "Conditions" "Actions" "Needs", if an IC asks you for a CAN report, you should provide the current state of your service (condition), what actions need to be taken to return it to a healthy state (actions), and what support you need in order to perform the actions (needs).
-1. **Span of Control:** Refers to the number of direct reports you have. For example, if the IC has 10 people as direct reports on a call, they have a large span of control. We aim to make the span of control as minimal as we can while still being productive.
-1. **Grenade Thrower:** Someone who joins the call at a late time in the game, and provides information that completely derails the current thinking. They then leave almost immediately.
-1. **Executive Swoop:** When an executive comes on the call and drops some sort of bombshell. A version of grenade throwing.
+# Glosario
 
+1. **El Incident Commander es la persona responsable de resolver cualquier incidente grave. Es la persona de mayor rango en cualquier llamada de incidente mayor, independientemente de su rango diario. Sus decisiones como comandante son definitivas.**
+1. **El adjunto:** Normalmente es el IC de apoyo. El trabajo del ayudante es apoyar al IC durante la llamada, proporcionándole cualquier ayuda que necesite.
+1. **Escriba:** El trabajo del escriba es mantener un registro de todas las actividades realizadas durante la llamada en un registro de chat escrito en Slack.
+1. **Resolver:** Una persona en la llamada de incidentes que es capaz de ayudar a resolver problemas dentro de un sistema particular. También se le conoce como SME (ver más abajo).
+1. **SME:** "Subject Matter Expert", alguien que es un experto en un servicio o tema particular que puede proporcionar información al IC, y realizar acciones de resolución para un sistema en particular.
+1. **Personal de mando:** El personal de mando está formado por el comandante del incidente, el ayudante y el escriba.
+1. **Informe CAN:** CAN significa "Condiciones" "Acciones" "Necesidades", si un IC le pide un informe CAN, debe proporcionar el estado actual de su servicio (condición), qué acciones hay que tomar para devolverlo a un estado saludable (acciones), y qué apoyo necesita para realizar las acciones (necesidades).
+1. **Espacio de control:** Se refiere al número de informes directos que tiene. Por ejemplo, si el IC tiene 10 personas como informadores directos en una convocatoria, tiene un gran rango de control. Nuestro objetivo es que el rango de control sea el mínimo posible sin dejar de ser productivo.
+1. **Lanzagranadas:** Alguien que se une a la llamada en un momento tardío del juego, y proporciona información que desbarata completamente el pensamiento actual. A continuación, se marchan casi inmediatamente.
+1. **Golpe Ejecutivo:** Cuando un ejecutivo entra en la convocatoria y suelta algún tipo de bomba. Una versión del lanzamiento de granadas.

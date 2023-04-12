@@ -1,65 +1,38 @@
-## Playbook: Supply Chain Compromise
 
-**Investigate, remediate (contain, eradicate), and communicate in parallel!**
+## Playbook: Compromiso de la cadena de suministro
 
-Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
+**Investigar, remediar (contener, erradicar) y comunicar en paralelo!.**
 
-### Investigate
+Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
 
-`TODO: Expand investigation steps, including key questions and strategies, for supply chain compromise.`
+### Investigar
 
-1. TODO
+### Remediar
 
-### Remediate
+* **Planificar eventos de remediación** en los que estos pasos se pongan en marcha juntos (o de forma coordinada), con los equipos adecuados listos para responder a cualquier interrupción.
+* **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
 
-* **Plan remediation events** where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.
-* **Consider the timing and tradeoffs** of remediation actions: your response has consequences.
+#### Contención
 
-#### Contain
+#### Erradicar
 
-`TODO: Customize containment steps, tactical and strategic, for supply chain compromise.`
+#### Referencia: Recursos de remediación
 
-`TODO: Specify tools and procedures for each step, below.`
 
-* TODO
+### Comunicar
 
-`TODO: Consider automating containment measures using orchestration tools.`
 
-#### Eradicate
+Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
 
-`TODO: Customize eradication steps, tactical and strategic, for supply chain compromise.`
 
-`TODO: Specify tools and procedures for each step, below.`
+### Recuperación
 
-* TODO
+Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
 
-#### Reference: Remediation Resources
 
-`TODO: Specify financial, personnel, and logistical resources to accomplish remediation.`
+### Recursos
 
-### Communicate
-
-`TODO: Customize communication steps for supply chain compromise`
-
-`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.`
-
-In addition to the general steps and guidance in the incident response plan:
-
-1. TODO
-
-### Recover
-
-`TODO: Customize recovery steps for supply chain compromise.`
-
-`TODO: Specify tools and procedures for each step, below.`
-
-In addition to the general steps and guidance in the incident response plan:
-
-1. TODO
-
-### Resources
-
-#### Additional Information
+#### Información adicional
 
 1. <a name="supply-chain-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
 

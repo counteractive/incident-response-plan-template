@@ -1,83 +1,83 @@
-# Incident Response Plan Template
+# Plantilla para el plan de respuesta a incidentes
 
-## About
+## Acerca de
 
-This template was developed by the team at [Counteractive Security](https://www.counteractive.net), to help all organizations get a good start on a concise, directive, specific, flexible, and free incident response plan.  Build a [plan you will actually use](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) to respond effectively, minimize cost and impact, and get back to business as soon as possible.
+Esta plantilla ha sido creada por el equipo de [Counteractive Security](https://www.counteractive.net/), para ayudar a todas las organizaciones a comenzar de forma concisa, directa, especifica, flexible y gratuita un plan de respuesta de incidentes. Crea un plan [que utilizaras](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) para responder de manera eficiente, minimizando los costes e impactos, para volver a trabajar lo mas rápido posible.
 
-Download the latest release [here](https://github.com/counteractive/incident-response-plan-template/releases/latest), a please create an issue or submit a pull request with any feedback, suggestions, or updates.
+Descarga la última versión [aquí](https://github.com/counteractive/incident-response-plan-template/releases/latest), por favor cree un problema o suba un pull request con retroalimentación, sugerencias, o actualizaciones. 
 
-## Instructions
+## Instrucciones
 
-**💡 If you prefer to work in Microsoft Word (.docx format), please download the [example word version](examples/plan.docx) and customize directly using the [instructions below](#customize).** 
+**💡 Si prefieres trabajar con Microsoft Word (.docx format), por favor descargue [ejemplo de word](examples/plan.docx) y personalice directamente usando [instrucciones abajo](#customize).** 
 
-For those working in other formats like markdown, html, or pdf, please read on.
+Para aquellos trabajando con markdown, html, o pdf, por favor siga leyendo.
 
-### Download or fork this template
+### Descargue o clone esta plantilla
 
-The layout is as follows:
+El diseño es el siguiente:
 
-* `during.md`: the core of the plan, actions taken during an incident response.
-* `playbooks/`: a folder containing playbooks with investigation, remediation, and communication suggestions for specific incidents.  Create playbooks for any incidents that are highly likely or highly damaging for your organization.  `playbooks/index.md` contains the playbook section header content, and each playbook should follow the convention `playbooks/playbook-[THREAT].md`.
-* `roles/`: a folder containing descriptions of each role in the plan, along with duties and training notes.  `index.md` contains the roles section header content, and each role should follow the convention `playbooks/role-[ORDER]-[NAME].md`.
-* `after.md`: the guide to after-action review (_a.k.a._, hotwash, debrief, or post-mortem)---actions taken after an incident response.
-* `about.md`: a footer containing information about the plan/template as a whole.
-* `info.yml`: a file containing values for the template strings throughout the plan (see below)
+* `during.md`: el núcleo del plan, acciones llevadas a cabo durante una respuesta a incidentes.
+* `playbooks/`: carpeta la cual contiene guías de investigación, remediación y sugerencias de comunicación para incidentes específicos. Cree guías para cualquier incidente que seguramente haga daño a su organización. `playbooks/index.md` contiene el contenido de la sección de la cabecera de la guía y cada guía debería seguir el convenio `playbooks/playbook-[THREAT].md`.
+* `roles/`: carpeta la cual contiene descripciones de cada rol en el plan, además de deberes y notas de entrenamiento. `index.md` contiene los contenido de la sección de la cabecera de roles y cada rol debería seguir el convenio `playbooks/role-[ORDER]-[NAME].md`.
+* `after.md`: la guía de repaso de acciones posteriores (_a.k.a._, hotwash, debrief, o post-mortem)---acciones llevadas a cabo despues de una respuesta a incidentes.
+* `about.md`: footer que contiene información acerca de toda la plantilla.
+* `info.yml`: archivo que contiene valores para las cadenas de texto de la plantilla durante todo el plan (ver abajo)
 
-### Fill `info.yml` with your organization's information
+### Rellenar `info.yml` con la información de tu organización
 
-The template files have a lot of placeholders that `{{LOOK_LIKE_THIS}}`.  The purpose of each placeholder should be discernable from context, and the [default `info.yml` file](./info.yml) is commented for additional clarity.  This is the [mustache](https://mustache.github.io/) template syntax, and has wide support in a variety of tools and languages.  
+Los archivos de la plantilla tienen muchos marcadores de posición que `{{se_ven_así}}`. El propósito de cada marcador debería ser discernible del contexto y de [default `info.yml` file](./info.yml) está comentado para claridad adicional. Esta es la sintaxis de la plantilla [mustache](https://mustache.github.io/) y tiene un enorme soporte mediante una variedad de herramientas y lenguajes.  
 
-The easiest way to replace these variables is to customize the `info.yml` file with your organization's information and use the provided [Makefile](https://en.wikipedia.org/wiki/Make_(software)) (as of v1.0.0) to automatically find and replace all the relevant strings.  _NOTE:_ this requires `make` (naturally), `mustache`, and `pandoc` to be installed and available in the user's `$PATH`.  _NOTE:_ pdf output needs `pdflatex` (see [this gist](https://gist.github.com/rain1024/98dd5e2c6c8c28f9ea9d) for instructions on Ubuntu/Debian), and you'll need `git` if you want to clone the repository rather than download the zipped source.
+La manera más fácil de reemplazar esas variables es personalizar el archivo `info.yml` con la información de tu organización y usar el proporcionado [Makefile](https://en.wikipedia.org/wiki/Make_(software)) (as of v1.0.0) para encontrar y reemplazar automáticamente todas las cadenas de texto relevantes.  _NOTA:_ esto requiere que `make` (naturalmente), `mustache`, y `pandoc` esten instalados y disponibles en el path de usuario `$PATH`.  _NOTA:_ la salida en pdf necesita `pdflatex` (ver [this gist](https://gist.github.com/rain1024/98dd5e2c6c8c28f9ea9d) para instrucciones en Ubuntu/Debian), y necesitarás `git` si quiere clonar el repositorio antes que descargarlo en formato zip.
 
-If you don't have the information or tools referenced in the template variables, that's definitely worth fixing.  **Especially** the critical information list (data you want to protect) and critical asset list (systems you want to protect).
+Si no tiene la información o las herramientas referenciadas en las variables de la plantilla, es mejor solucionar eso. **Especialmente** la lista de información crítica (datos que quiere proteger) y la lista de activos críticos (sistemas que quiere proteger).
 
-### Build the template
+### Construye la plantilla
 
-In your linux, mac, or [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq) terminal:
+En la terminal de su linux, mac, o [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq):
 
 ```bash
-# install core dependencies, if not already present
+# instalar dependencias indispensables si no están ya
 sudo apt-get install make ruby-mustache pandoc
 
-# for pdf format (big)
+# para formato pdf (big)
 sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
-# change to the directory of the cloned repository
+# cambiar al directorio del repositorio clonado
 cd /path/to/incident-response-plan-template
 
-# build the template
+# construir la plantilla
 make
 ```
 
-This merges the template components, combines them with your custom data from `info.yml`, and outputs all supported formats in the `public/` directory.  That's it!
+Esto fusiona los componentes de la plantilla, los combina con tus datos personalizados de `info.yml`, y los saca en todos los formatos soportados en el directorio `public/`. 
 
-*If you have a specific case and want more details, read on!*
+*Si tiene un caso específico y quiere más detalles, siga leyendo!*
 
-### Further customize the plan
+### Personalizar aún más el plan
 
-1. Fill in any remaining template variables (the strings that `{{LOOK_LIKE_THIS}}`).
-1. Review all the `TODO` prompts for likely areas to customize, if desired.  Delete them if no changes are required.
-1. Add any roles or playbooks relevant to your organization. These can also be added over time.
-1. Customize anything else!  Whatever you feel is most effective for your organization.
-1. _Optional:_ Customize formatting directly or [using pandoc's options](https://learnbyexample.github.io/customizing-pandoc/).  The default Makefile uses the default pandoc styles, and they're not for everyone.
+1. Rellenar cualquier variable restante de la plantilla (las cadenas como `{{se_ven_así}}`).
+1. Repasar todos los indicadores `TODO` para probables areas personalizables, si se desea.  Borrarlas si los cambios no se requieren.
+1. Añadir cualquier rol o guía relevante para tu organización. Pueden ser añadidos con el tiempo.
+1. Personalizar cualquier cosa más! Lo que sea que sienta que sea más efectivo paara tu organización.
+1. _Opcional:_ Personalizar el formateo directamente o [usar opciones de pandoc](https://learnbyexample.github.io/customizing-pandoc/). El Makefile por defecto usa los estilos predeterminados de Pandoc y no son para cualquiera.
 
-### Deploy and use the plan
+### Despliegue y uso del plan
 
-The makefile uses [pandoc](https://pandoc.org) to create a variety of formats, or you can use the markdown files with [mkdocs](http://www.mkdocs.org/), [hugo](https://gohugo.io/), or countless other platforms.
+El Makefile usa [pandoc](https://pandoc.org) para crear una variedad de formatos o puede usar los archivos markdown con [mkdocs](http://www.mkdocs.org/), [hugo](https://gohugo.io/), o un sinfín de otras plataformas.
 
-### Examples
+### Ejemplos
 
-Examples in each format are available in [the examples directory](./examples).  The [markdown version](./examples/plan.md) is a good place to start, rendered from markdown to html automatically by github.
+Ejemplos de cada formato están disponibles en [directorio de ejemplos](./examples). El [markdown version](./examples/plan.md) es un buen lugar para empezar, renderizado de markdown a html automáticamente por github.
 
-### Contact Us
+### Contactenos 
 
-For professional assistance with incident response, or with customizing, implementing, or testing your plan, please contact us at contact@counteractive.net or [(888) 925-5765](tel:+18889255765).
+Para profesional asistencia con respuesta a incidentes, o con personalización, implementación, o probar su plan, por favor contactenos en contact@counteractive.net o [(888) 925-5765](tel:+18889255765).
 
-## License
+## Licencia
 
-This template is provided under the Apache License, version 2.0.  See the [LICENSE](./LICENSE) and [NOTICE](./NOTICE) files for additional information.
+Esta plantilla está proporcionada bajo una licencia Apache version 2.0. Ver la [LICENCIA](./LICENSE) y [NOTICIA](./NOTICE) archivos para información adicional.
 
-## References and Additional Reading
+## Referencias y Material adicional
 
 * [Awesome Incident Response](https://github.com/meirwah/awesome-incident-response)
 * [NIST Computer Security Incident Handling Guide](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) (NIST)
@@ -108,10 +108,10 @@ This template is provided under the Apache License, version 2.0.  See the [LICEN
 * [EPA IR Plan](https://www.epa.gov/sites/production/files/2016-01/documents/cio_2150-p-08.2.pdf)
 * [incidentresponse.com playbooks](https://www.incidentresponse.com/playbooks/)
 
-## Roadmap
+## Hoja de ruta
 
-See [issues](https://github.com/counteractive/incident-response-plan-template/issues) list.
+Ver lista de [problemas](https://github.com/counteractive/incident-response-plan-template/issues) .
 
-## Changelog
+## Registro de cambios
 
-See [releases](https://github.com/counteractive/incident-response-plan-template/releases) page.
+Ver página de [versiones](https://github.com/counteractive/incident-response-plan-template/releases) .
