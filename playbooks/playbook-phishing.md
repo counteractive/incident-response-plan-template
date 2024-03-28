@@ -34,62 +34,67 @@ Inspección del Correo Electrónico:
 
 ## **Analizar los enlaces y los archivos adjuntos**
 Objetivo: Evaluar los enlaces y archivos adjuntos para determinar la naturaleza y el riesgo del contenido sin comprometer la seguridad.
-    * VirusTotal: Para análisis de URLs y archivos sospechosos.
-    * Sandbox de Malware: Como Cuckoo Sandbox, para observar el comportamiento de los archivos en un entorno controlado.
-    * Herramientas OSINT: Para investigar dominios y enlaces, como WHOIS, nslookup
-    * Analizadores de URL: Para descomponer y analizar el verdadero destino de un enlace.
-  
-Procedimiento:
-Enlaces:
+* VirusTotal: Para análisis de URLs y archivos sospechosos.
+* Sandbox de Malware: Como Cuckoo Sandbox, para observar el comportamiento de los archivos en un entorno controlado.
+* Herramientas OSINT: Para investigar dominios y enlaces, como WHOIS, nslookup
+* Analizadores de URL: Para descomponer y analizar el verdadero destino de un enlace.
 
-   * Utilizar decodificadores de URL para visualizar el verdadero destino.
-   * Ingresar los enlaces en VirusTotal para verificar si son conocidos por distribuir malware o por ser parte de campañas de phishing. 
-   * Realizar búsquedas OSINT para identificar la propiedad del dominio y su reputación.
+Enlaces:
+   - Utilizar decodificadores de URL para visualizar el verdadero destino.
+   - Ingresar los enlaces en VirusTotal para verificar si son conocidos por distribuir malware o por ser parte de campañas de phishing.
+   - Realizar búsquedas OSINT para identificar la propiedad del dominio y su reputación.
 
 Archivos Adjuntos:
-    * Subir los archivos a un sandbox de malware para analizar su comportamiento sin riesgo.
-    * Usar VirusTotal para escanear los archivos en busca de firmas de malware conocido.
-    * Investigar metadatos y propiedades del archivo para pistas sobre su origen y propósito.
+   - Subir los archivos a un sandbox de malware para analizar su comportamiento sin riesgo.
+   - Usar VirusTotal para escanear los archivos en busca de firmas de malware conocido.
+   - Investigar metadatos y propiedades del archivo para pistas sobre su origen y propósito.
     
-1. Categorice el tipo de ataque.
-1. **Determine la gravedad.**
+## **Tipos de ataque.**
 1.  Phishing General: Ataques no personalizados enviados a gran escala, buscando engañar a los usuarios para obtener información sensible.
 2.  Spear Phishing: Ataques dirigidos a individuos o empresas específicas, a menudo utilizando información personalizada para aumentar la credibilidad.
 3.  Whaling: Una forma de spear phishing dirigida a altos ejecutivos, buscando acceso a información corporativa crítica o transferencias financieras fraudulentas.
 4.  Smishing y Vishing: Phishing realizado a través de SMS (smishing) o llamadas telefónicas (vishing), buscando engañar a las víctimas para que revelen información personal o financiera.
  
-`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el phishing.`
 
 ### Remediar
 
 * **Planificar eventos de remediación** en los que estos pasos se pongan en marcha juntos (o de forma coordinada), con los equipos adecuados listos para responder a cualquier interrupción.
-* **Equipo de Gestión de Crisis: Supervisa la coordinación y ejecución de la remediación.
-* **Seguridad TI y Soporte TI: Implementación de acciones de contención y erradicación.
+* **Equipo de Gestión de Crisis:** Supervisa la coordinación y ejecución de la remediación.
+* **Seguridad TI y Soporte TI:** Implementación de acciones de contención y erradicación.
 
-#### Contener
+### Contener
 
-`TODO: Personalizar los pasos de contención, tácticos y estrátegicos, para el phishing.`
+1. Aislamiento y Gestión de Cuentas Comprometidas
+* Acciones Inmediatas:
+   - Identificación y Aislamiento: Rápidamente identificar cuentas afectadas y restringir su acceso para prevenir la propagación de la amenaza. Esto puede incluir desactivación temporal o restricciones de acceso.
+   - Cambio de Credenciales: Forzar un cambio de contraseña para todas las cuentas sospechosas de estar comprometidas, aplicando complejidad y unicidad en las nuevas contraseñas.
+* Herramientas y Procedimientos:
+   - Utilizar soluciones de gestión de identidades y accesos (IAM) para cambiar contraseñas y ajustar permisos de forma masiva.
+   - Implementar soluciones de autenticación multifactor (MFA) para añadir una capa adicional de seguridad a las cuentas en riesgo.
 
-`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.`
+2. Reforzamiento de la Seguridad de Acceso
+* Autenticación Multifactor (MFA):
+   - Implementación Acelerada: Para cuentas aún sin MFA, implementar rápidamente esta capa de seguridad para evitar accesos no autorizados.
+* Controles de Acceso Granulares:
+   -Restricción de Privilegios: Reducir los privilegios de acceso al mínimo necesario hasta que la investigación esté completa, especialmente para cuentas con acceso a datos críticos.
 
-* Contener las cuentas afectadas
-    * Cambiar las credenciales de acceso
-    * Reducir el acceso a los servicios, sistemas o datos críticos hasta que se complete la investigación
-    * Reforzar la autenticación multifactor (MFA)
-* Bloquear la actividad en función de los indicadores de compromiso descubiertos, _e.j._:
-    * Bloquear dominios maliciosos mediante DNS, cortafuegos o proxies
-    * Bloquear los mensajes con remitentes, cuerpos de mensajes, asuntos, enlaces, archivos adjuntos similares, etc., utilizando la puerta de enlace predeterminada o el servicio de correo electrónico.
-* Implementar la retención forense o conservar copias forenses de los mensajes
-* Purgar los mensajes relacionados de las bandejas de entrada de otros usuarios, o hacerlos inaccesibles de otro modo.
-* Contener el compromiso más amplio de acuerdo con el plan general de IR
-* Considerar medidas de contención de los dispositivos móviles, como el borrado a través de la gestión de dispositivos móviles (MDM). Equilibrio con el impacto de la investigación/forense.
-* Aumentar el "nivel de alerta" de la detección, con una mayor supervisión, en particular de las cuentas, dominios o direcciones IP relacionadas.
-* Considerar la posibilidad de contar con asistencia externa en materia de seguridad para apoyar la investigación y la correción.
-* Confirmar las actualizaciones de software y antimalware pertinenestes en los activos.
+3. Bloqueo y Neutralización de Amenazas
+* Bloqueo de Dominios y Enlaces Maliciosos:
+   - Implementar bloqueos a nivel de DNS, firewalls, y proxies para prevenir el acceso a dominios asociados al ataque de phishing.
+* Filtrado de Correos Electrónicos:
+   - Ajustar las políticas de filtrado de correos para interceptar y bloquear mensajes con características similares a las identificadas en el ataque.
 
-#### Referencia: Recursos de Reparación
+4. Conservación de Evidencia y Análisis Forense
+* Retención Forense:
+   - Realizar copias forenses de correos electrónicos de phishing y otros artefactos relevantes para la investigación.
+* Purga y Aislamiento de Mensajes:
+   - Eliminar o aislar correos de phishing de las bandejas de entrada de los usuarios para prevenir interacciones accidentales.
 
-`TODO: Especifique los recursos financieros, de personal y logísticos para llevar a cabo la reparación.`
+5. Gestión de Compromisos y Alertas de Seguridad
+* Aumento de la Vigilancia:
+   - Elevar el nivel de alerta y monitoreo de la seguridad, enfocándose en indicadores de compromiso específicos del incidente.
+* Asistencia Externa:
+   - Considerar el apoyo de expertos en seguridad cibernética para una evaluación más profunda y apoyo en la remediación.
 
 ### Comunicar
 
