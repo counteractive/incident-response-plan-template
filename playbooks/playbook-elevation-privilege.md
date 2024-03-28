@@ -61,8 +61,40 @@ Existen exploits específicamente diseñados para llevar a cabo la escalada de p
 
     2. **Revisión de Logs**:
         - Analizar nuevamente los registros de eventos del sistema para confirmar la actividad relacionada con la elevación de privilegios y asegurarse de que no haya sido detectada.
+4. **Comunicación**
 
-4. **Mitigación**:
+    1. **Identificación y Notificación Inicial**:
+    - Notificar al equipo de respuesta a incidentes (IR) y al equipo de seguridad de la información (IS) sobre la identificación de la vulnerabilidad y la escalada de privilegios para activar el protocolo de respuesta a incidentes.
+
+    2. **Comunicación Interna**:
+    - Informar al personal interno sobre la vulnerabilidad identificada y las medidas tomadas para mitigarla, proporcionando instrucciones claras sobre cómo proceder y reportar cualquier actividad sospechosa.
+
+    3. **Coordinación con Asesores Externos**:
+    - Consultar con asesores legales y de seguridad externos para determinar la gravedad del incidente y las obligaciones legales o de cumplimiento, como la notificación a las autoridades o afectados.
+
+    4. **Comunicación Externa**:
+    - Desarrollar y distribuir comunicados para informar a clientes, socios y, si es necesario, al público sobre la vulnerabilidad identificada, las acciones tomadas para mitigarla y las medidas recomendadas para protegerse.
+
+4. **Remediación**
+
+    1. **Restauración de Sistemas y Servicios**:
+        - Evaluar el alcance del daño causado por la escalada de privilegios y restaurar los sistemas afectados desde copias de seguridad limpias y seguras. Asegurarse de que todos los sistemas restaurados sean sometidos a una revisión exhaustiva de seguridad antes de reintegrarlos a la red.
+
+    2. **Análisis Forense y Eliminación de Malware**:
+        - Realizar un análisis forense para comprender cómo ocurrió la escalada de privilegios, qué vulnerabilidades fueron explotadas y si hay alguna presencia maliciosa persistente en la red. Utilizar esta información para eliminar completamente el malware o las herramientas utilizadas por los atacantes.
+
+        Herramientas útiles:
+            - Plataformas de análisis forense digital, como EnCase Forensic, Autopsy.
+            - Antivirus avanzados y herramientas de eliminación de malware, como Malwarebytes, Kaspersky Virus Removal Tool.
+            - Software de análisis de logs, como Splunk, ELK Stack.
+
+    3. **Reforzamiento de las Defensas**:
+        - Basado en los hallazgos del análisis forense, reforzar las defensas para cerrar las vulnerabilidades explotadas durante la escalada de    privilegios. Esto puede incluir la implementación de nuevas herramientas de seguridad, actualización de políticas y el reforzamiento de la seguridad física y de red.
+
+    4. **Educación y Concienciación sobre Seguridad**:
+        - Desarrollar y entregar programas de capacitación y concienciación para educar a los empleados sobre los riesgos de la escalada de privilegios, cómo identificarla y las acciones a tomar en caso de sospecha. Incluir simulaciones de ataques para evaluar y mejorar la respuesta de los empleados.
+
+5. **Mitigación**:
 
    Para mitigar la vulnerabilidad y prevenir futuras elevaciones de privilegios, se deben seguir las mejores prácticas de seguridad, que incluyen:
 
