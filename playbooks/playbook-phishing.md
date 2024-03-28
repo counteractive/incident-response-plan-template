@@ -9,51 +9,63 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 `TODO: Ampliar los pasos de las investigaciones, incluyendo preguntas y estrategias claves, para el phishing.`
 
-1. **Ámbito del ataque** Normalmente se le notificará que se está produciendo un posible ataque de phishing, ya sea por parte de un usuario, cliente o socio.
-    * Determinar el **número total de usuarios afectados**.
-    * Comprender **las acciones de los usuarios** en la respuesta al phishing de un correo electrónico (_e.j._, ¿Descargarón el archivo adjunto?, ¿Visitarón el sitio suplantado?, ¿O, dieron alguna información personal o comercial como credenciales?)
-    * Encontrar la actividad potencialmente relacionada. Comprueba:
-        * Redes Sociales
-        * Cualquier correo electrónico sospechoso posible.
-        * Correos electrónicos con enlaces a URL's externas y desconocidas.
-        * Correos electrónicos de no-retorno o no-entregables.
-        * Cualquier tipo de notificación de actividad sospechosa.
-1. **Analizar el mensaje** utilizando un dispositivo seguro (es decir, **no** abrir los mensajes en un dispositivo con acceso a datos sensibles o credenciales ya que el mensaje puede contener malware), determinar:
-`TODO: Especificar las herramientas y el procedimiento`.
-    * Quién ha recibido el mensaje
-    * Quién era el objetivo del mensaje (puede ser diferente de los destinatarios a los que iba realmente dirigido el mensaje)
-    * Dirección de correo electrónico del remitente
-    * línea de asunto
-    * Cuerpo del mensaje
-    * Adjuntos (**no abra los archivos adjuntos** salvo según los procedimientos establecidos)
-    * Enlaces, dominios, y nombres de host (**no siga los enlaces**, excepto según los procedimientos establecidos)
-    * Metadatos del correo electrónico inluidas las cabeceras de los mensajes (véase más adelante)
-        * Información del remitente en el campo "de" y en la cabecera del usuario autenticado-X
-        * Todas las direcciones IP del cliente y del servidor de correo
-    * Anotar las "peculiaridades" o características sospechosas
+1. **Ámbito del ataque**
+Objetivo: Determinar la extensión y el impacto del ataque de phishing para contenerlo y remediarlo de manera eficiente.
+        * Notificación Inicial: Registrar cómo se detectó el incidente, quién lo reportó, y la evidencia inicial proporcionada.
+        * Usuarios Afectados: Utilizar herramientas de análisis de logs y seguridad de correo electrónico para identificar a todos los usuarios que recibieron el mensaje de phishing.
+        * Acciones de los Usuarios: Comunicarse directamente con los posibles usuarios afectados para entender si interactuaron con el mensaje (descarga de archivos, clic en enlaces, suministro de información).
+        * Búsqueda de Actividad Relacionada: Revisar redes sociales, correos electrónicos sospechosos, y notificaciones de actividades inusuales que puedan estar relacionadas con el ataque.
+        * Clasificación del Ataque: Basándose en la información recopilada, determinar el tipo de phishing (general, spear, whaling, smishing/vishing) y la gravedad.
+1. **Analizar el mensaje** utilizando un dispositivo seguro
+Objetivo: Inspeccionar el correo electrónico de phishing de manera segura para recopilar datos sin comprometer la seguridad de la red o los datos sensibles.
+
+Herramientas:
+* Entornos Aislados: Máquinas virtuales dedicadas o entornos sandbox.
+* Herramientas Forenses de Correo Electrónico: MailXaminer, The Sleuth Kit para analizar cabeceras y contenido.
+* Decodificadores de URL: Para revelar redirecciones ocultas sin acceder a ellas.
+
+Procedimiento:
+* Preparación del Entorno Seguro: Iniciar una máquina virtual o entorno sandbox que no tenga acceso a la red corporativa o datos sensibles.
+
+Inspección del Correo Electrónico:
+* Cabeceras: Analizar las cabeceras del correo para determinar la ruta del mensaje, servidores involucrados y posibles falsificaciones.
+* Cuerpo y Asunto: Observar el tono, errores gramaticales y tácticas de engaño.
+* Adjuntos: Identificar nombres de archivos, tipos y tamaños sin abrirlos.
+* Enlaces: Copiar los enlaces sin hacer clic en ellos para su análisis posterior.
+
 1. **Analizar los enlaces y los archivos adjuntos**
-`TODO: Especificar las herramientas y el procedimiento`
-    * Utilizar la recopilación pasiva como nslookup y whois para encontrar direcciones IP e información de registro
-    * Encontrar dominios relacionados utilizando OSINT (_e.j._, [reverse whois](https://www.whoxy.com/reverse-whois/)) en direcciones de correo electrónico y otros datos de registro.
-    * Enviar enlaces, archivos adjuntos y/o hashes a [VirusTotal](https://www.virustotal.com/gui/)
-    * Enviar enlaces, adjuntos y/o hashes a un sandbox de malware como [Cuckoo](https://cuckoosandbox.org/), [Hybrid Analysis](https://www.hybrid-analysis.com/), [Joe Sandbox](https://www.joesecurity.org/), o [VMray](https://www.vmray.com/).
+Objetivo: Evaluar los enlaces y archivos adjuntos para determinar la naturaleza y el riesgo del contenido sin comprometer la seguridad.
+    * VirusTotal: Para análisis de URLs y archivos sospechosos.
+    * Sandbox de Malware: Como Cuckoo Sandbox, para observar el comportamiento de los archivos en un entorno controlado.
+    * Herramientas OSINT: Para investigar dominios y enlaces, como WHOIS, nslookup
+    * Analizadores de URL: Para descomponer y analizar el verdadero destino de un enlace.
+  
+Procedimiento:
+Enlaces:
+
+   * Utilizar decodificadores de URL para visualizar el verdadero destino.
+   * Ingresar los enlaces en VirusTotal para verificar si son conocidos por distribuir malware o por ser parte de campañas de phishing. 
+   * Realizar búsquedas OSINT para identificar la propiedad del dominio y su reputación.
+
+Archivos Adjuntos:
+    * Subir los archivos a un sandbox de malware para analizar su comportamiento sin riesgo.
+    * Usar VirusTotal para escanear los archivos en busca de firmas de malware conocido.
+    * Investigar metadatos y propiedades del archivo para pistas sobre su origen y propósito.
+    
 1. Categorice el tipo de ataque.
-`TODO: Personalizar las categorías y crear playbooks adicionales para tipos de phishing comunes o de alto impacto`
-1. **Determine la gravedad.** Considerar:
-    * Si la seguridad pública o personal está en riesgo
-    * Si los datos personales (u otros datos sensibles) están en riesgo
-    * Si hay pruebas de quién está detrás del ataque
-    * Número de activos afectados
-    * El impacto preliminar en el negocio
-    * Si los servicios se ven afectados
-    * Si se pueden controlar/registrar los sistemas críticos
+1. **Determine la gravedad.**
+1.  Phishing General: Ataques no personalizados enviados a gran escala, buscando engañar a los usuarios para obtener información sensible.
+2.  Spear Phishing: Ataques dirigidos a individuos o empresas específicas, a menudo utilizando información personalizada para aumentar la credibilidad.
+3.  Whaling: Una forma de spear phishing dirigida a altos ejecutivos, buscando acceso a información corporativa crítica o transferencias financieras fraudulentas.
+4.  Smishing y Vishing: Phishing realizado a través de SMS (smishing) o llamadas telefónicas (vishing), buscando engañar a las víctimas para que revelen información personal o financiera.
  
 `TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el phishing.`
 
 ### Remediar
 
 * **Planificar eventos de remediación** en los que estos pasos se pongan en marcha juntos (o de forma coordinada), con los equipos adecuados listos para responder a cualquier interrupción.
-* **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
+* **	Equipo de Gestión de Crisis: Supervisa la coordinación y ejecución de la remediación.
+* **  Seguridad TI y Soporte TI: Implementación de acciones de contención y erradicación.
 
 #### Contener
 
