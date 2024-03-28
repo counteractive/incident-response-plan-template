@@ -64,7 +64,7 @@ Archivos Adjuntos:
 
 ### Contener
 
-1. Aislamiento y Gestión de Cuentas Comprometidas
+1. **Aislamiento y Gestión de Cuentas Comprometidas:**
 * Acciones Inmediatas:
    - Identificación y Aislamiento: Rápidamente identificar cuentas afectadas y restringir su acceso para prevenir la propagación de la amenaza. Esto puede incluir desactivación temporal o restricciones de acceso.
    - Cambio de Credenciales: Forzar un cambio de contraseña para todas las cuentas sospechosas de estar comprometidas, aplicando complejidad y unicidad en las nuevas contraseñas.
@@ -72,25 +72,25 @@ Archivos Adjuntos:
    - Utilizar soluciones de gestión de identidades y accesos (IAM) para cambiar contraseñas y ajustar permisos de forma masiva.
    - Implementar soluciones de autenticación multifactor (MFA) para añadir una capa adicional de seguridad a las cuentas en riesgo.
 
-2. Reforzamiento de la Seguridad de Acceso
+2. **Reforzamiento de la Seguridad de Acceso:**
 * Autenticación Multifactor (MFA):
    - Implementación Acelerada: Para cuentas aún sin MFA, implementar rápidamente esta capa de seguridad para evitar accesos no autorizados.
 * Controles de Acceso Granulares:
-   -Restricción de Privilegios: Reducir los privilegios de acceso al mínimo necesario hasta que la investigación esté completa, especialmente para cuentas con acceso a datos críticos.
+   - Restricción de Privilegios: Reducir los privilegios de acceso al mínimo necesario hasta que la investigación esté completa, especialmente para cuentas con acceso a datos críticos.
 
-3. Bloqueo y Neutralización de Amenazas
+3. **Bloqueo y Neutralización de Amenazas:**
 * Bloqueo de Dominios y Enlaces Maliciosos:
    - Implementar bloqueos a nivel de DNS, firewalls, y proxies para prevenir el acceso a dominios asociados al ataque de phishing.
 * Filtrado de Correos Electrónicos:
    - Ajustar las políticas de filtrado de correos para interceptar y bloquear mensajes con características similares a las identificadas en el ataque.
 
-4. Conservación de Evidencia y Análisis Forense
+4. **Conservación de Evidencia y Análisis Forense:**
 * Retención Forense:
    - Realizar copias forenses de correos electrónicos de phishing y otros artefactos relevantes para la investigación.
 * Purga y Aislamiento de Mensajes:
    - Eliminar o aislar correos de phishing de las bandejas de entrada de los usuarios para prevenir interacciones accidentales.
 
-5. Gestión de Compromisos y Alertas de Seguridad
+5. **Gestión de Compromisos y Alertas de Seguridad:**
 * Aumento de la Vigilancia:
    - Elevar el nivel de alerta y monitoreo de la seguridad, enfocándose en indicadores de compromiso específicos del incidente.
 * Asistencia Externa:
@@ -98,19 +98,22 @@ Archivos Adjuntos:
 
 ### Comunicar
 
-1. Identificación y Notificación Inicial:
+1. **Identificación y Notificación Inicial:**
    - Quién Participa: Equipo de Respuesta a Incidentes (ERI), Departamento de Seguridad de la Información, Equipo de TI.
    - Procedimiento: Tan pronto como se identifique un incidente de phishing, el ERI debe ser notificado para activar el protocolo de respuesta a incidentes.
    - Herramientas: Sistemas de ticketing para incidentes, plataformas de comunicación interna (por ejemplo, Slack, Microsoft Teams).
-2. Comunicación Interna:
+     
+2. **Comunicación Interna:**
    - Quién Participa: ERI, Departamento de Comunicaciones, Recursos Humanos, Alta Dirección.
    - Procedimiento: Informar al personal interno sobre el incidente con instrucciones claras sobre cómo proceder, especialmente aquellos en departamentos afectados. Esto puede incluir la suspensión temporal de ciertos sistemas o el cambio de contraseñas.
    - Herramientas: Correo electrónico interno, intranet, herramientas de gestión de crisis (por ejemplo, Everbridge).
-3. Coordinación con Asesores Externos:
+
+3. **Coordinación con Asesores Externos:**
    - Quién Participa: ERI, Asesores Legales Externos, Proveedores de Seguridad Externos.
    - Procedimiento: Consultar con asesores legales y de seguridad externos para determinar la gravedad del incidente y las obligaciones legales o de cumplimiento, como la notificación a las autoridades o afectados.
    - Herramientas: Plataformas de comunicación segura, sistemas de gestión de relaciones con proveedores.
-4. Comunicación Externa:
+   
+4. **Comunicación Externa:**
    - Quién Participa: Departamento de Comunicaciones, Alta Dirección, Asesores Legales.
    - Procedimiento: Desarrollar y distribuir comunicados para informar a clientes, socios y, si es necesario, al público sobre el incidente, lo que se está haciendo para resolverlo, y cómo afecta a las partes interesadas. Se deben seguir las directrices legales y de cumplimiento para la comunicación de incidentes de seguridad.
    - Herramientas: Herramientas de gestión de relaciones públicas (PR), plataformas de redes sociales, sitio web corporativo.
@@ -121,12 +124,15 @@ Archivos Adjuntos:
 1. Restauración de Sistemas y Servicios:
    - Procedimiento: Evaluar el daño y determinar los sistemas y servicios afectados. Restaurar los datos desde copias de seguridad limpias y seguras. Asegurar que todos los sistemas restaurados sean sometidos a una exhaustiva revisión de seguridad antes de reintegrarlos a la red.
    - Herramientas: Software de respaldo y recuperación de datos, herramientas de gestión de parches para aplicar las últimas actualizaciones de seguridad.
+     
 2. Análisis Forense y Eliminación de Malware:
    - Procedimiento: Realizar un análisis forense para entender cómo ocurrió el ataque, qué vulnerabilidades fueron explotadas, y si queda alguna presencia maliciosa en la red. Usar esta información para eliminar completamente el malware o las herramientas utilizadas por los atacantes.
    - Herramientas: Plataformas de análisis forense digital, antivirus avanzados y herramientas de eliminación de malware, software de análisis de logs.
+     
 3. Reforzamiento de las Defensas:
    - Procedimiento: Basado en los hallazgos del análisis forense, reforzar las defensas para cerrar las vulnerabilidades explotadas durante el ataque. Esto puede incluir la implementación de nuevas herramientas de seguridad, actualización de políticas, y el reforzamiento de la seguridad física y de red.
    - Herramientas: Sistemas de detección y prevención de intrusiones (IDS/IPS), firewalls avanzados, soluciones de seguridad para el correo electrónico, herramientas de gestión de vulnerabilidades.
+     
 4. Educación y Concienciación sobre Seguridad:
    - Procedimiento: Desarrollar y entregar programas de capacitación y concienciación para educar a los empleados sobre las tácticas de phishing, cómo identificarlas y las acciones a tomar en caso de sospecha. Incluir simulaciones de phishing para evaluar y mejorar la respuesta de los empleados.
    - Herramientas: Plataformas de entrenamiento en concienciación de seguridad, herramientas de simulación de phishing, materiales educativos y cursos en línea.
@@ -135,52 +141,21 @@ Archivos Adjuntos:
 
 #### Referencia: Acciones del usuario ante la sospecha de un ataque de phishing
 
-`TODO: Personalizar los pasos para los usuarios ante una sospecha de phishing`
+1. Identificación y No Interacción:
+   - Reconocer Señales de Alerta: Los correos electrónicos de phishing a menudo contienen señales reveladoras, como solicitudes urgentes, ofertas demasiado buenas para ser verdad, errores ortográficos, y direcciones de correo electrónico que no coinciden con el nombre del remitente o la organización que afirman representar.
+   - Evitar Acciones Precipitadas: No haga clic en enlaces, no descargue archivos adjuntos, y no responda al mensaje. Si el correo parece provenir de una entidad conocida, como un banco o una empresa de servicios, contacte directamente a la entidad usando información de contacto confiable para verificar la comunicación.
 
-1. Mantenga la calma y respire profundamente.
-1. Haz fotos de tu pantalla con tu smartphone mostrando las cosas que has notado: el mensaje de phishing, el enlace si lo has abierto, la información del remitente.
-1. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y boli.  Todo por poco que sea, ayuda! Documenta lo siguiente:
-    1. ¿Qué has notado?
-    1. ¿Por qué pensaste que era un problema?
-    1. ¿Qué estabas haciendo en el momento en que lo detectaste?
-    1. ¿Cuándo se produjo por primera vez, y con qué frecuencia desde entonces?
-    1. ¿Dónde estaba cuando ocurrió y en qué red? (oficina/casa/tienda, con cable/inalámbrica, con/sin VPN, _etc._)
-    1. ¿Qué sistemas está utilizando? (sistema operativo, nombre de host, _etc._)
-    1. ¿Qué cuenta utilizas?
-    1. ¿A qué datos suele acceder?
-    1. ¿Con quién más te has puesto en contacto sobre este incidente y qué les has dicho?
-1. Ponte en contacto con el [servicio de ayuda](#TODO-enlace-a-actual-recurso) utlizando la [línea directa de phishing](#TODO-enlace-a-actual-recurso) o la [barra de herramientas de informe de phishing](#TODO-enlace-a-actual-recurso) y sé lo más servicial posible.
-1. Ten paciencia: La respuesta puede ser perturbardora, pero estas protegiendo a tu equipo y a la organización! **Gracias.**
+2. Reporte Inmediato:
+   - Utilizar Canales Establecidos: Reportar el incidente lo antes posible a través de los canales designados por su organización. Esto puede ser una dirección de correo electrónico específica para reportar phishing, una herramienta interna, o incluso un número de teléfono de ayuda.
+   - Proporcionar Detalles Clave: Incluya tanta información como sea posible al reportar, como el remitente del correo, cualquier enlace incluido (sin hacer clic en ellos), la fecha y hora del mensaje, y por qué sospecha que es un intento de phishing.
 
-#### Referencia: Acciones del servicio de ayuda ante un presunto ataque phishing
-
-`TODO: Personalizar los pasos para el personal del servicio de asistencia ante una sospecha de phishing`
-
-1. Mantenga la calma y respire profundamente.
-1. Abra un ticket para documentar el incidente, según el procedimiento.
-   `TODO: Personalizar la plantilla con las preguntas clave (véase más abajo) y el flujo de trabajo posterior`
-3. Pídale al usuario que tome fotos de su pantalla usando su smartphone mostrando las cosas que notó: el mensaje de phishing, el enlace si lo abrió, la información del remitente, _etc._  Si es algo que notó directamente, haga lo mismo usted.
-4. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y boli. Si se trata de un informe de usurio, haz preguntas detalladas, incluyendo:
-    1. ¿Qué has notado?
-    1. ¿Por qué pensaste que era un problema?
-    1. ¿Qué estabas haciendo en el momento en que lo detectaste?
-    1. ¿Cuándo se produjo por primera vez, y con qué frecuencia desde entonces?
-    1. ¿De qué redes se trata? (oficina/casa/tienda, cableada/inalámbrica, con/sin VPN, _etc._)
-    1. ¿De qué sistemas se trata? (sistema operativo, nombre de host, _etc._)
-    1. ¿De qué datos se trata? (rutas, tipos de archivos, archivos compartidos, bases de datos, software, _etc._)
-    1. ¿Qué usuarios y cuentas están implicados? (directorio activo, SaaS, SSO, cuentas de servicio, _etc._)
-    1. ¿A qué datos suelen acceder los usuarios implicados?
-    1. ¿Con quién más te has puesto en contacto sobre este incidente y qué les has dicho?
-5. Haz las preguntas de seguimiento que sean necesarias. **Usted es de respuesta ante Incidentes, Contamos contigo.**
-6. Obtenga información de contacto detallada del usuario (domicilio, oficina, móvil), si procede.
-7. Registra toda la información en el ticket, incluyendo notas manuscritas y de voz.
-8. Poner en cuarentena a los usuarios y sistemas afectados.
-   `TODO: Personalizar el contenido de los pasos, automatizar tanto como sea posible.`
-10. Póngase en contacto con el [equipo de seguridad](#TODO-enlace-a-actual-recurso) y prepárase para participar en la respuesta según las indicaciones: investigación, remediación comunicación y recuperación.
+3. Documentación del Incidente:
+   - Capturas de Pantalla: Tome capturas de pantalla del correo electrónico sospechoso, incluidos los encabezados completos del mensaje, si es posible. Esto proporcionará evidencia crucial para la investigación posterior.
+   - Registro de Acciones: Si accidentalmente interactuó con el correo (por ejemplo, haciendo clic en un enlace o descargando un archivo), documente cada paso que tomó después de la interacción.
 
 #### Información adicional
 
-1. <a name="phishing-playbook-ref-1"></a>[Recurso Ataque Anti-Phishing](https://resources.infosecinstitute.com/category/enterprise/phishing/phishing-countermeasures/top-16-anti-phishing-resources/#gref)
-1. <a name="phisphing-playbook-ref-2"></a>[Métodos de Identificación de Ataques Phishing](https://www.securitymetrics.com/blog/7-ways-recognize-phishing-email) 
-1. <a name="phishing-playbook-ref-3"></a>[Ejemplos Correos electrónicos de Phishing](https://www.phishing.org/phishing-examples) 
-1. <a name="phishing-playbook-ref-4"></a>[Mejores prácticas Anti-Phishing](https://resources.infosecinstitute.com/category/enterprise/phishing/phishing-countermeasures/anti-phishing-best-practices/#gref)
+1. <a name="phishing-playbook-ref-1"></a>[Protección contra Phishing](https://learn.microsoft.com/es-es/microsoft-365/security/office-365-security/anti-phishing-protection-about?view=o365-worldwide)
+1. <a name="phisphing-playbook-ref-2"></a>[Formación en concienciación sobre seguridad y simulaciones de phishing](https://www.knowbe4.com/phishing)
+1. <a name="phishing-playbook-ref-3"></a>[Los ejemplos más comunes de correos de Phishing](https://blog.usecure.io/es/the-most-common-examples-of-a-phishing-email) 
+1. <a name="phishing-playbook-ref-4"></a>[Mejores prácticas contra el Phishing](https://www.delfossistemas.com/mejores-practicas-contra-el-phishing/)
