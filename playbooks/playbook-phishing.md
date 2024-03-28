@@ -7,8 +7,6 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 ### Investigar
 
-`TODO: Ampliar los pasos de las investigaciones, incluyendo preguntas y estrategias claves, para el phishing.`
-
 1. **Ámbito del ataque**
 Objetivo: Determinar la extensión y el impacto del ataque de phishing para contenerlo y remediarlo de manera eficiente.
         * Notificación Inicial: Registrar cómo se detectó el incidente, quién lo reportó, y la evidencia inicial proporcionada.
@@ -16,6 +14,7 @@ Objetivo: Determinar la extensión y el impacto del ataque de phishing para cont
         * Acciones de los Usuarios: Comunicarse directamente con los posibles usuarios afectados para entender si interactuaron con el mensaje (descarga de archivos, clic en enlaces, suministro de información).
         * Búsqueda de Actividad Relacionada: Revisar redes sociales, correos electrónicos sospechosos, y notificaciones de actividades inusuales que puedan estar relacionadas con el ataque.
         * Clasificación del Ataque: Basándose en la información recopilada, determinar el tipo de phishing (general, spear, whaling, smishing/vishing) y la gravedad.
+
 1. **Analizar el mensaje** utilizando un dispositivo seguro
 Objetivo: Inspeccionar el correo electrónico de phishing de manera segura para recopilar datos sin comprometer la seguridad de la red o los datos sensibles.
 
