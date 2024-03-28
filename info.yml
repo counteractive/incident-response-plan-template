@@ -1,133 +1,135 @@
----
+# Para generar correctamente el plan de respuestas
+# hay que cambiar el string de la derecha (incluido los corchetes) 
+# por el dato que queramos. 
 
 # The name of your organization (e.g., Acme, Inc.)
-COMPANY_NAME: '{{COMPANY_NAME}}'
+COMPANY_NAME: '¿Ciberseguros?'
 
 # Name and email of plan author (e.g., Chris)
-AUTHOR_NAME: '{{AUTHOR_NAME}}'
+AUTHOR_NAME: 'Grupo 4'
 
 # Email of plan author (e.g., contact@counteractive.net)
-AUTHOR_EMAIL: '{{AUTHOR_EMAIL}}'
+AUTHOR_EMAIL: 'grupo4@ciberseguro.es'
 
 # Document control metadata (e.g., 1)
-REVISION_NUMBER: '{{REVISION_NUMBER}}'
+REVISION_NUMBER: '1'
 
 # Document control metadata (e.g., 7 Jan 2021)
-RELEASE_DATE: '{{RELEASE_DATE}}'
+RELEASE_DATE: '1 Abr 2024'
 
 # Date someone last reviewed the plan (e.g., 7 Jan 2021)
-REVIEW_DATE: '{{REVIEW_DATE}}'
+REVIEW_DATE: '1 Abr 2024'
 
 # Date someone last tested the plan (e.g., 7 Jan 2021)
-TEST_DATE: '{{TEST_DATE}}'
+TEST_DATE: '1 Abr 2024'
 
 # URL or reference to IR chat program like Teams, Slack, or Discord (e.g., chat.acme.tld/codename)
-RESPONSE_CHAT: '{{RESPONSE_CHAT}}'
+RESPONSE_CHAT: 'discord.gg/ciberseguros'
 
 # Phone number for response teleconference (e.g., 123-456-7890)
-RESPONSE_PHONE: '{{RESPONSE_PHONE}}'
+RESPONSE_PHONE: '956 28 11 28'
 
 # URL for response video teleconference (VTC) like Zoom or WebEx (e.g., zoom.acme.tld/codename)
-RESPONSE_VTC: '{{RESPONSE_VTC}}'
+RESPONSE_VTC: 'zoom.acme.tld/cibersecur'
 
 # Description/URL for alternate email (e.g., alt 365 tenant at ir.acme.tld/othermail)
-ALTERNATE_EMAIL: '{{ALTERNATE_EMAIL}}'
+ALTERNATE_EMAIL: 'ciberseguros@g.educaand.es'
 
 # Domain name for your organization (e.g., acme.tld)
-ORGANIZATION_DOMAIN: '{{ORGANIZATION_DOMAIN}}'
+ORGANIZATION_DOMAIN: 'ciberseguros.es'
 
 # Number or URL to page Commander(s) (e.g., 555-PAGE)
-INCIDENT_COMMANDER_PAGER_NUMBER: '{{INCIDENT_COMMANDER_PAGER_NUMBER}}'
+INCIDENT_COMMANDER_PAGER_NUMBER: '555-PAGE'
 
 # Number or URL to page Commander(s) (e.g., ir.acme.tld/ic-page)
-INCIDENT_COMMANDER_PAGER_URL: '{{INCIDENT_COMMANDER_PAGER_URL}}'
+INCIDENT_COMMANDER_PAGER_URL: 'grupo4.org/ic-page'
 
 # URL/path to Commander roster/list (e.g., ir.acme.tld/ic-roster)
-INCIDENT_COMMANDER_ROSTER: '{{INCIDENT_COMMANDER_ROSTER}}'
+INCIDENT_COMMANDER_ROSTER: 'grupo4.org/ic-roster'
 
 # As above, for security team (e.g., ir.acme.tld/sec-roster)
-SECURITY_TEAM_ROSTER: '{{SECURITY_TEAM_ROSTER}}'
+SECURITY_TEAM_ROSTER: 'Plácido Díaz Garrido'
 
 # As above, for SMEs (e.g., ir.acme.tld/sme-roster)
-TEAM_SME_ROSTER: '{{TEAM_SME_ROSTER}}'
+TEAM_SME_ROSTER: 'Álvaro Bueno Ortiz'
 
 # As above, for executive team (e.g., ir.acme.tld/exec-roster)
-EXECUTIVE_ROSTER: '{{EXECUTIVE_ROSTER}}'
+EXECUTIVE_ROSTER: 'Iván Sales Cisneros'
 
 # Time to wait for on-duty IC on call (e.g., 15 minutes)
-INCIDENT_COMMANDER_RESPONSE_SLA: '{{INCIDENT_COMMANDER_RESPONSE_SLA}}'
+INCIDENT_COMMANDER_RESPONSE_SLA: '15 minutos'
 
 # Time between scheduled updates (e.g., 4 hours)
-UPDATE_FREQUENCY: '{{UPDATE_FREQUENCY}}'
+UPDATE_FREQUENCY: '4 horas'
 
 # URL/path to incident file (e.g., ir.acme.tld/files/codename)
-INCIDENT_FILE_LOCATION: '{{INCIDENT_FILE_LOCATION}}'
+INCIDENT_FILE_LOCATION: 'ciberseguros.es/files/codename'
 
 # URL/path to critical information list, data you want to protect (e.g., ir.acme.tld/cil)
-CRITICAL_INFO_LIST_LOCATION: '{{CRITICAL_INFO_LIST_LOCATION}}'
+CRITICAL_INFO_LIST_LOCATION: 'ciberseguros.es/cil'
 
 # URL/path to critical asset list, systems you want to protect (e.g., ir.acme.tld/cal)
-CRITICAL_ASSET_LIST_LOCATION: '{{CRITICAL_ASSET_LIST_LOCATION}}'
+CRITICAL_ASSET_LIST_LOCATION: 'ciberseguros.es/cal'
 
 # URL/path to asset management DB (e.g., ir.acme.tld/assets)
-ASSET_MGMT_DB_LOCATION: '{{ASSET_MGMT_DB_LOCATION}}'
+ASSET_MGMT_DB_LOCATION: 'ciberseguros.es/assests'
 
 # URL/path to network map (e.g., ir.acme.tld/netmap)
-NETWORK_MAP_LOCATION:  '{NETWORK_MAP_LOCATION{}}'
+NETWORK_MAP_LOCATION:  'ciberseguros.es/netmap'
 
 # URL to SIEM (e.g., siem.acme.tld)
-SIEM_CONSOLE_LOCATION: '{{SIEM_CONSOLE_LOCATION}}'
+SIEM_CONSOLE_LOCATION: 'siem.ciberseguros.es'
 
 # URL to log aggregator (e.g., elk.acme.tld)
-LOG_AGGREGATOR_CONSOLE: '{{LOG_AGGREGATOR_CONSOLE}}'
+LOG_AGGREGATOR_CONSOLE: 'elk.ciberseguros.es'
 
 # Name/URL of live response tool (e.g., [velociraptor](https://www.velocidex.com))
-LIVE_RESPONSE_TOOL: '{{LIVE_RESPONSE_TOOL}}'
+LIVE_RESPONSE_TOOL: '[velociraptor](https://www.velocidex.org)'
 
 # Name/URL of memory collection tool (e.g., [winpmem](https://github.com/Velocidex/WinPmem))
-MEMORY_COLLECTION_TOOL: '{{MEMORY_COLLECTION_TOOL}}'
+MEMORY_COLLECTION_TOOL: '[winpmem](https://github.org/Velocidex/WinPmem)'
 
 # Name/URL of disk imaging tool (e.g., [sumuri](https://sumuri.com/software))
-DISK_IMAGE_TOOL: '{{DISK_IMAGE_TOOL}}'
+DISK_IMAGE_TOOL: '[FTK Imager](https://www.exterro.com/ftk-imager)'
 
 # URL/path to IR report template (e.g., ir.acme.tld/report/template)
-INCIDENT_REPORT_TEMPLATE: '{{INCIDENT_REPORT_TEMPLATE}}'
+INCIDENT_REPORT_TEMPLATE: 'ir.ciberseguros.es/report/template'
 
 # URL/path to report recipient list (e.g., ir.acme.tld/report/recipients)
-INCIDENT_REPORT_RECIPIENTS: '{{INCIDENT_REPORT_RECIPIENTS}}'
+INCIDENT_REPORT_RECIPIENTS: 'ir.ciberseguros.es/report/recipients'
 
 # Compliance team name and contact info (e.g., the legal team, legal@acme.tld)
-COMPLIANCE_TEAM:  '{COMPLIANCE_TEAM{}}'
+COMPLIANCE_TEAM:  'legal@ciberseguros.es'
 
 # Communications team name and contact info (e.g., the marketing team, marketing@acme.tld)
-COMMUNICATIONS_TEAM: '{{COMMUNICATIONS_TEAM}}'
+COMMUNICATIONS_TEAM: 'marketing@ciberseguros.es'
 
 # Executive team name and contact info (e.g., the front office, bosses@acme.tld)
-EXECUTIVE_TEAM: '{{EXECUTIVE_TEAM}}'
+EXECUTIVE_TEAM: 'bosses@ciberseguros.es'
 
 # Legal team name (e.g., the legal team, legal@acme.tld)
-LEGAL_TEAM: '{{LEGAL_TEAM}}'
+LEGAL_TEAM: 'legal@ciberseguros.es'
 
 # Local law enforcement contact info (e.g., Detective Jane Doe, police@local.gov.tld)
-LOCAL_LE_CONTACT: '{{LOCAL_LE_CONTACT}}'
+LOCAL_LE_CONTACT: 'policia@local_gov.es'
 
 # FBI contact info (e.g., 1-800-CALL-FBI (225-5324), https://www.fbi.gov/contact-us)
-FBI_CONTACT: '{{FBI_CONTACT}}'
+FBI_CONTACT: '1-800-CALL-FBI (225-5324), https://www.fbi.gov/contact-us'
 
 # Vendor for IR and infosec support (e.g., [Counteractive Security](https://www.counteractive.net))
-INCIDENT_RESPONSE_VENDOR: '{{INCIDENT_RESPONSE_VENDOR}}'
+INCIDENT_RESPONSE_VENDOR: '[Counteractive Security](https://www.counteractive.net)'
 
 # Vendor for PR support (e.g., public relations llc, pr.firm.tld)
-PUBLIC_RELATIONS_VENDOR: '{{PUBLIC_RELATIONS_VENDOR}}'
+PUBLIC_RELATIONS_VENDOR: 'public relations llc, pr.firm.tld'
 
 # (Cyber) insurance provider (e.g., AAA insurance co., cyber.insurance.tld)
-INSURANCE_VENDOR: '{{INSURANCE_VENDOR}}'
+INSURANCE_VENDOR: 'AAA insurance co., cyber.insurance.tld'
 
 # Industry ISAC contact info (e.g., FS ISAC, https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center)
-ISAC_CONTACT: '{{ISAC_CONTACT}}'
+ISAC_CONTACT: 'FS ISAC, https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center'
 
 # After action review (AAR) service level agreement (time after completion of incident to conduct AAR) (e.g., 5 business days)
-AAR_SLA: '{{AAR_SLA}}'
+AAR_SLA: '5 días laborales'
 
 # AAR attendees (e.g., ir.acme.tld/aar/attendees)
-AAR_ATTENDEES: '{{AAR_ATTENDEES}}'
+AAR_ATTENDEES: 'ir.ciberseguros.es/aar/attendees'

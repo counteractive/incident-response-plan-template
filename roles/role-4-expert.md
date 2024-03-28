@@ -1,40 +1,41 @@
-## Role: Subject Matter Expert (SME)
 
-### Description
+## Rol: Experto en la materia {Subject Matter Expert (SME)}
 
-A Subject Matter Expert (SME) is a domain expert or designated owner of a team, component, or service (an "area").  You are there to support the incident commander in identifying the cause of the incident, suggesting and evaluation investigation, remediation, and communication actions, and following through on them as tasked.
+### Descripción
 
-### Duties
+Un experto en la materia (SME) es un experto en el dominio o responsable designado de un equipo, componente o servicio (un "área"). Está ahí para apoyar al Incident Commander en la identificación de la causa del incidente, sugiriendo y evaluando las acciones de investigación, remediación y comunicación, y realizando el seguimiento de las mismas según se le encomiende.
 
-1. Diagnose common problems within your area of expertise.
-1. Rapidly fix issues found during an incident.
-1. Concise communication:
-    * Condition: What is the current state of your area? Is it healthy or not?
-    * Actions: What actions need to be taken if your area is not in a healthy state?
-    * Needs: What support do you need need to perform an action?
-1. Participate in the investigation, remediation, and/or communication phases of the response.
-1. Announce all suggestions to the incident commander, it is their decision on how to proceed, do not follow any actions unless told to do so.
+### Funciones
 
-If you are on-call for any team, you may be paged for an incident and will be expected to respond as a subject matter expert (SME) for your team, component, or service.  Anyone who is considered a "domain expert" can act as a SME for an incident. Typically the team's primary on-call will act as the SME for that team.
+1. Diagnosticar problemas comunes dentro de su área de experiencia.
+1. Solucionar rápidamente los problemas detectados durante un incidente.
+1. Comunicación concisa:
+    * Estado: ¿Cuál es el estado actual de su área? ¿Está buen estado o no?
+    * Acciones: ¿Qué medidas hay que tomar si su zona no se encuentra en un buen estado?
+    * Necesidades: ¿Qué apoyo necesita para realizar una acción?
+1. Participar en las fases de investigación, remediación y/o comunicación de la respuesta.
+1. Anunciar todas las sugerencias al comandante del incidente, es su decisión cómo proceder, no siga ninguna acción a menos que se le indique.
 
-#### Prepare for On-Call Period
+Si está de guardia para cualquier equipo, puede ser llamado para un incidente y se espera que responda como experto en la materia (SME) para su equipo, componente o servicio. Cualquiera que se considere un "experto en la materia" puede actuar como SME para un incidente. Por lo general, el principal de guardia del equipo actuará como SME para ese equipo.
 
-1. Be prepared, by having already familiarized yourself with our incident response policies and procedures.
-1. Make sure you have set up your alerting methods in accordance with our on-call procedure.
-1. Check you can join the incident call. You may need to install a browser plugin.
-1. Be aware of your upcoming on-call time and arrange swaps around travel, vacations, appointments, etc.
-1. If you are an Incident Commander, make sure you are not on-call for your team at the same time as being on-call as Incident Commander.
 
-#### During On-Call Period
+#### Prepárese para el periodo de guardia
 
-1. Have your laptop and Internet with you at all times during your on-call period (office, home, a MiFi, a phone with a tethering plan, etc).
-1. If you have important appointments, you need to get someone else on your team to cover that time slot in advance.
-1. When you receive an alert for an incident, you are expected to join the incident call and chat as quickly as possible (within minutes).
-1. You will be asked questions or given actions by the Incident Commander. Answer questions concisely, and follow all actions given (even if you disagree with them).
-1. If you're not sure about something, bring in other SMEs from your team that can help.  **Never hesitate to escalate**, if necessary.
-1. Do not blame.  This incident response process is completely blameless: blaming is counter productive and distracts from the problem at hand.  After-action review will identify places we can all improve.
+1. Esté preparado, habiéndose familiarizado ya con nuestras políticas y procedimientos de respuesta a incidentes.
+1. Asegúrese de que ha configurado sus métodos de alerta de acuerdo con nuestro procedimiento de guardia.
+1. Compruebe que puede unirse a la llamada de incidentes. Es posible que tenga que instalar un plugin para el navegador.
+1. Tenga en cuenta su próxima vez de guardia y organice los cambios en función de los viajes, las vacaciones, las citas, etc.
+1. Si usted es el Incident Commander, asegúrese de no estar de guardia con su equipo al mismo tiempo que está de guardia como Incident Commander.
 
-### Training
+#### Durante el periodo de guardia
 
-* Read and understand the incident response plan, including the roles and playbooks.
+1. Tenga su ordenador portátil e Internet con usted en todo momento durante su período de guardia (oficina, casa, un MiFi, un teléfono con un plan de conexión, etc).
+1. Si tiene citas importantes, debe conseguir que otra persona de su equipo cubra esa franja horaria con antelación.
+1. Cuando recibas una alerta de incidente, se espera que te unas a la llamada de incidente y chatees lo antes posible (en cuestión de minutos).
+1. El Incident Commander le hará preguntas o le dará acciones. Responde a las preguntas de forma concisa y sigue todas las acciones que se te den (incluso si no estás de acuerdo con ellas).
+1. Si no estás seguro de algo, haz venir a otros miembros de tu equipo que puedan ayudarte. **Nunca dudes en escalar**, si es necesario.  
+1. No culpes. Este proceso de respuesta a incidentes no tiene ninguna culpa: culpar es contraproducente y distrae del problema en cuestión. La revisión posterior a la acción identificará los puntos en los que todos podemos mejorar.
 
+### Formación
+
+* Lea y comprenda el plan de respuesta a incidentes, incluidas las funciones y las guías de actuación.

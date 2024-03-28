@@ -1,10 +1,10 @@
 ---
-title: 'Incident Response Plan for {{COMPANY_NAME}}'
-author: 'Author: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}'
-date: 'Revision {{REVISION_NUMBER}}, Released {{RELEASE_DATE}}'
+title: 'Plan de respuesta a incidentes para {{COMPANY_NAME}}'
+author: 'Autor: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}'
+date: 'Revisión {{REVISION_NUMBER}}, Publicado {{RELEASE_DATE}}'
 abstract: |
-  This incident response plan is based on the concise, directive, specific, flexible, and free plan available on Counteractive Security's [Github](https://github.com/counteractive/incident-response-plan-template) and discussed at [www.counteractive.net](https://www.counteractive.net/posts/an-ir-plan-you-will-use/)
+  Este plan de respuesta a incidentes está basado en el plan conciso, directivo, específico, flexible y gratuito disponible [Github](https://github.com/counteractive/incident-response-plan-template) de Counteractive Security's y discutido en [www.counteractive.net](https://www.counteractive.net/posts/an-ir-plan-you-will-use/)
 
-  It was last reviewed on {{REVIEW_DATE}}.  It was last tested on {{TEST_DATE}}.
+  Fue revisado por última vez el {{REVIEW_DATE}}.  Fue probado por última vez en {{TEST_DATE}}.
 # geometry: margin=1.5in
 ---

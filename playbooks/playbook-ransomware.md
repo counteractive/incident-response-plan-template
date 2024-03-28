@@ -1,204 +1,176 @@
+
 ## Playbook: Ransomware
 
-**Investigate, remediate (contain, eradicate), and communicate in parallel! Containment is critical in ransomware incidents, prioritize accordingly.**
+**Investigar, remediar (contener, erradicar) y comunicar en paralelo. La contención es fundamental en los incidentes de ransomware, priorice en consecuencia.**
 
-Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
+Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
 
-### Investigate
+### Investigación
 
-`TODO: Expand investigation steps, including key questions and strategies, for ransomware.`
+`OBJETIVO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el ransomware.`
 
-1. **Determine the type** of ransomware (_i.e.,_ what is the family, variant, or flavor?)[<sup>[1]</sup>](#ransomware-playbook-ref-1)
-    1. Find any related messages.  Check:
-        * graphical user interfaces (GUIs) for the malware itself
-        * text or html files, sometimes opened automatically after encryption
-        * image files, often as wallpaper on infected systems
-        * contact emails in encrypted file extensions
-        * pop-ups after trying to open an encrypted file
-        * voice messages
-    1. Analyze the messages looking for clues to the ransomware type:
-        * ransomware name
-        * language, structure, phrases, artwork
-        * contact email
-        * format of the user id
-        * ransom demand specifics (_e.g._, digital currency, gift cards)
-        * payment address in case of digital currency
-        * support chat or support page
-    1. Analyze affected and/or new files.  Check:
-        * file renaming scheme of encrypted files including extension (_e.g._, `.crypt`, `.cry`, `.locked`) and base name
-        * file corruption vs encryption
-        * targeted file types and locations
-        * owning user/group of affected files
-        * icon for encrypted files
-        * file markers
-        * existence of file listings, key files or other data files
-    1. Analyze affected software or system types.  Some ransomware variants only affect certain tools (_e.g._, [databases](https://www.bleepingcomputer.com/news/security/mongodb-apocalypse-professional-ransomware-group-gets-involved-infections-reach-28k-servers/)) or platforms (_e.g._, [NAS products](https://forum.synology.com/enu/viewtopic.php?f=3&t=88716))
-    1. Upload indicators to automated categorization services like [Crypto Sheriff](https://www.nomoreransom.org/crypto-sheriff.php), [ID Ransomware](https://id-ransomware.malwarehunterteam.com/), or similar.
-1. **Determine the scope:**
-    1. Which systems are affected? `TODO: Specify tool(s) and procedure`
-        * Scan for concrete indicators of compromise (IOCs) such as files/hashes, processes, network connections, etc.  Use [endpoint protection/EDR](#TODO-link-to-actual-resource), [endpoint telemetry](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), etc.
-        * Check similar systems for infection (_e.g._, similar users, groups, data, tools, department,configuration, patch status): check [IAM tools](#TODO-link-to-actual-resource), [permissions management tools](#TODO-link-to-actual-resource), [directory services](#TODO-link-to-actual-resource), _etc._
+1. **Determinar el tipo** de ransomware (_es decir, _ ¿cuál es la familia, la variante o el tipo?)[<sup>[1]</sup>](#ransomware-playbook-ref-1)
+    1. Encuentre cualquier mensaje relacionado.  Compruebe:
+        * las interfaces gráficas de usuario (GUI) del propio malware
+        * archivos de texto o html, que a veces se abren automáticamente tras el cifrado
+        * archivos de imange, a menudo, como fondos de pantalla del sistema infectado
+        * correos electrónicos de contacto en extensiones de archivo encriptadas
+        * ventanas emergentes después de intentar abrir un archivo encriptado
+        * mensajes de voz
+    1. Analice los mensajes en busca de pistas sobre el tipo de ransomware:
+        * nombre del ransomware
+        * lenguaje, estructura, frases, material gráfico
+        * correo electrónico de contacto
+        * formato de la identificación del usuario
+        * especificaciones de la demanda de rescate (_p.ej._, moneda digital, tarjetas de regalo)
+        * dirección de pago en caso de moneda digital
+        * chat de soporte o página de soporte
+    1. Analice los archivos afectados y/o nuevos.  Compruebe:
+        * el esquema de cambio de nombre de los archivos encriptados, incluyendo la extensión (_p.ej._, `.cry`, `.cry`, `.locked`) y el nombre base
+        * corrupción de archivos frente a encriptación
+        * Tipos de archivos y ubicaciones objetivo
+        * usuario/grupo propietario de los archivos afectados
+        * Icono de los archivos encriptados
+        * marcadores de archivos
+        * existencia de listados de archivos, archivos clave u otros archivos de datos
+
+    1. Analice los tipos de software o sistemas afectados.  Algunas variantes de ransomware sólo afectan a determinadas herramientas (_p.ej._, [databases](https://www.bleepingcomputer.com/news/security/mongodb-apocalypse-professional-ransomware-group-gets-involved-infections-reach-28k-servers/)) or platforms (_e.g._, [NAS products](https://forum.synology.com/enu/viewtopic.php?f=3&t=88716))
+    1. Subir los indicadores a servicios de categorización automatizados como [Crypto Sheriff](https://www.nomoreransom.org/crypto-sheriff.php), [ID Ransomware](https://id-ransomware.malwarehunterteam.com/), o similar.
+1. **Determinar el alcance:**
+    1. ¿Qué sistemas están afectados? `TODO: Especificar herramientas y procedimientos`
+        * Busque indicadores de compromiso (IOC), como archivos/hashes, procesos, conexiones de red, etc.  Utilice [endpoint protection/EDR](#TODO-link-to-actual-resource), [endpoint telemetry](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), etc.
+        * Comprobar la infección de sistemas similares (_por ejemplo, usuarios, grupos, datos, herramientas, departamento, configuración, estado de los parches): comprobar [IAM tools](#TODO-link-to-actual-resource), [permissions management tools](#TODO-link-to-actual-resource), [directory services](#TODO-link-to-actual-resource), _etc._
         * Find external command and control (C2), if present, and find other systems connecting to it: check [firewall or IDS logs](#TODO-link-to-actual-resource), [system logs/EDR](#TODO-link-to-actual-resource), [DNS logs](#TODO-link-to-actual-resource), [netflow or router logs](#TODO-link-to-actual-resource), _etc._
-    1. What data is affected? (_e.g._, file types, department or group, affected software) `TODO: Specify tool(s) and procedure`
-        * Find anomalous changes to file metadata such as mass changes to creation or modification times.  Check [file metadata search tools](#TODO-link-to-actual-resource)
-        * Find changes to normally-stable or critical data files.  Check [file integrity monitoring](#TODO-link-to-actual-resource) tools
-1. **Assess the impact** to prioritize and motivate resources
-    1. Assess functional impact: impact to business or mission.
-        * How much money is lost or at risk?
-        * How many (and which) missions are degraded or at risk?
-    1. Assess information impact: impact to confidentiality, integrity, and availability of data.
-        * How critical is the data to the business/mission?
-        * How sensitive is the data? (_e.g._, trade secrets)
-        * What is the regulatory status of data (_e.g._, PII, PHI)
-1. **Find the infection vector.**  Check the tactics captured in the [Initial Access tactic](https://attack.mitre.org/tactics/TA0001/) of MITRE ATT&CK[<sup>[4]</sup>](#ransomware-playbook-ref-4).  Common specifics and data sources include:
-    * email attachment: check [email logs](#TODO-link-to-actual-resource), [email security appliances and services](#TODO-link-to-actual-resource), [e-discovery tools](#TODO-link-to-actual-resource), _etc._
+    1. ¿Qué datos están afectados? (_e.g._, tipos de archivo, departamento o grupo, software afectado) `TODO: Especifique la(s) herramienta(s) y el procedimiento`.
+        * Buscar cambios anómalos en los metadatos de los archivos, como cambios masivos en las horas de creación o modificación.  Comprobar [herramientas de búsqueda de metadatos de archivos](#TODO-link-to-actual-resource)
+        * Buscar cambios en archivos de datos normalmente estables o críticos.  Comprobar las herramientas de [supervisión de la integridad de los archivos](#TODO-link-to-actual-resource)
+1. **Evaluar el impacto** para priorizar y motivar los recursos
+    1. Evaluar el impacto funcional: impacto en la empresa o en la misión.
+        * ¿Cuánto dinero se pierde o está en riesgo?
+        * ¿Cuántas (y cuáles) misiones se degradan o están en riesgo?
+    1. Evaluar el impacto en la información: impacto en la confidencialidad, integridad y disponibilidad de los datos.
+        * ¿Qué importancia tienen los datos para la empresa/misión?
+        * ¿Cuán sensibles son los datos? (_p.ej._, secretos comerciales)
+        * ¿Cuál es la situación reglamentaria de los datos (_p.ej._, PII, PHI)?
+
+1. **Encuentra el vector de infección.** Comprueba las tácticas capturadas en la [Initial Access tactic](https://attack.mitre.org/tactics/TA0001/) of MITRE ATT&CK[<sup>[4]</sup>](#ransomware-playbook-ref-4).  Los datos más comunes y las fuentes de datos son:
+    * archivo adjunto de correo electrónico: comprobar [email logs](#TODO-link-to-actual-resource), [email security appliances and services](#TODO-link-to-actual-resource), [e-discovery tools](#TODO-link-to-actual-resource), _etc._
     * insecure remote desktop protocol (RDP): check [vulnerability scanning results](#TODO-link-to-actual-resource), [firewall configurations](#TODO-link-to-actual-resource), _etc._
-    * self-propagation (worm or virus) (check [host telemetry/EDR](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), [forensic analysis](#TODO-link-to-actual-resource), _etc._)
-    * infection via removable drives (worm or virus)
-    * delivered by other malware or attacker tool: expand investigation to include additional attacker tools or malware
+    * auto-propagación (worm or virus) (check [host telemetry/EDR](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), [forensic analysis](#TODO-link-to-actual-resource), _etc._)
 
-### Remediate
+### Remediar
 
-* **Plan remediation events** where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.
-* **Consider the timing and tradeoffs** of remediation actions: your response has consequences.
+**Planificar eventos de remediación** en los que estos pasos se lancen juntos (o de forma coordinada), con los equipos apropiados listos para responder a cualquier interrupción.
+**Considere el momento y las compensaciones** de las acciones de reparación: su respuesta tiene consecuencias.
 
-#### Contain
+#### Contención
 
-`TODO: Customize containment steps, tactical and strategic, for ransomware.`
+`OBJETIVO: Personalizar los pasos de contención, tácticos y estratégicos, para el ransomware.`
 
-`TODO: Specify tools and procedures for each step, below.`
+`OBJETIVO: especificar las herramientas y los procedimientos para cada paso, a continuación.`
 
-**In ransomware situations, containment is critical.  Inform containment measures with facts from the investigation.  Prioritize quarantines and other containment measures higher than during a typical response.**
+**En situaciones de ransomware, la contención es fundamental.  Informar de las medidas de contención con los datos de la investigación.  Dé mayor prioridad a las cuarentenas y otras medidas de contención que durante una respuesta típica.**
 
-Quarantines (logical, physical, or both) prevent spread _from_ infected systems and prevent spread _to_ critical systems and data. Quarantines should be comprehensive: include cloud/SaaS access, single-sign-on, system access such as to ERP or other business tools, _etc._
+Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los sistemas infectados y evitan la propagación _hacia_ los sistemas y datos críticos. Las cuarentenas deben ser exhaustivas: incluir el acceso a la nube/SaaS, el inicio de sesión único, el acceso a sistemas como el ERP u otras herramientas empresariales, _etc._.
 
-* Quarantine infected systems
-* Quarantine affected users and groups.
-* Quarantine file shares (not just known-infected shares; protect uninfected shares too)
-* Quarantine shared databases (not just known-infected servers; protect uninfected databases too)
-* Quarantine backups, if not already secured
-* Block command and control domains and addresses
-* Remove vector emails from inboxes
-* Confirm endpoint protection (AV, NGAV, EDR, _etc._) is up-to-date and enabled on all systems.
-* Confirm patches are deployed on all systems (prioritizing targeted systems, OSes, software, _etc._).
-* Deploy custom signatures to endpoint protection and network security tools based on discovered IOCs
+* Poner en cuarentena los sistemas infectados
+* Poner en cuarentena a los usuarios y grupos afectados.
+* Ponga en cuarentena los archivos compartidos (no sólo los conocidos; proteja también los no infectados).
+* Ponga en cuarentena las bases de datos compartidas (no sólo los servidores infectados conocidos; proteja también las bases de datos no infectadas)
+* Ponga en cuarentena las copias de seguridad, si no están ya protegidas
+* Bloquee los dominios y direcciones de comando y control
+* Elimine los correos electrónicos vectoriales de las bandejas de entrada.
+* Confirme que la protección de los puntos finales (AV, NGAV, EDR, etc.) está actualizada y activada en todos los sistemas.
+* Confirmar que los parches se despliegan en todos los sistemas (priorizando los sistemas, SOs, software, _etc._).
+* Despliegue de firmas personalizadas en las herramientas de protección de puntos finales y de seguridad de la red, basándose en los COI descubiertos.
 
-`TODO: Consider automating containment measures using orchestration tools.`
+`OBJETIVO: Considerar la posibilidad de automatizar las medidas de contención mediante herramientas de orquestación.`
 
-#### Eradicate
+#### Erradicar
 
-`TODO: Customize eradication steps, tactical and strategic, for ransomware.`
+`OBJETIVO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el ransomware.`
 
-`TODO: Specify tools and procedures for each step, below.`
+`OBJETIVO: Especificar las herramientas y los procedimientos para cada paso, a continuación.`
 
-* Rebuild infected systems from known-good media
-* Restore from known-clean backups
-* Confirm endpoint protection (AV, NGAV, EDR, _etc._) is up-to-date and enabled on all systems.
-* Confirm patches are deployed on all systems (prioritizing targeted systems, OSes, software, _etc._).
-* Deploy custom signatures to endpoint protection and network security tools based on discovered IOCs
-* **Watch for re-infection:** consider increased priority for alarms/alerts related to this incident.
+* Reconstruir los sistemas infectados a partir de soportes conocidos como buenos.
+* Restaurar a partir de copias de seguridad conocidas y limpias.
+* Confirmar que la protección de los puntos finales (AV, NGAV, EDR, etc.) está actualizada y activada en todos los sistemas.
+* Confirmar que los parches se despliegan en todos los sistemas (dando prioridad a los sistemas, SO, software, etc.).
+* Despliegue de firmas personalizadas en las herramientas de protección de puntos finales y de seguridad de la red, basándose en los IOC descubiertos.
+* **Vigilar la reinfección:** considerar el aumento de la prioridad de las alarmas/alertas relacionadas con este incidente.
 
-#### Reference: Remediation Resources
+#### Referencia: Recursos de remediación
 
-`TODO: Specify financial, personnel, and logistical resources to accomplish remediation.`
+`OBJETIVO: Especifique los recursos financieros, de personal y logísticos para llevar a cabo la reparación.`
 
-### Communicate
+### Comunicar
 
-`TODO: Customize communication steps for ransomware`
+`OBJETIVO: Personalizar los pasos de comunicación para el ransomware.`
 
-`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.`
+`OBJETIVO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`
 
-1. Escalate incident and communicate with leadership per procedure
-1. Document incident per procedure
-1. Communicate with internal and external legal counsel per procedure, including discussions of compliance, risk exposure, liability, law enforcement contact, _etc._
-1. Communicate with users (internal)
-    1. Communicate incident response updates per procedure
-    1. Communicate impact of incident **and** incident response actions (e.g., containment: "why is the file share down?"), which can be more intrusive/disruptive during ransomware incidents
-    1. Communicate requirements: "what should users do and not do?"  See "Reference: User Actions for Suspected Ransomware," below
-1. Communicate with customers
-    1. Focus particularly on those whose data was affected
-    1. Generate required notifications based on applicable regulations (particularly those that may consider ransomware a data breach or otherwise requires notifications (_e.g._, [HHS/HIPAA](https://www.hhs.gov/sites/default/files/RansomwareFactSheet.pdf))) `TODO: Expand notification requirements and procedures for applicable regulations`
-1. Contact insurance provider(s)
-    1. Discuss what resources they can make available, what tools and vendors they support and will pay for, _etc._
-    1. Comply with reporting and claims requirements to protect eligibility
-1. Communicate with regulators, including a discussion of what resources they can make available (not just boilerplate notification: many can actively assist)
-1. Consider notifying and involving [law enforcement](https://www.nomoreransom.org/en/report-a-crime.html)
-    1. [Local law enforcement](#TODO-link-to-actual-resource)
-    1. [State or regional law enforcement](#TODO-link-to-actual-resource)
-    1. [Federal or national law enforcement](#TODO-link-to-actual-resource)
-1. Communicate with security and IT vendors
-    1. Notify and collaborate with [managed providers](#TODO-link-to-actual-resource) per procedure
-    1. Notify and collaborate with [incident response consultants](#TODO-link-to-actual-resource) per procedure
+> **No recomendamos pagar el rescate:** no garantiza la solución del problema. Puede salir mal (_e._, los errores podrían hacer que los datos sean irrecuperables incluso con la clave).  Además, pagar demuestra que el ransomware funciona y podría aumentar los ataques contra ti o contra otros grupos.[<sup>[2, paraphrased]</sup>](#ransomware-playbook-ref-2)
 
-### Recover
+1. Poner en marcha un plan de continuidad de la actividad/recuperación de desastres: Por ejemplo, considerar la migración a ubicaciones operativas alternativas, sitios de conmutación por error, sistemas de respaldo.
+1. Recuperar los datos de las copias de seguridad ya limpias en sistemas ya limpios, parcheados y monitorizados (post-erradicación), de acuerdo con nuestra [well-tested backup strategy](#TODO-link-to-actual-resource).
+    *Comprobar las copias de seguridad en busca de indicadores de peligro
+    * Considerar la recuperación parcial y las pruebas de integridad de las copias de seguridad
+1. ¡Encuentre y pruebe desencriptadores conocidos para la(s) variante(s) descubierta(s) utilizando recursos como el proyecto No More Ransom! Project's [Decryption Tools page](https://www.nomoreransom.org/en/decryption-tools.html).
+1. Considerar el pago del rescate por los activos/datos críticos irrecuperables, de acuerdo con la política `OBJETIVO: Ampliar y socializar esta matriz de decisión`.
+    * Considerar las ramificaciones con las partes interesadas apropiadas
+    * Comprender las implicaciones financieras y el presupuesto
+    * Comprender las implicaciones legales, reglamentarias y de seguros
+    * Comprender los mecanismos (por ejemplo, tecnologías, plataformas, proveedores intermedios/intermediarios)
 
-`TODO: Customize recovery steps for ransomware.`
+### Recursos
 
-`TODO: Specify tools and procedures for each step, below.`
+#### Referencia: Acciones de los usuarios ante la sospecha de ransomware
 
-> **We do not recommend paying the ransom:** it does not guarantee a solution to the problem. It can go wrong (_e.g._, bugs could make data unrecoverable even with the key).  Also, paying proves ransomware works and could increase attacks against you or other groups.[<sup>[2, paraphrased]</sup>](#ransomware-playbook-ref-2)
+`OBJETIVO: Personalizar los pasos para los usuarios ante la sospecha de ransomware`.
 
-1. Launch business continuity/disaster recovery plan(s): _e.g._, consider migration to alternate operating locations, fail-over sites, backup systems.
-1. Recover data from known-clean backups to known-clean, patched, monitored systems (post-eradication), in accordance with our [well-tested backup strategy](#TODO-link-to-actual-resource).
-    * Check backups for indicators of compromise
-    * Consider partial recovery and backup integrity testing
-1. Find and try known decryptors for the variant(s) discovered using resources like the No More Ransom! Project's [Decryption Tools page](https://www.nomoreransom.org/en/decryption-tools.html).
-1. Consider paying the ransom for irrecoverable critical assets/data, in accordance with policy `TODO: Expand and socialize this decision matrix`
-    * Consider ramifications with appropriate stakeholders
-    * Understand finance implications and budget
-    * Understand legal, regulatory, and insurance implications
-    * Understand mechanisms (_e.g._, technologies, platforms, intermediate vendors/go-betweens)
+1. Mantenga la calma y respire profundamente.
+1. Desconecte su sistema de la red `OBJETIVO: incluya pasos detallados con capturas de pantalla, una herramienta preinstalada o un script para facilitar esta tarea ("romper en caso de emergencia"), considere los interruptores de corte de red por hardware`.
+1. Haz fotos de tu pantalla con tu smartphone mostrando las cosas que has notado: mensajes de rescate, archivos encriptados, mensajes de error del sistema, _etc._.
+1. 2. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz.  Todo ayuda.  Documenta lo siguiente:
+    1. ¿Qué has notado?
+    1. ¿Por qué pensaste que era un problema?
+    1. ¿Qué estabas haciendo en el momento en que lo detectaste?
+    1. ¿Cuándo se produjo por primera vez, y con qué frecuencia desde entonces?
+    1. ¿Dónde estaba cuando ocurrió y en qué red? (oficina/casa/tienda, con cable/inalámbrica, con/sin VPN, _etc._)
+    1. ¿Qué sistemas está utilizando? (sistema operativo, nombre de host, _etc._)
+    1. ¿Qué cuenta utilizas?
+    1. ¿A qué datos suele acceder?
+    1. ¿Con quién más se ha puesto en contacto en relación con este incidente y qué le ha dicho?
+1. Contacta al  [help desk](#TODO-link-to-actual-resource) y ser lo más útil posible
+1. Tenga paciencia: la respuesta puede ser perturbadora, pero está protegiendo a su equipo y a la organización.  **Gracias.**
 
-### Resources
+#### Referencia: Acciones del servicio de asistencia técnica ante la sospecha de ransomware
 
-#### Reference: User Actions for Suspected Ransomware
+`OBJETIVO: Personalizar los pasos para el personal de la mesa de ayuda ante la sospecha de ransomware`.
 
-`TODO: Customize steps for users dealing with suspected ransomware`
+1. Mantenga la calma y respire profundamente.
+1. Abra un ticket para documentar el incidente, según el procedimiento `TODO: Personalizar la plantilla con las preguntas clave (ver abajo) y el flujo de trabajo de seguimiento`.
+1. 2. Pida al usuario que tome fotos de su pantalla usando su smartphone mostrando las cosas que ha notado: mensajes de rescate, archivos encriptados, mensajes de error del sistema, _etc._ Si es algo que ha notado directamente, haga lo mismo usted.
+1. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz.  2. Si se trata de un informe de usuario, haz preguntas detalladas, incluyendo
+    1. ¿Qué ha notado?
+    1. ¿Por qué pensaste que era un problema?
+    1. ¿Qué estabas haciendo en el momento en que lo detectaste?
+    1. ¿Cuándo se produjo por primera vez, y con qué frecuencia desde entonces?
+    1. ¿De qué redes se trata? (oficina/casa/tienda, cableada/inalámbrica, con/sin VPN, _etc._)
+    1. 2. ¿De qué sistemas se trata? (sistema operativo, nombre de host, _etc._)
+    1. 2. ¿De qué datos se trata? (rutas, tipos de archivos, archivos compartidos, bases de datos, software, _etc._)
+    1. ¿Qué usuarios y cuentas están implicados? (directorio activo, SaaS, SSO, cuentas de servicio, _etc._)
+    1. ¿A qué datos suelen acceder los usuarios implicados?
+    1. ¿Con quién más has contactado acerca de este incidente y qué les has dicho?
+1. Haz las preguntas de seguimiento que sean necesarias.  **Usted es el encargado de responder al incidente, contamos con usted.**
+1. Obtenga información de contacto detallada del usuario (domicilio, oficina, móvil), si procede
+1. Registre toda la información en el ticket, incluyendo notas manuscritas y de voz
+1. Poner en cuarentena a los usuarios y sistemas afectados `OBJETIVO: Personalizar los pasos de contención, automatizar todo lo posible`.
+1. Póngase en contacto con el [equipo de seguridad](#TODO-link-to-actual-resource) y estar preparados para participar en la respuesta según las indicaciones: investigación, reparación, comunicación y recuperación
 
-1. Stay calm, take a deep breath.
-1. Disconnect your system from the network `TODO: include detailed steps with screenshots, a pre-installed tool or script to make this easy ("break in case of emergency"), consider hardware network cut-off switches`
-1. Take pictures of your screen using your smartphone showing the things you noticed: ransom messages, encrypted files, system error messages, _etc._
-1. Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper.  Every little bit helps!  Document the following:
-    1. What did you notice?
-    1. Why did you think it was a problem?
-    1. What were you doing at the time you detected it?
-    1. When did it first occur, and how often since?
-    1. Where were you when it happened, and on what network? (office/home/shop, wired/wireless, with/without VPN, _etc._)
-    1. What systems are you using? (operating system, hostname, _etc._)
-    1. What account were you using?
-    1. What data do you typically access?
-    1. Who else have you contacted about this incident, and what did you tell them?
-1. Contact the [help desk](#TODO-link-to-actual-resource) and be as helpful as possible
-1. Be patient: the response may be disruptive, but you are protecting your team and the organization!  **Thank you.**
-
-#### Reference: Help Desk Actions for Suspected Ransomware
-
-`TODO: Customize steps for help desk personnel dealing with suspected ransomware`
-
-1. Stay calm, take a deep breath.
-1. Open a ticket to document the incident, per procedure `TODO: Customize template with key questions (see below) and follow-on workflow`
-1. Ask the user to take pictures of their screen using their smartphone showing the things they noticed: ransom messages, encrypted files, system error messages, _etc._  If this is something you noticed directly, do the same yourself.
-1. Take notes about the problem(s) using the voice memo app on your smartphone or pen-and-paper.  If this is a user report, ask detailed questions, including:
-    1. What did you notice?
-    1. Why did you think it was a problem?
-    1. What were you doing at the time you detected it?
-    1. When did it first occur, and how often since?
-    1. What networks are involved? (office/home/shop, wired/wireless, with/without VPN, _etc._)
-    1. What systems are involved? (operating system, hostname, _etc._)
-    1. What data is involved? (paths, file types, file shares, databases, software, _etc._)
-    1. What users and accounts are involved? (active directory, SaaS, SSO, service accounts, _etc._)
-    1. What data do the involved users typically access?
-    1. Who else have you contacted about this incident, and what did you tell them?
-1. Ask follow-up questions as necessary.  **You are an incident responder, we are counting on you.**
-1. Get detailed contact information from the user (home, office, mobile), if applicable
-1. Record all information in the ticket, including hand-written and voice notes
-1. Quarantine affected users and systems `TODO: Customize containment steps, automate as much as possible`
-1. Contact the [security team](#TODO-link-to-actual-resource) and stand by to participate in the response as directed: investigation, remediation, communication, and recovery
-
-#### Additional Information
+#### Información adicional
 
 1. <a name="ransomware-playbook-ref-1"></a>["Ransomware Identification for the Judicious Analyst"](https://www.gdatasoftware.com/blog/2019/06/31666-ransomware-identification-for-the-judicious-analyst), Hahn (12 Jun 2019)
 1. <a name="ransomware-playbook-ref-2"></a>[No More Ransom!](https://www.nomoreransom.org) Project, including their [Crypto Sheriff](https://www.nomoreransom.org/crypto-sheriff.php?lang=en) service and their [Q&A](https://www.nomoreransom.org/en/ransomware-qa.html)
 1. <a name="ransomware-playbook-ref-3"></a>[ID Ransomware](https://id-ransomware.malwarehunterteam.com/) service
 1. <a name="ransomware-playbook-ref-4"></a>[MITRE ATT&CK Matrix](https://attack.mitre.org), including the [Initial Access](https://attack.mitre.org/tactics/TA0001/) and [Impact](https://attack.mitre.org/tactics/TA0040/) tactics
-

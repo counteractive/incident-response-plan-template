@@ -1,65 +1,66 @@
-## Playbook: Supply Chain Compromise
 
-**Investigate, remediate (contain, eradicate), and communicate in parallel!**
+## Playbook: Compromiso de la cadena de suministro
 
-Assign steps to individuals or teams to work concurrently, when possible; this playbook is not purely sequential. Use your best judgment.
+**Investigar, remediar (contener, erradicar) y comunicar en paralelo!.**
 
-### Investigate
+Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
 
-`TODO: Expand investigation steps, including key questions and strategies, for supply chain compromise.`
+### Investigar
+
+`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el compromiso de la cadena de suministro.`
 
 1. TODO
 
-### Remediate
+### Remediar
 
-* **Plan remediation events** where these steps are launched together (or in coordinated fashion), with appropriate teams ready to respond to any disruption.
-* **Consider the timing and tradeoffs** of remediation actions: your response has consequences.
+* **Planificar eventos de remediación** en los que estos pasos se pongan en marcha juntos (o de forma coordinada), con los equipos adecuados listos para responder a cualquier interrupción.
+* **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
 
-#### Contain
+#### Contención
 
-`TODO: Customize containment steps, tactical and strategic, for supply chain compromise.`
+`TODO: Personalizar los pasos de contención, tácticos y estratégicos, para el compromiso de la cadena de suministro.`
 
-`TODO: Specify tools and procedures for each step, below.`
+`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.`
+
+*TODO
+
+`TODO: Considerar la posibilidad de automatizar las medidas de contención mediante herramientas de orquestación.`
+
+#### Erradicar
+
+`TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la cadena de suministro.`
+
+`TODO: Especificar las herramientas y los procedimientos para cada paso, a continuación.`
 
 * TODO
 
-`TODO: Consider automating containment measures using orchestration tools.`
+#### Referencia: Recursos de remediación
 
-#### Eradicate
+`TODO: Especificar los recursos financieros, de personal y logísticos para llevar a cabo la remediación.`
 
-`TODO: Customize eradication steps, tactical and strategic, for supply chain compromise.`
+### Comunicar
 
-`TODO: Specify tools and procedures for each step, below.`
+`TODO: Personalizar los pasos de la comunicación para el compromiso de la cadena de suministro`
 
-* TODO
+`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o consulte el plan general.`
 
-#### Reference: Remediation Resources
-
-`TODO: Specify financial, personnel, and logistical resources to accomplish remediation.`
-
-### Communicate
-
-`TODO: Customize communication steps for supply chain compromise`
-
-`TODO: Specify tools and procedures (including who must be involved) for each step, below, or refer to overall plan.`
-
-In addition to the general steps and guidance in the incident response plan:
+Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
 
 1. TODO
 
-### Recover
+### Recuperación
 
-`TODO: Customize recovery steps for supply chain compromise.`
+`TODO: Personalizar los pasos de recuperación para el compromiso de la cadena de suministro.`
 
-`TODO: Specify tools and procedures for each step, below.`
+`TODO: Especifique las herramientas y procedimientos para cada paso, a continuación.`
 
-In addition to the general steps and guidance in the incident response plan:
+Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
 
 1. TODO
 
-### Resources
+### Recursos
 
-#### Additional Information
+#### Información adicional
 
 1. <a name="supply-chain-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
 

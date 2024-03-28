@@ -1,35 +1,36 @@
-## Role: Scribe
 
-### Description
+## Rol: Escriba
 
-A Scribe documents the timeline of an incident as it progresses, and makes sure all important decisions and data are captured for later review.  The Scribe should focus on the incident file, as well as follow-up items for later action.
+### Descripción
 
-### Duties
+Un escriba documenta la línea de tiempo de un incidente a medida que avanza, y se asegura de que todas las decisiones y datos importantes se capturen para su posterior revisión.  El escriba debe centrarse en el archivo del incidente, así como en los elementos de seguimiento para una acción posterior.
 
-1. Ensure the incident call is being recorded.
-1. Note in chat and in the file timelines: important data, events, and actions, as they happen. Specifically:
-    * Key actions as they are taken
-    * Status reports when one is provided by the IC
-    * Any key call-outs either during the call or at the ending review
-1. Update the chat with who the IC is, who the Deputy is, and that you're the scribe (if not already done).
+### Funciones
 
-Scribing is more art than science. The objective is to keep an accurate record of important events that occurred, Use your judgement and experience. But here are some general things you most definitely want to capture as scribe.
+1. Asegurarse de que la llamada del incidente se está grabando.
+1. 2. Anotar en el chat y en la línea de tiempo del expediente: los datos, eventos y acciones importantes, a medida que se producen. Específicamente:
+    * Acciones clave a medida que se llevan a cabo
+    * Informes de estado cuando el IC los proporcione
+    * Cualquier llamada clave durante la llamada o en la revisión final
+1. Actualice el chat indicando quién es el IC, quién es el adjunto y que usted es el escribiente (si no lo ha hecho ya).
 
-* The result of any polling decisions.
-* Any followup items that are called out as "We should do this..", "Why didn't this?..", etc.
+Escribir es más un arte que una ciencia. El objetivo es mantener un registro preciso de los eventos importantes que ocurrieron, Usa tu juicio y experiencia. Pero aquí hay algunas cosas generales que definitivamente querrás capturar como escribiente.
 
-### Training
+* El resultado de cualquier decisión de la votación.
+### Cualquier elemento de seguimiento que se llame "Deberíamos hacer esto..", "¿Por qué no se hizo esto?", etc.
 
-Read and understand the incident response plan, including the roles and playbooks.
+### Formación
 
-#### Prerequisites
+Lea y comprenda el plan de respuesta a incidentes, incluyendo los roles y los libros de jugadas.
 
-* Excellent verbal and written **communication skills**.
-* Anyone can act as a scribe during an incident, and are chosen by the Incident Commander at the start of the call.
-* Typically the Deputy will act as the Scribe
+#### Requisitos previos
 
-#### Training Process
+* Excelentes habilidades de **comunicación verbal y escrita**.
+* Cualquiera puede actuar como escribiente durante un incidente, y son elegidos por el Incident Commander al inicio de la llamada.
+* Normalmente, el ayudante actuará como escribiente.
 
-* Read the incident response plan, including all roles and playbooks.
-* _OPTIONAL:_ Parallel the actions of a scribe during an incident or exercise, and seek feedback from the actual Scribe and Incident Commander.
+#### Proceso de formación
+
+* Lea el plan de respuesta a incidentes, incluyendo todos los roles y libros de jugadas.
+* _OPCIONAL:_ Paralizar las acciones de un escriba durante un incidente o ejercicio, y buscar la opinión del escriba real y del Incident Commander.
 
