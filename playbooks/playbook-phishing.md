@@ -63,8 +63,8 @@ Archivos Adjuntos:
 ### Remediar
 
 * **Planificar eventos de remediación** en los que estos pasos se pongan en marcha juntos (o de forma coordinada), con los equipos adecuados listos para responder a cualquier interrupción.
-* **	Equipo de Gestión de Crisis: Supervisa la coordinación y ejecución de la remediación.
-* **  Seguridad TI y Soporte TI: Implementación de acciones de contención y erradicación.
+* **Equipo de Gestión de Crisis: Supervisa la coordinación y ejecución de la remediación.
+* **Seguridad TI y Soporte TI: Implementación de acciones de contención y erradicación.
 
 #### Contener
 
