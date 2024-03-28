@@ -58,6 +58,31 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
     * insecure remote desktop protocol (RDP): check [vulnerability scanning results](#TODO-link-to-actual-resource), [firewall configurations](#TODO-link-to-actual-resource), _etc._
     * auto-propagación (worm or virus) (check [host telemetry/EDR](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), [forensic analysis](#TODO-link-to-actual-resource), _etc._)
 
+
+
+
+
+
+Determinar el tipo de ransomware:
+
+Equipo asignado: Equipo de Análisis de Malware.
+Estrategia: Utilizar herramientas avanzadas de análisis de malware para identificar la familia, variante o tipo específico de ransomware involucrado en el incidente. Analizar firmas, comportamiento y características únicas del malware.
+Analizar mensajes relacionados:
+
+Equipo asignado: Equipo de Análisis de Mensajes.
+Estrategia: Revisar detenidamente todos los mensajes relacionados con el ransomware, incluyendo interfaces gráficas, archivos de texto/html, mensajes de voz, etc. Identificar patrones de lenguaje, contactos de correo electrónico, instrucciones de rescate y cualquier otra información relevante.
+Examinar archivos afectados:
+
+Equipo asignado: Equipo de Análisis de Archivos.
+Estrategia: Investigar a fondo los archivos afectados por el ransomware. Analizar el esquema de cambio de nombre de los archivos encriptados, tipos de archivos afectados, iconos de archivos, etc. Determinar la extensión de la encriptación y evaluar la posibilidad de recuperación de datos.
+Determinar el alcance:
+
+Equipo asignado: Equipo de Investigación de Alcance.
+Estrategia: Identificar el alcance total del incidente de ransomware. Determinar qué sistemas están afectados, identificar indicadores de compromiso (IOC), evaluar la sensibilidad de los datos comprometidos y encontrar el vector de infección utilizado por el atacante.
+
+
+
+
 ### Remediar
 
 **Planificar eventos de remediación** en los que estos pasos se lancen juntos (o de forma coordinada), con los equipos apropiados listos para responder a cualquier interrupción.
@@ -65,26 +90,19 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 #### Contención
 
-`OBJETIVO: Personalizar los pasos de contención, tácticos y estratégicos, para el ransomware.`
+Poner en cuarentena sistemas infectados:
 
-`OBJETIVO: especificar las herramientas y los procedimientos para cada paso, a continuación.`
+Equipo asignado: Equipo de Seguridad de Red.
+Estrategia: Implementar medidas de cuarentena para aislar los sistemas infectados y evitar la propagación del ransomware a través de la red. Desconectar los sistemas comprometidos de la red corporativa y bloquear el tráfico malicioso.
+Bloquear dominios y direcciones de comando y control:
 
-**En situaciones de ransomware, la contención es fundamental.  Informar de las medidas de contención con los datos de la investigación.  Dé mayor prioridad a las cuarentenas y otras medidas de contención que durante una respuesta típica.**
+Equipo asignado: Equipo de Seguridad de Red.
+Estrategia: Utilizar firewalls, sistemas de detección de intrusiones y listas negras de dominios para bloquear el acceso a los servidores de comando y control utilizados por el ransomware. Prevenir cualquier comunicación saliente hacia direcciones maliciosas.
+Erradicación:
 
-Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los sistemas infectados y evitan la propagación _hacia_ los sistemas y datos críticos. Las cuarentenas deben ser exhaustivas: incluir el acceso a la nube/SaaS, el inicio de sesión único, el acceso a sistemas como el ERP u otras herramientas empresariales, _etc._.
-
-* Poner en cuarentena los sistemas infectados
-* Poner en cuarentena a los usuarios y grupos afectados.
-* Ponga en cuarentena los archivos compartidos (no sólo los conocidos; proteja también los no infectados).
-* Ponga en cuarentena las bases de datos compartidas (no sólo los servidores infectados conocidos; proteja también las bases de datos no infectadas)
-* Ponga en cuarentena las copias de seguridad, si no están ya protegidas
-* Bloquee los dominios y direcciones de comando y control
-* Elimine los correos electrónicos vectoriales de las bandejas de entrada.
-* Confirme que la protección de los puntos finales (AV, NGAV, EDR, etc.) está actualizada y activada en todos los sistemas.
-* Confirmar que los parches se despliegan en todos los sistemas (priorizando los sistemas, SOs, software, _etc._).
-* Despliegue de firmas personalizadas en las herramientas de protección de puntos finales y de seguridad de la red, basándose en los COI descubiertos.
-
-`OBJETIVO: Considerar la posibilidad de automatizar las medidas de contención mediante herramientas de orquestación.`
+Reconstruir sistemas infectados:
+Equipo asignado: Equipo de Infraestructura de TI.
+Estrategia: Restaurar los sistemas afectados desde copias de seguridad verificadas y limpias. Reinstalar sistemas operativos y aplicaciones si es necesario. Implementar medidas de seguridad adicionales para prevenir futuros ataques.
 
 #### Erradicar
 
@@ -99,28 +117,17 @@ Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los
 * Despliegue de firmas personalizadas en las herramientas de protección de puntos finales y de seguridad de la red, basándose en los IOC descubiertos.
 * **Vigilar la reinfección:** considerar el aumento de la prioridad de las alarmas/alertas relacionadas con este incidente.
 
-#### Referencia: Recursos de remediación
-
-`OBJETIVO: Especifique los recursos financieros, de personal y logísticos para llevar a cabo la reparación.`
 
 ### Comunicar
 
-`OBJETIVO: Personalizar los pasos de comunicación para el ransomware.`
+No pagar el rescate y activar un plan de continuidad de negocio:
 
-`OBJETIVO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`
+Equipo asignado: Equipo de Gestión de Crisis.
+Estrategia: Comunicar claramente la política de la organización de no pagar rescates y activar un plan de continuidad de negocio para mitigar el impacto del ransomware en las operaciones comerciales. Informar a todas las partes interesadas sobre los pasos a seguir y las medidas de contingencia implementadas.
+Recuperación de datos y consideraciones legales:
 
-> **No recomendamos pagar el rescate:** no garantiza la solución del problema. Puede salir mal (_e._, los errores podrían hacer que los datos sean irrecuperables incluso con la clave).  Además, pagar demuestra que el ransomware funciona y podría aumentar los ataques contra ti o contra otros grupos.[<sup>[2, paraphrased]</sup>](#ransomware-playbook-ref-2)
-
-1. Poner en marcha un plan de continuidad de la actividad/recuperación de desastres: Por ejemplo, considerar la migración a ubicaciones operativas alternativas, sitios de conmutación por error, sistemas de respaldo.
-1. Recuperar los datos de las copias de seguridad ya limpias en sistemas ya limpios, parcheados y monitorizados (post-erradicación), de acuerdo con nuestra [well-tested backup strategy](#TODO-link-to-actual-resource).
-    *Comprobar las copias de seguridad en busca de indicadores de peligro
-    * Considerar la recuperación parcial y las pruebas de integridad de las copias de seguridad
-1. ¡Encuentre y pruebe desencriptadores conocidos para la(s) variante(s) descubierta(s) utilizando recursos como el proyecto No More Ransom! Project's [Decryption Tools page](https://www.nomoreransom.org/en/decryption-tools.html).
-1. Considerar el pago del rescate por los activos/datos críticos irrecuperables, de acuerdo con la política `OBJETIVO: Ampliar y socializar esta matriz de decisión`.
-    * Considerar las ramificaciones con las partes interesadas apropiadas
-    * Comprender las implicaciones financieras y el presupuesto
-    * Comprender las implicaciones legales, reglamentarias y de seguros
-    * Comprender los mecanismos (por ejemplo, tecnologías, plataformas, proveedores intermedios/intermediarios)
+Equipo asignado: Equipo de Gestión Legal y de Cumplimiento.
+Estrategia: Coordinar la recuperación de datos de las copias de seguridad verificadas y limpias. Evaluar las implicaciones legales, regulatorias y financieras del incidente de ransomware. Colaborar con las autoridades pertinentes y cumplir con los requisitos de notificación de violación de datos según sea necesario.
 
 ### Recursos
 
@@ -144,29 +151,7 @@ Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los
 1. Contacta al  [help desk](#TODO-link-to-actual-resource) y ser lo más útil posible
 1. Tenga paciencia: la respuesta puede ser perturbadora, pero está protegiendo a su equipo y a la organización.  **Gracias.**
 
-#### Referencia: Acciones del servicio de asistencia técnica ante la sospecha de ransomware
 
-`OBJETIVO: Personalizar los pasos para el personal de la mesa de ayuda ante la sospecha de ransomware`.
-
-1. Mantenga la calma y respire profundamente.
-1. Abra un ticket para documentar el incidente, según el procedimiento `TODO: Personalizar la plantilla con las preguntas clave (ver abajo) y el flujo de trabajo de seguimiento`.
-1. 2. Pida al usuario que tome fotos de su pantalla usando su smartphone mostrando las cosas que ha notado: mensajes de rescate, archivos encriptados, mensajes de error del sistema, _etc._ Si es algo que ha notado directamente, haga lo mismo usted.
-1. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz.  2. Si se trata de un informe de usuario, haz preguntas detalladas, incluyendo
-    1. ¿Qué ha notado?
-    1. ¿Por qué pensaste que era un problema?
-    1. ¿Qué estabas haciendo en el momento en que lo detectaste?
-    1. ¿Cuándo se produjo por primera vez, y con qué frecuencia desde entonces?
-    1. ¿De qué redes se trata? (oficina/casa/tienda, cableada/inalámbrica, con/sin VPN, _etc._)
-    1. 2. ¿De qué sistemas se trata? (sistema operativo, nombre de host, _etc._)
-    1. 2. ¿De qué datos se trata? (rutas, tipos de archivos, archivos compartidos, bases de datos, software, _etc._)
-    1. ¿Qué usuarios y cuentas están implicados? (directorio activo, SaaS, SSO, cuentas de servicio, _etc._)
-    1. ¿A qué datos suelen acceder los usuarios implicados?
-    1. ¿Con quién más has contactado acerca de este incidente y qué les has dicho?
-1. Haz las preguntas de seguimiento que sean necesarias.  **Usted es el encargado de responder al incidente, contamos con usted.**
-1. Obtenga información de contacto detallada del usuario (domicilio, oficina, móvil), si procede
-1. Registre toda la información en el ticket, incluyendo notas manuscritas y de voz
-1. Poner en cuarentena a los usuarios y sistemas afectados `OBJETIVO: Personalizar los pasos de contención, automatizar todo lo posible`.
-1. Póngase en contacto con el [equipo de seguridad](#TODO-link-to-actual-resource) y estar preparados para participar en la respuesta según las indicaciones: investigación, reparación, comunicación y recuperación
 
 #### Información adicional
 
