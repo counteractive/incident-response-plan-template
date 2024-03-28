@@ -98,51 +98,38 @@ Archivos Adjuntos:
 
 ### Comunicar
 
-`TODO: Personalizar los pasos de comunicación para el phishing`
+1. Identificación y Notificación Inicial:
+   - Quién Participa: Equipo de Respuesta a Incidentes (ERI), Departamento de Seguridad de la Información, Equipo de TI.
+   - Procedimiento: Tan pronto como se identifique un incidente de phishing, el ERI debe ser notificado para activar el protocolo de respuesta a incidentes.
+   - Herramientas: Sistemas de ticketing para incidentes, plataformas de comunicación interna (por ejemplo, Slack, Microsoft Teams).
+2. Comunicación Interna:
+   - Quién Participa: ERI, Departamento de Comunicaciones, Recursos Humanos, Alta Dirección.
+   - Procedimiento: Informar al personal interno sobre el incidente con instrucciones claras sobre cómo proceder, especialmente aquellos en departamentos afectados. Esto puede incluir la suspensión temporal de ciertos sistemas o el cambio de contraseñas.
+   - Herramientas: Correo electrónico interno, intranet, herramientas de gestión de crisis (por ejemplo, Everbridge).
+3. Coordinación con Asesores Externos:
+   - Quién Participa: ERI, Asesores Legales Externos, Proveedores de Seguridad Externos.
+   - Procedimiento: Consultar con asesores legales y de seguridad externos para determinar la gravedad del incidente y las obligaciones legales o de cumplimiento, como la notificación a las autoridades o afectados.
+   - Herramientas: Plataformas de comunicación segura, sistemas de gestión de relaciones con proveedores.
+4. Comunicación Externa:
+   - Quién Participa: Departamento de Comunicaciones, Alta Dirección, Asesores Legales.
+   - Procedimiento: Desarrollar y distribuir comunicados para informar a clientes, socios y, si es necesario, al público sobre el incidente, lo que se está haciendo para resolverlo, y cómo afecta a las partes interesadas. Se deben seguir las directrices legales y de cumplimiento para la comunicación de incidentes de seguridad.
+   - Herramientas: Herramientas de gestión de relaciones públicas (PR), plataformas de redes sociales, sitio web corporativo.
 
-`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`
-
-1. Elevar el incidente y comunicarlo a la dirección según el procedimiento
-1. Documente el incidente según el procedimiento (y [informe](https://us-cert.cisa.gov/report-phishing))
-1. Comunicarse con los asesores jurídicos internos y externos según el procedimiento, incluyendo discusiones sobre el cumplimiento, la exposición al riesgo, la responsabilidad, el contacto con las fuerzas del orden, _etc._
-1. Comnunicación con los usuarios (interna)
-    1. Comunicar las actualizaciones de la respuesta a incidentes según el procedimiento
-    1. Comunicar el impacto del incidente **y** las acciones de respuesta al mismo (e.j., contención: "¿Por qué está caído el archivo compartido?")
-    1. Comunicar los requisitos: "¿Qué deben hacer y no hacer los usuarios?"
-1. Comunicar a los clientes
-    1. Centrarse especialmente en aquellos cuyos datos se vieron afectados
-    1. Genere las notificaciones requeridas en base a las regulaciones aplicables (particularmente aquellas que puedan considerar el phishing como una violación de datos o que requieren notificaciones de otro tipo)
-   `TODO: Ampliar los requisitos y procedimientos de notificación para las regulaciones aplicables`
-1. Contactar con el/los proveedor/es de seguros
-    1. Discutir qué recursos pueden poner a disposición, qué herramientas y proveedores apoyan y pagarán, _etc._
-    1. Cumplir con los requisitos de presentación de informes y reclamaciones para proteger la elegibilidad.
-1. Considere la posibilidad de notificar e implicar a [las fuerzas del orden](https://www.policia.es/_es/tupolicia_conocenos_estructura_dao_cgpoliciajudicial_bcit.php)
-   `TODO: Vincule los siguiente puntos con los recursos reales de su organización`
-    1. [Aplicación de la ley local](#TODO-enlace-a-actual-recurso)
-    1. [Aplicación de la ley a nivel estatal o regional](#TODO-enlace-a-actual-recurso)
-    1. [Fuerzas de seguridad nacionales o europeas](#TODO-enlace-a-actual-recurso)
-1. Comuníquese con los proveedores de seguridad y de TI
-   `TODO: Vincule las siguientes viñetas con los recursos reales de su organización`
-    1. Notifique y colabore con [proveedores gestionados](#TODO-enlace-a-actual-recurso) para el procedimiento
-    1. Notifique y colabore con [consultores de respuesta ante incidentes](#TODO-enlace-a-actual-recurso) para el procedimiento
 
 ### Recuperación
 
-`TODO: Personalizar los pasos de recuperación para el phishing`
-
-`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación`
-
-1. Poner en marcha un plan de continuidad de negocio/recuperación de desastres si el compromiso implica interrupciones de negocio: _e.j._, considerar la migración a ubicaciones operativas alternativas, clústers de conmutación por error, sistemas de copias de seguridad.
-1. Reforzar los programas de formación sobre los ataques de phishing sospechosos. Los principales indicadores de sospecha pueden ser:
-    * Errores ortográficos en el mensaje o en el asunto
-    * Nombres de remitentes que parezcan de telélefono, incluida la falta de coincidencia entre el nombre y la dirección de correo electrónico.
-    * Direcciones de correo electrónico personales para asuntos oficiales (e.j., correos electrónicos de gmail o yahoo de colegas de trabajo)
-    * Líneas de asunto marcadas con "[EXTERNO]" en correos electrónicos que parecen internos.
-    * [enlaces maliciosos o sospechosos](https://www.pcworld.com/article/248963/how-to-tell-if-a-link-is-safe-without-clicking-on-it.html)
-    * Recibir un correo electrónico o un archivo adjunto que no se esperaba, pero que proviene de alguien conocido (contactar con el remitente antes de abrirlo).
-    * Informar de actividades sospechosas al departamento de TI o de seguridad.
-1. Asegúrate de que el personal de TI y de seguridad está al día de las técnicas de phishing más recientes.
-1. Determine si ha fallado algún control al ser victima de un ataque y rectifíquelo. He aquí una [buena fuente](https://www.proofpoint.com/us/security-awareness/post/14-things-do-after-phishing-attack) a tener en cuenta tras un ataque de phishing.
+1. Restauración de Sistemas y Servicios:
+   - Procedimiento: Evaluar el daño y determinar los sistemas y servicios afectados. Restaurar los datos desde copias de seguridad limpias y seguras. Asegurar que todos los sistemas restaurados sean sometidos a una exhaustiva revisión de seguridad antes de reintegrarlos a la red.
+   - Herramientas: Software de respaldo y recuperación de datos, herramientas de gestión de parches para aplicar las últimas actualizaciones de seguridad.
+2. Análisis Forense y Eliminación de Malware:
+   - Procedimiento: Realizar un análisis forense para entender cómo ocurrió el ataque, qué vulnerabilidades fueron explotadas, y si queda alguna presencia maliciosa en la red. Usar esta información para eliminar completamente el malware o las herramientas utilizadas por los atacantes.
+   - Herramientas: Plataformas de análisis forense digital, antivirus avanzados y herramientas de eliminación de malware, software de análisis de logs.
+3. Reforzamiento de las Defensas:
+   - Procedimiento: Basado en los hallazgos del análisis forense, reforzar las defensas para cerrar las vulnerabilidades explotadas durante el ataque. Esto puede incluir la implementación de nuevas herramientas de seguridad, actualización de políticas, y el reforzamiento de la seguridad física y de red.
+   - Herramientas: Sistemas de detección y prevención de intrusiones (IDS/IPS), firewalls avanzados, soluciones de seguridad para el correo electrónico, herramientas de gestión de vulnerabilidades.
+4. Educación y Concienciación sobre Seguridad:
+   - Procedimiento: Desarrollar y entregar programas de capacitación y concienciación para educar a los empleados sobre las tácticas de phishing, cómo identificarlas y las acciones a tomar en caso de sospecha. Incluir simulaciones de phishing para evaluar y mejorar la respuesta de los empleados.
+   - Herramientas: Plataformas de entrenamiento en concienciación de seguridad, herramientas de simulación de phishing, materiales educativos y cursos en línea.
 
 ### Recursos
 
