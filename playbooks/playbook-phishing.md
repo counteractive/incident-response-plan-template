@@ -15,7 +15,7 @@ Objetivo: Determinar la extensión y el impacto del ataque de phishing para cont
 * Búsqueda de Actividad Relacionada: Revisar redes sociales, correos electrónicos sospechosos, y notificaciones de actividades inusuales que puedan estar relacionadas con el ataque.
 * Clasificación del Ataque: Basándose en la información recopilada, determinar el tipo de phishing (general, spear, whaling, smishing/vishing) y la gravedad.
 
-1. **Analizar el mensaje** utilizando un dispositivo seguro
+2. **Analizar el mensaje** utilizando un dispositivo seguro.
 Objetivo: Inspeccionar el correo electrónico de phishing de manera segura para recopilar datos sin comprometer la seguridad de la red o los datos sensibles.
 
 ## Herramientas:
