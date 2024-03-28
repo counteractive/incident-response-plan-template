@@ -7,7 +7,7 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 ### Investigar
 
-1. **Ámbito del ataque**
+## **Ámbito del ataque** <br>
 Objetivo: Determinar la extensión y el impacto del ataque de phishing para contenerlo y remediarlo de manera eficiente.
 * Notificación Inicial: Registrar cómo se detectó el incidente, quién lo reportó, y la evidencia inicial proporcionada.
 * Usuarios Afectados: Utilizar herramientas de análisis de logs y seguridad de correo electrónico para identificar a todos los usuarios que recibieron el mensaje de phishing.
@@ -15,15 +15,15 @@ Objetivo: Determinar la extensión y el impacto del ataque de phishing para cont
 * Búsqueda de Actividad Relacionada: Revisar redes sociales, correos electrónicos sospechosos, y notificaciones de actividades inusuales que puedan estar relacionadas con el ataque.
 * Clasificación del Ataque: Basándose en la información recopilada, determinar el tipo de phishing (general, spear, whaling, smishing/vishing) y la gravedad.
 
-2. **Analizar el mensaje** utilizando un dispositivo seguro.
+## **Analizar el mensaje** utilizando un dispositivo seguro. <br>
 Objetivo: Inspeccionar el correo electrónico de phishing de manera segura para recopilar datos sin comprometer la seguridad de la red o los datos sensibles.
 
-## Herramientas:
+Herramientas:
 * Entornos Aislados: Máquinas virtuales dedicadas o entornos sandbox.
 * Herramientas Forenses de Correo Electrónico: MailXaminer, The Sleuth Kit para analizar cabeceras y contenido.
 * Decodificadores de URL: Para revelar redirecciones ocultas sin acceder a ellas.
 
-## Procedimiento:
+Procedimiento:
 * Preparación del Entorno Seguro: Iniciar una máquina virtual o entorno sandbox que no tenga acceso a la red corporativa o datos sensibles.
 
 Inspección del Correo Electrónico:
@@ -32,7 +32,7 @@ Inspección del Correo Electrónico:
 * Adjuntos: Identificar nombres de archivos, tipos y tamaños sin abrirlos.
 * Enlaces: Copiar los enlaces sin hacer clic en ellos para su análisis posterior.
 
-1. **Analizar los enlaces y los archivos adjuntos**
+## **Analizar los enlaces y los archivos adjuntos**
 Objetivo: Evaluar los enlaces y archivos adjuntos para determinar la naturaleza y el riesgo del contenido sin comprometer la seguridad.
     * VirusTotal: Para análisis de URLs y archivos sospechosos.
     * Sandbox de Malware: Como Cuckoo Sandbox, para observar el comportamiento de los archivos en un entorno controlado.
